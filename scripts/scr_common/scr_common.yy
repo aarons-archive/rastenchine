@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_bases",
+  "name": "scr_common",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
