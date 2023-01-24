@@ -1,0 +1,1 @@
+player.do_movement()
