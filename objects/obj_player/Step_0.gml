@@ -1,16 +1,13 @@
 var _horizontal_input = keyboard_check(global.RIGHT_KEY) - keyboard_check(global.LEFT_KEY)
 var _vertical_input = keyboard_check(global.DOWN_KEY) - keyboard_check(global.UP_KEY)
 do_movement(_horizontal_input, _vertical_input);
-melee_attack();
+weapon_attacks();
 
-
-/*dodge roll
-if keyboard_check_pressed(vk_space)
-{
-}
-*/
 
 
 
 	
 
+//dodge roll
+// lock movement
+// move smoothly

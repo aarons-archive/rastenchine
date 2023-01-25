@@ -26,9 +26,15 @@ function do_movement(horizontal_input, vertical_input) {
 	}
 	#endregion
 	//Move player
+	if keyboard_check_pressed(vk_space)
+	{
+		x += _xspd * _roll_spd;
+		y += _yspd * _roll_spd;
+	} else
+	{
 	x += _xspd;
 	y += _yspd;
-	
+	}	
 	#region Stamina
 if _stamina >= 100
 {
@@ -50,32 +56,32 @@ if keyboard_check(vk_shift) && _stamina > 1 && _stamina_lock = 0
 #endregion
 }
 
-function melee_attack()
+function weapon_attacks()
 {
-	centerY = other.y + centerYOffset;
-	_aim_dir = point_direction(other.x, centerY, mouse_x, mouse_y);
+		_center_y = other.y + _center_y_offset;
+	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y);
+	
+	if mouse_check_button_pressed(mb_left)
+	{
+	}
 }
 
 function draw_my_weapon()
 {
-	var _depth = (_aim_dir > 0 && _aim_dir < 180);
-	myGun.depth = depth + _depth;
+	//weapon depth
+	var _depth = (_aim_dir > 90 && _aim_dir < 270);
+	_weap.depth = depth + _depth;
+	_weap.image_angle = _aim_dir;
 	
-	myGun.x = x + lengthdir_x(gun_dis, _aim_dir);
-	myGun.y = y + lengthdir_y(gun_dis, _aim_dir);
+	_weap.x = x + lengthdir_x(_weap_dis, _aim_dir);
+	_weap.y = y + lengthdir_y(_weap_dis, _aim_dir);
 
-	gun_dis = lerp(gun_dis, 11, 0.1);
-	
-	
-	//get the weapon off the players body
-	var _xOffset = lengthdir_x(weaponOffsetDist, _aim_dir);
-	var _yOffset = lengthdir_y(weaponOffsetDist, _aim_dir);
+	_weap_dis = lerp(_weap_dis, 30, 0.1);
 
 	//flip weapon upright
-	var _weaponYscl = 1;
 	if _aim_dir > 90 && _aim_dir < 270
 	{
-		_weaponYscl = -1;	
-	}		
+		_weap.image_yscale = -1;	
+	} else { _weap.image_yscale = 1; }
 }
  

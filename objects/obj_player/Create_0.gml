@@ -16,10 +16,8 @@ _move_spd = 3;
 _roll_spd = 7;
 
 //Weapon Stuff
-centerYOffset = -8;
-centerY = y + centerYOffset;//set in step event
+_center_y_offset = -8;
+_center_y = y + _center_y_offset;//set in step event
 _aim_dir = 0;
-weaponOffsetDist = 50;
-
-myGun = instance_create_layer(x, y, "Instances_1", obj_weap);
-gun_dis = 50;
+_weap = instance_create_layer(x, y, "Instances_1", obj_weap);
+_weap_dis = 50;
