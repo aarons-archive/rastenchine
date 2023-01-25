@@ -15,13 +15,14 @@ function do_movement(horizontal_input, vertical_input) {
 	_xspd = lengthdir_x(_spd, _move_dir);
 	_yspd = lengthdir_y(_spd, _move_dir);
 		
-	//Collision
+	#region Collision
 	if place_meeting(other.x + _xspd, other.y, obj_collision) {
 		_xspd = 0;	
 	}
 	if place_meeting(other.x, y + _yspd, obj_collision) {
 		_yspd = 0;	
 	}
+	#endregion
 	//Move player
 	x += _xspd;
 	y += _yspd;
