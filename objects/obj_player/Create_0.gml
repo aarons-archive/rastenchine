@@ -1,19 +1,23 @@
-/*
+
 MIN_HEALTH = 0
-MAX_HEALTH = health_
+MAX_HEALTH = 10
 _health = MAX_HEALTH
-*/
-//MAX_SPEED = speed_
-//_speed = MAX_SPEED
+
+WALK_SPEED = 3
+RUN_SPEED = 6
+_speed = WALK_SPEED
 
 MAX_STAMINA = 100
 _stamina = MAX_STAMINA
 timer = 60;
 alarm[0] = 60;
 _stamina_lock = 0;
-
 _move_spd = 3;
 _roll_spd = 7;
+
+_x_movement = 0
+_y_movement = 0
+
 
 //Weapon Stuff
 _center_y_offset = -8;

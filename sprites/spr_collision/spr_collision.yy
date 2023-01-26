@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Collision",
-    "path": "folders/Collision.yy",
+    "name": "Map",
+    "path": "folders/Map.yy",
   },
 }

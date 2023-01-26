@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Generic weapon(stand in)",
-    "path": "folders/Entities/Player/Generic weapon(stand in).yy",
+    "name": "Player",
+    "path": "folders/Entities/Player.yy",
   },
 }

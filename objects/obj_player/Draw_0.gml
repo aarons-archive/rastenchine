@@ -22,12 +22,12 @@ if _aim_dir >= 180 && _aim_dir < 360
 #endregion
 
 #region flip player
-if _xspd > 1
+if _x_movement > 1
 {
 	image_angle = 0
 	image_yscale = 1;
 }
-if _xspd < 0
+if _x_movement < 0
 {
 	image_angle = 180
 	image_yscale = -1;
