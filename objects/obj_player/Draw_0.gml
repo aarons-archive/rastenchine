@@ -1,8 +1,8 @@
 draw_self();
-
+draw_text_color(100,200,_speed,c_green,c_green,c_green,c_green,1)
 draw_healthbar(100,100,200,150,_stamina,c_black,c_red,c_yellow,0,true,true)
 
-if _stamina_lock = 1 //stamina gone notifier
+if _stamina_lock == true //stamina gone notifier
 {
 	draw_text_color(100,150,"EXAHUSTED!",c_green,c_green,c_green,c_green,1)
 }

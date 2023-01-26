@@ -1,1 +1,1 @@
-attack_cooldown = 0;
+attack_cooldown = 0
