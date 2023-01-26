@@ -5,7 +5,7 @@ _health = MAX_HEALTH
 
 WALK_SPEED = 3
 RUN_SPEED = 6
-ROLL_SPEED = 15
+ROLL_SPEED = 10
 _speed = WALK_SPEED
 
 MAX_STAMINA = 100
@@ -15,7 +15,7 @@ _stamina_lock = 0;
 
 _x_movement = 0
 _y_movement = 0
-_roll_lock = 0;
+_is_rolling = false
 
 //Weapon Stuff
 _center_y_offset = -8;

@@ -1,2 +1,1 @@
-_stamina_lock = 0;
-
+_stamina_lock = false

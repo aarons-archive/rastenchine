@@ -1,1 +1,1 @@
-_roll_lock = 0;
+_is_rolling = false

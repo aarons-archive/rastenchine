@@ -6,6 +6,7 @@
     {"id":{"name":"obj_main_menu","path":"objects/obj_main_menu/obj_main_menu.yy",},"order":2,},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"order":2,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
+    {"id":{"name":"scr_do_roll","path":"scripts/scr_do_roll/scr_do_roll.yy",},"order":2,},
     {"id":{"name":"scr_menus","path":"scripts/scr_menus/scr_menus.yy",},"order":0,},
     {"id":{"name":"obj_pause_menu","path":"objects/obj_pause_menu/obj_pause_menu.yy",},"order":3,},
     {"id":{"name":"spr_weap","path":"sprites/spr_weap/spr_weap.yy",},"order":2,},
@@ -17,7 +18,6 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
     {"id":{"name":"_obj_base_menu","path":"objects/_obj_base_menu/_obj_base_menu.yy",},"order":1,},
     {"id":{"name":"obj_entity","path":"objects/obj_entity/obj_entity.yy",},"order":0,},
-    {"id":{"name":"spr_weap_attack","path":"sprites/spr_weap_attack/spr_weap_attack.yy",},"order":4,},
     {"id":{"name":"Tests","path":"rooms/Tests/Tests.yy",},"order":0,},
   ],
   "Options": [

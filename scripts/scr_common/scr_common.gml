@@ -9,21 +9,34 @@ function do_movement(horizontal_input, vertical_input) {
 		_stamina = MAX_STAMINA
 	}
 	if _stamina < 1 {
-		_stamina_lock = 1;
+		_stamina_lock = true;
 		alarm[0] = 120;
 	}
-	if keyboard_check(vk_shift) && _stamina > 1 && _stamina_lock = 0 {
-		_speed = RUN_SPEED;
-		_stamina -= 1;
+	if keyboard_check(vk_shift) && _stamina > 1 && _stamina_lock == false {
+		_speed = RUN_SPEED
+		_stamina -= 1
 	} 
 	else {
-		_speed = WALK_SPEED;
-		_stamina += 0.2;
+		_speed = WALK_SPEED
+		_stamina += 0.2
+	}
+	#endregion
+	
+	#region Roll
+	if (keyboard_check_pressed(vk_space) && _is_rolling == false) {
+		_is_rolling = true
+		alarm[1] = 30
+	}
+	if (_is_rolling == true) {
+		_speed = lerp(_speed, ROLL_SPEED, 0.8)
+	}
+	else {
+		_speed = lerp(_speed, WALK_SPEED, 0.8)
 	}
 	#endregion
 
 	#region Movement Calculation
-	if (horizontal_input != 0 || vertical_input != 0) && _roll_lock = 0 {
+	if ((horizontal_input != 0 || vertical_input != 0) && _is_rolling == false) {
 		var _direction = point_direction(0, 0, horizontal_input, vertical_input)
 		_x_movement = lengthdir_x(_speed, _direction)
 		_y_movement = lengthdir_y(_speed, _direction)
@@ -49,21 +62,8 @@ function do_movement(horizontal_input, vertical_input) {
 	}
 	#endregion
 	
-	#region Misc
-	
-	var horizontal_direction = sign(_x_movement)
-	var vertical_direction = sign(_y_movement)
-	if keyboard_check_pressed(vk_space) {
-		_roll_lock = 1
-		alarm[1] = 30;
-		x += _roll_spd * horizontal_direction
-		y += _roll_spd * vertical_direction
-	} 
-	else {
-		x += _x_movement
-		y += _y_movement
-	}	
-	#endregion
+	x += _x_movement
+	y += _y_movement
 }
 
 function weapon_attacks() {
