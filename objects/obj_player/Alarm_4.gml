@@ -1,0 +1,1 @@
+_heal_cooldown = false;

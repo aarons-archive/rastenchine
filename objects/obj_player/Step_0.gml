@@ -6,3 +6,27 @@ do_movement(
 )
 
 weapon_attacks()
+
+if _health > MAX_HEALTH {_health = MAX_HEALTH }
+
+if keyboard_check_pressed(ord("K"))
+{
+	_health -= 10;
+}
+
+
+if keyboard_check(ord("H")) && _healing_pack > 0 && _heal_cooldown == false
+{
+	_heal_counter += 1;
+} else {_heal_counter = 0 }
+
+if _heal_counter >= 100
+{
+	_heal_cooldown = true;
+	alarm[4] = 120;
+	_healing_pack -= 1
+	_health += 50
+	_heal_counter = 0
+}
+
+show_debug_message(_health)
