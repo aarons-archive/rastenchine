@@ -57,9 +57,4 @@ page = MenuPage.MAIN
 subpages = [settings_video, settings_audio, settings_gameplay]
 subpage = undefined
 
-for (var i = 0; i < array_length(pages); i++) {
-	pages_selected_elements[i] = 0
-}
-for (var i = 0; i < array_length(subpages); i++) {
-	subpages_selected_elements[i] = 0
-}
+buttons = ds

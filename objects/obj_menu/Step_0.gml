@@ -12,7 +12,7 @@ var menu_x = MENU_X
 for (var i = 0; i < height; i++) {
 	
 	var text = menu[# 0, i]
-	var element_length = string_length(text) * ELEMENT_TEXT_SCALE
+	var element_length = string_length(text) * ELEMENT_TEXT_SCALE 
 	
 	instance_create_layer(
 		menu_x,
@@ -22,7 +22,9 @@ for (var i = 0; i < height; i++) {
 		{
 			length: element_length,
 			height: ELEMENT_HEIGHT,
-			text: text
+			text: text,
+			element: menu[# 1, i],
+			arg0: menu[# 2, i]
 		}
 	)
 	
