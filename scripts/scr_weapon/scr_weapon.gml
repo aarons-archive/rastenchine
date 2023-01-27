@@ -2,27 +2,25 @@ function weapon_attacks() {
 	//weapon rotation stuff
 	_center_y = other.y + _center_y_offset
 	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
-	//charge attack
 	//attack
-	if mouse_check_button_pressed(mb_left) && _attack_cooldown = 0
+	if _attack_charger >= 10
 	{
-		_attack_cooldown = 1
-		alarm[2] = 30
-		obj_weap.sprite_index = spr_attack
-	} else if _attack_cooldown = 0 {
-		obj_weap.sprite_index = spr_weap
-		_damage = 5
-	} else if mouse_check_button(mb_left) && _attack_charger > 1
-	{
-		_attack_cooldown = 1
+		_attack_charger = 10	
+	}
+	if mouse_check_button(mb_left) && _attack_cooldown = 0 {
 		obj_weap.sprite_index = spr_chargeattack
 		_attack_charger += 0.1
-	} else if mouse_check_button_released(mb_left)
+	} if mouse_check_button_released(mb_left) && _attack_charger > 1
 	{
 		obj_weap.sprite_index = spr_attack
 		_attack_cooldown = 1
 		alarm[2] = 30
-		_damage = (_attack_charger * _damage) + _damage
+		global._attack_damage = _attack_charger * _damage + _damage
+	} if mouse_check_button_pressed(mb_left) && _attack_cooldown = 0 && _attack_charger < 1
+	{
+		_attack_cooldown = 1
+		alarm[2] = 30
+		obj_weap.sprite_index = spr_attack
 	} 
 }
 
