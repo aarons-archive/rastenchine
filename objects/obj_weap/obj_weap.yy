@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Entities/Player.yy",
+    "name": "Weapons temporary",
+    "path": "folders/Entities/Weapons temporary.yy",
   },
 }
