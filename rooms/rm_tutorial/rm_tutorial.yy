@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "Tests",
+  "name": "rm_tutorial",
   "isDnd": false,
   "volume": 1.0,
   "parentRoom": null,
@@ -26,15 +26,15 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_3455CC37","path":"rooms/Tests/Tests.yy",},
-    {"name":"inst_EE24B12","path":"rooms/Tests/Tests.yy",},
+    {"name":"inst_3455CC37","path":"rooms/rm_tutorial/rm_tutorial.yy",},
+    {"name":"inst_EE24B12","path":"rooms/rm_tutorial/rm_tutorial.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
   "roomSettings": {
     "inheritRoomSettings": false,
-    "Width": 2000,
-    "Height": 2000,
+    "Width": 2048,
+    "Height": 2048,
     "persistent": false,
   },
   "viewSettings": {
