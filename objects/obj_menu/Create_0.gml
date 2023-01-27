@@ -53,9 +53,11 @@ settings_gameplay = create_menu(
 
 pages = [main, settings]
 page = MenuPage.MAIN
+selected_page_element = undefined
 
 subpages = [settings_video, settings_audio, settings_gameplay]
 subpage = undefined
+selected_subpage_element = undefined
 
 buttons = ds_list_create()
 
