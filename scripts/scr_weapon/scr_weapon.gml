@@ -1,20 +1,34 @@
 function weapon_attacks() {
+	//weapon rotation stuff
 	_center_y = other.y + _center_y_offset
 	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
-	
+	//charge attack
+	if mouse_check_button(mb_left) && attack_cooldown = 0
+	{
+		attack_cooldown = 1
+		obj_weap.sprite_index = spr_chargeattack
+		_attack_charger += 0.1
+	} else if mouse_check_button_released(mb_left)
+		{
+			obj_weap.sprite_index = spr_attack
+			attack_cooldown = 1
+			alarm[2] = 30
+			_damage = _attack_charger + 5
+	} else if attack_cooldown = 0 {obj_weap.sprite_index = spr_weap}	
+	//attack
 	if mouse_check_button_pressed(mb_left) && attack_cooldown = 0
 	{
 		attack_cooldown = 1
 		alarm[2] = 30
-		_weap.image_angle -= lerp(_aim_dir, _aim_dir + 45 , 1)
-	}
+		obj_weap.sprite_index = spr_attack
+	} else if attack_cooldown = 0 {obj_weap.sprite_index = spr_weap}
 }
 
 function draw_my_weapon() {
 
 	var _depth = (_aim_dir > 90 && _aim_dir < 270);
 	_weap.depth = depth + _depth;
-	if !mouse_check_button_pressed(mb_left) && attack_cooldown = 0
+	if !mouse_check_button_pressed(mb_left)
 	{	
 		_weap.image_angle = _aim_dir;
 	}

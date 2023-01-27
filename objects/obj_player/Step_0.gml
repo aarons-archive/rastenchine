@@ -4,15 +4,11 @@ do_movement(
 	(keyboard_check(global.RIGHT_KEY) - keyboard_check(global.LEFT_KEY)), 
 	(keyboard_check(global.DOWN_KEY) - keyboard_check(global.UP_KEY))
 )
-
 weapon_attacks()
 
 if _health > MAX_HEALTH {_health = MAX_HEALTH}
 
-if keyboard_check_pressed(ord("K"))
-{
-	_health -= 10;
-}
+if keyboard_check_pressed(ord("K")){_health -= 10;}
 
 if keyboard_check(ord("H")) && _healing_pack > 0 && _heal_cooldown == false
 {
@@ -27,3 +23,4 @@ if _heal_counter >= 100
 	_health += 50
 	_heal_counter = 0
 }
+

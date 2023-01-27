@@ -27,3 +27,5 @@ _aim_dir = 0;
 _weap = instance_create_layer(x, y, "Instances_1", obj_weap);
 _weap_dis = 50;
 attack_cooldown = 0
+_damage = 5
+_attack_charger = 0
