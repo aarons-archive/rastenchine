@@ -19,17 +19,17 @@ enum MenuElement {
 	
 main = create_menu(
 	[
-		["PLAY", MenuElement.RUN_SCRIPT, play_game],
-		["SETTINGS", MenuElement.CHANGE_PAGE, MenuPage.SETTINGS],
-		["EXIT", MenuElement.RUN_SCRIPT, exit_game],
+		["PLAY", MenuElement.RUN_SCRIPT, play_game, undefined, undefined],
+		["SETTINGS", MenuElement.RUN_SCRIPT, change_page, MenuPage.SETTINGS, MenuSubPage.SETTINGS_VIDEO],
+		["EXIT", MenuElement.RUN_SCRIPT, exit_game, undefined, undefined],
 	]
 )
 settings = create_menu(
 	[
-		["<- BACK", MenuElement.CHANGE_PAGE, MenuPage.MAIN],
-		["VIDEO", MenuElement.CHANGE_SUBPAGE, MenuSubPage.SETTINGS_VIDEO],
-		["AUDIO", MenuElement.CHANGE_SUBPAGE, MenuSubPage.SETTINGS_AUDIO],
-		["GAMEPLAY", MenuElement.CHANGE_SUBPAGE, MenuSubPage.SETTINGS_GAMEPLAY],
+		["<- BACK", MenuElement.RUN_SCRIPT, change_page, MenuPage.MAIN, undefined],
+		["VIDEO", MenuElement.RUN_SCRIPT, change_page, MenuPage.SETTINGS, MenuSubPage.SETTINGS_VIDEO],
+		["AUDIO", MenuElement.RUN_SCRIPT, change_page, MenuPage.SETTINGS, MenuSubPage.SETTINGS_AUDIO],
+		["GAMEPLAY", MenuElement.RUN_SCRIPT, change_page, MenuPage.SETTINGS, MenuSubPage.SETTINGS_GAMEPLAY],
 	]
 )
 settings_video = create_menu(
@@ -57,4 +57,6 @@ page = MenuPage.MAIN
 subpages = [settings_video, settings_audio, settings_gameplay]
 subpage = undefined
 
-buttons = ds
+buttons = ds_list_create()
+
+draw_menu()
