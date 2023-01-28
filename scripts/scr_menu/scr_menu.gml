@@ -23,18 +23,19 @@ function render_menu() {
 	var ELEMENT_HEIGHT = 60
 	var ELEMENT_OFFSET = 5
 	
-	// Pages
+	#region Pages
 	var elements = pages[page]
 	var height = ds_grid_height(elements)
 	var page_x = MENU_START_X
-
+	
 	for (var element_index = 0; element_index < height; element_index++) {
 		var text = elements[# 0, element_index]
 		var element_length = string_length(text) * ELEMENT_TEXT_SCALE 
 		ds_list_add(
 			buttons, 
 			instance_create_layer(
-				page_x, PAGE_START_Y,
+				page_x, 
+				PAGE_START_Y,
 				"Instances",
 				obj_button,
 				{
@@ -51,19 +52,20 @@ function render_menu() {
 		)
 		page_x = page_x + element_length + ELEMENT_OFFSET
 	}
+	#endregion
 
 	// Sub Pages
 	if (sub_page != undefined) {
 		elements = sub_pages[sub_page]
 		height = ds_grid_height(elements)
-
 		for (var element_index = 0; element_index < height; element_index++) {
 			var text = elements[# 0, element_index]
 			var element_length = string_length(text) * ELEMENT_TEXT_SCALE 
 			ds_list_add(
 				buttons, 
 				instance_create_layer(
-					MENU_START_X, SUB_PAGE_START_Y + ((ELEMENT_HEIGHT + ELEMENT_OFFSET) * element_index),
+					MENU_START_X, 
+					SUB_PAGE_START_Y + ((ELEMENT_HEIGHT + ELEMENT_OFFSET) * element_index),
 					"Instances",
 					obj_button,
 					{
