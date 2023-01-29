@@ -6,7 +6,7 @@ function render_page() {
 	
 	var MENU_START_X = 20
 	var PAGE_START_Y = 20
-	var SUB_PAGE_START_Y = 120
+	var SUB_PAGE_START_Y = 100
 	
 	var ELEMENT_PADDING = 20
 	var ELEMENT_MARGIN = 5
