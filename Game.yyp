@@ -17,6 +17,7 @@
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},"order":1,},
     {"id":{"name":"scr_keybinds","path":"scripts/scr_keybinds/scr_keybinds.yy",},"order":0,},
     {"id":{"name":"scr_game_controls","path":"scripts/scr_game_controls/scr_game_controls.yy",},"order":1,},
+    {"id":{"name":"scr_utils","path":"scripts/scr_utils/scr_utils.yy",},"order":4,},
     {"id":{"name":"spr_chargeattack","path":"sprites/spr_chargeattack/spr_chargeattack.yy",},"order":3,},
     {"id":{"name":"obj_weap","path":"objects/obj_weap/obj_weap.yy",},"order":1,},
     {"id":{"name":"scr_change_resolution","path":"scripts/scr_change_resolution/scr_change_resolution.yy",},"order":2,},

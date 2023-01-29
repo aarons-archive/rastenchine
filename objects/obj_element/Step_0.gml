@@ -1,5 +1,5 @@
 if point_in_rectangle(mouse_x, mouse_y, X1, Y1, X2, Y2) {
-	_button_colour = ACTIVE_BUTTON_COLOUR
+	_colour = ACTIVE_COLOUR
 	if mouse_check_button_pressed(mb_left) {
 		switch (ACTION) {
 			case menu_element_action.run_script:
@@ -10,9 +10,9 @@ if point_in_rectangle(mouse_x, mouse_y, X1, Y1, X2, Y2) {
 }
 else {
 	if (SELECTED == true) {
-		_button_colour = ACTIVE_BUTTON_COLOUR
+		_colour = ACTIVE_COLOUR
 	}
 	else {
-		_button_colour = DEFAULT_BUTTON_COLOUR
+		_colour = DEFAULT_COLOUR
 	}
 }
