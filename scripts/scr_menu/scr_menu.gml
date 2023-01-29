@@ -1,82 +1,70 @@
-function create_page(elements) {
-	var width = 0
-	for (var i = 0; i < array_length(elements); i++) {
-		width = max(width, array_length(elements[i]))
-	}
-	var height = array_length(elements)
-	var grid = ds_grid_create(width, height)
-	for (var i = 0; i < height; i++) {
-		for (var j = 0; j < width; j++) {
-			grid[# j, i] = elements[i, j] 
-		}
-	}
-	return grid
-}
-
-function render_menu() {
+function render_page() {
 	
-	// Common
+	draw_set_valign(fa_middle)
+	draw_set_halign(fa_left)
+	draw_set_font(fnt_menu)
+	
 	var MENU_START_X = 20
 	var PAGE_START_Y = 20
 	var SUB_PAGE_START_Y = 120
-	var ELEMENT_TEXT_SCALE = 30
-	var ELEMENT_HEIGHT = 60
-	var ELEMENT_OFFSET = 5
+	
+	var ELEMENT_PADDING = 20
+	var ELEMENT_MARGIN = 5
 	
 	#region Pages
-	var elements = pages[page]
-	var height = ds_grid_height(elements)
+	var page = pages[selected_page]
 	var page_x = MENU_START_X
 	
-	for (var element_index = 0; element_index < height; element_index++) {
-		var text = elements[# 0, element_index]
-		var element_length = string_length(text) * ELEMENT_TEXT_SCALE 
-		ds_list_add(
-			buttons, 
+	for (var i = 0; i < array_length(page); i += 1) {
+		var element = page[@ i]
+		var text = element[@ 0]
+		var element_width = string_width(text) + ELEMENT_PADDING
+		array_push(
+			instances, 
 			instance_create_layer(
 				page_x, 
 				PAGE_START_Y,
 				"Instances",
-				obj_button,
+				obj_element,
 				{
-					LENGTH: element_length,
-					HEIGHT: ELEMENT_HEIGHT,
+					WIDTH: element_width,
+					HEIGHT: string_height(text) + ELEMENT_PADDING,
 					TEXT: text,
-					SELECTED: (sub_page == undefined ? false : ((sub_page + 1) == element_index)),
-					ACTION: elements[# 1, element_index],
-					FUNCTION: elements[# 2, element_index],
-					ARG_0: elements[# 3, element_index],
-					ARG_1: elements[# 4, element_index]
+					SELECTED: (selected_sub_page == undefined ? false : (selected_sub_page + 1) == i),
+					ACTION: element[@ 1],
+					FUNCTION: element[@ 2],
+					ARG_0: element[@ 3],
+					ARG_1: element[@ 4]
 				}
 			)
 		)
-		page_x = page_x + element_length + ELEMENT_OFFSET
+		page_x += element_width + ELEMENT_MARGIN
 	}
 	#endregion
 
 	// Sub Pages
-	if (sub_page != undefined) {
-		elements = sub_pages[sub_page]
-		height = ds_grid_height(elements)
-		for (var element_index = 0; element_index < height; element_index++) {
-			var text = elements[# 0, element_index]
-			var element_length = string_length(text) * ELEMENT_TEXT_SCALE 
-			ds_list_add(
-				buttons, 
+	if (selected_sub_page != undefined) {
+		page = sub_pages[selected_sub_page]
+		for (var i = 0; i < array_length(page); i++) {
+			var element = page[@ i]
+			var text = element[@ 0]
+			var element_height = string_height(text) + ELEMENT_PADDING
+			array_push(
+				instances, 
 				instance_create_layer(
 					MENU_START_X, 
-					SUB_PAGE_START_Y + ((ELEMENT_HEIGHT + ELEMENT_OFFSET) * element_index),
-					"Instances",
-					obj_button,
+					SUB_PAGE_START_Y + ((element_height + ELEMENT_MARGIN) * i),
+					"Instances", 
+					obj_element,
 					{
-						LENGTH: element_length,
-						HEIGHT: ELEMENT_HEIGHT,
+						WIDTH: string_width(text) + ELEMENT_PADDING,
+						HEIGHT: element_height,
 						TEXT: text,
 						SELECTED: false,
-						ACTION: elements[# 1, element_index],
-						FUNCTION: elements[# 2, element_index],
-						ARG_0: elements[# 3, element_index],
-						ARG_1: elements[# 4, element_index]
+						ACTION: element[@ 1],
+						FUNCTION: element[@ 2],
+						ARG_0: element[@ 3],
+						ARG_1: element[@ 4]
 					}
 				)
 			)
@@ -84,13 +72,12 @@ function render_menu() {
 	}
 }
 
-function change_page(_page, _subpage) {
+function change_page(page, sub_page) {
 	with (obj_menu) {
-		for (var i = 0; i < ds_list_size(buttons); i++) {
-			instance_destroy(buttons[| i])
-		}
-		page = _page
-		sub_page = _subpage
-		render_menu()
+		selected_page = page
+		selected_sub_page = sub_page
+		array_map_ext(instances, function(element) {instance_destroy(element)})
+		array_resize(instances, 0)
+		render_page()
 	}
 }

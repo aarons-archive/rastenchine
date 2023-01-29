@@ -8,7 +8,7 @@ draw_rectangle_colour(
 	false
 )
 draw_text_colour(
-	x + (LENGTH / 2), y + (HEIGHT / 2), 
+	x + (WIDTH / 2), y + (HEIGHT / 2), 
 	TEXT,
 	TEXT_COLOUR, TEXT_COLOUR, TEXT_COLOUR, TEXT_COLOUR,
 	1
