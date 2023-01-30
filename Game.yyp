@@ -51,6 +51,7 @@
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entities","folderPath":"folders/Entities.yy","order":3,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy Ai","folderPath":"folders/Entities/Enemy Ai.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Entities/Player.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Weapons temporary","folderPath":"folders/Entities/Weapons temporary.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Inventory","folderPath":"folders/Inventory.yy","order":1,},
@@ -68,7 +69,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Menu.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Menu/Scripts.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy","order":2,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy Ai","folderPath":"folders/Entities/Enemy Ai.yy","order":8,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
