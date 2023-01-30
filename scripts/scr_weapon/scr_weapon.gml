@@ -1,7 +1,8 @@
 function weapon_attacks() {
-	//weapon rotation stuff
+	#region weapon rotation stuff
 	_center_y = other.y + _center_y_offset
 	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
+	#endregion
 	//attack
 	if _attack_charger >= 10
 	{
