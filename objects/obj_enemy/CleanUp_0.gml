@@ -1,1 +1,1 @@
-path_delete(path);
+//path_delete(path);

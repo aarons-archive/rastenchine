@@ -4,16 +4,16 @@ _health = MAX_HEALTH
 _healing_pack = 4;
 _heal_counter = 0
 _heal_cooldown = false
-
+//stamina
 MAX_STAMINA = 100
 _stamina = MAX_STAMINA
 _stamina_lock = false
-
+//movement speed
 WALK_SPEED = 5
 RUN_SPEED = 10
 ROLL_SPEED = 15
 _speed = WALK_SPEED
-
+//movement calculation
 _direction = 0
 _x_movement = 0
 _y_movement = 0

@@ -30,7 +30,7 @@ function draw_ui_healthbar() {
 		STAMINA_BAR_X1, STAMINA_BAR_Y1,
 		STAMINA_BAR_X2, STAMINA_BAR_Y2,
 		_stamina, 
-		c_black, c_red, c_red, 
+		c_black, c_yellow, c_yellow, 
 		0, true, true
 	)
 	if (_stamina_lock == true) {
