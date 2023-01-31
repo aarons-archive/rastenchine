@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Attenuation",
-    "path": "folders/Lighting/Scripts/Extension Modules/Attenuation.yy",
+    "path": "folders/Lighting System/Scripts/Extension Modules/Attenuation.yy",
   },
 }

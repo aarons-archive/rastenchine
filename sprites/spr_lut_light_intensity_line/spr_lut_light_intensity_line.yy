@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b7fe1726-8200-42ec-af22-ee0117c84de8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d063a6c4-4046-436d-85f5-16a5cd77d756","path":"sprites/spr_lut_light_intensity_line/spr_lut_light_intensity_line.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"458f8def-1a12-4a9c-8520-f3a63d4429e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d063a6c4-4046-436d-85f5-16a5cd77d756","path":"sprites/spr_lut_light_intensity_line/spr_lut_light_intensity_line.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Lighting/Sprites.yy",
+    "path": "folders/Lighting System/Sprites.yy",
   },
 }

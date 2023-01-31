@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Lights",
-    "path": "folders/Lighting/Scripts/Lights.yy",
+    "path": "folders/Lighting System/Scripts/Lights.yy",
   },
 }

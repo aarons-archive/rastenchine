@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_demo_directional_light",
+  "spriteId": {
+    "name": "spr_light_directional",
+    "path": "sprites/spr_light_directional/spr_light_directional.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "obj_demo_point_light",
+    "path": "objects/obj_demo_point_light/obj_demo_point_light.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":60,"eventType":6,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":61,"eventType":6,"collisionObjectId":null,},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"Light_Type","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"\"Directional Light\"",},
+  ],
+  "parent": {
+    "name": "Objects",
+    "path": "folders/Lighting System/Demo/Objects.yy",
+  },
+}

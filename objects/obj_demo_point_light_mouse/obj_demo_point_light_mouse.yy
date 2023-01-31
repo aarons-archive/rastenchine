@@ -1,0 +1,41 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_demo_point_light_mouse",
+  "spriteId": {
+    "name": "spr_light_point",
+    "path": "sprites/spr_light_point/spr_light_point.yy",
+  },
+  "solid": false,
+  "visible": false,
+  "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "obj_demo_point_light",
+    "path": "objects/obj_demo_point_light/obj_demo_point_light.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 0,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"Light_Color","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"$FF99D4FF",},
+  ],
+  "parent": {
+    "name": "Objects",
+    "path": "folders/Lighting System/Demo/Objects.yy",
+  },
+}

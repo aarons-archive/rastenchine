@@ -34,6 +34,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Lighting/Objects.yy",
+    "path": "folders/Lighting System/Objects.yy",
   },
 }

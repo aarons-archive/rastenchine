@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "Internal",
-    "path": "folders/Lighting/Scripts/Misc/Internal.yy",
+    "path": "folders/Lighting System/Scripts/Misc/Internal.yy",
   },
 }
