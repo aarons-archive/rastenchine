@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Enem",
+  "name": "obj_enemy",
   "spriteId": {
-    "name": "spr_enem",
-    "path": "sprites/spr_enem/spr_enem.yy",
+    "name": "spr_enemy",
+    "path": "sprites/spr_enemy/spr_enemy.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Ai",
-    "path": "folders/Entities/Enemy Ai.yy",
+    "name": "Enemy",
+    "path": "folders/Entities/Enemy.yy",
   },
 }

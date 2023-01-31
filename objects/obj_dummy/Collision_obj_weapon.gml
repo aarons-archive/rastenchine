@@ -1,4 +1,4 @@
-if obj_weap.sprite_index == spr_attack && _invincible = 0
+if obj_weapon.sprite_index == spr_weapon_attack && _invincible = 0
 {
 	_dummy_health -= global._attack_damage
 	_invincible = 1

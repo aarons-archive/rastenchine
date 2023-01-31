@@ -2,16 +2,16 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_weapon",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_weapon",
+    "path": "sprites/spr_weapon/spr_weapon.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_item",
-    "path": "objects/obj_item/obj_item.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,13 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Weapon",
-    "path": "folders/Inventory/Items/Weapon.yy",
+    "path": "folders/Entities/Player/Weapon.yy",
   },
 }
