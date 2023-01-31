@@ -4,7 +4,7 @@ _health = MAX_HEALTH
 _healing_pack = 4;
 _heal_counter = 0
 _heal_cooldown = false
-//stamina stuff
+
 MAX_STAMINA = 100
 _stamina = MAX_STAMINA
 _stamina_lock = false
@@ -19,6 +19,15 @@ _x_movement = 0
 _y_movement = 0
 _is_rolling = false
 
+#region Create Lighting
+global.ambientShadowIntensity = 1
+
+flash_light = light_create_spot(x, y, 64000, $FFFFFFFF, 1000, 1.4, 30, 0)
+light_add_to_world(flash_light)
+
+point_light = light_create_point(x, y, 64000, $FFFFFFFF, 100, 1.4)
+light_add_to_world(point_light)
+#endregion
 
 //weapon stuff
 _center_y_offset = -8;
