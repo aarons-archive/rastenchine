@@ -2,8 +2,8 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "lighting_debug_shadow_casters",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Internal",
     "path": "folders/Lighting System/Scripts/Misc/Internal.yy",

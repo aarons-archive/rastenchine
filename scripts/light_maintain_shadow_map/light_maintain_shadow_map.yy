@@ -2,8 +2,8 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "light_maintain_shadow_map",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Internal",
     "path": "folders/Lighting System/Scripts/Lights/Internal.yy",
