@@ -4,6 +4,7 @@ _health = MAX_HEALTH
 _healing_pack = 4;
 _heal_counter = 0
 _heal_cooldown = false
+_iframes = 0
 //stamina
 MAX_STAMINA = 100
 _stamina = MAX_STAMINA

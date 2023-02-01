@@ -1,10 +1,31 @@
-if(target == noone)
+#region health check
+if(_hp <= 0)
 {
-	target = instance_find(obj_player, 0);
-	return;
+	state = STATES.death;
+}
+#endregion
+
+if collision_circle(x,y,_vision_radius,obj_player,false,false) 
+{
+	move_towards_point(obj_player.x,obj_player.y,_speed)
+	sprite_index = spr_enemy_chasing
+} else _idle_movement = 0 {
+	x += _speed * choose(-2,2);
+	y += _speed * choose(-2,2);
+	_idle_movement = 1
+	alarm[1] = 120
 }
 
-	if(state != STATES.death)
+if collision_circle(x,y,_attack_radius,obj_player,false,false)
+{
+	_speed = 0
+	sprite_index = spr_enemy_attack
+}
+
+show_debug_message(alarm[1])
+
+/*
+if(state != STATES.death)
 	{
 		//random idle momvement
 		x = lerp(x, _x, 0.02);
@@ -21,24 +42,15 @@ if(target == noone)
 				}
 		}
 		}
-	} else {
-		image_speed = 1;
-	}
+} else {image_speed = 1}
 	
-	if(state == STATES.chasing) && (target != noone)
-	{
-		if (collision_circle(x, y, attack_radius, obj_player, false, true))
-		{
-			state = STATES.attacking;
-			image_index = 0;
-			move_towards_point(obj_player.x,obj_player.y,2)
-		}
-	}
-	
-if(_hp <= 0)
+if(state == STATES.chasing) && (target != noone)
 {
-	state = STATES.death;
+	move_towards_point(obj_player.x,obj_player.y,2)
+	if (collision_circle(x, y, _attack_radius, obj_player, false, true))
+	{
+		state = STATES.attacking;
+		image_index = 0;
+	
+	}
 }
-
-show_debug_message(state)
-

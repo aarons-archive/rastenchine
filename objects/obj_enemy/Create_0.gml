@@ -1,14 +1,17 @@
-state = STATES.chasing;
-
 HP_MAX = 100;
 _hp = HP_MAX;
 _invincible = 0;
+
+
+_vision_radius = 300;
 //ATACKING
-attack_radius = 200;
-attack_rate = room_speed * 0.5;
+_attack_radius = 100;
+global._enemy_damage = 10;
+_idle_movement = 0;
 attack_is_possible = true;
 //Moving
 _y = y;
 _x = x;
-// used to find player
-target = noone;
+_rand_move = 0
+
+_speed = 4;
