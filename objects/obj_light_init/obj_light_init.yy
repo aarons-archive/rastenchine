@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_point",
-    "path": "sprites/spr_light_point/spr_light_point.yy",
+    "name": "spr_lighting_init",
+    "path": "sprites/spr_lighting_init/spr_lighting_init.yy",
   },
   "spriteMaskId": null,
   "visible": false,

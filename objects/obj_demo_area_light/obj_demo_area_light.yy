@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_area",
-    "path": "sprites/spr_light_area/spr_light_area.yy",
+    "name": "spr_area_light",
+    "path": "sprites/spr_area_light/spr_area_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

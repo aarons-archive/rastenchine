@@ -1,5 +1,3 @@
-/// @desc Initialise shadow caster
-
 //
 //	Inherit this event and assign a polygon and (optionally) shadow caster flags
 //	Use eShadowCasterFlags.Static if your shadow caster is unlikely to move between frames!

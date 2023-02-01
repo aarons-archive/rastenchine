@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_directional",
-    "path": "sprites/spr_light_directional/spr_light_directional.yy",
+    "name": "spr_directional_light",
+    "path": "sprites/spr_directional_light/spr_directional_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

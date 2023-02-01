@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_spot",
-    "path": "sprites/spr_light_spot/spr_light_spot.yy",
+    "name": "spr_spot_light",
+    "path": "sprites/spr_spot_light/spr_spot_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_renderer",
-    "path": "sprites/spr_light_renderer/spr_light_renderer.yy",
+    "name": "spr_lighting_renderer",
+    "path": "sprites/spr_lighting_renderer/spr_lighting_renderer.yy",
   },
   "spriteMaskId": null,
   "visible": true,

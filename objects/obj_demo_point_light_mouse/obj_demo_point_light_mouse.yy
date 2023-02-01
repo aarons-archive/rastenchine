@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_point",
-    "path": "sprites/spr_light_point/spr_light_point.yy",
+    "name": "spr_point_light",
+    "path": "sprites/spr_point_light/spr_point_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

@@ -1,3 +1,1 @@
-/// @desc Init lighting
-
-lighting_global();
+lighting_global()

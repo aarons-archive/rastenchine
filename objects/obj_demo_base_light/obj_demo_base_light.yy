@@ -134,10 +134,7 @@
       ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":5,},
   ],
   "solid": false,
-  "spriteId": {
-    "name": "spr_light_point",
-    "path": "sprites/spr_light_point/spr_light_point.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": false,
 }

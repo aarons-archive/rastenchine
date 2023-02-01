@@ -1,3 +1,1 @@
-/// @description Tick
-
-++tick;
+++tick

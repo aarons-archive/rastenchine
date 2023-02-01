@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_line",
-    "path": "sprites/spr_light_line/spr_light_line.yy",
+    "name": "spr_line_light",
+    "path": "sprites/spr_line_light/spr_line_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,
