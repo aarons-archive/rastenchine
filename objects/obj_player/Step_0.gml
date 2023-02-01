@@ -34,3 +34,5 @@ point_light[| eLight.X] = x
 point_light[| eLight.Y] = y
 point_light[| eLight.Flags] |= eLightFlags.Dirty
 #endregion
+
+show_debug_message(_iframes)

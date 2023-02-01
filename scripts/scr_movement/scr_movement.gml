@@ -20,6 +20,8 @@ function do_roll() {
 		alarm[1] = 30
 	}
 	if (_is_rolling == true) {
+		_iframes = 1
+		alarm[3] = 30
 		_speed = lerp(_speed, ROLL_SPEED, 0.8)
 	}
 }

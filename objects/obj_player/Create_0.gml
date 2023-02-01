@@ -12,7 +12,7 @@ _stamina_lock = false
 //movement speed
 WALK_SPEED = 5
 RUN_SPEED = 10
-ROLL_SPEED = 15
+ROLL_SPEED = 6
 _speed = WALK_SPEED
 //movement calculation
 _direction = 0
