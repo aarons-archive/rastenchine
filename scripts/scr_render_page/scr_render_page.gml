@@ -3,6 +3,7 @@
 #macro SUB_PAGE_START_Y 100
 #macro ELEMENT_PADDING 20
 #macro ELEMENT_MARGIN 5
+#macro ELEMENT_HEIGHT string_height("HEIGHT") + ELEMENT_PADDING
 #macro ELEMENT_FONT_TUNING 2
 
 function render_page() {
@@ -11,9 +12,6 @@ function render_page() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_middle)
 	
-	var ELEMENT_HEIGHT = string_height("HEIGHT") + ELEMENT_PADDING
-	
-	#region Pages
 	var page = pages[selected_page]
 	var page_x = MENU_START_X
 	for (var i = 0; i < array_length(page); i++) {
@@ -41,9 +39,7 @@ function render_page() {
 		)
 		page_x += element_width + ELEMENT_MARGIN
 	}
-	#endregion
 
-	#region Sub Pages
 	if (selected_sub_page != undefined) {
 		var sub_page = sub_pages[selected_sub_page]
 		var element_width = array_max(array_map(sub_page, function(element) {return string_width(element[@ 0]) + ELEMENT_PADDING}))
@@ -70,16 +66,5 @@ function render_page() {
 				)
 			)
 		}
-	}
-	#endregion
-}
-
-function change_page(page, sub_page) {
-	with (obj_menu) {
-		selected_page = page
-		selected_sub_page = sub_page
-		array_map_ext(instances, function(element) {instance_destroy(element)})
-		array_resize(instances, 0)
-		render_page()
 	}
 }
