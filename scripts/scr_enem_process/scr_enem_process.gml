@@ -3,27 +3,24 @@ function CheckForPlayer()
 	var _dis = distance_to_object(obj_player);
 	
 	//can start chasing? or ready for attack
-	if ((_dis <= alert_dis) or alert) and _dis > attack_dis {
+	if _dis <= _agro_radius && _dis > _attack_radius {
 		//should calc path?
-		if calc_path_timer-- <= 0 {
+		if _path_timer-- <= 0 {
 			//reset timer
-			calc_path_timer = calc_path_delay;
+			_path_timer = _path_delay;
 			//can make path to player
-			if x == xp and y == yp var _type = 0 else var _type = 1;
+			if x == _x and y == _y var _type = 0 else var _type = 1;
 			var _foundPlayer = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0, 1));
-	
 			//start path if can reach the player
 			if _foundPlayer
 			{
-				path_start(path, move_spd, path_action_stop, false);
+				path_start(path, _speed, path_action_stop, false);
 			}
-		}
-	} else {
-		//is close enough to player?
-		if _dis <= attack_dis {
-			path_end();
-		}
+		} else if _dis < _attack_radius {
+		//is close enough to player?		
+		path_end();
 	}
+}
 }
 
 function EnemyAnim(){
