@@ -34,6 +34,8 @@ if collision_circle(x,y,_vision_radius,obj_player,false,false) && _hp > 0
 #endregion
 
 /*
-idle
-chasing
+idle (move around naturally)
+chasing (when player is no longer in chasing range go back to idly walking around)
+collisions(dont walk through walls to get to player)
+knockback(for when the player is hit and when the enemy is hit)
 */
