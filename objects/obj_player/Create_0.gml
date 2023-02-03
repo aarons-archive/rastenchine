@@ -23,10 +23,10 @@ _is_rolling = false
 #region Create Lighting
 global.ambientShadowIntensity = 1
 
-flash_light = light_create_spot(x, y, 64000, $FFFFFFFF, 1000, 1.4, 30, 0)
+flash_light = light_create_spot(x, y, 64000, $FFFFFFFF, 1000, 2, 30, 0)
 light_add_to_world(flash_light)
 
-point_light = light_create_point(x, y, 64000, $FFFFFFFF, 100, 1.4)
+point_light = light_create_point(x, y, 64000, $FFFFFFFF, 250, 2)
 light_add_to_world(point_light)
 #endregion
 

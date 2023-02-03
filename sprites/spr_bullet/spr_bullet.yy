@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Weapon",
-    "path": "folders/Entities/Player/Weapon.yy",
+    "name": "Gun",
+    "path": "folders/Inventory/Items/Gun.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

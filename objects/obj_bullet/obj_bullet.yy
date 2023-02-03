@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapon",
-    "path": "folders/Entities/Player/Weapon.yy",
+    "name": "Gun",
+    "path": "folders/Inventory/Items/Gun.yy",
   },
   "parentObjectId": null,
   "persistent": false,
