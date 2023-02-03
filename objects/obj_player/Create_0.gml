@@ -40,3 +40,5 @@ _attack_cooldown = 0
 _damage = 5
 global._attack_damage = 0
 _attack_charger = 0
+_melee_activate = 1
+_range_activate = 0

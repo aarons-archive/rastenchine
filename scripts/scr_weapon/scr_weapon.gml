@@ -4,10 +4,7 @@ function weapon_attacks() {
 	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
 	#endregion
 	//attack
-	if _attack_charger >= 10
-	{
-		_attack_charger = 10	
-	}
+	if _attack_charger >= 10 {_attack_charger = 10}
 	if mouse_check_button(mb_left) && _attack_cooldown = 0 {
 		obj_weapon.sprite_index = spr_weapon_charge_attack
 		_attack_charger += 0.1
@@ -24,7 +21,38 @@ function weapon_attacks() {
 		obj_weapon.sprite_index = spr_weapon_attack
 	} 
 }
+function ranged_attacks()
+{
 
+	//#region Shooting
+	//if shootTimer > 0 shootTimer--;
+//	if reloadTimer > 0 reloadTimer--;
+//	if (shootKey && shootTimer <= 0 && clipAmmo > 0)
+//	{
+		//reset timer
+//		shootTimer = shootCooldown;
+		
+		//remove ammo
+//		clipAmmo -= 1;
+		
+/*	}
+	else if (shootKey && shootTimer <= 0 && clipAmmo == 0)
+	{
+		reloading = true;	
+	}
+	if (reloadKey && clipAmmo < maxClip) reloading = true;
+	
+	if (reloading)
+	{
+		if reloadTimer = 0 reloadTimer = reloadLength;
+		else if reloadTimer = 1
+		{
+			heldAmmo -= (maxClip - clipAmmo);
+			clipAmmo = maxClip;
+			reloading = false;
+		}
+	}*/
+}
 function draw_my_weapon() {
 	var _depth = (_aim_dir > 90 && _aim_dir < 270);
 	_weapon.depth = depth + _depth;
