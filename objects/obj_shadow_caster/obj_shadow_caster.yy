@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Objects.yy",
+    "name": "Lighting System",
+    "path": "folders/Lighting System.yy",
   },
   "parentObjectId": null,
   "persistent": false,

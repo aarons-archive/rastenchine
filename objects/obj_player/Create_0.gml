@@ -34,7 +34,7 @@ light_add_to_world(point_light)
 _center_y_offset = -8;
 _center_y = y + _center_y_offset;
 _aim_dir = 0;
-_weapon = instance_create_layer(x, y, "instances", obj_weapon);
+_weapon = instance_create_layer(x, y, "instances", obj_crowbar);
 _weap_dis = 50;
 _attack_cooldown = 0
 _damage = 5

@@ -4,7 +4,7 @@
   "name": "sh_blend_light",
   "parent": {
     "name": "Shaders",
-    "path": "folders/Lighting System/Scripts/Shaders.yy",
+    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Shaders.yy",
   },
   "type": 1,
 }

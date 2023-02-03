@@ -5,13 +5,13 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"\"Line Light\"",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Color","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"$FF2C02FF",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Width","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"512",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_light/obj_light.yy",},"value":"\"Line Light\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Color","path":"objects/obj_light/obj_light.yy",},"value":"$FF2C02FF",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Width","path":"objects/obj_light/obj_light.yy",},"value":"512",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Demo/Objects.yy",
+    "name": "Line Light",
+    "path": "folders/Lighting System/Demo/Line Light.yy",
   },
   "parentObjectId": {
     "name": "obj_demo_point_light",
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_line_light",
-    "path": "sprites/spr_line_light/spr_line_light.yy",
+    "name": "spr_demo_line_light",
+    "path": "sprites/spr_demo_line_light/spr_demo_line_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

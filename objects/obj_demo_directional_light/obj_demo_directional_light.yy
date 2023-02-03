@@ -8,11 +8,11 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"\"Directional Light\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_light/obj_light.yy",},"value":"\"Directional Light\"",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Demo/Objects.yy",
+    "name": "Directional Light",
+    "path": "folders/Lighting System/Demo/Directional Light.yy",
   },
   "parentObjectId": {
     "name": "obj_demo_point_light",
@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_directional_light",
-    "path": "sprites/spr_directional_light/spr_directional_light.yy",
+    "name": "spr_demo_directional_light",
+    "path": "sprites/spr_demo_directional_light/spr_demo_directional_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

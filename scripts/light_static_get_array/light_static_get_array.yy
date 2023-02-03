@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Static Storage",
-    "path": "folders/Lighting System/Scripts/Lights/Static Storage.yy",
+    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Lights/Static Storage.yy",
   },
 }

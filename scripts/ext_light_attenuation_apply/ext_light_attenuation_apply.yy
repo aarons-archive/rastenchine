@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Attenuation",
-    "path": "folders/Lighting System/Scripts/Extension Modules/Attenuation.yy",
+    "name": "Extension Modules",
+    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Extension Modules.yy",
   },
 }

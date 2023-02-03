@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Demo/Objects.yy",
+    "name": "Common",
+    "path": "folders/Lighting System/Demo/Common.yy",
   },
   "parentObjectId": null,
   "persistent": false,

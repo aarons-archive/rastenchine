@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Lighting System/Demo/Sprites.yy",
+    "name": "Common",
+    "path": "folders/Lighting System/Demo/Common.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

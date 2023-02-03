@@ -1,3 +1,3 @@
 function play_game() {
-	room_goto(rm_tutorial)
+	room_goto(rm_one)
 }

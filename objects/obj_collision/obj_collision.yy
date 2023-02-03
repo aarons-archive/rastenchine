@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Collisions",
-    "path": "folders/Map/Collisions.yy",
+    "name": "Collision",
+    "path": "folders/Map/Collision.yy",
   },
   "parentObjectId": {
     "name": "obj_shadow_caster",

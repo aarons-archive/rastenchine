@@ -6,11 +6,11 @@ function weapon_attacks() {
 	//attack
 	if _attack_charger >= 10 {_attack_charger = 10}
 	if mouse_check_button(mb_left) && _attack_cooldown = 0 {
-		obj_weapon.sprite_index = spr_weapon_charge_attack
+		obj_crowbar.sprite_index = spr_crowbar_charge_attack
 		_attack_charger += 0.1
 	} if mouse_check_button_released(mb_left) && _attack_charger > 1
 	{
-		obj_weapon.sprite_index = spr_weapon_attack
+		obj_crowbar.sprite_index = spr_crowbar_attack
 		_attack_cooldown = 1
 		alarm[2] = 30
 		global._attack_damage = _attack_charger * _damage + _damage
@@ -18,7 +18,7 @@ function weapon_attacks() {
 	{
 		_attack_cooldown = 1
 		alarm[2] = 30
-		obj_weapon.sprite_index = spr_weapon_attack
+		obj_crowbar.sprite_index = spr_crowbar_attack
 	} 
 }
 function ranged_attacks()

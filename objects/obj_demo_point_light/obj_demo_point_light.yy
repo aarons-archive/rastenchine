@@ -11,12 +11,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Demo/Objects.yy",
+    "name": "Point Light",
+    "path": "folders/Lighting System/Demo/Point Light.yy",
   },
   "parentObjectId": {
-    "name": "obj_demo_base_light",
-    "path": "objects/obj_demo_base_light/obj_demo_base_light.yy",
+    "name": "obj_light",
+    "path": "objects/obj_light/obj_light.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_point_light",
-    "path": "sprites/spr_point_light/spr_point_light.yy",
+    "name": "spr_demo_point_light",
+    "path": "sprites/spr_demo_point_light/spr_demo_point_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,

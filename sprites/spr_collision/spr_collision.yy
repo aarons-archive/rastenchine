@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Collisions",
-    "path": "folders/Map/Collisions.yy",
+    "name": "Collision",
+    "path": "folders/Map/Collision.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

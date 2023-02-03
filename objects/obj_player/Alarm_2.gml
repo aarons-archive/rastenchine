@@ -1,3 +1,3 @@
 _attack_cooldown = 0
-obj_weapon.sprite_index = spr_weapon
+obj_crowbar.sprite_index = spr_crowbar
 global._attack_damage = _damage

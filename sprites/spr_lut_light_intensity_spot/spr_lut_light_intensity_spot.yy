@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Lighting System/Sprites.yy",
+    "name": "LUTs",
+    "path": "folders/Lighting System/LUTs.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

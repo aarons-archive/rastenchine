@@ -5,12 +5,12 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"\"Area Light\"",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_demo_base_light","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"propertyId":{"name":"Light_Color","path":"objects/obj_demo_base_light/obj_demo_base_light.yy",},"value":"$FF02FFAA",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Type","path":"objects/obj_light/obj_light.yy",},"value":"\"Area Light\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"propertyId":{"name":"Light_Color","path":"objects/obj_light/obj_light.yy",},"value":"$FF02FFAA",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Lighting System/Demo/Objects.yy",
+    "name": "Area Light",
+    "path": "folders/Lighting System/Demo/Area Light.yy",
   },
   "parentObjectId": {
     "name": "obj_demo_point_light",
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_area_light",
-    "path": "sprites/spr_area_light/spr_area_light.yy",
+    "name": "spr_demo_area_light",
+    "path": "sprites/spr_demo_area_light/spr_demo_area_light.yy",
   },
   "spriteMaskId": null,
   "visible": false,
