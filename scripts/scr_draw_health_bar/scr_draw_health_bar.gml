@@ -4,14 +4,14 @@ function draw_health_bar() {
 		HEALTH_BAR_BG_Y1,
 		HEALTH_BAR_BG_X2, 
 		HEALTH_BAR_BG_Y2,
-		10, 10,
-		UI_DEFAULT_BG_COLOUR, UI_DEFAULT_BG_COLOUR,
+		UI_ROUNDING, UI_ROUNDING,
+		UI_BG_COLOUR, UI_BG_COLOUR,
 		false
 	)
 	draw_sprite_stretched(
 		spr_heart, 0,
-		HEALTH_BAR_FG_X, 
-		HEALTH_BAR_FG_Y,
+		HEALTH_BAR_X, 
+		HEALTH_BAR_Y,
 		HEALTH_BAR_WIDTH * (_health / MAX_HEALTH), 
 		HEALTH_BAR_HEIGHT
 	)
