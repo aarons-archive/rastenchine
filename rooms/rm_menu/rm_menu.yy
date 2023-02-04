@@ -18,7 +18,7 @@
   ],
   "parent": {
     "name": "Menu",
-    "path": "folders/Menu.yy",
+    "path": "folders/GUI/Menu.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

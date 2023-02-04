@@ -46,4 +46,4 @@ sub_pages = [video_settings, audio_settings, gameplay_settings]
 selected_sub_page = undefined
 
 instances = []
-render_page()
+draw_page()

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "UI",
-    "path": "folders/Scripts/UI.yy",
+    "path": "folders/GUI/UI.yy",
   },
 }

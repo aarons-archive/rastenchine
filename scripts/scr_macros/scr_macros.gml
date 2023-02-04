@@ -23,7 +23,7 @@
 #region Health Bar
 #macro HEALTH_BAR_SPRITE       spr_heart
 #macro HEALTH_BAR_SPRITE_COUNT 10
-#macro HEALTH_BAR_WIDTH        sprite_get_width(HEALTH_BAR_SPRITE) * HEALTH_BAR_SPRI
+#macro HEALTH_BAR_WIDTH        sprite_get_width(HEALTH_BAR_SPRITE) * HEALTH_BAR_SPRITE_COUNT
 #macro HEALTH_BAR_HEIGHT       sprite_get_height(HEALTH_BAR_SPRITE)
 //bar background
 #macro HEALTH_BAR_BG_X1 UI_X2 - HEALTH_BAR_WIDTH - (UI_PADDING * 2) + UI_TUNING

@@ -17,4 +17,15 @@ function draw_stamina_bar() {
 		UI_BG_ACTIVE_COLOUR, UI_BG_ACTIVE_COLOUR,
 		false
 	)
+	if (_stamina_lock == true) {
+		draw_set_valign(fa_top)
+		draw_set_halign(fa_left)
+		draw_text_color(
+			STAMINA_BAR_BG_X1, 
+			STAMINA_BAR_BG_Y2 + UI_MARGIN, 
+			"EXAHUSTED!",	
+			c_green, c_green, c_green, c_green, 
+			1
+		)
+	}
 }

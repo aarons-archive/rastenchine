@@ -1,4 +1,4 @@
-function render_page() {
+function draw_page() {
 	
 	draw_set_font(fnt_menu)
 	draw_set_halign(fa_left)

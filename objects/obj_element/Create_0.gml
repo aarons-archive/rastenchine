@@ -3,5 +3,5 @@ Y1 = y
 X2 = x + WIDTH
 Y2 = y + HEIGHT 
 
-_colour = UI_DEFAULT_BG_COLOUR
+_colour = UI_BG_COLOUR
 
