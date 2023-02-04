@@ -1,2 +1,2 @@
-draw_ui_healthbar()
-draw_ui_debug()
+draw_health_bar()
+draw_stamina_bar()

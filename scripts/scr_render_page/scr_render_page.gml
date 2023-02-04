@@ -1,11 +1,3 @@
-#macro MENU_START_X 20
-#macro PAGE_START_Y 20
-#macro SUB_PAGE_START_Y 100
-#macro ELEMENT_PADDING 20
-#macro ELEMENT_MARGIN 5
-#macro ELEMENT_HEIGHT string_height("HEIGHT") + ELEMENT_PADDING
-#macro ELEMENT_FONT_TUNING 2
-
 function render_page() {
 	
 	draw_set_font(fnt_menu)

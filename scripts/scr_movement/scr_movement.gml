@@ -2,7 +2,7 @@ function do_run() {
 	_stamina = min(_stamina, MAX_STAMINA)
 	if _stamina < 1 {
 		_stamina_lock = true;
-		alarm[0] = 120;
+		alarm[0] = 120
 	}
 	if keyboard_check(vk_shift) && _stamina > 1 && _stamina_lock == false {
 		_speed = RUN_SPEED

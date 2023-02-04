@@ -1,24 +1,4 @@
-#macro BAR_WIDTH 200
-#macro BAR_HEIGHT 50
-#macro BAR_MARGIN 10
-
-#macro VIEW_WIDTH camera_get_view_width(view_camera[0])
-#macro VIEW_HEIGHT camera_get_view_height(view_camera[0])
-
-#macro HEALTH_BAR_X1 VIEW_WIDTH - BAR_MARGIN - BAR_WIDTH
-#macro HEALTH_BAR_Y1 BAR_MARGIN
-#macro HEALTH_BAR_X2 VIEW_WIDTH - BAR_MARGIN
-#macro HEALTH_BAR_Y2 BAR_MARGIN + BAR_HEIGHT
-
-#macro STAMINA_BAR_X1 HEALTH_BAR_X1
-#macro STAMINA_BAR_Y1 HEALTH_BAR_Y1 + BAR_HEIGHT + BAR_MARGIN
-#macro STAMINA_BAR_X2 HEALTH_BAR_X2 
-#macro STAMINA_BAR_Y2 HEALTH_BAR_Y2 + BAR_MARGIN + BAR_HEIGHT
-
-function draw_ui_healthbar() {
-	draw_set_valign(fa_top)
-	draw_set_halign(fa_left)
-	
+function draw_healthbar() {
 	draw_healthbar(
 		HEALTH_BAR_X1, HEALTH_BAR_Y1,
 		HEALTH_BAR_X2, HEALTH_BAR_Y2,
@@ -34,6 +14,8 @@ function draw_ui_healthbar() {
 		0, true, true
 	)
 	if (_stamina_lock == true) {
+		draw_set_valign(fa_top)
+		draw_set_halign(fa_left)
 		draw_text_color(
 			STAMINA_BAR_X1, 
 			STAMINA_BAR_Y1 + BAR_HEIGHT + BAR_MARGIN, 

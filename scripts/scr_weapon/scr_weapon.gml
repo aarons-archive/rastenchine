@@ -53,7 +53,7 @@ function ranged_attacks()
 		}
 	}*/
 }
-function draw_my_weapon() {
+function draw_weapon() {
 	var _depth = (_aim_dir > 90 && _aim_dir < 270);
 	_weapon.depth = depth + _depth;
 	if !mouse_check_button_pressed(mb_left){_weapon.image_angle = _aim_dir;}

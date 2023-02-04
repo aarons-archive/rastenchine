@@ -43,7 +43,8 @@ if _heal_counter >= 100
 	_heal_counter = 0
 }
 #endregion
-#region Update Lighting
+
+#region Lighting
 flash_light[| eLight.X] = x
 flash_light[| eLight.Y] = y
 flash_light[| eLight.Direction] = point_direction(x, y, mouse_x, mouse_y)
