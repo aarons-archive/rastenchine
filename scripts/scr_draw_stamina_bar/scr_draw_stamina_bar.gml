@@ -18,8 +18,8 @@ function draw_stamina_bar() {
 		false
 	)
 	if (_stamina_lock == true) {
-		draw_set_valign(fa_top)
 		draw_set_halign(fa_left)
+		draw_set_valign(fa_top)
 		draw_text_color(
 			STAMINA_BAR_BG_X1, 
 			STAMINA_BAR_BG_Y2 + UI_MARGIN, 

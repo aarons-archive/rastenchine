@@ -9,7 +9,7 @@ draw_rectangle_colour(
 )
 draw_text_colour(
 	X1 + (ELEMENT_PADDING / 2), 
-	Y1 + (HEIGHT / 2) + ELEMENT_FONT_TUNING, 
+	Y1 + (HEIGHT / 2) + UI_TUNING, 
 	TEXT,
 	UI_FG_COLOR, UI_FG_COLOR, UI_FG_COLOR, UI_FG_COLOR,
 	1

@@ -5,7 +5,7 @@ function draw_page() {
 	draw_set_valign(fa_middle)
 	
 	var page = pages[selected_page]
-	var page_x = MENU_START_X
+	var page_x = MENU_X
 	for (var i = 0; i < array_length(page); i++) {
 		var element = page[i]
 		var text = element[0]
@@ -14,7 +14,7 @@ function draw_page() {
 			instances, 
 			instance_create_layer(
 				page_x, 
-				PAGE_START_Y,
+				MENU_PAGE_Y,
 				"Instances",
 				obj_element,
 				{
@@ -41,8 +41,8 @@ function draw_page() {
 			array_push(
 				instances, 
 				instance_create_layer(
-					MENU_START_X, 
-					SUB_PAGE_START_Y + ((ELEMENT_HEIGHT + ELEMENT_MARGIN) * i),
+					MENU_X, 
+					MENU_SUB_PAGE_Y + ((ELEMENT_HEIGHT + ELEMENT_MARGIN) * i),
 					"Instances", 
 					obj_element,
 					{
