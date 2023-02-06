@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Gun",
-    "path": "folders/Inventory/Items/Weapons/Gun.yy",
+    "path": "folders/Inventory/Gun.yy",
   },
   "parentObjectId": null,
   "persistent": false,
