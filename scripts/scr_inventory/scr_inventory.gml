@@ -3,22 +3,30 @@ function Weapon() : Item() constructor {}
 function Tool() : Item() constructor {}
 
 function Crowbar() constructor {
-	static Draw = function() {
+	static draw = function() {
 		draw_sprite(spr_crowbar, 0, obj_player.x, obj_player.y)
 	}
 }
 function Plank() constructor {
-	static Draw = function() {
+	static draw = function() {
 		draw_sprite(spr_plank, 0, obj_player.x, obj_player.y)
+	}
+}
+function Gun() constructor {
+	static draw = function() {
+		draw_sprite(spr_gun, 0, obj_player.x, obj_player.y)
 	}
 }
 
 function Inventory() constructor {
-	inventory = [new Crowbar(), new Plank()]
+	items = [new Crowbar(), new Plank(), new Gun()]
 	selected_item = 0
-	static Draw = function() {
-		var _item = inventory[| selected_item]
-		_item.Draw()
+	static draw = function() {
+		var _item = items[selected_item]
+		_item.draw()
+	}
+	static change_item = function(index) {
+		selected_item = index
 	}
  }
  

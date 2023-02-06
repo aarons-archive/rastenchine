@@ -33,6 +33,9 @@ light_add_to_world(flash_light)
 point_light = light_create_point(x, y, 64000, $FFFFFFFF, 250, 2)
 light_add_to_world(point_light)
 
+// Inventory
+_inventory = new Inventory()
+
 // Weapon
 _weapon = instance_create_layer(x, y, "instances", obj_crowbar)
 _center_y_offset = -8;
