@@ -24,6 +24,7 @@ function weapon_attacks() {
 function ranged_attacks()
 {
 
+
 	//#region Shooting
 	//if shootTimer > 0 shootTimer--;
 //	if reloadTimer > 0 reloadTimer--;
