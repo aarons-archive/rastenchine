@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Crowbar",
-    "path": "folders/Inventory/Items/Crowbar.yy",
+    "path": "folders/Inventory/Items/Weapon/Crowbar.yy",
   },
   "parentObjectId": null,
   "persistent": false,

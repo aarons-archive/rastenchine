@@ -28,8 +28,9 @@
     {"name":"Scripts","order":1,"path":"folders/Scripts.yy",},
     {"name":"Enemies","order":2,"path":"folders/Scripts/Enemies.yy",},
     {"name":"Player","order":1,"path":"folders/Scripts/Player.yy",},
-    {"name":"Gun","order":1,"path":"folders/Inventory/Items/Gun.yy",},
+    {"name":"Gun","order":2,"path":"folders/Inventory/Items/Weapon/Gun.yy",},
     {"name":"Menu","order":4,"path":"folders/GUI/Menu.yy",},
+    {"name":"Plank","order":1,"path":"folders/Inventory/Items/Weapon/Plank.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_element","order":3,"path":"objects/obj_element/obj_element.yy",},
