@@ -19,17 +19,7 @@ if keyboard_check_pressed(ord("2"))
 if _melee_activate == 1
 {weapon_attacks()}
 if _range_activate == 1
-{
-	_center_y = other.y + _center_y_offset
-	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
-	if mouse_check_button_pressed(mb_left)
-	{
-	//create bullet
-	var _bulletInst = instance_create_layer(x + _weap_dis, _center_y + _weap_dis, "instances", obj_bullet);
-	_bulletInst.image_angle = _aim_dir
-	_bulletInst.speed = 3
-	}//ranged_attacks()}
-}
+{ranged_attacks()}
 
 #region Healing
 if _health > MAX_HEALTH {_health = MAX_HEALTH}
