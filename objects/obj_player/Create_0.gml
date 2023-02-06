@@ -48,3 +48,4 @@ global._attack_damage = 0
 _attack_charger = 0
 _melee_activate = 1
 _range_activate = 0
+_bullet_spread = 7;
