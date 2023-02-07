@@ -1,1 +1,1 @@
-_inventory.change_item(_inventory.selected_item - 1)
+_inventory.change_selected_item(_inventory.selected_item - 1)

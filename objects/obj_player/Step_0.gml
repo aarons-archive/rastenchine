@@ -6,20 +6,14 @@ do_movement(
 )
 
 
-
-if keyboard_check_pressed(ord("1"))
-{ _melee_activate = 1
-  _range_activate = 0
+if (_x_movement > 1) {
+	image_angle = 0
+	image_yscale = 1
 }
-if keyboard_check_pressed(ord("2"))
-{_melee_activate = 0
- _range_activate = 1
+if (_x_movement < 0) {
+	image_angle = 180
+	image_yscale = -1
 }
-
-if _melee_activate == 1
-{weapon_attacks()}
-if _range_activate == 1
-{ranged_attacks()}
 
 #region Healing
 if _health > MAX_HEALTH {_health = MAX_HEALTH}

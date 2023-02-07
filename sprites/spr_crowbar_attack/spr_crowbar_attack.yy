@@ -29,8 +29,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Inventory/Crowbar/Sprites.yy",
+    "name": "Crowbar",
+    "path": "folders/Inventory/Crowbar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

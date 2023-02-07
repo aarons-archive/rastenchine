@@ -35,17 +35,3 @@ light_add_to_world(point_light)
 
 // Inventory
 _inventory = new Inventory()
-
-// Weapon
-_weapon = instance_create_layer(x, y, "instances", obj_crowbar)
-_center_y_offset = -8;
-_center_y = y + _center_y_offset;
-_aim_dir = 0;
-_weap_dis = 50;
-_attack_cooldown = 0
-_damage = 5
-global._attack_damage = 0
-_attack_charger = 0
-_melee_activate = 1
-_range_activate = 0
-_bullet_spread = 7;
