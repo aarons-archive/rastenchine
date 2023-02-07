@@ -5,6 +5,7 @@ do_movement(
 	(keyboard_check(global.DOWN_KEY) - keyboard_check(global.UP_KEY))
 )
 
+_inventory.step()
 
 if (_x_movement > 1) {
 	image_angle = 0

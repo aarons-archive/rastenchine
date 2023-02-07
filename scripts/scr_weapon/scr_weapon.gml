@@ -1,34 +1,35 @@
 function weapon_attacks() {
 	//attack
-	if _attack_charger >= 10 {_attack_charger = 10}
-	if mouse_check_button(mb_left) && _attack_cooldown = 0 {
-		obj_crowbar.sprite_index = spr_crowbar_charge_attack
+	if _attack_charger >= 10 {
+		_attack_charger = 10
+	}
+	if (mouse_check_button(mb_left) && _attack_cooldown = 0) {
+		_instance.sprite_index = spr_crowbar_charge_attack
 		_attack_charger += 0.1
-	} if mouse_check_button_released(mb_left) && _attack_charger > 1
-	{
-		obj_crowbar.sprite_index = spr_crowbar_attack
+	} 
+	if (mouse_check_button_released(mb_left) && _attack_charger > 1) {
+		_instance.sprite_index = spr_crowbar_attack
 		_attack_cooldown = 1
-		alarm[2] = 30
+		obj_player.alarm[2] = 30
 		global._attack_damage = _attack_charger * _damage + _damage
-	} if mouse_check_button_pressed(mb_left) && _attack_cooldown = 0 && _attack_charger < 1
-	{
+	} 
+	if (mouse_check_button_pressed(mb_left) && _attack_cooldown = 0 && _attack_charger < 1) {
 		_attack_cooldown = 1
-		alarm[2] = 30
-		obj_crowbar.sprite_index = spr_crowbar_attack
+		obj_player.alarm[2] = 30
+		_instance.sprite_index = spr_crowbar_attack
 	} 
 }
 function ranged_attacks()
 {
-	_center_y = other.y + _center_y_offset
-	_aim_dir = point_direction(other.x, _center_y, mouse_x, mouse_y)
+	_center_y = obj_player.y + _center_y_offset
+	_aim_dir = point_direction(obj_player.x, _center_y, mouse_x, mouse_y)
 	_shoot_dir = _aim_dir + irandom_range(-_bullet_spread,_bullet_spread);
 	var _xOffset = lengthdir_x(_center_y + _weap_dis,_shoot_dir);
 	var _yOffset = lengthdir_y(_center_y + _weap_dis,_shoot_dir);
-	if mouse_check_button_pressed(mb_left)
-	{
+	if mouse_check_button_pressed(mb_left) {
 		//create bullet
-		var _dir = point_direction(x, y, mouse_x, mouse_y);
-		var _bulletInst = instance_create_layer(x + _xOffset, y + _yOffset, "instances", obj_bullet);
+		var _dir = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y);
+		var _bulletInst = instance_create_layer(obj_player.x + _xOffset, obj_player.y + _yOffset, "instances", obj_bullet);
 		_bulletInst.speed = 3
 		_bulletInst.image_angle = _dir
 		_bulletInst.direction = _dir
