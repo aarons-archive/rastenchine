@@ -8,14 +8,14 @@ _heal_cooldown = false
 _iframes = 0
 
 // Stamina
-MAX_STAMINA = 100
+MAX_STAMINA = 150
 _stamina = MAX_STAMINA
 _stamina_lock = false
 
 // Movement
 WALK_SPEED = 5
-RUN_SPEED = 10
-ROLL_SPEED = 6
+RUN_SPEED = 7
+ROLL_SPEED = 8
 _speed = WALK_SPEED
 
 // Movement Calculation

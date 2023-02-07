@@ -40,14 +40,14 @@ function do_movement(horizontal_input, vertical_input) {
 		_y_movement = 0
 	}
 	
-	if (place_meeting(x + _x_movement, y, obj_collision)) {
-		while (not place_meeting(x + sign(_x_movement), y, obj_collision)) {
+	if (place_meeting(x + _x_movement, y, obj_player_collision)) {
+		while (not place_meeting(x + sign(_x_movement), y, obj_player_collision)) {
 			x += sign(_x_movement)
 		}
 		_x_movement = 0
 	}
-	if (place_meeting(x, y + _y_movement, obj_collision)) {
-		while (not place_meeting(x, y + sign(_y_movement), obj_collision)) {
+	if (place_meeting(x, y + _y_movement, obj_player_collision)) {
+		while (not place_meeting(x, y + sign(_y_movement), obj_player_collision)) {
 			y += sign(_y_movement)
 		}
 		_y_movement = 0
