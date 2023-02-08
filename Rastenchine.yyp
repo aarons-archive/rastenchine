@@ -82,7 +82,7 @@
     {"id":{"name":"scr_change_page","path":"scripts/scr_change_page/scr_change_page.yy",},"order":0,},
     {"id":{"name":"tri_direction","path":"scripts/tri_direction/tri_direction.yy",},"order":0,},
     {"id":{"name":"spr_enemy_chasing","path":"sprites/spr_enemy_chasing/spr_enemy_chasing.yy",},"order":0,},
-    {"id":{"name":"scr_draw_debug_values","path":"scripts/scr_draw_debug_values/scr_draw_debug_values.yy",},"order":0,},
+    {"id":{"name":"scr_draw_debug","path":"scripts/scr_draw_debug/scr_draw_debug.yy",},"order":0,},
     {"id":{"name":"scr_plank","path":"scripts/scr_plank/scr_plank.yy",},"order":0,},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"order":0,},
     {"id":{"name":"scr_change_difficulty","path":"scripts/scr_change_difficulty/scr_change_difficulty.yy",},"order":0,},

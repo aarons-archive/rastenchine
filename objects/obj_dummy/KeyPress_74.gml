@@ -1,2 +1,2 @@
-_dummy_health += 10
+_health += 10
 

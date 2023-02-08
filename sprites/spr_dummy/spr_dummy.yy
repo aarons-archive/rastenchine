@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "spr_dummy",
   "bbox_bottom": 63,
-  "bbox_left": 10,
-  "bbox_right": 51,
+  "bbox_left": 0,
+  "bbox_right": 41,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 42,
 }

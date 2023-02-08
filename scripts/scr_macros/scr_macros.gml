@@ -1,3 +1,5 @@
+#macro DEBUG true
+
 // camera view
 #macro VIEW_WIDTH  camera_get_view_width(view_camera[0])
 #macro VIEW_HEIGHT camera_get_view_height(view_camera[0])
@@ -31,6 +33,7 @@
 #macro HEALTH_BAR_BG_Y1  UI_Y1 - UI_TUNING
 #macro HEALTH_BAR_BG_X2  UI_X2 
 #macro HEALTH_BAR_BG_Y2  HEALTH_BAR_BG_Y1 + HEALTH_BAR_HEIGHT + (UI_PADDING * 2) - UI_TUNING
+#macro HEALTH_BAR_MIDDLE HEALTH_BAR_BG_Y1 + (HEALTH_BAR_HEIGHT / 2) + UI_PADDING - UI_TUNING
 // bar sprite
 #macro HEALTH_BAR_X      HEALTH_BAR_BG_X1 + UI_PADDING
 #macro HEALTH_BAR_Y      HEALTH_BAR_BG_Y1 + UI_PADDING
@@ -46,6 +49,7 @@
 #macro STAMINA_BAR_BG_Y1  HEALTH_BAR_BG_Y2 + UI_MARGIN
 #macro STAMINA_BAR_BG_X2  UI_X2
 #macro STAMINA_BAR_BG_Y2  STAMINA_BAR_BG_Y1 + STAMINA_BAR_HEIGHT + (UI_PADDING * 2)
+#macro STAMINA_BAR_MIDDLE STAMINA_BAR_BG_Y1 + (STAMINA_BAR_HEIGHT / 2) + UI_PADDING
 // bar foreground
 #macro STAMINA_BAR_FG_X1  STAMINA_BAR_BG_X1 + UI_PADDING
 #macro STAMINA_BAR_FG_Y1  STAMINA_BAR_BG_Y1 + UI_PADDING
@@ -55,8 +59,8 @@
 
 #region Menu
 // spacing
-#macro ELEMENT_PADDING 15
 #macro ELEMENT_MARGIN  5
+#macro ELEMENT_PADDING 15
 // sizes
 #macro ELEMENT_HEIGHT  string_height("HEIGHT") + ELEMENT_PADDING
 // positions
