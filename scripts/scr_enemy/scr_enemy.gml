@@ -1,7 +1,7 @@
 function check_for_player() {
 	var _dis = distance_to_object(obj_player);
 	//can start chasing? or ready for attack
-	if (_dis <= _agro_radius && _dis > _attack_radius) {
+	if (_dis <= _agro_radius && _dis > _attack_radius) || _agro == true{
 		//should calc path?
 		if (_path_timer-- <= 0) {
 			//reset timer

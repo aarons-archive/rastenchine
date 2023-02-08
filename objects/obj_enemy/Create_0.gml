@@ -5,7 +5,7 @@ _invincible = 0
 _vision_radius = 500
 _attack_radius = 100
 _agro_radius = 300
-
+_agro = false
 
 global._enemy_damage = 10
 _idle_movement = 0
