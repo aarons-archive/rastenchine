@@ -97,6 +97,7 @@
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"order":0,},
     {"id":{"name":"rm_demo_point_light","path":"rooms/rm_demo_point_light/rm_demo_point_light.yy",},"order":0,},
     {"id":{"name":"light_create_extension","path":"scripts/light_create_extension/light_create_extension.yy",},"order":0,},
+    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"order":0,},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},"order":0,},
     {"id":{"name":"obj_lighting_initializer","path":"objects/obj_lighting_initializer/obj_lighting_initializer.yy",},"order":0,},
     {"id":{"name":"obj_player_collision","path":"objects/obj_player_collision/obj_player_collision.yy",},"order":0,},
