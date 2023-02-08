@@ -29,8 +29,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Crowbar",
-    "path": "folders/Inventory/Crowbar.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Items/Weapons/Crowbar/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

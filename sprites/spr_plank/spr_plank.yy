@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Plank",
-    "path": "folders/Inventory/Plank.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Items/Weapons/Plank/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
