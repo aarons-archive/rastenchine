@@ -23,4 +23,12 @@ function draw_debug_values() {
 		c_red, c_red, c_red, c_red,
 		1
 	)
+	if room_light != undefined {
+	draw_text_color(
+		200, 200, 
+		room_light[| eLight.Range], 
+		c_green, c_green, c_green, c_green, 
+		1
+	)
+	}
 }

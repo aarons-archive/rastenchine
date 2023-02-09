@@ -1,0 +1,1 @@
+light_create_point(x, y, 64000, $FFFFFFFF, 1000, 10);

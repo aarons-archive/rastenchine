@@ -45,10 +45,23 @@ point_light[| eLight.Y] = y
 point_light[| eLight.Flags] |= eLightFlags.Dirty
 #endregion
 
-if (place_meeting(x,y,obj_room_collision) && room_light == undefined)
+room_col = instance_place(x, y, obj_room_collision)
+if (room_col != noone && room_light == undefined)
 {
-	room_light = light_create_point(other.x, other.y, 64000, $FFFFFFFF, 250, 2)	
+	room_light = light_create_point(room_col.x, room_col.y, 64000, $FFFFFFFF, 0, 4);
+	light_add_to_world(room_light)
 }
-else {
-	room_light = undefined
+else if (room_col == noone && room_light != undefined)
+{
+	if (room_light[| eLight.Range] > 1) {
+		room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 0, 0.1)
+	}
+	else {
+		light_remove_from_world(room_light)
+		light_destroy(room_light)
+		room_light = undefined
+	}
+}
+if (room_light != undefined) {
+	room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 500, 0.1)
 }
