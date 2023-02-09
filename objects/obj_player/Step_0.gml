@@ -53,8 +53,8 @@ if (room_col != noone && room_light == undefined)
 }
 else if (room_col == noone && room_light != undefined)
 {
-	if (room_light[| eLight.Range] > 1) {
-		room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 0, 0.1)
+	if (room_light[| eLight.Range] > 180) {
+		room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 0, 0.3)
 	}
 	else {
 		light_remove_from_world(room_light)
