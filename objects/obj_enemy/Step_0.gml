@@ -21,7 +21,6 @@ if ( collision_circle(x, y, _vision_radius, obj_player, false, false) && _idle_m
 	alarm[1] = 60
 }
 #endregion
-show_debug_message(_agro)
 #region Chasing/hunting and attack
 if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _hp > 0) || _agro == true && _hp > 0
 {

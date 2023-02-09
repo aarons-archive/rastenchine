@@ -21,9 +21,13 @@ function draw_debug() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	
-	var _names = "Speed: \nHealing Packs:"
+	var _names = "Speed: \nHealing Packs: "
 	var _values = string(_speed) + "\n" + string(_healing_pack)
 	
+	if (is_instanceof(_inventory.item, Crowbar)) {
+		_names += "\nCooldown: \nCharge: "
+		_values += "\n" + string(_inventory.item._cooldown) + "\n" + string(_inventory.item._charge)
+	}
 	
 	draw_text_color( 
 		UI_X1, UI_Y1, 
