@@ -7,11 +7,6 @@ function Weapon() : Item() constructor {
 	_center_y = obj_player.y + _center_y_offset
 	_aim_dir = 0
 	_weap_dis = 50
-	_attack_cooldown = 0
-	_damage = 5
-	global._attack_damage = 0
-	_attack_charger = 0
-	_bullet_spread = 7
 	
 	static draw = function() {
 		_center_y = obj_player.y + _center_y_offset

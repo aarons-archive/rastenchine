@@ -13,10 +13,9 @@ function Gun() : Weapon() constructor {
 	static attack = function() {
 		_center_y = obj_player.y + _center_y_offset
 		_aim_dir = point_direction(obj_player.x, _center_y, mouse_x, mouse_y)
-		_shoot_dir = _aim_dir + irandom_range(-_bullet_spread,_bullet_spread)
 		if (keyboard_check_pressed(ord("R"))) {
 			_reloading = true
-			obj_player.alarm[5] = 120
+			_instance.alarm[1] = 120
 		}
 		if (mouse_check_button_pressed(mb_left) && _bullets > 0 && _reloading = false) {
 			_bullets -= 1

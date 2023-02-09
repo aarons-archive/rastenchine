@@ -1,1 +1,0 @@
-_inventory.item.alarm_one()
