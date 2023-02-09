@@ -13,7 +13,7 @@ if ( collision_circle(x, y, _vision_radius, obj_player, false, false) && _idle_m
 	_hp > 0 && !collision_circle(x, y, _agro_radius, obj_player, false, false))
 {
 	sprite_index = spr_enemy
-	alarm[3] = 60
+	alarm[3] = 120
 	_speed = SPEED_MAX
 	x += _speed * irandom_range(-3,3)
 	y += _speed * irandom_range(-3,3)
@@ -23,13 +23,15 @@ if ( collision_circle(x, y, _vision_radius, obj_player, false, false) && _idle_m
 #endregion
 show_debug_message(_agro)
 #region Chasing/hunting and attack
-if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _hp > 0) || _agro == true
+if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _hp > 0) || _agro == true && _hp > 0
 {
 	_agro = true
-	if _agro = true
+	sprite_index = spr_enemy_chasing
+	if _agro == true
 	{
 		check_for_player()
-		sprite_index = spr_enemy_chasing	
+		if obj_player.x < x {image_xscale = -1 }
+		else{image_xscale = 1} 
 	}
 	#region attacking
 	if (collision_circle(x, y, _attack_radius, obj_player, false, false) && _hp > 0) {
