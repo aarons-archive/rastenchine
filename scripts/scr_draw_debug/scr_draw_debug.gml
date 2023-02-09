@@ -21,9 +21,11 @@ function draw_debug() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	
-	var _names = "Speed: \nHealing Packs: "
+	var _names = "Speed: \nHealing Packs:"
 	var _values = string(_speed) + "\n" + string(_healing_pack)
-	draw_text_color(
+	
+	
+	draw_text_color( 
 		UI_X1, UI_Y1, 
 		_names, 
 		c_white, c_white, c_white, c_white,

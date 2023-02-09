@@ -1,3 +1,15 @@
+enum player_states {
+	idle,
+	moving,
+	dodging,	
+}
+
+switch (_state) {
+	case player_states.idle:
+		
+		break
+}
+
 do_run()
 do_roll()
 do_movement(

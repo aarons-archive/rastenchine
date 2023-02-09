@@ -1,3 +1,6 @@
+// State
+_state = player_states.idle
+
 // Health
 MAX_HEALTH = 100
 MIN_HEALTH = 0
@@ -19,6 +22,8 @@ ROLL_SPEED = 8
 _speed = WALK_SPEED
 
 // Movement Calculation
+_horizontal_input = 0
+_vertical_input = 0
 _direction = 0
 _x_movement = 0
 _y_movement = 0
