@@ -33,5 +33,7 @@ light_add_to_world(flash_light)
 point_light = light_create_point(x, y, 64000, $FFFFFFFF, 250, 2)
 light_add_to_world(point_light)
 
+room_light = undefined
+
 // Inventory
 _inventory = new Inventory()

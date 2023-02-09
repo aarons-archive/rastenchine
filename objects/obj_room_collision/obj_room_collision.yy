@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_player_collision",
+  "name": "obj_room_collision",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,9 +26,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_collision",
-    "path": "sprites/spr_player_collision/spr_player_collision.yy",
+    "name": "spr_room_collision",
+    "path": "sprites/spr_room_collision/spr_room_collision.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

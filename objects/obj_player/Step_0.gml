@@ -44,3 +44,11 @@ point_light[| eLight.X] = x
 point_light[| eLight.Y] = y
 point_light[| eLight.Flags] |= eLightFlags.Dirty
 #endregion
+
+if (place_meeting(x,y,obj_room_collision) && room_light == undefined)
+{
+	room_light = light_create_point(other.x, other.y, 64000, $FFFFFFFF, 250, 2)	
+}
+else {
+	room_light = undefined
+}
