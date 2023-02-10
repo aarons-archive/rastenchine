@@ -1,6 +1,7 @@
-HP_MAX = 100
-_hp = HP_MAX
-_invincible = 0
+MAX_HEALTH = 100
+_health = MAX_HEALTH
+
+invincible = false
 
 _vision_radius = 500
 _attack_radius = 100

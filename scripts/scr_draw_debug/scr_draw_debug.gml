@@ -24,9 +24,13 @@ function draw_debug() {
 	var _names = "Speed: \nHealing Packs: "
 	var _values = string(_speed) + "\n" + string(_healing_pack)
 	
-	if (is_instanceof(_inventory.item, Crowbar)) {
-		_names += "\nCooldown: \nCharge: "
-		_values += "\n" + string(_inventory.item._cooldown) + "\n" + string(_inventory.item._charge)
+	if (is_instanceof(inventory.item, Crowbar)) {
+		_names += "\nState: \nCharge: \nDamage: "
+		_values += (
+			"\n" + string(inventory.item.state) + 
+			"\n" + string(inventory.item.charge) + 
+			"\n" + string(inventory.item.damage)
+		)
 	}
 	
 	draw_text_color( 

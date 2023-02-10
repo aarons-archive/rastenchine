@@ -1,3 +1,1 @@
-with (obj_player) {
-	_inventory.item.alarm_three()
-}
+obj_player.inventory.item.alarm_three()

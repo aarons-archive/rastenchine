@@ -1,5 +1,5 @@
 #region death
-if (_hp < 1) {
+if (_health < 1) {
 	_speed = 0
 	sprite_index = spr_enemy_death
 	if (image_index == 8) {
@@ -10,7 +10,7 @@ if (_hp < 1) {
 
 #region idle
 if ( collision_circle(x, y, _vision_radius, obj_player, false, false) && _idle_movement = 0 && 
-	_hp > 0 && !collision_circle(x, y, _agro_radius, obj_player, false, false))
+	_health > 0 && !collision_circle(x, y, _agro_radius, obj_player, false, false))
 {
 	sprite_index = spr_enemy
 	alarm[3] = 120
@@ -22,7 +22,7 @@ if ( collision_circle(x, y, _vision_radius, obj_player, false, false) && _idle_m
 }
 #endregion
 #region Chasing/hunting and attack
-if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _hp > 0) || _agro == true && _hp > 0
+if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _health > 0) || _agro == true && _health > 0
 {
 	_agro = true
 	sprite_index = spr_enemy_chasing
@@ -33,7 +33,7 @@ if (collision_circle(x, y, _agro_radius, obj_player, false, false) && _hp > 0) |
 		else{image_xscale = 1} 
 	}
 	#region attacking
-	if (collision_circle(x, y, _attack_radius, obj_player, false, false) && _hp > 0) {
+	if (collision_circle(x, y, _attack_radius, obj_player, false, false) && _health > 0) {
 		_speed = 0
 		alarm[2] = 30
 		sprite_index = spr_enemy_attack

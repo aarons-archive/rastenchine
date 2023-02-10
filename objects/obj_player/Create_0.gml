@@ -41,4 +41,4 @@ light_add_to_world(point_light)
 room_light = undefined
 
 // Inventory
-_inventory = new Inventory()
+inventory = new Inventory()
