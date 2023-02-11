@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/GUI/UI.yy",
+    "name": "Stamina Bar",
+    "path": "folders/GUI/UI/Stamina Bar.yy",
   },
 }

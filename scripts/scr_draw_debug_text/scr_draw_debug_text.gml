@@ -1,4 +1,4 @@
-function draw_debug() {
+function draw_debug_text() {
 
 	draw_set_halign(fa_right)
 	draw_set_valign(fa_middle)

@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/GUI/Menu/Scripts.yy",
+    "name": "Element Actions",
+    "path": "folders/GUI/Menu/Element Actions.yy",
   },
 }
