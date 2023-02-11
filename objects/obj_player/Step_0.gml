@@ -1,21 +1,13 @@
-enum player_states {
-	idle,
-	moving,
-	dodging,	
-}
-
-switch (_state) {
+switch (state) {
 	case player_states.idle:
-		
+		horizontal_input = keyboard_check(global.RIGHT_KEY) - keyboard_check(global.LEFT_KEY)
+		vertical_input = keyboard_check(global.DOWN_KEY) - keyboard_check(global.UP_KEY)
 		break
 }
 
-do_run()
-do_roll()
-do_movement(
-	(keyboard_check(global.RIGHT_KEY) - keyboard_check(global.LEFT_KEY)), 
-	(keyboard_check(global.DOWN_KEY) - keyboard_check(global.UP_KEY))
-)
+run()
+roll()
+movement()
 
 inventory.step()
 
@@ -48,14 +40,14 @@ if _heal_counter >= 100
 #endregion
 
 #region Lighting
+point_light[| eLight.X] = x
+point_light[| eLight.Y] = y
+point_light[| eLight.Flags] |= eLightFlags.Dirty
+
 flash_light[| eLight.X] = x
 flash_light[| eLight.Y] = y
 flash_light[| eLight.Direction] = point_direction(x, y, mouse_x, mouse_y)
 flash_light[| eLight.Flags] |= eLightFlags.Dirty
-		
-point_light[| eLight.X] = x
-point_light[| eLight.Y] = y
-point_light[| eLight.Flags] |= eLightFlags.Dirty
 #endregion
 
 room_col = instance_place(x, y, obj_room_collision)

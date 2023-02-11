@@ -1,4 +1,4 @@
-function do_run() {
+function run() {
 	_stamina = min(_stamina, MAX_STAMINA)
 	if _stamina < 1 {
 		_stamina_lock = true;
@@ -14,8 +14,9 @@ function do_run() {
 	}
 }
 
-function do_roll() {
+function roll() {
 	if (keyboard_check_pressed(vk_space) && _is_rolling == false) {
+		state = player_states.rolling
 		_is_rolling = true
 		alarm[1] = 30
 	}
@@ -26,7 +27,7 @@ function do_roll() {
 	}
 }
 
-function do_movement(horizontal_input, vertical_input) {
+function movement() {
 
 	if (horizontal_input != 0 || vertical_input != 0) {
 		if (_is_rolling == false) {

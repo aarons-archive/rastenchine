@@ -9,24 +9,24 @@ switch(Light_Type) {
 		
 	case "Spot Light":
 		light = light_create_spot(x, y, Light_Shadow_Length, Light_Color, Light_Range, Light_Intensity, Light_Angle, Light_Direction);
-		sprite_index = spr_spot_light;
+		sprite_index = spr_demo_spot_light;
 		break;
 		
 	case "Area Light":
 		light = light_create_area(x, y, Light_Shadow_Length, Light_Color, Light_Range, Light_Intensity, Light_Width, Light_Direction);
-		sprite_index = spr_area_light;
+		sprite_index = spr_demo_area_light;
 		image_angle = Light_Direction;
 		break;
 		
 	case "Directional Light":
 		light = light_create_directional(x, y, Light_Shadow_Length, Light_Color, Light_Range, Light_Intensity, Light_Direction);
-		sprite_index = spr_directional_light;
+		sprite_index = spr_demo_directional_light;
 		image_angle = Light_Direction;
 		break;
 		
 	case "Line Light":
 		light = light_create_line(x, y, Light_Shadow_Length, Light_Color, Light_Range, Light_Intensity, Light_Width, Light_Direction);
-		sprite_index = spr_line_light;
+		sprite_index = spr_demo_line_light;
 		image_angle = Light_Direction;
 		break;
 }

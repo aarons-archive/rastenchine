@@ -209,11 +209,11 @@
     {"roomId":{"name":"rm_one","path":"rooms/rm_one/rm_one.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_demo_lighting","path":"rooms/rm_demo_lighting/rm_demo_lighting.yy",},},
+    {"roomId":{"name":"rm_demo_point_light","path":"rooms/rm_demo_point_light/rm_demo_point_light.yy",},},
+    {"roomId":{"name":"rm_demo_spot_light","path":"rooms/rm_demo_spot_light/rm_demo_spot_light.yy",},},
     {"roomId":{"name":"rm_demo_area_light","path":"rooms/rm_demo_area_light/rm_demo_area_light.yy",},},
     {"roomId":{"name":"rm_demo_directional_light","path":"rooms/rm_demo_directional_light/rm_demo_directional_light.yy",},},
     {"roomId":{"name":"rm_demo_line_light","path":"rooms/rm_demo_line_light/rm_demo_line_light.yy",},},
-    {"roomId":{"name":"rm_demo_point_light","path":"rooms/rm_demo_point_light/rm_demo_point_light.yy",},},
-    {"roomId":{"name":"rm_demo_spot_light","path":"rooms/rm_demo_spot_light/rm_demo_spot_light.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
