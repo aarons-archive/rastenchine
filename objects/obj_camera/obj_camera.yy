@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Cam",
-    "path": "folders/GUI/Cam.yy",
+    "name": "Map",
+    "path": "folders/Map.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -1,18 +1,22 @@
-/// @description Update Camera
-
-//Update destination
-if (instance_exists(follow))
-{
-	xTo = follow.x;	
-	yTo = follow.y;
+if (instance_exists(follow)) {
+	if (ENABLE_PANNING == true) {
+		with (follow) {
+			other.pan = min(other.PAN_MAX, distance_to_object(obj_crosshair) / other.PAN_SCALE)
+		}
+		var _direction = point_direction(follow.x, follow.y, obj_crosshair.x, obj_crosshair.y)
+		to_x = follow.x + lengthdir_x(pan, _direction)
+		to_y = follow.y - 20 + lengthdir_y(pan, _direction)
+	}
+	else {
+		to_x = follow.x
+		to_y = follow.y
+	}
 }
 
-//Update object position
-x += (xTo - x) / 20;
-y += (yTo - y) / 20;
+x += (to_x - x) / 50
+y += (to_y - y) / 50
 
-x = clamp(x, view_w_half, room_width-view_w_half);
-y = clamp(y, view_h_half, room_height-view_h_half);
+x = clamp(x, HALF_VIEW_WIDTH, room_width - HALF_VIEW_WIDTH)
+y = clamp(y, HALF_VIEW_HEIGHT, room_height - HALF_VIEW_HEIGHT)
 
-//Update Camera View
-camera_set_view_pos(cam,x-view_w_half,y-view_h_half);
+camera_set_view_pos(CAMERA, x - HALF_VIEW_WIDTH, y - HALF_VIEW_HEIGHT)

@@ -1,6 +1,5 @@
 {
   "FolderOrderSettings": [
-    {"name":"Cam","order":1,"path":"folders/GUI/Cam.yy",},
     {"name":"Entities","order":3,"path":"folders/Entities.yy",},
     {"name":"Dummy","order":2,"path":"folders/Entities/Dummy.yy",},
     {"name":"Enemy","order":3,"path":"folders/Entities/Enemy.yy",},
@@ -31,6 +30,7 @@
     {"name":"LUTs","order":7,"path":"folders/Lighting System/LUTs.yy",},
     {"name":"Map","order":1,"path":"folders/Map.yy",},
     {"name":"Collision","order":2,"path":"folders/Map/Collision.yy",},
+    {"name":"Rooms","order":1,"path":"folders/Map/Rooms.yy",},
     {"name":"Scripts","order":2,"path":"folders/Scripts.yy",},
     {"name":"Crosshair","order":3,"path":"folders/GUI/UI/Crosshair.yy",},
     {"name":"Stamina Bar","order":1,"path":"folders/GUI/UI/Stamina Bar.yy",},
@@ -90,7 +90,6 @@
     {"name":"light_destroy","order":11,"path":"scripts/light_destroy/light_destroy.yy",},
     {"name":"obj_motion_planner","order":1,"path":"objects/obj_motion_planner/obj_motion_planner.yy",},
     {"name":"obj_room_collision","order":5,"path":"objects/obj_room_collision/obj_room_collision.yy",},
-    {"name":"obj_camtilt","order":1,"path":"objects/obj_camtilt/obj_camtilt.yy",},
     {"name":"light_ignore_shadow_caster","order":4,"path":"scripts/light_ignore_shadow_caster/light_ignore_shadow_caster.yy",},
     {"name":"polygon_from_instance","order":4,"path":"scripts/polygon_from_instance/polygon_from_instance.yy",},
     {"name":"obj_demo_point_light","order":2,"path":"objects/obj_demo_point_light/obj_demo_point_light.yy",},

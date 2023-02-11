@@ -11,7 +11,6 @@
   },
   "defaultScriptType": 1,
   "Folders": [
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cam","folderPath":"folders/GUI/Cam.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entities","folderPath":"folders/Entities.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dummy","folderPath":"folders/Entities/Dummy.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy","folderPath":"folders/Entities/Enemy.yy","order":0,},
@@ -136,7 +135,6 @@
     {"id":{"name":"light_destroy","path":"scripts/light_destroy/light_destroy.yy",},"order":0,},
     {"id":{"name":"obj_motion_planner","path":"objects/obj_motion_planner/obj_motion_planner.yy",},"order":0,},
     {"id":{"name":"obj_room_collision","path":"objects/obj_room_collision/obj_room_collision.yy",},"order":0,},
-    {"id":{"name":"obj_camtilt","path":"objects/obj_camtilt/obj_camtilt.yy",},"order":0,},
     {"id":{"name":"spr_lut_light_intensity_spot","path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},"order":0,},
     {"id":{"name":"light_ignore_shadow_caster","path":"scripts/light_ignore_shadow_caster/light_ignore_shadow_caster.yy",},"order":0,},
     {"id":{"name":"polygon_from_instance","path":"scripts/polygon_from_instance/polygon_from_instance.yy",},"order":0,},
