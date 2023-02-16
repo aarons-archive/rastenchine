@@ -1,8 +1,10 @@
+/// @description weapon damage
+
 var item = obj_player.inventory.item
 
-if (is_instanceof(item, Weapon) && item.state == weapon_state.attacking) {
-	_health -= item.damage
+if ((invincible == false) && (is_instanceof(item, Weapon) == true) && (item.state == weapon_state.attacking)) {
 	invincible = true
-	alarm[0] = 30
+	alarm[6] = 30
+	_health -= item.damage
 	item.state = weapon_state.cooldown
 }

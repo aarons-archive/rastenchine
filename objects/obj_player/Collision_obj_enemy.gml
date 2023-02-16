@@ -1,6 +1,7 @@
-if obj_enemy.sprite_index == spr_enemy_attack && _iframes = 0
-{	
+/// @description enemy damage
+
+if ((invincible == false) && (obj_enemy.sprite_index == spr_enemy_attack)) {	
+	invincible = true
+	alarm[6] = 30
 	_health -= global._enemy_damage
-	_iframes = 1
-	alarm[3] = 30
 }

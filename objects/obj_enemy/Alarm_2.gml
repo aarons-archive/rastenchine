@@ -1,1 +1,1 @@
-_speed = SPEED_MAX
+_speed = ENEMY_DEFAULT_SPEED

@@ -11,13 +11,13 @@ function draw_stamina_bar() {
 	draw_roundrect_colour_ext(
 		STAMINA_BAR_FG_X1, 
 		STAMINA_BAR_FG_Y1,
-		STAMINA_BAR_FG_X1 + (STAMINA_BAR_WIDTH * (_stamina / MAX_STAMINA)), 
+		STAMINA_BAR_FG_X1 + (STAMINA_BAR_WIDTH * (stamina / PLAYER_MAX_STAMINA)), 
 		STAMINA_BAR_FG_Y2,
 		UI_ROUNDING, UI_ROUNDING,
 		UI_BG_ACTIVE_COLOUR, UI_BG_ACTIVE_COLOUR,
 		false
 	)
-	if (_stamina_lock == true) {
+	if (stamina_lock == true) {
 		draw_set_halign(fa_left)
 		draw_set_valign(fa_top)
 		draw_text_color(

@@ -1,3 +1,5 @@
+draw_self()
+
 draw_healthbar(
 	bbox_left - 5,
 	bbox_top - 15,
@@ -15,7 +17,7 @@ if (DEBUG == true) {
 	draw_text_color(
 		bbox_left + (sprite_width / 2), 
 		bbox_top - 30,
-		string(_health) + "/" + string(MAX_HEALTH), 
+		string(_health) + "/" + string(DUMMY_MAX_HEALTH), 
 		c_white, c_white, c_white, c_white,
 		1
 	)

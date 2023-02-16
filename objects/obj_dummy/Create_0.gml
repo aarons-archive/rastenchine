@@ -1,4 +1,3 @@
-MAX_HEALTH = 100
-_health = MAX_HEALTH
+event_inherited()
 
-invincible = false
+_health = DUMMY_MAX_HEALTH

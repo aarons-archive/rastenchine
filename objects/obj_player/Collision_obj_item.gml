@@ -1,1 +1,1 @@
-// dont interact with items
+/// @description disable weapon damage

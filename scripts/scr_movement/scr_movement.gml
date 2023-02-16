@@ -1,59 +1,56 @@
 function run() {
-	_stamina = min(_stamina, MAX_STAMINA)
-	if _stamina < 1 {
-		_stamina_lock = true;
+	stamina = min(stamina, PLAYER_MAX_STAMINA)
+	if (stamina < 1) {
+		stamina_lock = true;
 		alarm[0] = 120
 	}
-	if keyboard_check(vk_shift) && _stamina > 1 && _stamina_lock == false {
-		_speed = RUN_SPEED
-		_stamina -= 1
+	if (keyboard_check(vk_shift) && stamina > 1 && stamina_lock == false) {
+		speed_ = PLAYER_RUN_SPEED
+		stamina -= 1
 	} 
 	else {
-		_speed = WALK_SPEED
-		_stamina += 0.2
+		speed_ = PLAYER_WALK_SPEED
+		stamina += 0.2
 	}
 }
 
 function roll() {
-	if (keyboard_check_pressed(vk_space) && _is_rolling == false) {
+	if (keyboard_check_pressed(vk_space)) {
 		state = player_states.rolling
-		_is_rolling = true
 		alarm[1] = 30
 	}
-	if (_is_rolling == true) {
-		_iframes = 1
+	if (state == player_states.rolling) {
+		iframes = 1
 		alarm[3] = 30
-		_speed = lerp(_speed, ROLL_SPEED, 0.8)
+		speed_ = lerp(speed_, PLAYER_ROLL_SPEED, 0.8)
 	}
 }
 
 function movement() {
 
-	if (horizontal_input != 0 || vertical_input != 0) {
-		if (_is_rolling == false) {
-			_direction = point_direction(0, 0, horizontal_input, vertical_input)
-		}
-		_x_movement = lengthdir_x(_speed, _direction)
-		_y_movement = lengthdir_y(_speed, _direction)
+	if (x_input != 0 || y_input != 0) {
+		xy_direction = point_direction(0, 0, x_input, y_input)
+		x_movement = lengthdir_x(speed_, xy_direction)
+		y_movement = lengthdir_y(speed_, xy_direction)
 	} 
 	else {
-		_x_movement = 0
-		_y_movement = 0
+		x_movement = 0
+		y_movement = 0
 	}
 	
-	if (place_meeting(x + _x_movement, y, obj_player_collision)) {
-		while (not place_meeting(x + sign(_x_movement), y, obj_player_collision)) {
-			x += sign(_x_movement)
+	if (place_meeting(x + x_movement, y, obj_player_collision)) {
+		while (not place_meeting(x + sign(x_movement), y, obj_player_collision)) {
+			x += sign(x_movement)
 		}
-		_x_movement = 0
+		x_movement = 0
 	}
-	if (place_meeting(x, y + _y_movement, obj_player_collision)) {
-		while (not place_meeting(x, y + sign(_y_movement), obj_player_collision)) {
-			y += sign(_y_movement)
+	if (place_meeting(x, y + y_movement, obj_player_collision)) {
+		while (not place_meeting(x, y + sign(y_movement), obj_player_collision)) {
+			y += sign(y_movement)
 		}
-		_y_movement = 0
+		y_movement = 0
 	}
 	
-	x += _x_movement
-	y += _y_movement
+	x += x_movement
+	y += y_movement
 }

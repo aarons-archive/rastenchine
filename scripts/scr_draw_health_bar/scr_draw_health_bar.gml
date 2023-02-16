@@ -12,7 +12,7 @@ function draw_health_bar() {
 		spr_heart, 0,
 		HEALTH_BAR_X, 
 		HEALTH_BAR_Y,
-		HEALTH_BAR_WIDTH * (_health / MAX_HEALTH), 
+		HEALTH_BAR_WIDTH * (_health / PLAYER_MAX_HEALTH), 
 		HEALTH_BAR_HEIGHT
 	)
 }
