@@ -1,7 +1,7 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_test",
+  "name": "ts_tiles",
   "autoTileSets": [],
   "macroPageTiles": {
     "SerialiseHeight": 0,
@@ -12,12 +12,12 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Map/Rooms.yy",
+    "name": "Tiles",
+    "path": "folders/Map/Tiles.yy",
   },
   "spriteId": {
-    "name": "spr_test_tiles",
-    "path": "sprites/spr_test_tiles/spr_test_tiles.yy",
+    "name": "spr_tiles",
+    "path": "sprites/spr_tiles/spr_tiles.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

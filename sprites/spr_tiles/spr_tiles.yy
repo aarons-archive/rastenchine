@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_test_tiles",
+  "name": "spr_tiles",
   "bbox_bottom": 63,
   "bbox_left": 32,
   "bbox_right": 255,
@@ -26,14 +26,14 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Map/Rooms.yy",
+    "name": "Tiles",
+    "path": "folders/Map/Tiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_test_tiles",
+    "name": "spr_tiles",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -55,7 +55,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"47f5f2af-ab4f-4b0f-bdab-b7c901814272","path":"sprites/spr_test_tiles/spr_test_tiles.yy",},},},"Disabled":false,"id":"e510e7af-36ff-4eaa-a390-af3b4fa2c954","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"47f5f2af-ab4f-4b0f-bdab-b7c901814272","path":"sprites/spr_tiles/spr_tiles.yy",},},},"Disabled":false,"id":"e510e7af-36ff-4eaa-a390-af3b4fa2c954","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

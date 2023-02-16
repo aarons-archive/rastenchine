@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Map",
-    "path": "folders/Map.yy",
+    "name": "UI",
+    "path": "folders/GUI/UI.yy",
   },
   "parentObjectId": null,
   "persistent": false,
