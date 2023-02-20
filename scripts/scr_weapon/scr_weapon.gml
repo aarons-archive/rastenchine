@@ -4,6 +4,7 @@ enum weapon_state {
 	attacking,
 	cooldown,
 	shooting,
+	reloading
 }
 
 function Weapon() : Item() constructor {
