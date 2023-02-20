@@ -116,6 +116,7 @@
     {"name":"ts_tiles","order":1,"path":"tilesets/ts_tiles/ts_tiles.yy",},
     {"name":"light_trace_polygon","order":3,"path":"scripts/light_trace_polygon/light_trace_polygon.yy",},
     {"name":"obj_demo_statistics","order":1,"path":"objects/obj_demo_statistics/obj_demo_statistics.yy",},
+    {"name":"spr_gun_reloading","order":2,"path":"sprites/spr_gun_reloading/spr_gun_reloading.yy",},
     {"name":"polygon_from_path","order":5,"path":"scripts/polygon_from_path/polygon_from_path.yy",},
     {"name":"light_create_line","order":8,"path":"scripts/light_create_line/light_create_line.yy",},
     {"name":"lighting_get_active_camera","order":1,"path":"scripts/lighting_get_active_camera/lighting_get_active_camera.yy",},

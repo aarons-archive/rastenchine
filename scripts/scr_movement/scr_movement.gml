@@ -1,5 +1,4 @@
 function run() {
-	stamina = min(stamina, PLAYER_MAX_STAMINA)
 	if (stamina < 1) {
 		stamina_lock = true;
 		alarm[0] = 120
@@ -12,6 +11,7 @@ function run() {
 		speed_ = PLAYER_WALK_SPEED
 		stamina += 0.2
 	}
+	stamina = min(stamina, PLAYER_MAX_STAMINA)
 }
 
 function roll() {
