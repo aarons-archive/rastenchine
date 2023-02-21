@@ -12,10 +12,6 @@ function Gun() : Weapon() constructor {
 		bullets = GUN_MAX_BULLETS
 	}
 	
-	static alarm_two = function() {
-		state = weapon_state.idle
-	}
-
 	static attack = function() {
 		switch (state) {
 			case weapon_state.idle:
@@ -24,7 +20,7 @@ function Gun() : Weapon() constructor {
 					instance_create_layer(instance.x, instance.y, "instances", obj_projectile, { sprite_index: spr_bullet, speed: 8, direction: _direction, image_angle: _direction })
 					bullets -= 1
 				}
-				else if ((keyboard_check_pressed(global.RELOAD_GUN_KEY))) {
+				else if ((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((bullets <= 0) && (mouse_check_button_pressed(global.ATTACK_BUTTON)))) {
 					state = weapon_state.reloading
 					instance.sprite_index = spr_gun_reloading
 				}
@@ -35,9 +31,7 @@ function Gun() : Weapon() constructor {
 				} 
 				break
 			case weapon_state.cooldown:
-				if (instance.alarm[2] == -1) {
-					instance.alarm[2] = 1
-				} 
+				state = weapon_state.idle
 				break
 		}
 	}
