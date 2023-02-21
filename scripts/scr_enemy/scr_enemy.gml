@@ -15,7 +15,7 @@ function check_for_player() {
 			}
 		} 
 		//is close enough to player?	
-		else if (_dis < _attack_radius) {
+		else if (_dis < obj_enemy) {
 			path_end()
 		}
 	}
