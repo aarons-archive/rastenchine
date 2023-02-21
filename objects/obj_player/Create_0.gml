@@ -1,5 +1,12 @@
 event_inherited()
 
+#region Lighting
+global.ambientShadowIntensity = 0.9
+flash_light = instance_create_layer(x, y, "Player", obj_flash_light)
+area_light = instance_create_layer(x, y, "Player", obj_area_light)
+room_light = undefined
+#endregion
+
 enum player_states {
 	idle,
 	moving,
@@ -17,17 +24,8 @@ stamina_lock = false
 _speed = PLAYER_WALK_SPEED
 x_input = 0
 y_input = 0
-_direction = 0
+xy_direction = 0
 x_movement = 0
 y_movement = 0
 
-#region Lighting
-global.ambientShadowIntensity = 1
-area_light = light_create_point(x, y, 32000, $FFFFFFFF, 250, 2)
-light_add_to_world(area_light)
-flash_light = light_create_spot(x, y, 32000, $FFFFFFFF, 1000, 2, 20, 0)
-light_add_to_world(flash_light)
-room_light = undefined
-#endregion
-
-
+visibility_cone = instance_create_layer(x, y, "Player", obj_visibility_cone)

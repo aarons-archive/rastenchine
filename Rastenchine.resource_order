@@ -1,9 +1,9 @@
 {
   "FolderOrderSettings": [
     {"name":"Entities","order":3,"path":"folders/Entities.yy",},
-    {"name":"Dummy","order":2,"path":"folders/Entities/Dummy.yy",},
-    {"name":"Enemy","order":3,"path":"folders/Entities/Enemy.yy",},
-    {"name":"Player","order":1,"path":"folders/Entities/Player.yy",},
+    {"name":"Dummy","order":3,"path":"folders/Entities/Dummy.yy",},
+    {"name":"Enemy","order":4,"path":"folders/Entities/Enemy.yy",},
+    {"name":"Player","order":2,"path":"folders/Entities/Player.yy",},
     {"name":"Element Actions","order":12,"path":"folders/GUI/Menu/Element Actions.yy",},
     {"name":"UI","order":2,"path":"folders/GUI/UI.yy",},
     {"name":"Crosshair","order":4,"path":"folders/GUI/UI/Crosshair.yy",},
@@ -38,6 +38,7 @@
     {"name":"Sprites","order":1,"path":"folders/Map/Sprites.yy",},
     {"name":"Tiles","order":2,"path":"folders/Map/Tiles.yy",},
     {"name":"Scripts","order":2,"path":"folders/Scripts.yy",},
+    {"name":"Lights","order":4,"path":"folders/Entities/Player/Lights.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_element","order":3,"path":"objects/obj_element/obj_element.yy",},
@@ -100,6 +101,7 @@
     {"name":"obj_demo_point_light","order":2,"path":"objects/obj_demo_point_light/obj_demo_point_light.yy",},
     {"name":"spr_demo_area_light","order":1,"path":"sprites/spr_demo_area_light/spr_demo_area_light.yy",},
     {"name":"light_create","order":5,"path":"scripts/light_create/light_create.yy",},
+    {"name":"obj_flash_light","order":1,"path":"objects/obj_flash_light/obj_flash_light.yy",},
     {"name":"obj_demo_line_light","order":2,"path":"objects/obj_demo_line_light/obj_demo_line_light.yy",},
     {"name":"obj_demo_mouse_shadow_caster","order":2,"path":"objects/obj_demo_mouse_shadow_caster/obj_demo_mouse_shadow_caster.yy",},
     {"name":"light_create_point","order":9,"path":"scripts/light_create_point/light_create_point.yy",},
@@ -111,6 +113,7 @@
     {"name":"lighting_free","order":8,"path":"scripts/lighting_free/lighting_free.yy",},
     {"name":"obj_demo_mouse_point_light","order":3,"path":"objects/obj_demo_mouse_point_light/obj_demo_mouse_point_light.yy",},
     {"name":"shadow_map_ensure_exists","order":9,"path":"scripts/shadow_map_ensure_exists/shadow_map_ensure_exists.yy",},
+    {"name":"obj_area_light","order":2,"path":"objects/obj_area_light/obj_area_light.yy",},
     {"name":"polygon_create","order":3,"path":"scripts/polygon_create/polygon_create.yy",},
     {"name":"obj_spawner","order":5,"path":"objects/obj_spawner/obj_spawner.yy",},
     {"name":"light_create_area","order":6,"path":"scripts/light_create_area/light_create_area.yy",},

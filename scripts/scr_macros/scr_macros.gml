@@ -27,12 +27,13 @@
 #region Inventory
 
 #region Crowbar
-#macro CROWBAR_DAMAGE 5
+#macro CROWBAR_DAMAGE 2
 // charge
 #macro CROWBAR_MIN_CHARGE       0
 #macro CROWBAR_CHARGE_THRESHOLD 2
 #macro CROWBAR_CHARGE_PER_FRAME 0.1
-#macro CROWBAR_MAX_CHARGE       10
+#macro CROWBAR_MAX_CHARGE       4
+#macro CROWBAR_CHARGE_DAMAGE    3
 // alarm frames
 #macro CROWBAR_ATTACK_FRAMES   20
 #macro CROWBAR_COOLDOWN_FRAMES 40

@@ -1,7 +1,7 @@
 CAMERA = view_camera[0]
 HALF_VIEW_WIDTH = camera_get_view_width(CAMERA) * 0.5
 HALF_VIEW_HEIGHT = camera_get_view_height(CAMERA) * 0.5
-ENABLE_PANNING = false
+ENABLE_PANNING = true
 
 follow = obj_player
 
