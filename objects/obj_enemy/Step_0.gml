@@ -40,6 +40,5 @@ if ((collision_circle(x, y, _agro_radius, obj_player, false, false) && _health >
 
 /*
 idle (move around naturally/smooth)
-collisions(dont walk through walls to get to player)
 knockback(for when the player is hit and when the enemy is hit)
 */
