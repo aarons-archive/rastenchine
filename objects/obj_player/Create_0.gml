@@ -28,4 +28,3 @@ xy_direction = 0
 x_movement = 0
 y_movement = 0
 
-visibility_cone = instance_create_layer(x, y, "Player", obj_visibility_cone)

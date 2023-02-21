@@ -1,17 +1,4 @@
 function lighting() {
-	#region Area light
-	area_light[| eLight.X] = x
-	area_light[| eLight.Y] = y
-	area_light[| eLight.Flags] |= eLightFlags.Dirty
-	#endregion
-	
-	#region Flash light
-	flash_light[| eLight.X] = x
-	flash_light[| eLight.Y] = y
-	flash_light[| eLight.Direction] = point_direction(x, y, mouse_x, mouse_y)
-	flash_light[| eLight.Flags] |= eLightFlags.Dirty
-	#endregion
-	
 	#region Room light
 	var _room = instance_place(x, y, obj_room_collision)
 	if ((room_light == undefined) && (_room != noone)) {
