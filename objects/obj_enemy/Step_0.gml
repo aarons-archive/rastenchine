@@ -1,3 +1,4 @@
+event_inherited()
 
 #region death
 if (_health < 1) {

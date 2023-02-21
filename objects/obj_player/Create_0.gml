@@ -27,4 +27,3 @@ y_input = 0
 xy_direction = 0
 x_movement = 0
 y_movement = 0
-

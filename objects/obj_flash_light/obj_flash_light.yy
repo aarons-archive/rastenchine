@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lights",
-    "path": "folders/Entities/Player/Lights.yy",
+    "name": "Player",
+    "path": "folders/Entities/Player.yy",
   },
   "parentObjectId": null,
   "persistent": false,
