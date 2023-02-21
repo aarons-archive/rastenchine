@@ -1,6 +1,6 @@
 draw_self()
 
-draw_circle_color(x, y, _attack_radius, c_green, c_red, true)
+draw_rectangle_color(x-64, y-34,x+64,y+34, c_red,c_red,c_red, c_red, true)
 draw_circle_color(x, y, _vision_radius, c_green, c_blue, true)
 draw_circle_color(x, y, _agro_radius, c_green, c_green, true)
 
