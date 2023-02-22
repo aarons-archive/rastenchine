@@ -12,7 +12,10 @@
     "name": "Player",
     "path": "folders/Entities/Player.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_player_light",
+    "path": "objects/obj_player_light/obj_player_light.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

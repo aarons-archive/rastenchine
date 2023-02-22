@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_change_page",
+  "name": "scr_menu_element_actions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Element Actions",
-    "path": "folders/GUI/Menu/Element Actions.yy",
+    "name": "Menu",
+    "path": "folders/GUI/Menu.yy",
   },
 }

@@ -17,14 +17,14 @@ enum menu_element_action {
 
 home = [
 	["PLAY",          menu_element_action.run_script,  play_game,                   undefined,                   undefined                      ],
-	["SETTINGS",      menu_element_action.run_script,  change_page,                 menu_page.settings,          menu_settings_sub_page.video   ],
+	["SETTINGS",      menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.video   ],
 	["EXIT",          menu_element_action.run_script,  exit_game,                   undefined,                   undefined                      ],
 ]
 settings = [
-	["<- BACK",       menu_element_action.run_script,  change_page,                 menu_page.home,              undefined                      ],
-	["VIDEO",         menu_element_action.run_script,  change_page,                 menu_page.settings,          menu_settings_sub_page.video   ],
-	["AUDIO",         menu_element_action.run_script,  change_page,                 menu_page.settings,          menu_settings_sub_page.audio   ],
-	["GAMEPLAY",      menu_element_action.run_script,  change_page,                 menu_page.settings,          menu_settings_sub_page.gameplay],
+	["<- BACK",       menu_element_action.run_script,  menu_change_page,            menu_page.home,              undefined                      ],
+	["VIDEO",         menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.video   ],
+	["AUDIO",         menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.audio   ],
+	["GAMEPLAY",      menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.gameplay],
 ]
 video_settings = [
 	["RESOLUTION",    menu_element_action.shift_value, change_resolution,           global.resolution,           ["1920x1080", "1280x720"]      ],
@@ -46,4 +46,4 @@ sub_pages = [video_settings, audio_settings, gameplay_settings]
 selected_sub_page = undefined
 
 instances = []
-draw_page()
+menu_create_page()

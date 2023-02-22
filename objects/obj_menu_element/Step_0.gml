@@ -1,5 +1,5 @@
 if point_in_rectangle(mouse_x, mouse_y, X1, Y1, X2, Y2) {
-	_colour = UI_BG_ACTIVE_COLOUR
+	colour = UI_BG_ACTIVE_COLOUR
 	if mouse_check_button_pressed(mb_left) {
 		switch (ACTION) {
 			case menu_element_action.run_script:
@@ -9,10 +9,6 @@ if point_in_rectangle(mouse_x, mouse_y, X1, Y1, X2, Y2) {
 	}
 }
 else {
-	if (SELECTED == true) {
-		_colour = UI_BG_ACTIVE_COLOUR
-	}
-	else {
-		_colour = UI_BG_COLOUR
-	}
+	if (SELECTED == true) { colour = UI_BG_ACTIVE_COLOUR }
+	else { colour = UI_BG_COLOUR }
 }

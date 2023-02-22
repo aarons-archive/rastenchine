@@ -1,5 +1,6 @@
-#macro DEBUG true
-#macro FPS   game_get_speed(gamespeed_fps) 
+#macro DEBUG          true
+#macro LIGHTING_DEBUG false
+#macro FPS            game_get_speed(gamespeed_fps) 
 
 #region Entities
 

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_exit_game",
+  "name": "scr_menu_pages",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Element Actions",
-    "path": "folders/GUI/Menu/Element Actions.yy",
+    "name": "Menu",
+    "path": "folders/GUI/Menu.yy",
   },
 }
