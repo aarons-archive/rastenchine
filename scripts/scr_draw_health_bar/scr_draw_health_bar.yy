@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Health Bar",
-    "path": "folders/GUI/UI/Health Bar.yy",
+    "name": "UI <-> UX",
+    "path": "folders/UI <-> UX.yy",
   },
 }

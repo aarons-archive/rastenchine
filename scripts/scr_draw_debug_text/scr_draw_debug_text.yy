@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Debug Text",
-    "path": "folders/GUI/UI/Debug Text.yy",
+    "name": "UI <-> UX",
+    "path": "folders/UI <-> UX.yy",
   },
 }

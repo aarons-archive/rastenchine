@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/GUI/UI.yy",
+    "name": "UI <-> UX",
+    "path": "folders/UI <-> UX.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_camera",
+    "path": "sprites/spr_camera/spr_camera.yy",
+  },
   "spriteMaskId": null,
   "visible": false,
 }

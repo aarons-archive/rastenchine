@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Health Bar",
-    "path": "folders/GUI/UI/Health Bar.yy",
+    "name": "UI <-> UX",
+    "path": "folders/UI <-> UX.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

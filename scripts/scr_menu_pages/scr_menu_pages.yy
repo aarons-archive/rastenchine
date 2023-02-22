@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Menu",
-    "path": "folders/GUI/Menu.yy",
+    "path": "folders/UI <-> UX/Menu.yy",
   },
 }
