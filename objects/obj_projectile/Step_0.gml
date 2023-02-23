@@ -1,3 +1,3 @@
-if (image_index >= 11) {
+if (image_index >= 6) {
 	instance_destroy()
 }

@@ -1,2 +1,2 @@
-image_speed = 1
+image_speed = 3
 speed = 0
