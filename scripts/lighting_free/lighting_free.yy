@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Misc",
-    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Misc.yy",
+    "path": "folders/Lighting/_INTERNALS/Misc.yy",
   },
 }

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lighting System",
-    "path": "folders/Lighting System.yy",
+    "name": "Lighting",
+    "path": "folders/Lighting.yy",
   },
   "parentObjectId": null,
   "persistent": false,

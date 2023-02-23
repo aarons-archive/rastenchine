@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Extension Modules",
-    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Extension Modules.yy",
+    "name": "Extensions",
+    "path": "folders/Lighting/_INTERNALS/Extensions.yy",
   },
 }

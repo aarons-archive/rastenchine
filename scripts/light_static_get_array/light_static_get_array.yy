@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Static Storage",
-    "path": "folders/Lighting System/_LIGHTING_INTERNALS/Lights/Static Storage.yy",
+    "name": "Lights",
+    "path": "folders/Lighting/_INTERNALS/Lights.yy",
   },
 }

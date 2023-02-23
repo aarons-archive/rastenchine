@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Lighting System",
-    "path": "folders/Lighting System.yy",
+    "name": "Lighting",
+    "path": "folders/Lighting.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
