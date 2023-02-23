@@ -110,6 +110,7 @@ function light_update(argument0) {
 		// Find all shadow casters possibly affected by this light
 		var list = global.worldCulledShadowCastersRTree;
 		ds_list_clear(list);
+		// Feather disable once GM2022
 		collision_rectangle_list(light_area[0], light_area[1], light_area[2], light_area[3], obj_shadow_caster, false, false, list, false);
 		var list_size = ds_list_size(list);
 	
@@ -215,14 +216,14 @@ function light_update(argument0) {
 		
 					if(shadow_caster_static) {
 						// Save the array; we copy it because the returned array is reused
-						var copy = array_create(array_length_1d(shadow));
-						array_copy(copy, 0, shadow, 0, array_length_1d(shadow));
+						var copy = array_create(array_length(shadow));
+						array_copy(copy, 0, shadow, 0, array_length(shadow));
 						light_static_set_array(light, id, copy);
 					}
 				}
 	
 				// Write the shadow vertices to the vertex buffer
-				var len = array_length_1d(shadow);
+				var len = array_length(shadow);
 				// There's at least 3 vertices in the array, so add those outside loop
 				var k = 0;
 				var vertex = shadow[k++];
@@ -369,14 +370,14 @@ function light_update(argument0) {
 		
 				if(shadow_caster_static) {
 					// Save the array; we copy it because the returned array is reused
-					var copy = array_create(array_length_1d(shadow));
-					array_copy(copy, 0, shadow, 0, array_length_1d(shadow));
+					var copy = array_create(array_length(shadow));
+					array_copy(copy, 0, shadow, 0, array_length(shadow));
 					light_static_set_array(light, id, copy);
 				}
 			}
 	
 			// Write the shadow vertices to the vertex buffer
-			var len = array_length_1d(shadow);
+			var len = array_length(shadow);
 			// There's at least 3 vertices in the array, so add those outside loop
 			var k = 0;
 			var vertex = shadow[k++];

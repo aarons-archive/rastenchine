@@ -13,7 +13,7 @@ function light_trace_polygon(argument0, argument1) {
 
 	// Validate arguments
 	if(__LIGHTING_ERROR_CHECKS) {
-		if(!is_array(polygon) || array_length_1d(polygon) <= 3) {
+		if(!is_array(polygon) || array_length(polygon) <= 3) {
 			// This array is not a polygon
 			show_debug_message("light_trace_polygon(polygon, light): argument `polygon` is not a polygon array, or has less than 3 vertices");
 			return undefined;
@@ -84,13 +84,23 @@ function light_trace_polygon(argument0, argument1) {
 		if(line_emitter) {
 			// Either the vertex is perpendicular to the line emitter,
 			// or we take the angle to whichever vertex on the line this polygon vertex is closest to
+			// Feather disable once GM2043
 			var p1v = [vx - areaPoint1[0], vy - areaPoint1[1]];
+			// Feather disable once GM2043
 			var projection = dot_product(p1v[0], p1v[1], p1p2[0], p1p2[1]) / p1p2_dot;
-			if(projection < 0.0) langle = point_direction(areaPoint1[0], areaPoint1[1], vx, vy);		// Vertex
-			else if(projection > 1.0) langle = point_direction(areaPoint2[0], areaPoint2[1], vx, vy);	// Vertex
+			if (projection < 0.0) {
+				// Feather disable once GM2043
+				langle = point_direction(areaPoint1[0], areaPoint1[1], vx, vy);
+			}
+			else if (projection > 1.0) { 
+				// Feather disable once GM2043
+				langle = point_direction(areaPoint2[0], areaPoint2[1], vx, vy)
+			}
 			else {
 				// Perpendicular
+				// Feather disable once GM2043
 				var __x = areaPoint1[0] + p1p2[0] * projection;
+				// Feather disable once GM2043
 				var __y = areaPoint1[1] + p1p2[1] * projection;
 				langle = point_direction(__x, __y, vx, vy);
 			}

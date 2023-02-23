@@ -164,7 +164,7 @@ function lighting_global() {
 	
 		// This light is dirty; this makes it update all static shadow casters
 		// Should be set whenever the light's position or range has changed
-		Dirty = 1 << 0,
+		Dirty = 1 ,
 	
 		// This light casts shadows on shadow casters
 		// This is set by default but can be taken off
@@ -172,11 +172,11 @@ function lighting_global() {
 		//		 to not redraw if it's not dirty. This means changing render-only attributes of a light (e.g. intensity or color)
 		//		 that doesn't cast shadow should also dirty the light. You need to dirty it manually to ensure it redraws.
 		//		 TL;DR: If you remove this flag, always dirty the light when you change a render-only attribute on it
-		CastsShadows = 1 << 1,
+		CastsShadows = 2,
 	
 		// Internal
 		// This light has a unique shadow map? This CANNOT be set - it is determined by the system
-		UsesUniqueShadowMap = 1 << 2,
+		UsesUniqueShadowMap = 4,
 	}
 
 	// Shadow caster flags
@@ -187,14 +187,14 @@ function lighting_global() {
 		// This shadow caster is static; if this flag is not set, the shadow caster is movable
 		// A static shadow caster can be cached by light sources and is therefore faster than a movable shadow caster
 		// If your shadow caster never changes its polygon then mark it as static
-		Static = 1 << 0,
+		Static = 1,
 	
 		// This shadow caster is dirty; this applies to the Static flag and will make lights rebuild this shadow caster
-		Dirty = 1 << 1,
+		Dirty = 2,
 	
 		// Internal; do not use
 		// This marks a shadow caster as pending being "cleaned" (un-dirtied) after the lighting pass
-		MarkedForCleanup = 1 << 2,
+		MarkedForCleanup = 4,
 	}
 
 	// Enum that describes a light extension module

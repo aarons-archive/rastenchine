@@ -25,7 +25,7 @@ function _draw_page() {
 		var element = page[i]
 		var element_width = string_width(element[0]) + MENU_ELEMENT_PADDING
 		array_push(
-			instances,
+			obj_menu.instances,
 			instance_create_layer(
 				page_x, 
 				MENU_PAGE_Y,
@@ -55,7 +55,7 @@ function _draw_sub_page() {
 	for (var i = 0; i < array_length(sub_page); i++) {
 		var element = sub_page[i]
 		array_push(
-			instances, 
+			obj_menu.instances, 
 			instance_create_layer(
 				MENU_X, 
 				MENU_SUB_PAGE_Y + ((MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * i),

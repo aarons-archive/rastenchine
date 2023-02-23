@@ -1,7 +1,8 @@
 /// @desc Composite the shadow map from all the lights
 /// @arg lights The ds_list of lights, in order, to composite
 /// @returns True if it succeeded, otherwise false
-function composite_shadow_map(argument0) {
+function composite_shadow_map(argument0)
+{
 
 	var lights = argument0;
 	var lightCount = ds_list_size(lights);
@@ -55,8 +56,10 @@ function composite_shadow_map(argument0) {
 		// Get the light's range attribute
 		var lightRange = light[| eLight.Range];
 		// The light's position depends if it has its own shadow map
+		// Feather disable once GM2018
 		var lightTexelX, lightTexelY;
 		// Conversion from pixels to texels for this light
+		// Feather disable once GM2018
 		var texelConvX, texelConvY;
 		// The surface to draw the light to
 		var shadowMap = undefined;
@@ -90,7 +93,9 @@ function composite_shadow_map(argument0) {
 			// If this is the first light using the global shadow map
 			if(firstUseOfGlobalShadowMap) {
 				// Ensure that we have a valid global shadow map surface
+				// Feather disable once GM2044
 				var has_shadow_map = shadow_map_ensure_exists(eShadowMap.Light);
+				// Feather disable once GM2044
 				if(!has_shadow_map) {
 					// Failed to create a shadow map
 					show_debug_message("composite_shadow_map(lights): failed to create light shadow map");
@@ -112,6 +117,7 @@ function composite_shadow_map(argument0) {
 		// Get the light's other attributes
 		var lightColor = light[| eLight.Color];
 		var lightIntensity = light[| eLight.Intensity];
+		// Feather disable once GM2044
 		var lightType = light[| eLight.Type];
 		var lightAngle = light[| eLight.Angle];
 		var lightDirection = light[| eLight.Direction];
