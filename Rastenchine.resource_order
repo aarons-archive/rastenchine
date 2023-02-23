@@ -101,7 +101,7 @@
     {"name":"obj_demo_point_light","order":2,"path":"objects/obj_demo_point_light/obj_demo_point_light.yy",},
     {"name":"spr_demo_area_light","order":1,"path":"sprites/spr_demo_area_light/spr_demo_area_light.yy",},
     {"name":"light_create","order":5,"path":"scripts/light_create/light_create.yy",},
-    {"name":"obj_shambler","order":5,"path":"objects/obj_shambler/obj_shambler.yy",},
+    {"name":"obj_shambler","order":1,"path":"objects/obj_shambler/obj_shambler.yy",},
     {"name":"obj_flash_light","order":2,"path":"objects/obj_flash_light/obj_flash_light.yy",},
     {"name":"obj_demo_line_light","order":2,"path":"objects/obj_demo_line_light/obj_demo_line_light.yy",},
     {"name":"obj_demo_mouse_shadow_caster","order":2,"path":"objects/obj_demo_mouse_shadow_caster/obj_demo_mouse_shadow_caster.yy",},

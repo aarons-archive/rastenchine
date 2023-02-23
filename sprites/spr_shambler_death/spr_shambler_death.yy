@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Shambler",
-    "path": "folders/Entities/Enemy/Shambler.yy",
+    "name": "sprites",
+    "path": "folders/Entities/Enemy/Shambler/sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

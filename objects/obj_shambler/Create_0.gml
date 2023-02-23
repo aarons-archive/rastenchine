@@ -4,7 +4,7 @@ state = shambler_state.idle
 idle_sprite = spr_shambler
 death_sprite = spr_shambler_death
 
-
+invincible = false
 push = 1
 _health = ENEMY_MAX_HEALTH
 _speed = ENEMY_DEFAULT_SPEED
