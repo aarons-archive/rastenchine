@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_basic_enemy",
+    "path": "sprites/spr_basic_enemy/spr_basic_enemy.yy",
   },
   "spriteMaskId": null,
   "visible": true,

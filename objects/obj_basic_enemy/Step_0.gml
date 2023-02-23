@@ -37,7 +37,7 @@ switch (state) {
 	case basic_enem_state.attacking:
 		_speed = 0
 		alarm[2] = 30
-		sprite_index = spr_enemy_attack
+		sprite_index = spr_basic_enemy_attack
 		if image_index >= 4 {state = basic_enem_state.agro}
 		break
 	case basic_enem_state.death:

@@ -19,5 +19,5 @@ path = path_add()
 path_delay = 10
 path_timer = irandom(60)
 
-death_sprite = spr_enemy_death
-idle_sprite = spr_enemy
+death_sprite = spr_basic_enemy_death
+idle_sprite = spr_basic_enemy
