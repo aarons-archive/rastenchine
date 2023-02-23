@@ -34,11 +34,11 @@ function draw_debug_text() {
 		)
 	}
 	else if (is_instanceof(item, Gun)) {
-		names += "\nState: \nBullets: \nReloading: "
+		names += "\nState: \nClip: \nAmmo: "
 		values += (
 			"\n" + string(item.state) + 
-			"\n" + string(item.bullets) + 
-			"\n" + string(item.reloading)
+			"\n" + string(item.clip) + 
+			"\n" + string(item.ammo)
 		)
 	}
 	if (room_light != undefined) {

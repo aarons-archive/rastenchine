@@ -1,9 +1,9 @@
 {
   "FolderOrderSettings": [
     {"name":"Entities","order":5,"path":"folders/Entities.yy",},
-    {"name":"Dummy","order":1,"path":"folders/Entities/Enemy/Dummy.yy",},
     {"name":"Enemy","order":2,"path":"folders/Entities/Enemy.yy",},
     {"name":"Basic Enemy","order":2,"path":"folders/Entities/Enemy/Basic Enemy.yy",},
+    {"name":"Dummy","order":1,"path":"folders/Entities/Enemy/Dummy.yy",},
     {"name":"Shambler","order":3,"path":"folders/Entities/Enemy/Shambler.yy",},
     {"name":"Player","order":1,"path":"folders/Entities/Player.yy",},
     {"name":"Inventory","order":6,"path":"folders/Inventory.yy",},
