@@ -4,7 +4,6 @@
     {"name":"Dummy","order":3,"path":"folders/Entities/Dummy.yy",},
     {"name":"Enemy","order":4,"path":"folders/Entities/Enemy.yy",},
     {"name":"Player","order":2,"path":"folders/Entities/Player.yy",},
-    {"name":"UI <-> UX","order":1,"path":"folders/UI <-> UX.yy",},
     {"name":"Inventory","order":6,"path":"folders/Inventory.yy",},
     {"name":"Items","order":1,"path":"folders/Inventory/Items.yy",},
     {"name":"Weapons","order":3,"path":"folders/Inventory/Items/Weapons.yy",},
@@ -33,6 +32,7 @@
     {"name":"Sprites","order":1,"path":"folders/Map/Sprites.yy",},
     {"name":"Tiles","order":2,"path":"folders/Map/Tiles.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
+    {"name":"UI <-> UX","order":1,"path":"folders/UI <-> UX.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":4,"path":"objects/obj_menu_element/obj_menu_element.yy",},
