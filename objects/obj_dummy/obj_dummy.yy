@@ -11,11 +11,11 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dummy",
-    "path": "folders/Entities/Dummy.yy",
+    "path": "folders/Entities/Enemy/Dummy.yy",
   },
   "parentObjectId": {
-    "name": "obj_entity",
-    "path": "objects/obj_entity/obj_entity.yy",
+    "name": "obj_enemy",
+    "path": "objects/obj_enemy/obj_enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

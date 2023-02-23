@@ -1,5 +1,9 @@
 event_inherited()
 
+death_sprite = undefined
+idle_sprite = undefined
+image_speed = 1
+push = 1
 _health = ENEMY_MAX_HEALTH
 _speed = ENEMY_DEFAULT_SPEED
 
