@@ -5,6 +5,9 @@ ENABLE_PANNING = true
 
 follow = obj_player
 
+x = follow.x;
+y = follow.y;
+
 to_x = xstart
 to_y = ystart
 

@@ -16,7 +16,7 @@
     "name": "obj_player_light",
     "path": "objects/obj_player_light/obj_player_light.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
