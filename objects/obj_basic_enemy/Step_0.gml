@@ -43,4 +43,4 @@ switch (state) {
 		break
 }
 
-show_debug_message(state)
+show_debug_message(agro)

@@ -1,5 +1,5 @@
 
-state = shambler_state.idle
+state = shambler_state.sleeping
 
 idle_sprite = spr_shambler
 death_sprite = spr_shambler_death

@@ -1,4 +1,5 @@
 enum shambler_state {
+	sleeping,
 	idle,
 	agro,
 	charging,
@@ -7,6 +8,11 @@ enum shambler_state {
 }
 
 switch (state) {
+	case shambler_state.sleeping:
+		_speed = 0
+		sprite_index = spr_shambler_sleeping
+		if (collision_circle(x, y, agro_radius, obj_player, false, false)) && obj_player._speed > 5 {state = shambler_state.agro }
+		break
 	case shambler_state.idle:
 			sprite_index = idle_sprite
 			alarm[3] = 120
@@ -28,13 +34,16 @@ switch (state) {
 		}
 		if (collision_circle(x, y, vision_radius, obj_player, false, false)
 			&& !collision_circle(x, y, agro_radius, obj_player, false, false)) {state = shambler_state.idle }
-		if (collision_circle(x, y,100, obj_player, false, false) && _health > 0) {state = shambler_state.charging}
+		if (collision_circle(x, y,100, obj_player, false, false)) {state = shambler_state.charging}
 		break
 	case shambler_state.charging:
 		sprite_index = spr_shambler_charging
 		explode_timer += 0.1
 		if sprite_index == spr_shambler_charging{_speed = 0}
-		if !(collision_circle(x, y,100, obj_player, false, false)) {_speed = ENEMY_DEFAULT_SPEED explode_timer = 0 state = shambler_state.agro}
+		if !(collision_circle(x, y,100, obj_player, false, false)){
+			_speed = ENEMY_DEFAULT_SPEED 
+			explode_timer = 0 
+			state = shambler_state.agro}
 		if explode_timer >= 8 {state = shambler_state.attacking}
 		break
 	case shambler_state.attacking:
