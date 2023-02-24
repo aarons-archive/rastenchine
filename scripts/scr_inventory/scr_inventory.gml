@@ -1,6 +1,6 @@
 function Inventory() constructor {
 	
-	items = [new Crowbar(), new Gun()]
+	items = [new Crowbar(), new Gun(), new HealingPack()]
 	item_index = 0
 	item = items[item_index]
 	
@@ -8,20 +8,13 @@ function Inventory() constructor {
 	item.instance.sprite_index = item.sprite
 
 	static step = function() {
-		if (is_instanceof(item, Weapon)) {
-			item.attack()
-		}
-	}
-	
-	static draw = function() {
-		item.draw()
+		item.common()
+		if (is_instanceof(item, Weapon)) { item.attack() }
 	}
 	
 	static change_item = function(index) {
-		// don't do anything if the weapon (only item type atm) is not idle
-		if (is_instanceof(item, Weapon) && item.state != weapon_state.idle) {
-			return
-		}
+		// don't do anything if the item is a weapon and is not idle
+		if (is_instanceof(item, Weapon) && item.state != weapon_state.idle) { return }
 		// destroy old item instance
 		instance_destroy(item.instance)
 		// set new item

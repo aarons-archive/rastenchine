@@ -21,30 +21,28 @@ function draw_debug_text() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	
-	var names = "Speed: "
-	var values = string(_speed)
-	var item = inventory.item
+	var names = "Speed: \nItem Index: \nY Scale: "
+	var values = string(_speed) + "\n" + string(inventory.item_index) + "\n" + string(inventory.item.instance.image_yscale)
 	
+	var item = inventory.item
+	if (is_instanceof(item, Weapon)) {
+		names += "\nState: \nDamage: "
+		values += "\n" + string(item.state) + "\n" + string(item.damage)
+ 	}
 	if (is_instanceof(item, Crowbar)) {
-		names += "\nState: \nCharge: \nDamage: "
-		values += (
-			"\n" + string(item.state) + 
-			"\n" + string(item.charge) + 
-			"\n" + string(item.damage)
-		)
+		names += "\nCharge: "
+		values += "\n" + string(item.charge)
 	}
 	else if (is_instanceof(item, Gun)) {
-		names += "\nState: \nClip: \nAmmo: "
-		values += (
-			"\n" + string(item.state) + 
-			"\n" + string(item.clip) + 
-			"\n" + string(item.ammo)
-		)
+		names += "\nAmmo: \nClip: "
+		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 	}
+	
 	if (room_light != undefined) {
 		names += "\nRoom Light Range: "
 		values += "\n" + string(room_light[| eLight.Range])
 	}
+	
 	draw_text_color( 
 		UI_X1, UI_Y1, 
 		names, 

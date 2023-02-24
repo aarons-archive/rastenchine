@@ -1,12 +1,5 @@
 event_inherited()
 
-#region Lighting
-global.ambientShadowIntensity = 0.9
-flash_light = instance_create_layer(x, y, "Player", obj_flash_light)
-area_light = instance_create_layer(x, y, "Player", obj_area_light)
-room_light = undefined
-#endregion
-
 enum player_states {
 	idle,
 	moving,
@@ -27,3 +20,10 @@ y_input = 0
 xy_direction = 0
 x_movement = 0
 y_movement = 0
+
+#region Lighting
+global.ambientShadowIntensity = 0.9
+flash_light = instance_create_layer(x, y, "Player", obj_flash_light)
+area_light = instance_create_layer(x, y, "Player", obj_area_light)
+room_light = undefined
+#endregion

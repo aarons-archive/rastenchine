@@ -1,16 +1,16 @@
 function Crowbar() : Weapon() constructor {
 	
+	// from Item
 	sprite = spr_crowbar
+	
+	// from Weapon
 	damage = CROWBAR_DAMAGE
 	
+	// Crowbar
 	charge = CROWBAR_MIN_CHARGE
 
-	static alarm_one = function() {
-		state = weapon_state.cooldown
-	}
-	static alarm_two = function() {
-		state = weapon_state.idle
-	}
+	static alarm_one = function() { state = weapon_state.cooldown }
+	static alarm_two = function() { state = weapon_state.idle }
 	
 	static attack = function() { 
 		switch (state) {

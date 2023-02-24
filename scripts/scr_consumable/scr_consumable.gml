@@ -1,0 +1,1 @@
+function Consumables() : Item() constructor {}

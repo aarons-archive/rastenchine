@@ -1,29 +1,30 @@
 function Gun() : Weapon() constructor {
 
+	// from Item
 	sprite = spr_gun
+	
+	// from Weapon
 	damage = GUN_DAMAGE
 	
+	// Gun
 	ammo = GUN_MAX_AMMO
 	clip = GUN_CLIP
-	reloading = false
-	
+
 	static alarm_one = function() {
 		state = weapon_state.idle
 		instance.sprite_index = spr_gun
-		if (clip + ammo) < GUN_CLIP
-		{
+		if ((clip + ammo) < GUN_CLIP) {
 			clip = ammo
-			ammo = 0;
+			ammo = 0
 		}
-		else
-		{
-		ammo -= (GUN_CLIP - clip);
-		clip = GUN_CLIP;
+		else {
+			ammo -= (GUN_CLIP - clip)
+			clip = GUN_CLIP
 		}
 	}
 	
-	static alarm_two = function() {
-		state = weapon_state.idle
+	static alarm_two = function() { 
+		state = weapon_state.idle 
 	}
 	
 	static attack = function() {
