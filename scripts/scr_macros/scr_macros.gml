@@ -9,9 +9,9 @@
 #macro PLAYER_MAX_HEALTH  100
 #macro PLAYER_MAX_STAMINA 100
 // speed
-#macro PLAYER_WALK_SPEED 5
-#macro PLAYER_RUN_SPEED  10
-#macro PLAYER_ROLL_SPEED 15
+#macro PLAYER_WALK_SPEED 4
+#macro PLAYER_RUN_SPEED  7
+#macro PLAYER_ROLL_SPEED 10
 #endregion
 
 #region Dummy
