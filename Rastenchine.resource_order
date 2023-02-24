@@ -9,6 +9,8 @@
     {"name":"Player","order":1,"path":"folders/Entities/Player.yy",},
     {"name":"Inventory","order":6,"path":"folders/Inventory.yy",},
     {"name":"Items","order":5,"path":"folders/Inventory/Items.yy",},
+    {"name":"Consumables","order":4,"path":"folders/Inventory/Items/Consumables.yy",},
+    {"name":"Healing Pack","order":1,"path":"folders/Inventory/Items/Consumables/Healing Pack.yy",},
     {"name":"Weapons","order":3,"path":"folders/Inventory/Items/Weapons.yy",},
     {"name":"Crowbar","order":1,"path":"folders/Inventory/Items/Weapons/Crowbar.yy",},
     {"name":"Gun","order":3,"path":"folders/Inventory/Items/Weapons/Gun.yy",},
@@ -24,8 +26,6 @@
     {"name":"Tiles","order":2,"path":"folders/Map/Tiles.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
     {"name":"UI <-> UX","order":1,"path":"folders/UI <-> UX.yy",},
-    {"name":"Consumables","order":4,"path":"folders/Inventory/Items/Consumables.yy",},
-    {"name":"Healing Pack","order":1,"path":"folders/Inventory/Items/Consumables/Healing Pack.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":4,"path":"objects/obj_menu_element/obj_menu_element.yy",},

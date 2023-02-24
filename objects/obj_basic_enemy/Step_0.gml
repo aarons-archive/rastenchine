@@ -19,27 +19,28 @@ switch (state) {
 				idle_movement = 1
 				alarm[1] = 60
 			}
-			if ((collision_circle(x, y, agro_radius, obj_player, false, false) && _health > 0) 
-			|| agro == true && _health > 0) {state = shambler_state.agro} 
+			if ((collision_circle(x, y, agro_radius, obj_player, false, false)) || agro == true)
+				{state = shambler_state.agro} 
 			break
 	case basic_enem_state.agro:
+		_speed = ENEMY_DEFAULT_SPEED
 		agro = true
-		sprite_index = spr_shambler
+		sprite_index = spr_basic_enemy_chasing
 		if (agro == true) {
 			check_for_player()
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
-			if (collision_rectangle(x-64, y-34,x+64,y+34, obj_player, false, false) && _health > 0) {state = basic_enem_state.attacking	}
-		}
+			if (collision_rectangle(x-64, y-34,x+64,y+34, obj_player, false, false)) {state = basic_enem_state.attacking}
+			}
 		if (collision_circle(x, y, vision_radius, obj_player, false, false)
 			&& !collision_circle(x, y, agro_radius, obj_player, false, false)) {state = basic_enem_state.idle }
-		if (collision_circle(x, y,100, obj_player, false, false) && _health > 0) {state = basic_enem_state.agro}
 		break
 	case basic_enem_state.attacking:
 		_speed = 0
-		alarm[2] = 30
 		sprite_index = spr_basic_enemy_attack
-		if image_index >= 4 {state = basic_enem_state.agro}
+		if image_index > 3 {state = basic_enem_state.agro}
 		break
 	case basic_enem_state.death:
 		break
 }
+
+show_debug_message(state)
