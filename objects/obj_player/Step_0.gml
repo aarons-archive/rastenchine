@@ -10,13 +10,3 @@ run()
 roll()
 movement()
 inventory.step()
-
-if (x_input == 1) {
-	image_angle = 0
-	image_yscale = 1
-}
-if (x_input == -1) {
-	image_angle = 180
-	image_yscale = -1
-}
-

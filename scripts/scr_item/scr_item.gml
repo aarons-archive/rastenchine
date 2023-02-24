@@ -18,9 +18,15 @@ function Item() constructor {
 		else {instance.depth = obj_player.depth - 1 }
 		
 		// facing right when the mouse is in the right screen area
-		if (_direction < 90 || _direction > 270) { instance.image_yscale = lerp(instance.image_yscale, 1, 0.3) }
+		if (_direction < 90 || _direction > 270) { 
+			instance.image_yscale = lerp(instance.image_yscale, 1, 0.3)
+			obj_player.image_xscale = 1
+		}
 		// facing left when the mouse is in the left screen area
-		else { instance.image_yscale = lerp(instance.image_yscale, -1, 0.3)}
+		else { 
+			instance.image_yscale = lerp(instance.image_yscale, -1, 0.3)
+			obj_player.image_xscale = -1
+		}
 	}
 	
 	static alarm_one = function() {}
