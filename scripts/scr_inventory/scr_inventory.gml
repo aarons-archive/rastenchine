@@ -37,9 +37,9 @@ function Inventory() constructor {
 	
 	static draw_hotbar = function() {
 		var hotbar_length = array_length(hotbar)
-		draw_roundrect_color_ext(
+		//draw_roundrect_color_ext(
 			
-		)
+		//)
 		
 		for (i = 0; i < hotbar_length; i++) {
 			var hotbar_item = items[i]

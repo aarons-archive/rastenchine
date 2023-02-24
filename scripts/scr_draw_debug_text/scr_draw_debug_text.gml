@@ -19,10 +19,15 @@ function draw_debug_text() {
 	)
 	
 	draw_set_halign(fa_left)
-	draw_set_valign(fa_top)
+	draw_set_valign(fa_bottom)
 	
-	var names = "Speed: \nInventory Index:"
+	var names = "Speed: \nInventory Index: "
 	var values = string(_speed) + "\n" + string(inventory.index)
+	
+	if (room_light != undefined) {
+		names += "\nRoom Light Range: "
+		values += "\n" + string(room_light[| eLight.Range])
+	}
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {
@@ -37,20 +42,15 @@ function draw_debug_text() {
 		names += "\nAmmo: \nClip: "
 		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 	}
-	
-	if (room_light != undefined) {
-		names += "\nRoom Light Range: "
-		values += "\n" + string(room_light[| eLight.Range])
-	}
-	
+		
 	draw_text_color( 
-		UI_X1, UI_Y1, 
+		UI_X1, UI_Y2, 
 		names, 
 		c_white, c_white, c_white, c_white,
 		1
 	)
 	draw_text_color(
-		UI_X1 + string_width(names), UI_Y1, 
+		UI_X1 + string_width(names), UI_Y2, 
 		values,
 		c_white, c_white, c_white, c_white,
 		1
