@@ -1,2 +1,2 @@
 /// @description next item
-inventory.change_item(inventory.item_index + 1)
+inventory.change_item(inventory.index + 1)

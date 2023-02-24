@@ -21,8 +21,8 @@ function draw_debug_text() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	
-	var names = "Speed: \nItem Index: \nY Scale: "
-	var values = string(_speed) + "\n" + string(inventory.item_index) + "\n" + string(inventory.item.instance.image_yscale)
+	var names = "Speed: \nInventory Index:"
+	var values = string(_speed) + "\n" + string(inventory.index)
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {
