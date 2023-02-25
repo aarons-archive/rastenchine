@@ -1,2 +1,2 @@
-/// @description previous item
-inventory.change_item(inventory.index - 1)
+
+inventory.change_item(inventory.hotbar_index - 1)
