@@ -19,8 +19,7 @@ switch (state) {
 				idle_movement = 1
 				alarm[1] = 60
 			}
-			if ((collision_circle(x, y, agro_radius, obj_player, false, false)) || agro == true)
-				{state = shambler_state.agro} 
+			if (collision_circle(x, y, agro_radius, obj_player, false, true)) {state = shambler_state.agro} 
 			break
 	case basic_enem_state.agro:
 		_speed = ENEMY_DEFAULT_SPEED
@@ -29,10 +28,9 @@ switch (state) {
 		if (agro == true) {
 			check_for_player()
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
-			if (collision_rectangle(x-64, y-34,x+64,y+34, obj_player, false, false)) {state = basic_enem_state.attacking}
-			}
+			if (collision_rectangle(x-64, y-34,x+64,y+34, obj_player, false, false)) {state = basic_enem_state.attacking}}
 		if (collision_circle(x, y, vision_radius, obj_player, false, false)
-			&& !collision_circle(x, y, agro_radius, obj_player, false, false)) {state = basic_enem_state.idle }
+			&& (!collision_circle(x, y, agro_radius, obj_player, false, false)) && (agro == false)) {state = basic_enem_state.idle}
 		break
 	case basic_enem_state.attacking:
 		_speed = 0

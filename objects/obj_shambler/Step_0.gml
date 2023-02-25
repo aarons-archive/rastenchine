@@ -11,7 +11,7 @@ switch (state) {
 	case shambler_state.sleeping:
 		_speed = 0
 		sprite_index = spr_shambler_sleeping
-		if (collision_circle(x, y, agro_radius, obj_player, false, false)) && obj_player._speed > 5 {state = shambler_state.agro }
+		if (collision_circle(x, y, vision_radius, obj_player, false, false)) && obj_player._speed > 3 {state = shambler_state.agro }
 		break
 	case shambler_state.idle:
 			sprite_index = idle_sprite
