@@ -18,7 +18,7 @@
   ],
   "parent": {
     "name": "Menu",
-    "path": "folders/UI <-> UX/Menu.yy",
+    "path": "folders/Menu.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

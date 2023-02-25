@@ -1,10 +1,10 @@
 function Inventory() constructor {
 	
 	// list of Item subclasses
-	items = [new Crowbar(), new Gun(), new HealingPack()]
+	items = [new Crowbar(), new Gun(), new HealingPack(), new AmmoBox()]
 	
 	// list of references (by index) to 'items'
-	hotbar = [1, 2, undefined]
+	hotbar = [1, 2, 3]
 	
 	// reference (by index) to 'hotbar' of the currently held item
 	hotbar_index = 0
@@ -17,13 +17,6 @@ function Inventory() constructor {
 	if (item != undefined) {
 		item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item)
 		item.instance.sprite_index = item.sprite
-	}
-
-	static step = function() {
-		if (item != undefined) {
-			item.common()
-			if (is_instanceof(item, Weapon)) { item.attack() }
-		}
 	}
 	
 	static change_item = function(index) {
@@ -50,8 +43,15 @@ function Inventory() constructor {
 			item.instance.sprite_index = item.sprite
 		}
 	}
+
+	static step = function() {
+		if (item != undefined) {
+			item.common()
+			if (is_instanceof(item, Weapon)) { item.attack() }
+		}
+	}
 	
-	static draw_hotbar = function() {
+	static draw = function() {
 		var hotbar_length = array_length(hotbar)
 		draw_sprite_stretched(
 			spr_hotbar_background, 0,
@@ -64,14 +64,14 @@ function Inventory() constructor {
 				spr_hotbar_foreground, 0,
 				5, 
 				5 + ((50 + 5) * i),
-				50, 50,
+				50, 50
 			)
 			var hotbar_item = (hotbar[i] != undefined) ? items[hotbar[i]] : undefined
 			if (hotbar_item != undefined) {
 				draw_sprite(
 					hotbar_item.sprite, 0, 
 					5 + (50 / 2),
-					5 + ((50 + 5) * i) + 25,
+					5 + ((50 + 5) * i) + 25
 				)
 			}
 		}

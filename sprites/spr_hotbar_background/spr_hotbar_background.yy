@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Inventory",
-    "path": "folders/Inventory.yy",
+    "name": "Hotbar",
+    "path": "folders/Inventory/Hotbar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

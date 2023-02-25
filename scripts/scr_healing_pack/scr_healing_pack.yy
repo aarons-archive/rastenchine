@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Healing Pack",
-    "path": "folders/Inventory/Items/Consumables/Healing Pack.yy",
+    "path": "folders/Inventory/Consumables/Healing Pack.yy",
   },
 }

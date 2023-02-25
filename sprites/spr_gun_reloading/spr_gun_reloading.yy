@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_gun_reloading",
-  "bbox_bottom": 30,
-  "bbox_left": 1,
+  "bbox_bottom": 25,
+  "bbox_left": 0,
   "bbox_right": 30,
-  "bbox_top": 1,
+  "bbox_top": 5,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Gun",
-    "path": "folders/Inventory/Items/Weapons/Gun.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Weapons/Gun/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0cbdcd35-d5b3-4c98-a848-73a9b7164762","path":"sprites/spr_gun_reloading/spr_gun_reloading.yy",},},},"Disabled":false,"id":"fe2d914b-b10b-478e-bd35-584f52ba71e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0cbdcd35-d5b3-4c98-a848-73a9b7164762","path":"sprites/spr_gun_reloading/spr_gun_reloading.yy",},},},"Disabled":false,"id":"04c12fcd-d6dd-4259-b949-613616c1471c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

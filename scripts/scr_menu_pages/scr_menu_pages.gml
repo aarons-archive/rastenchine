@@ -1,4 +1,13 @@
-function menu_create_page() {
+#macro MENU_ELEMENT_MARGIN  5
+#macro MENU_ELEMENT_PADDING 15
+
+#macro MENU_ELEMENT_HEIGHT string_height("HEIGHT") + MENU_ELEMENT_PADDING
+
+#macro MENU_X          UI_X1
+#macro MENU_PAGE_Y     UI_Y1
+#macro MENU_SUB_PAGE_Y (MENU_PAGE_Y + MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * 1.2 
+
+function menu_draw_page() {
 	_draw_page()
 	if (selected_sub_page != undefined) { _draw_sub_page() }
 }
@@ -9,7 +18,7 @@ function menu_change_page(page, sub_page) {
 		selected_sub_page = sub_page
 		array_map_ext(instances, function(element) { instance_destroy(element) })
 		array_resize(instances, 0)
-		menu_create_page()
+		menu_draw_page()
 	}
 }
 

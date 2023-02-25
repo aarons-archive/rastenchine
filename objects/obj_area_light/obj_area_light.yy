@@ -5,17 +5,15 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lights",
-    "path": "folders/Entities/Player/Lights.yy",
+    "name": "Lighting",
+    "path": "folders/Entities/Player/Lighting.yy",
   },
-  "parentObjectId": {
-    "name": "obj_player_light",
-    "path": "objects/obj_player_light/obj_player_light.yy",
-  },
+  "parentObjectId": null,
   "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

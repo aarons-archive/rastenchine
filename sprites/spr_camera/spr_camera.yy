@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "UI <-> UX",
-    "path": "folders/UI <-> UX.yy",
+    "name": "UI",
+    "path": "folders/UI.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

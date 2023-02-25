@@ -23,10 +23,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"04911881-b2f1-4824-bbc8-d0b088464756","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 4,
   "parent": {
     "name": "Healing Pack",
-    "path": "folders/Inventory/Items/Consumables/Healing Pack.yy",
+    "path": "folders/Inventory/Consumables/Healing Pack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 20,
+    "yorigin": 16,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

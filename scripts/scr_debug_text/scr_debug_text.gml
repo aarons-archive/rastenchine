@@ -1,23 +1,5 @@
 function draw_debug_text() {
 
-	draw_set_halign(fa_right)
-	draw_set_valign(fa_middle)
-	
-	draw_text_colour(
-		HEALTH_BAR_BG_X1 - UI_MARGIN, 
-		HEALTH_BAR_MIDDLE,
-		string(_health) + "/" + string(PLAYER_MAX_HEALTH), 
-		c_white, c_white, c_white, c_white,
-		1
-	)
-	draw_text_colour(
-		STAMINA_BAR_BG_X1 - UI_MARGIN, 
-		STAMINA_BAR_MIDDLE, 
-		string(stamina) + "/" + string(PLAYER_MAX_STAMINA), 
-		c_white, c_white, c_white, c_white,
-		1
-	)
-	
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_bottom)
 	
