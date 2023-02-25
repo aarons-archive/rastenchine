@@ -8,7 +8,7 @@ function lighting() {
 	if (room_light != undefined) {
 		if (_room == noone) {
 			if (room_light[| eLight.Range] > 5) {
-				room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 0, 0.2)
+				room_light[| eLight.Range] = lerp(room_light[| eLight.Range], 0, 0.4)
 			}
 			else {
 				light_remove_from_world(room_light)

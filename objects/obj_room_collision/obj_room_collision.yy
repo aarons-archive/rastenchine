@@ -30,5 +30,5 @@
     "path": "sprites/spr_room_collision/spr_room_collision.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
