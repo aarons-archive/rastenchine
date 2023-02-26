@@ -4,7 +4,7 @@ enum shambler_state {
 	agro,
 	charging,
 	attacking,
-	death
+	death,
 }
 
 switch (state) {
@@ -12,6 +12,7 @@ switch (state) {
 		_speed = 0
 		sprite_index = spr_shambler_sleeping
 		if (collision_circle(x, y, vision_radius, obj_player, false, false)) && obj_player._speed > 3 {state = shambler_state.agro }
+		//if (collision_circle(x, y, 50, obj_player, false, false)) {shambler_state.tamed}
 		break
 	case shambler_state.idle:
 			sprite_index = idle_sprite
