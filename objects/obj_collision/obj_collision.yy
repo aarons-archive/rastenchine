@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Collision",
-    "path": "folders/Map/Collision.yy",
+    "path": "folders/Maps/Collision.yy",
   },
   "parentObjectId": {
     "name": "obj_shadow_caster",

@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Tiles",
-    "path": "folders/Map/Tiles.yy",
+    "path": "folders/Maps/Tiles.yy",
   },
   "spriteId": {
     "name": "spr_tiles",

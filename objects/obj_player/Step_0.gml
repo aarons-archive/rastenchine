@@ -5,7 +5,6 @@ switch (state) {
 		break
 }
 
-lighting()
 run()
 roll()
 movement()

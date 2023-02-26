@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "Tiles",
-    "path": "folders/Map/Tiles.yy",
+    "path": "folders/Maps/Tiles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

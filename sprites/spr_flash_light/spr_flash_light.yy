@@ -26,7 +26,7 @@
   "origin": 3,
   "parent": {
     "name": "Lighting",
-    "path": "folders/Entities/Player/Lighting.yy",
+    "path": "folders/Lighting.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -12,14 +12,14 @@
 
 function draw_stamina_bar() {
 	draw_sprite_stretched(
-		spr_hotbar_background, 0,
+		spr_ui_background, 0,
 		STAMINA_BAR_BACKGROUND_X,
 		STAMINA_BAR_BACKGROUND_Y,
 		STAMINA_BAR_BACKGROUND_WIDTH,
 		STAMINA_BAR_BACKGROUND_HEIGHT
 	)
 	draw_sprite_stretched(
-		spr_hotbar_foreground, 0,
+		spr_ui_foreground, 0,
 		STAMINA_BAR_FOREGROUND_X, 
 		STAMINA_BAR_FOREGROUND_Y,
 		STAMINA_BAR_FOREGROUND_WIDTH * (stamina / PLAYER_MAX_STAMINA), 

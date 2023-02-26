@@ -15,7 +15,7 @@
 
 function draw_health_bar() {
 	draw_sprite_stretched(
-		spr_hotbar_background, 0,
+		spr_ui_background, 0,
 		HEALTH_BAR_BACKGROUND_X,
 		HEALTH_BAR_BACKGROUND_Y,
 		HEALTH_BAR_BACKGROUND_WIDTH,

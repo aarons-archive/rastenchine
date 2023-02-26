@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_hotbar_foreground",
+  "name": "spr_ui_foreground",
   "bbox_bottom": 0,
   "bbox_left": 0,
   "bbox_right": 0,
@@ -48,14 +48,14 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Hotbar",
-    "path": "folders/Inventory/Hotbar.yy",
+    "name": "Sprites",
+    "path": "folders/UI/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_hotbar_foreground",
+    "name": "spr_ui_foreground",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -77,7 +77,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e9fe1fcd-af6c-43c5-9b76-7b861bb97819","path":"sprites/spr_hotbar_foreground/spr_hotbar_foreground.yy",},},},"Disabled":false,"id":"45d397f8-bae4-442c-beb0-3b9bd1b2a254","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e9fe1fcd-af6c-43c5-9b76-7b861bb97819","path":"sprites/spr_ui_foreground/spr_ui_foreground.yy",},},},"Disabled":false,"id":"45d397f8-bae4-442c-beb0-3b9bd1b2a254","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

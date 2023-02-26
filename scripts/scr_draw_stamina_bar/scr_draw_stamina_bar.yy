@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_lighting",
+  "name": "scr_draw_stamina_bar",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
     "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "path": "folders/UI/Scripts.yy",
   },
 }

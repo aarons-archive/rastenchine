@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_stamina_bar",
+  "name": "scr_draw_health_bar",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/UI.yy",
+    "name": "Scripts",
+    "path": "folders/UI/Scripts.yy",
   },
 }

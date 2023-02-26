@@ -195,7 +195,7 @@
   ],
   "parent": {
     "name": "Rooms",
-    "path": "folders/Map/Rooms.yy",
+    "path": "folders/Maps/Rooms.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

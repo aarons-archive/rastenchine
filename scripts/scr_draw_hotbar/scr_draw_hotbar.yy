@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_debug_text",
+  "name": "scr_draw_hotbar",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/UI.yy",
+    "name": "Scripts",
+    "path": "folders/UI/Scripts.yy",
   },
 }

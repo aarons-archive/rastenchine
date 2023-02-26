@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Collision",
-    "path": "folders/Map/Collision.yy",
+    "path": "folders/Maps/Collision.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
