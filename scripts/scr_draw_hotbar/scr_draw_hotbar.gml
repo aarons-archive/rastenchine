@@ -21,7 +21,7 @@ function draw_hotbar() {
 		HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + UI_MARGIN) * hotbar_length) + (HOTBAR_PADDING - UI_MARGIN)
 	)
 	
-	for (i = 0; i < hotbar_length; i++) {
+	for (var i = 0; i < hotbar_length; i++) {
 		var slot_y = HOTBAR_BACKGROUND_Y + HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + UI_MARGIN) * i)
 		var colour = (i == hotbar_index) ? c_green : c_white
 		draw_sprite_stretched_ext(

@@ -13,7 +13,7 @@ switch (state) {
 		sprite_index = spr_shambler_sleeping
 		if (collision_circle(x, y, vision_radius, obj_player, false, false)) && obj_player._speed > 4 {state = shambler_state.agro }
 		if (collision_circle(x, y, 50, obj_player, false, false)) && keyboard_check_pressed(ord("E")){
-		instance_create_layer(x,y,"other",obj_shambler_tamed)
+		instance_create_layer(x,y,"other",obj_tamed_shambler)
 		instance_destroy()
 		}
 		break
