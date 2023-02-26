@@ -1,4 +1,5 @@
 var item = obj_player.inventory.item
+var tame = obj_shambler_tamed
 
 if ((invincible == false) && (is_instanceof(item, Weapon) == true) && (item.state == weapon_state.attacking)) {
 	invincible = true
@@ -6,4 +7,6 @@ if ((invincible == false) && (is_instanceof(item, Weapon) == true) && (item.stat
 	alarm[6] = 30
 	_health -= item.damage
 	item.state = weapon_state.cooldown
+	tame.state = shambler_tamed_state.agro
+	tame.target = self
 }
