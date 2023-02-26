@@ -133,10 +133,6 @@
     {"name":"inst_7E60035C","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
     {"name":"inst_7785A0A4","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
     {"name":"inst_72394708","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
-    {"name":"inst_391BFB66","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
-    {"name":"inst_6E36FA68","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
-    {"name":"inst_51A0A02E","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
-    {"name":"inst_348AD681","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},
   ],
   "isDnd": false,
   "layers": [
