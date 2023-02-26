@@ -21,13 +21,15 @@ function draw_debug_text() {
 	}
 		
 	draw_text_color( 
-		UI_X1, UI_Y2, 
+		UI_X1 + UI_MARGIN, 
+		UI_Y2 - UI_MARGIN, 
 		names, 
 		c_white, c_white, c_white, c_white,
 		1
 	)
 	draw_text_color(
-		UI_X1 + string_width(names), UI_Y2, 
+		UI_X1 + UI_MARGIN + string_width(names), 
+		UI_Y2 - UI_MARGIN,
 		values,
 		c_white, c_white, c_white, c_white,
 		1

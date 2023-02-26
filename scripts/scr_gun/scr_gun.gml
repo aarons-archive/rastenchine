@@ -1,3 +1,11 @@
+#macro GUN_DAMAGE 5
+
+#macro GUN_MAX_AMMO 10
+#macro GUN_CLIP     6
+
+#macro GUN_RELOAD_FRAMES   FPS * 1
+#macro GUN_COOLDOWN_FRAMES FPS * 0.4
+
 function Gun() : Weapon() constructor {
 
 	// from Item

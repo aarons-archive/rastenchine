@@ -1,10 +1,17 @@
+#macro MENU_MARGIN 10
+
+#macro MENU_X1 VIEW_X1 + MENU_MARGIN
+#macro MENU_Y1 VIEW_Y1 + MENU_MARGIN
+#macro MENU_X2 VIEW_X2 - MENU_MARGIN
+#macro MENU_Y2 VIEW_Y2 - MENU_MARGIN
+
 #macro MENU_ELEMENT_MARGIN  5
 #macro MENU_ELEMENT_PADDING 15
 
 #macro MENU_ELEMENT_HEIGHT string_height("HEIGHT") + MENU_ELEMENT_PADDING
 
-#macro MENU_X          UI_X1
-#macro MENU_PAGE_Y     UI_Y1
+#macro MENU_X          MENU_X1
+#macro MENU_PAGE_Y     MENU_Y1
 #macro MENU_SUB_PAGE_Y (MENU_PAGE_Y + MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * 1.2 
 
 function menu_draw_page() {

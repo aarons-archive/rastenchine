@@ -1,3 +1,13 @@
+#macro CROWBAR_DAMAGE 2
+
+#macro CROWBAR_MIN_CHARGE       0
+#macro CROWBAR_CHARGE_THRESHOLD 2
+#macro CROWBAR_CHARGE_PER_FRAME 0.1
+#macro CROWBAR_MAX_CHARGE       4
+
+#macro CROWBAR_ATTACK_FRAMES   20
+#macro CROWBAR_COOLDOWN_FRAMES 40
+
 function Crowbar() : Weapon() constructor {
 	
 	// from Item

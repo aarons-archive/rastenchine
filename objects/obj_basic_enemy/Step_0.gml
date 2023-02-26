@@ -40,5 +40,3 @@ switch (state) {
 	case basic_enem_state.death:
 		break
 }
-
-show_debug_message(agro)

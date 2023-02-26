@@ -61,7 +61,7 @@ function Inventory() constructor {
 		)
 		for (i = 0; i < hotbar_length; i++) {
 			draw_sprite_stretched(
-				spr_hotbar_foreground, 0,
+				spr_hotbar_background, 0,
 				5, 
 				5 + ((50 + 5) * i),
 				50, 50
