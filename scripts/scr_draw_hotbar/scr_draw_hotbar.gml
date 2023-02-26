@@ -12,9 +12,7 @@
 #macro HOTBAR_SLOT_Y (undefined) // calculated on demand
 
 function draw_hotbar() {
-	var hotbar = obj_player.inventory.hotbar
 	var hotbar_length = array_length(hotbar)
-	
 	draw_sprite_stretched(
 		spr_ui_background, 0,
 		HOTBAR_BACKGROUND_X, 
@@ -25,13 +23,14 @@ function draw_hotbar() {
 	
 	for (i = 0; i < hotbar_length; i++) {
 		var slot_y = HOTBAR_BACKGROUND_Y + HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + UI_MARGIN) * i)
-		
-		draw_sprite_stretched(
+		var colour = (i == hotbar_index) ? c_green : c_white
+		draw_sprite_stretched_ext(
 			spr_ui_background, 0,
 			HOTBAR_SLOT_X, 
 			slot_y,
 			HOTBAR_SLOT_WIDTH, 
-			HOTBAR_SLOT_HEIGHT
+			HOTBAR_SLOT_HEIGHT,
+			colour, 1
 		)
 		var hotbar_item = (hotbar[i] != undefined) ? items[hotbar[i]] : undefined
 		if (hotbar_item != undefined) {

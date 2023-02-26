@@ -4,7 +4,7 @@ function Inventory() constructor {
 	items = [new Crowbar(), new Gun(), new HealingPack(), new AmmoBox()]
 	
 	// list of references (by index) to 'items'
-	hotbar = [1, 2, 3]
+	hotbar = [0, 1, 2, 3]
 	
 	// reference (by index) to 'hotbar' of the currently held item
 	hotbar_index = 0
