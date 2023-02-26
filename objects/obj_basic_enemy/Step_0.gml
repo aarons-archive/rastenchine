@@ -19,7 +19,7 @@ switch (state) {
 				idle_movement = 1
 				alarm[1] = 60
 			}
-			if (collision_circle(x, y, agro_radius, obj_player, false, true)) {state = shambler_state.agro} 
+			if (collision_circle(x, y, agro_radius, obj_player, false, true)) {state = basic_enem_state.agro} 
 			break
 	case basic_enem_state.agro:
 		_speed = ENEMY_DEFAULT_SPEED
@@ -35,7 +35,7 @@ switch (state) {
 	case basic_enem_state.attacking:
 		_speed = 0
 		sprite_index = spr_basic_enemy_attack
-		if image_index > 3 {state = basic_enem_state.agro}
+		if image_index > 9 {state = basic_enem_state.agro}
 		break
 	case basic_enem_state.death:
 		break

@@ -1,6 +1,6 @@
 event_inherited()
 
-state = shambler_state.idle
+state = basic_enem_state.idle
 
 _health = ENEMY_MAX_HEALTH
 _speed = ENEMY_DEFAULT_SPEED
