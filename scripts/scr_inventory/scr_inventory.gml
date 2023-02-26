@@ -51,9 +51,6 @@ function Inventory() constructor {
 		}
 	}
 	
-	static draw = function() {
-		draw_hotbar()
-	}
-
+	static draw = function() { draw_hotbar()}
  }
  
