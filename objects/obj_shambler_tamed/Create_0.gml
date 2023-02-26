@@ -12,4 +12,4 @@ target = undefined
 
 attack_radius = 100
 agro_radius = 300
-
+damage = 10

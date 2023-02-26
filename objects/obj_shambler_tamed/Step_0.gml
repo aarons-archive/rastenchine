@@ -25,7 +25,7 @@ switch (state) {
 		break
 	case shambler_tamed_state.attacking:
 		_speed = 0
-		sprite_index = spr_basic_enemy_attack
+		sprite_index = spr_shambler_tame_attacking
 		if image_index > 9 {state = shambler_tamed_state.agro}
 		break
 	case shambler_tamed_state.death:
