@@ -11,6 +11,7 @@
     {"name":"Consumables","order":6,"path":"folders/Inventory/Consumables.yy",},
     {"name":"Ammo Box","order":2,"path":"folders/Inventory/Consumables/Ammo Box.yy",},
     {"name":"Healing Pack","order":1,"path":"folders/Inventory/Consumables/Healing Pack.yy",},
+    {"name":"Items","order":4,"path":"folders/Inventory/Items.yy",},
     {"name":"Weapons","order":5,"path":"folders/Inventory/Weapons.yy",},
     {"name":"Crowbar","order":1,"path":"folders/Inventory/Weapons/Crowbar.yy",},
     {"name":"Gun","order":2,"path":"folders/Inventory/Weapons/Gun.yy",},
@@ -28,7 +29,6 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":3,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":2,"path":"folders/UI/Sprites.yy",},
-    {"name":"Items","order":4,"path":"folders/Inventory/Items.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":5,"path":"objects/obj_menu_element/obj_menu_element.yy",},
