@@ -22,7 +22,7 @@ function Crowbar() : Weapon() constructor {
 	static alarm_one = function() { state = weapon_state.cooldown }
 	static alarm_two = function() { state = weapon_state.idle }
 	
-	static attack = function() { 
+	static use = function() { 
 		switch (state) {
 			case weapon_state.idle:
 				// start the charging state when the user presses the attack button.
@@ -61,6 +61,5 @@ function Crowbar() : Weapon() constructor {
 				}
 				break
 		}
-		
 	}
 }

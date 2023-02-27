@@ -35,7 +35,7 @@ function Gun() : Weapon() constructor {
 		state = weapon_state.idle 
 	}
 	
-	static attack = function() {
+	static use = function() {
 		switch (state) {
 			case weapon_state.idle:
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {

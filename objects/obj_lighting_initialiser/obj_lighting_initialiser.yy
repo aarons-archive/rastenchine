@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_lighting_initializer",
+  "name": "obj_lighting_initialiser",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_lighting_initializer",
-    "path": "sprites/spr_lighting_initializer/spr_lighting_initializer.yy",
+    "name": "spr_lighting_initialiser",
+    "path": "sprites/spr_lighting_initialiser/spr_lighting_initialiser.yy",
   },
   "spriteMaskId": null,
   "visible": false,

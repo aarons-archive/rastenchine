@@ -1,1 +1,2 @@
-state = player_states.idle
+/// @description reset player state
+state = player_state.idle

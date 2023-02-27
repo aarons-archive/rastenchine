@@ -12,6 +12,6 @@ function Weapon() : Item() constructor {
 	// common
 	state = weapon_state.idle
 	
-	// overridden in subclasses (Crowbar, Gun, ...)
+	// must be overridden in subclasses
 	damage = undefined
 }
