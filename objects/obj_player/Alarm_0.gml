@@ -1,2 +1,2 @@
-/// @description reset stamina_lock
-stamina_lock = false
+/// @description reset movement state
+movement_state = player_movement_state.not_moving
