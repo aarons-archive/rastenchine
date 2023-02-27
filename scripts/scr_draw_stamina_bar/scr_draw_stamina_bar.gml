@@ -25,7 +25,7 @@ function draw_stamina_bar() {
 		STAMINA_BAR_FOREGROUND_WIDTH * (stamina / PLAYER_MAX_STAMINA), 
 		STAMINA_BAR_FOREGROUND_HEIGHT
 	)
-	if (stamina_lock == true) {
+	if (movement_state == player_movement_state.exhausted) {
 		draw_set_halign(fa_left)
 		draw_set_valign(fa_top)
 		draw_text_color(

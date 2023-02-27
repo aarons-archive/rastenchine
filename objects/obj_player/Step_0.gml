@@ -6,7 +6,7 @@ wasd_input = ((x_input != 0) or (y_input != 0))
 run_input = keyboard_check(global.RUN_KEY)
 dodge_input = keyboard_check_pressed(global.DODGE_KEY)
 
-if ((stamina <= 0) and movement_state != player_movement_state.dodging) {
+if ((stamina <= 0) and (movement_state != player_movement_state.dodging)) {
 	movement_state = player_movement_state.exhausted
 }
 
@@ -59,7 +59,7 @@ switch (movement_state) {
 	case player_movement_state.exhausted:
 		_speed = lerp(_speed, PLAYER_EXHAUSTED_SPEED, 0.2)
 		stamina = min(PLAYER_MAX_STAMINA, stamina + 0.2)
-		if (stamina >= ((stamina / PLAYER_MAX_STAMINA) * 100)) {
+		if (stamina >= (PLAYER_MAX_STAMINA * 0.3)) {
 			movement_state = player_movement_state.not_moving
 		}
 		break
