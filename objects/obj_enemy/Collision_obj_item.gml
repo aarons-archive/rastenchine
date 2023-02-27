@@ -8,5 +8,5 @@ if ((invincible == false) && (is_instanceof(item, Weapon) == true) && (item.stat
 	_health -= item.damage
 	item.state = weapon_state.cooldown
 	tame.state = shambler_tamed_state.agro
-	tame.target = self
+	tame.target = self.id
 }

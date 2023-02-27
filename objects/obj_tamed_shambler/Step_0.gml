@@ -22,8 +22,7 @@ switch (state) {
 		sprite_index = spr_tamed_shambler_agro
 		check_for_enemy()
 		if (target.x < x) {image_xscale = -1} else {image_xscale = 1} 
-		if (collision_rectangle(x-64, y-34,x+64,y+34, obj_enemy, false, false)) {state = shambler_tamed_state.attacking}
-		if (target == undefined) {state = shambler_tamed_state.following}
+		if (collision_rectangle(x-64, y-34,x+64,y+34 , obj_enemy, false, false)) {state = shambler_tamed_state.attacking}
 		break
 	case shambler_tamed_state.attacking:
 		_speed = 0
