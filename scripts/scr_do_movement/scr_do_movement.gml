@@ -4,7 +4,7 @@ function do_movement() {
 		return 
 	}
 	
-	var _direction = point_direction(0, 0, x_input, y_input)
+	_direction = point_direction(0, 0, x_input, y_input)
 	var x_movement = lengthdir_x(_speed, _direction)
 	var y_movement = lengthdir_y(_speed, _direction)
 

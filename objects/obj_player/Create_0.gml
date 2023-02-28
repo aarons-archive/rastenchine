@@ -17,6 +17,7 @@ enum player_movement_state {
 }
 movement_state = player_movement_state.idle
 
+_direction = 0
 _health = PLAYER_HEALTH
 _speed = PLAYER_WALK_SPEED
 stamina = PLAYER_MAX_STAMINA
