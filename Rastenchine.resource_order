@@ -30,6 +30,7 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":3,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":2,"path":"folders/UI/Sprites.yy",},
+    {"name":"group1","order":9,"path":"folders/Entities/Enemy/group1.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":5,"path":"objects/obj_menu_element/obj_menu_element.yy",},

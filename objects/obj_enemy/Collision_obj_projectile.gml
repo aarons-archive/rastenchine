@@ -6,6 +6,6 @@ if (invincible == false) {
 	alarm[6] = 30
 	_health -= item.damage
 	item.state = weapon_state.cooldown
-	tame.state = shambler_tamed_state.agro
-	tame.target = self.id
+	if instance_exists(obj_tamed_shambler){tame.state = shambler_tamed_state.agro}
+	if instance_exists(obj_tamed_shambler){tame.target = self}
 }
