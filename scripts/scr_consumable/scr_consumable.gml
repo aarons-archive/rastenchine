@@ -1,1 +1,3 @@
-function Consumables() : Item() constructor {}
+function Consumables() : Item() constructor {
+	count = 1
+}
