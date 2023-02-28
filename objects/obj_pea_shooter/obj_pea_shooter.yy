@@ -1,17 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ammo_box",
-  "eventList": [],
+  "name": "obj_pea_shooter",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Ammo Box",
-    "path": "folders/Inventory/Consumables/Ammo Box.yy",
+    "name": "Pea Shooter",
+    "path": "folders/Entities/Enemy/Pea Shooter.yy",
   },
   "parentObjectId": {
-    "name": "obj_item_pickup",
-    "path": "objects/obj_item_pickup/obj_item_pickup.yy",
+    "name": "obj_enemy",
+    "path": "objects/obj_enemy/obj_enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ammo_box",
-    "path": "sprites/spr_ammo_box/spr_ammo_box.yy",
+    "name": "spr_pea_shooter",
+    "path": "sprites/spr_pea_shooter/spr_pea_shooter.yy",
   },
   "spriteMaskId": null,
   "visible": true,

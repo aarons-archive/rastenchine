@@ -8,15 +8,15 @@ function draw_debug_text() {
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {
-		names += "\nState: \nDamage: "
+		names += "\nItem State: \nItem Damage: "
 		values += "\n" + string(item.state) + "\n" + string(item.damage)
  	}
 	if (is_instanceof(item, Crowbar)) {
-		names += "\nCharge: "
+		names += "\nCrowbar Charge: "
 		values += "\n" + string(item.charge)
 	}
 	else if (is_instanceof(item, Gun)) {
-		names += "\nAmmo: \nClip: "
+		names += "\nGun Ammo: \nGun Clip: "
 		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 	}
 		

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "bullet",
-    "path": "folders/Entities/Enemy/peashooter/bullet.yy",
+    "name": "Pea Shooter",
+    "path": "folders/Entities/Enemy/Pea Shooter.yy",
   },
   "parentObjectId": null,
   "persistent": false,
