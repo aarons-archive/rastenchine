@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Entities/Enemy.yy",
+    "name": "Enemies",
+    "path": "folders/Entities/Enemies.yy",
   },
   "parentObjectId": null,
   "persistent": false,

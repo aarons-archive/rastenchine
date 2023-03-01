@@ -31,7 +31,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Entities/Enemy/Shambler/Sprites.yy",
+    "path": "folders/Entities/Enemies/Shambler/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

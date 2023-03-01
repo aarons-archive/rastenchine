@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dummy",
-    "path": "folders/Entities/Enemy/Dummy.yy",
+    "path": "folders/Entities/Enemies/Dummy.yy",
   },
   "parentObjectId": {
     "name": "obj_enemy",

@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pea Shooter",
-    "path": "folders/Entities/Enemy/Pea Shooter.yy",
+    "path": "folders/Entities/Enemies/Pea Shooter.yy",
   },
   "parentObjectId": null,
   "persistent": false,

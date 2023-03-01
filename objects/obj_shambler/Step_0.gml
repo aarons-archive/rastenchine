@@ -1,3 +1,5 @@
+event_inherited()
+
 enum shambler_state {
 	sleeping,
 	idle,

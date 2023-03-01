@@ -1,4 +1,4 @@
-
+event_inherited()
 state = shambler_state.sleeping
 
 idle_sprite = spr_shambler
@@ -16,10 +16,4 @@ agro = false
 
 global._enemy_damage = 10
 idle_movement = 0
-_y = y
-_x = x
-
-path = path_add()
-path_delay = 10
-path_timer = irandom(60)
 explode_timer = 0
