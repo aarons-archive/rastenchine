@@ -1,1 +1,0 @@
-idle_movement = 0

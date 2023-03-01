@@ -1,1 +1,0 @@
-_speed = ENEMY_DEFAULT_SPEED

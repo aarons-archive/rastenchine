@@ -31,19 +31,21 @@ switch (state) {
 				idle_movement = 1
 				alarm[1] = 60
 			}
-			if (collision_circle(x, y, agro_radius, obj_player, false, false)) {state = shambler_state.agro} 
+			if (collision_circle(x, y, agro_radius, obj_player, false, false)) {
+				state = shambler_state.agro 
+				agro = true} 
 			break
 	#endregion
 	#region agro case
 	case shambler_state.agro:
 		_speed = ENEMY_DEFAULT_SPEED
-		agro = true
 		sprite_index = spr_shambler
 		if (agro == true) {
 			check_for_player()
 			if (obj_player.x < x) { image_xscale = -1 } else { image_xscale = 1 } 
 		}
-		if !(collision_circle(x, y, agro_radius, obj_player, false, false)) {state = shambler_state.idle }
+		if !(collision_circle(x, y, agro_radius, obj_player, false, false)) && (alarm[3] == -1) {alarm[3] = agro_timer }
+		if (agro == false) {state = shambler_state.idle path_end()}
 		if (collision_circle(x, y,100, obj_player, false, false)) {state = shambler_state.charging}
 		break
 	#endregion
@@ -55,13 +57,15 @@ switch (state) {
 		if !(collision_circle(x, y,100, obj_player, false, false)){
 			_speed = ENEMY_DEFAULT_SPEED 
 			explode_timer = 0 
-			state = shambler_state.agro}
+			state = shambler_state.agro
+			agro = true
+			}
 		if explode_timer >= 8 {state = shambler_state.attacking}
 		break
 	#endregion
 	#region attacking case
 	case shambler_state.attacking:
-		sprite_index = spr_shambler_explode
+		sprite_index = attacking_sprite
 		if image_index >= 5 {instance_destroy()}
 		break
 	#endregion

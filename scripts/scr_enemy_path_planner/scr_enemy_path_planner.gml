@@ -33,7 +33,9 @@ function check_for_player_ranged() {
 			var _found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0, 1));
 			//start path if can reach the player
 			if (_found_player) {path_start(path, _speed, path_action_stop, false)}
-			if (sprite_index == spr_pea_shooter) { path_end()} 
+		}
+			else if (_dis < close_radius) {
+			path_end()
 		}
 	}
 }
