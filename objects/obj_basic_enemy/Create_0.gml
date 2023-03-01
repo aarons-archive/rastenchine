@@ -11,5 +11,5 @@ agro_radius = 300
 agro = false
 global._enemy_damage = 10
 
-death_sprite = spr_basic_enemy_death
 idle_sprite = spr_basic_enemy
+death_sprite = spr_basic_enemy_death

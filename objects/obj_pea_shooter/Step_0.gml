@@ -2,25 +2,21 @@ enum peashooter_state {
 	idle,
 	burrowed,
 	agro,
-	attacking,
-	death,
+	attacking
 }
 
 switch(state){
 	#region idle case
 	case peashooter_state.idle:
-	agro = false
-		sprite_index = spr_pea_shooter_burrowed
-		alarm[3] = 120
-			_speed = ENEMY_DEFAULT_SPEED
-			if idle_movement = 0
-			{
-				x += _speed * irandom_range(-3, 3)
-				y += _speed * irandom_range(-3, 3)
-				idle_movement = 1
-				alarm[1] = 60
-			}
-			if (collision_circle(x, y, agro_radius, obj_player, false, true)) {state = peashooter_state.agro} 
+		sprite_index = idle_sprite
+		_speed = ENEMY_DEFAULT_SPEED
+		if idle_movement = 0{
+			x += _speed * irandom_range(-3, 3)
+			y += _speed * irandom_range(-3, 3)
+			idle_movement = 1
+			alarm[1] = 60
+		}
+		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {state = peashooter_state.agro} 
 		break
 		#endregion
 	#region agro case
@@ -28,11 +24,14 @@ switch(state){
 		_speed = ENEMY_DEFAULT_SPEED
 		agro = true
 		sprite_index = spr_pea_shooter_angry_burrowed
-		if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
-		if (agro == true) { check_for_player_ranged() }
+	
+		if (agro == true) { 
+			check_for_player_ranged()
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+		}
 		if (collision_circle(x, y, attack_radius, obj_player, false, false)) {state = peashooter_state.attacking}
-		if (collision_circle(x, y, vision_radius, obj_player, false, false)
-			&& (!collision_circle(x, y, agro_radius, obj_player, false, false)) && (agro == false)) {state = peashooter_state.idle}
+		if !(collision_circle(x, y, agro_radius, obj_player, false, false)) {alarm[3] = 120 }
+		if (agro == false) {state = peashooter_state.idle}
 		break
 		#endregion
 		#region attacking case
