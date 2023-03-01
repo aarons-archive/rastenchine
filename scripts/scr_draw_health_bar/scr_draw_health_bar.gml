@@ -25,7 +25,7 @@ function draw_health_bar() {
 		HEALTH_BAR_SPRITE, 0,
 		HEALTH_BAR_SPRITE_X, 
 		HEALTH_BAR_SPRITE_Y,
-		HEALTH_BAR_SPRITE_WIDTH * (_health / PLAYER_HEALTH), 
+		HEALTH_BAR_SPRITE_WIDTH * (_health / PLAYER_MAX_HEALTH), 
 		HEALTH_BAR_SPRITE_HEIGHT
 	)
 	if (DEBUG == true) {
@@ -34,7 +34,7 @@ function draw_health_bar() {
 		draw_text_colour(
 			HEALTH_BAR_BACKGROUND_X - UI_MARGIN, 
 			HEALTH_BAR_BACKGROUND_Y + (HEALTH_BAR_BACKGROUND_HEIGHT / 2),
-			string(_health) + "/" + string(PLAYER_HEALTH), 
+			string(_health) + "/" + string(PLAYER_MAX_HEALTH), 
 			c_white, c_white, c_white, c_white,
 			1
 		)

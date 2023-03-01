@@ -3,8 +3,8 @@ function draw_debug_text() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_bottom)
 	
-	var names = "Movement State \nSpeed: \nDirection: "
-	var values = string(movement_state) + "\n" + string(_speed) + "\n" + string(_direction)
+	var names = "Movement State \nSpeed: "
+	var values = string(movement_state) + "\n" + string(_speed)
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {

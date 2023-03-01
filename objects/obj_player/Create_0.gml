@@ -1,13 +1,11 @@
 event_inherited()
 
-// scr_get_inputs
 x_input = 0
 y_input = 0
 walk_input = false
 run_input = false
 dodge_input = false
 
-// scr_handle_movement_state
 enum player_movement_state {
 	idle,
 	walking,
@@ -16,11 +14,10 @@ enum player_movement_state {
 	exhausted,
 }
 movement_state = player_movement_state.idle
-
-_direction = 0
-_health = PLAYER_HEALTH
-_speed = PLAYER_WALK_SPEED
 stamina = PLAYER_MAX_STAMINA
+_speed = PLAYER_WALK_SPEED
+
+_health = PLAYER_MAX_HEALTH
 inventory = new Inventory()
 
 // make everything dark

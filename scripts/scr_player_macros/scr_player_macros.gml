@@ -1,22 +1,29 @@
-// misc
-#macro PLAYER_HEALTH  (100)
-#macro PLAYER_DODGE_FRAMES (FPS / 2)
+// health
+#macro PLAYER_MIN_HEALTH (0)
+#macro PLAYER_MAX_HEALTH (100)
 
-// stamina
+// stamina 
 #macro PLAYER_MIN_STAMINA (0)
 #macro PLAYER_MAX_STAMINA (100)
 
-// speed
-#macro PLAYER_WALK_SPEED      (4)
-#macro PLAYER_RUN_SPEED       (7)
-#macro PLAYER_DODGE_SPEED     (10)
-#macro PLAYER_EXHAUSTED_SPEED (2)
+// idle
+#macro PLAYER_IDLE_SPEED                  (0)
+#macro PLAYER_IDLE_STAMINA_GAIN_PER_FRAME (0.75)
 
-// stamina gain
-#macro IDLE_STAMINA_GAIN_PER_FRAME      (0.5)
-#macro WALKING_STAMINA_GAIN_PER_FRAME   (0.5)
-#macro EXHAUSTED_STAMINA_GAIN_PER_FRAME (0.2)
+// walking
+#macro PLAYER_WALK_SPEED                  (4)
+#macro PLAYER_WALK_STAMINA_GAIN_PER_FRAME (0.5)
 
-// stamina cost
-#macro RUNNING_STAMINA_COST_PER_FRAME (1)
-#macro DODGING_STAMINA_COST           (20)
+// running
+#macro PLAYER_RUN_SPEED                  (7)
+#macro PLAYER_RUN_STAMINA_COST_PER_FRAME (1)
+
+// dodging
+#macro PLAYER_DODGE_SPEED        (10)
+#macro PLAYER_DODGE_STAMINA_COST (20)
+#macro PLAYER_DODGE_FRAMES       (FPS / 2)  // 30 frames
+
+// exhausted
+#macro PLAYER_EXHAUSTED_SPEED                  (2)
+#macro PLAYER_EXHAUSTED_STAMINA_GAIN_PER_FRAME (0.25)
+#macro PLAYER_EXHAUSTED_THRESHOLD              (PLAYER_MAX_STAMINA * 0.3)  // 30%

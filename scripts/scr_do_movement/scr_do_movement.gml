@@ -1,10 +1,10 @@
 function do_movement() {
 
-	if ((x_input == 0) and (y_input == 0)) { 
+	if (walk_input == false) { 
 		return 
 	}
 	
-	_direction = point_direction(0, 0, x_input, y_input)
+	var _direction = point_direction(0, 0, x_input, y_input)
 	var x_movement = lengthdir_x(_speed, _direction)
 	var y_movement = lengthdir_y(_speed, _direction)
 
