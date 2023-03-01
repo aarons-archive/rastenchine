@@ -39,10 +39,7 @@ switch (state) {
 	case basic_enem_state.attacking:
 		path_end()
 		sprite_index = attacking_sprite
-		if image_index > 8 {
-			state = basic_enem_state.agro 
-			agro = true
-		}
+		if (image_index > 9) && (alarm[4] == -1)  {alarm[4] = 120}
 		break
 	#endregion
 }
