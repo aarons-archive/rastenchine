@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_collision",
-  "bbox_bottom": 31,
+  "bbox_bottom": 23,
   "bbox_left": 0,
-  "bbox_right": 31,
+  "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 32,
+  "height": 24,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"62e89fd1-c6cd-427b-b3a8-2e98f4c2cc8b","blendMode":0,"displayName":"default","isLocked":false,"opacity":60.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 32,
+  "width": 24,
 }
