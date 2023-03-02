@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_enemy_spawner",
-  "bbox_bottom": 63,
+  "bbox_bottom": 23,
   "bbox_left": 0,
-  "bbox_right": 63,
+  "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 24,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"60d3ea73-a2ae-499f-9b45-9ec46dbd6fd4","blendMode":0,"displayName":"default","isLocked":false,"opacity":60.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 24,
 }
