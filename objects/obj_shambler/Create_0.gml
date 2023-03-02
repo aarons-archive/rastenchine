@@ -1,6 +1,6 @@
 event_inherited()
 
-state = shambler_state.sleeping
+state = enemy_state.sleeping
 
 vision_radius = 500
 attack_radius = 100

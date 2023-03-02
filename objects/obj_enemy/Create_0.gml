@@ -1,5 +1,14 @@
 event_inherited()
 
+enum enemy_state {
+	idle,
+	agro,
+	attacking,
+	burrowed,
+	charging,
+	sleeping
+}
+
 death_sprite = undefined
 idle_sprite = undefined
 agro_sprite = undefined

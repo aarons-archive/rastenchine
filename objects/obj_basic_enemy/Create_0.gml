@@ -1,6 +1,6 @@
 event_inherited()
 
-state = basic_enem_state.idle
+state = enemy_state.idle
 
 vision_radius = 500
 attack_radius = 100

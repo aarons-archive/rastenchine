@@ -1,6 +1,6 @@
 event_inherited()
 
-state = peashooter_state.idle
+state = enemy_state.idle
 
 vision_radius = 700
 attack_radius = 300
