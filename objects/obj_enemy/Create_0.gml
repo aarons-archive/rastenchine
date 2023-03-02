@@ -9,6 +9,8 @@ enum enemy_state {
 	sleeping
 }
 
+state = enemy_state.idle
+
 death_sprite = undefined
 idle_sprite = undefined
 agro_sprite = undefined

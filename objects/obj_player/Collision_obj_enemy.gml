@@ -1,4 +1,4 @@
-if ((invincible == false) && (obj_enemy.sprite_index == spr_basic_enemy_attack)) {	
+if (invincible == false) && (other.state == enemy_state.attacking) {	
 	invincible = true
 	alarm[6] = 30
 	_health -= global._enemy_damage
