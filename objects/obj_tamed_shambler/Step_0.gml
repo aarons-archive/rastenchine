@@ -34,5 +34,3 @@ switch (state) {
 	case shambler_tamed_state.death:
 		break
 }
-
-show_debug_message(target)

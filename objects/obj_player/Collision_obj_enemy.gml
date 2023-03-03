@@ -3,7 +3,3 @@ if (invincible == false) && (other.state == enemy_state.attacking) {
 	alarm[6] = 30
 	_health -= global._enemy_damage
 }
-
-// long/easy way type all attack states per enemy
-// move all attacking states to same position 
-// long way that i dont remember

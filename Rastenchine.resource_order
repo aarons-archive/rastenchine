@@ -32,6 +32,7 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":3,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":2,"path":"folders/UI/Sprites.yy",},
+    {"name":"Leaper","order":6,"path":"folders/Entities/Enemies/Leaper.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":5,"path":"objects/obj_menu_element/obj_menu_element.yy",},
@@ -135,6 +136,7 @@
     {"name":"polygon_get_area","order":7,"path":"scripts/polygon_get_area/polygon_get_area.yy",},
     {"name":"ext_light_attenuation_init","order":1,"path":"scripts/ext_light_attenuation_init/ext_light_attenuation_init.yy",},
     {"name":"spr_basic_enemy_attack","order":1,"path":"sprites/spr_basic_enemy_attack/spr_basic_enemy_attack.yy",},
+    {"name":"spr_leaper","order":1,"path":"sprites/spr_leaper/spr_leaper.yy",},
     {"name":"light_create_directional","order":5,"path":"scripts/light_create_directional/light_create_directional.yy",},
     {"name":"spr_pea_shooter_burrowed","order":2,"path":"sprites/spr_pea_shooter_burrowed/spr_pea_shooter_burrowed.yy",},
     {"name":"obj_dummy","order":1,"path":"objects/obj_dummy/obj_dummy.yy",},
