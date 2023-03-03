@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_room_collision",
+  "name": "spr_room_light_collision",
   "bbox_bottom": 23,
   "bbox_left": 0,
   "bbox_right": 23,
@@ -25,8 +25,8 @@
   "nineSlice": {
     "resourceType": "GMNineSliceData",
     "resourceVersion": "1.0",
-    "bottom": 3,
-    "enabled": false,
+    "bottom": 4,
+    "enabled": true,
     "guideColour": [
       4294902015,
       4294902015,
@@ -35,8 +35,8 @@
     ],
     "highlightColour": 1728023040,
     "highlightStyle": 0,
-    "left": 3,
-    "right": 3,
+    "left": 4,
+    "right": 4,
     "tileMode": [
       0,
       0,
@@ -44,7 +44,7 @@
       0,
       0,
     ],
-    "top": 3,
+    "top": 4,
   },
   "origin": 4,
   "parent": {
@@ -55,7 +55,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_room_collision",
+    "name": "spr_room_light_collision",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -77,7 +77,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22674b19-711d-4b1b-91e2-6d09b8656c71","path":"sprites/spr_room_collision/spr_room_collision.yy",},},},"Disabled":false,"id":"094f0aab-1253-4fc7-9e18-948dd21d270a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22674b19-711d-4b1b-91e2-6d09b8656c71","path":"sprites/spr_room_light_collision/spr_room_light_collision.yy",},},},"Disabled":false,"id":"094f0aab-1253-4fc7-9e18-948dd21d270a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

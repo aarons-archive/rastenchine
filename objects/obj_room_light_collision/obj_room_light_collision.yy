@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_room_collision",
+  "name": "obj_room_light_collision",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -30,9 +30,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_room_collision",
-    "path": "sprites/spr_room_collision/spr_room_collision.yy",
+    "name": "spr_room_light_collision",
+    "path": "sprites/spr_room_light_collision/spr_room_light_collision.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
