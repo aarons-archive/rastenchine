@@ -11,13 +11,13 @@ if (active == true) {
 		light = light_create_point(x, y, 64000, $FFFFFFFF, 500, 0)
 		light_add_to_world(light)
 	}
-	if (light[| eLight.Intensity] < 5.0) {
+	else if (light[| eLight.Intensity] < 5.0) {
 		light[| eLight.Intensity] = lerp(light[| eLight.Intensity], 5.0, 0.1)
 	}
 	if (connected_room_count >= 1) {
 		for (var i = 0; i < connected_room_count; ++i;) {
-			if (activated_by == connected_rooms[| i].id) { continue }
-			connected_rooms[| i].activated_by = (activated_by == undefined) ? self.id : activated_by
+			if (connected_rooms[| i].id == activated_by) { continue }
+			connected_rooms[| i].activated_by = (activated_by != undefined) ? activated_by : self.id
 		}
 	}
 }
