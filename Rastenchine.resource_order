@@ -92,6 +92,7 @@
     {"name":"draw_shadow_map","order":7,"path":"scripts/draw_shadow_map/draw_shadow_map.yy",},
     {"name":"spr_shambler_agro","order":2,"path":"sprites/spr_shambler_agro/spr_shambler_agro.yy",},
     {"name":"obj_lighting_renderer","order":5,"path":"objects/obj_lighting_renderer/obj_lighting_renderer.yy",},
+    {"name":"spr_leaper_attacking","order":2,"path":"sprites/spr_leaper_attacking/spr_leaper_attacking.yy",},
     {"name":"scr_healing_pack","order":2,"path":"scripts/scr_healing_pack/scr_healing_pack.yy",},
     {"name":"spr_player_walk","order":3,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
     {"name":"spr_lighting_renderer","order":4,"path":"sprites/spr_lighting_renderer/spr_lighting_renderer.yy",},

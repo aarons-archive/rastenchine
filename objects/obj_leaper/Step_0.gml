@@ -3,7 +3,7 @@ event_inherited();
 switch(state){
 	#region idle case
 	case enemy_state.idle:
-		sprite_index = idle_sprite
+		sprite_index = spr_leaper
 		_speed = ENEMY_DEFAULT_SPEED
 		if idle_movement = 0{
 			x += _speed * irandom_range(-3, 3)
@@ -15,11 +15,11 @@ switch(state){
 			state = enemy_state.agro
 			agro = true} 
 		break
-		#endregion
+	#endregion
 	#region agro case
 	case enemy_state.agro:
 		_speed = ENEMY_DEFAULT_SPEED
-		sprite_index = agro_sprite
+		sprite_index = spr_leaper
 		if (agro == true) { 
 			check_for_player()
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
@@ -28,7 +28,7 @@ switch(state){
 		if !(collision_circle(x, y, agro_radius, obj_player, false, false)) && (alarm[3] == -1) {alarm[3] = agro_timer }
 		if (agro == false) {state = enemy_state.idle path_end()}
 		break
-		#endregion
+	#endregion
 	#region charging case
 	case enemy_state.charging:
 		path_end()
@@ -41,11 +41,13 @@ switch(state){
 	#endregion
 	#region attacking case
 	case enemy_state.attacking:
-		sprite_index = spr_leaper
 		//jump attack
 		(move_towards_point(obj_player.x,obj_player.y, speed = 10))
 		if !(collision_circle(x, y, attack_radius, obj_player, false, false)) && alarm[4] == -1{
 			alarm[4] = 60}
 		break
-		#endregion
+	#endregion
 }
+ 
+ 
+ show_debug_message(state)
