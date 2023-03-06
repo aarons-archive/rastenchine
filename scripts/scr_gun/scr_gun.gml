@@ -1,4 +1,5 @@
 #macro GUN_DAMAGE 5
+#macro GUN_RANGE 30
 
 #macro GUN_MAX_AMMO 10
 #macro GUN_CLIP     6
@@ -40,7 +41,7 @@ function Gun() : Weapon() constructor {
 			case weapon_state.idle:
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
 					var _direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
-					instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _direction, image_angle: _direction })
+					with (instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _direction, image_angle: _direction })) lifetime = GUN_RANGE;
 					clip -= 1
 					state = weapon_state.cooldown
 				}

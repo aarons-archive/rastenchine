@@ -1,4 +1,5 @@
 #macro SHOTGUN_DAMAGE 20
+#macro SHOTGUN_RANGE 15
 
 #macro SHOTGUN_MAX_AMMO 10
 #macro SHOTGUN_CLIP     2
@@ -43,7 +44,7 @@ function Shotgun() : Weapon() constructor {
 					var _spread_direction = _direction - 10;
 					repeat 4
 					{
-						instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _spread_direction, image_angle: _direction })
+						with (instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _spread_direction, image_angle: _direction })) lifetime = SHOTGUN_RANGE;
 						_spread_direction += irandom_range(5, 10)
 					}
 					clip -= 1

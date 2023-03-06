@@ -19,6 +19,8 @@
     {"name":"Weapons","order":5,"path":"folders/Inventory/Weapons.yy",},
     {"name":"Crowbar","order":1,"path":"folders/Inventory/Weapons/Crowbar.yy",},
     {"name":"Gun","order":2,"path":"folders/Inventory/Weapons/Gun.yy",},
+    {"name":"Shotgun","order":3,"path":"folders/Inventory/Weapons/Shotgun.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Inventory/Weapons/Shotgun/Sprites.yy",},
     {"name":"Lighting","order":7,"path":"folders/Lighting.yy",},
     {"name":"Lights","order":1,"path":"folders/Lighting/_INTERNALS/Lights.yy",},
     {"name":"Misc","order":2,"path":"folders/Lighting/_INTERNALS/Misc.yy",},
@@ -33,8 +35,6 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":3,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":2,"path":"folders/UI/Sprites.yy",},
-    {"name":"Shotgun","order":3,"path":"folders/Inventory/Weapons/Shotgun.yy",},
-    {"name":"Sprites","order":1,"path":"folders/Inventory/Weapons/Shotgun/Sprites.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":5,"path":"objects/obj_menu_element/obj_menu_element.yy",},
