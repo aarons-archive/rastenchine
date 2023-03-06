@@ -4,7 +4,7 @@
   "name": "spr_gun_reloading",
   "bbox_bottom": 19,
   "bbox_left": 0,
-  "bbox_right": 23,
+  "bbox_right": 25,
   "bbox_top": 7,
   "bboxMode": 0,
   "collisionKind": 1,

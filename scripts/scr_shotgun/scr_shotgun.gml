@@ -1,7 +1,7 @@
 #macro SHOTGUN_DAMAGE 20
 #macro SHOTGUN_RANGE 15
 
-#macro SHOTGUN_MAX_AMMO 10
+#macro SHOTGUN_MAX_AMMO 40
 #macro SHOTGUN_CLIP     2
 
 #macro SHOTGUN_RELOAD_FRAMES   FPS * 1
@@ -39,6 +39,7 @@ function Shotgun() : Weapon() constructor {
 	static use = function() {
 		switch (state) {
 			case weapon_state.idle:
+			instance_offset = 15;
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
 					var _direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
 					var _spread_direction = _direction - 10;
@@ -47,6 +48,7 @@ function Shotgun() : Weapon() constructor {
 						with (instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _spread_direction, image_angle: _direction })) lifetime = SHOTGUN_RANGE;
 						_spread_direction += irandom_range(5, 10)
 					}
+					instance_offset = 0;
 					clip -= 1
 					state = weapon_state.cooldown
 				}
@@ -64,6 +66,7 @@ function Shotgun() : Weapon() constructor {
 				if (instance.alarm[2] == -1) {
 					instance.alarm[2] = SHOTGUN_COOLDOWN_FRAMES
 				} 
+				instance_offset = lerp(instance_offset, 15, 0.1);
 				break
 		}
 	}
