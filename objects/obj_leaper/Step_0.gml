@@ -21,7 +21,7 @@ switch(state){
 		_speed = ENEMY_DEFAULT_SPEED
 		sprite_index = agro_sprite
 		if (agro == true) { 
-			check_for_player_ranged()
+			check_for_player()
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 		}
 		if (collision_circle(x, y,leap_radius, obj_player, false, false)) {state = enemy_state.charging}
@@ -33,17 +33,17 @@ switch(state){
 	case enemy_state.charging:
 		path_end()
 		sprite_index = spr_leaper//_charging
-		explode_timer += 0.1
+		leap_timer += 0.1
 		if sprite_index == spr_leaper//_charging
 		{_speed = 0}
-		if explode_timer >= 8 {state = enemy_state.attacking}
+		if leap_timer >= 8 {state = enemy_state.attacking}
 		break
 	#endregion
 	#region attacking case
 	case enemy_state.attacking:
-		sprite_index = attacking_sprite
+		sprite_index = spr_leaper
 		//jump attack
-		
+		(move_towards_point(obj_player.x,obj_player.y, speed = 10))
 		if !(collision_circle(x, y, attack_radius, obj_player, false, false)) && alarm[4] == -1{
 			alarm[4] = 60}
 		break
