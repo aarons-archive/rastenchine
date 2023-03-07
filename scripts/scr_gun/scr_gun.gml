@@ -60,7 +60,7 @@ function Gun() : Weapon() constructor {
 				if (instance.alarm[2] == -1) {
 					instance.alarm[2] = GUN_COOLDOWN_FRAMES
 				} 
-				instance_offset = lerp(instance_offset, 15, 0.1);
+				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
 		}
 	}

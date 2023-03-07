@@ -1,9 +1,9 @@
 function Inventory() constructor {
 	
 	// list of 'Item' subclasses; 
-	items = [new Crowbar(), new Gun(), new Shotgun(), new AmmoBox()]
+	items = [new Crowbar(), new Gun(), new Shotgun(), new AmmoBox(), new HealingPack()]
 	// items in the hotbar as a list of references (by index) to 'items'.
-	hotbar = [0, 1, 2, 3, undefined]
+	hotbar = [0, 1, 2, 3, 4,]
 	// current item as a reference (by index) to 'hotbar'.
 	hotbar_index = 0
 	// current item

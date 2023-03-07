@@ -1,7 +1,7 @@
 #macro HOTBAR_PADDING (8)
 
-#macro HOTBAR_SLOT_WIDTH  (50)
-#macro HOTBAR_SLOT_HEIGHT (50) 
+#macro HOTBAR_SLOT_WIDTH  (60)
+#macro HOTBAR_SLOT_HEIGHT (60) 
 
 #macro HOTBAR_BACKGROUND_WIDTH	((HOTBAR_PADDING * 2) + HOTBAR_SLOT_WIDTH)
 #macro HOTBAR_BACKGROUND_HEIGHT (undefined) // calculated on demand

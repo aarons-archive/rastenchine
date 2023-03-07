@@ -7,7 +7,7 @@ function Item() constructor {
 	sprite = undefined
 	
 	// can be overriden in subclasses to customise instance placement
-	instance_offset = 15   // distance from the players center 
+	instance_offset = 25   // distance from the players center 
 	instance_y_offset = -5 // item up by x pixels (to match hand position)
 	
 	static alarm_one = function() {}

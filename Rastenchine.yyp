@@ -180,6 +180,7 @@
     {"id":{"name":"polygon_create","path":"scripts/polygon_create/polygon_create.yy",},},
     {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},},
     {"id":{"name":"light_create_area","path":"scripts/light_create_area/light_create_area.yy",},},
+    {"id":{"name":"spr_shell","path":"sprites/spr_shell/spr_shell.yy",},},
     {"id":{"name":"rm_finley_containment_zone","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},},
     {"id":{"name":"spr_tamed_shambler_attacking","path":"sprites/spr_tamed_shambler_attacking/spr_tamed_shambler_attacking.yy",},},
     {"id":{"name":"scr_menu_element_actions","path":"scripts/scr_menu_element_actions/scr_menu_element_actions.yy",},},
