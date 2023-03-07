@@ -1,32 +1,18 @@
-#macro MENU_MARGIN 10
+#macro MENU_MARGIN (10)
 
-#macro MENU_X1 VIEW_X1 + MENU_MARGIN
-#macro MENU_Y1 VIEW_Y1 + MENU_MARGIN
-#macro MENU_X2 VIEW_X2 - MENU_MARGIN
-#macro MENU_Y2 VIEW_Y2 - MENU_MARGIN
+#macro MENU_X1 (UI_X1 + MENU_MARGIN)
+#macro MENU_Y1 (UI_Y1 + MENU_MARGIN)
+#macro MENU_X2 (UI_X2 - MENU_MARGIN)
+#macro MENU_Y2 (UI_Y2 - MENU_MARGIN)
 
-#macro MENU_ELEMENT_MARGIN  5
-#macro MENU_ELEMENT_PADDING 15
+#macro MENU_ELEMENT_MARGIN  (5)
+#macro MENU_ELEMENT_PADDING (10)
 
-#macro MENU_ELEMENT_HEIGHT string_height("HEIGHT") + MENU_ELEMENT_PADDING
-
-#macro MENU_X          MENU_X1
-#macro MENU_PAGE_Y     MENU_Y1
-#macro MENU_SUB_PAGE_Y (MENU_PAGE_Y + MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * 1.2 
+#macro MENU_ELEMENT_HEIGHT ((MENU_ELEMENT_PADDING * 2) + string_height("HEIGHT"))
 
 function menu_draw_page() {
 	_draw_page()
-	if (selected_sub_page != undefined) { _draw_sub_page() }
-}
-
-function menu_change_page(page, sub_page) {
-	with (obj_menu) {
-		selected_page = page
-		selected_sub_page = sub_page
-		array_map_ext(instances, function(element) { instance_destroy(element) })
-		array_resize(instances, 0)
-		menu_draw_page()
-	}
+	// if (selected_sub_page != undefined) { _draw_sub_page() }
 }
 
 function _draw_page() {
@@ -35,16 +21,15 @@ function _draw_page() {
 	draw_set_valign(fa_middle)
 	
 	var page = pages[selected_page]
-	var page_x = MENU_X
+	var element_width = array_max(array_map(page, function(element) { return ((MENU_ELEMENT_PADDING * 2) + string_width(element[0])) }))
 	
 	for (var i = 0; i < array_length(page); i++) {
 		var element = page[i]
-		var element_width = string_width(element[0]) + MENU_ELEMENT_PADDING
 		array_push(
 			obj_menu.instances,
 			instance_create_layer(
-				page_x, 
-				MENU_PAGE_Y,
+				MENU_X1, 
+				0,
 				"Instances", 
 				obj_menu_element,
 				{
@@ -86,5 +71,15 @@ function _draw_sub_page() {
 				}
 			)
 		)
+	}
+}
+
+function menu_change_page(page, sub_page) {
+	with (obj_menu) {
+		selected_page = page
+		selected_sub_page = sub_page
+		array_map_ext(instances, function(element) { instance_destroy(element) })
+		array_resize(instances, 0)
+		menu_draw_page()
 	}
 }
