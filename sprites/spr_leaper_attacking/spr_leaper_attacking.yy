@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Leaper",
-    "path": "folders/Entities/Enemies/Leaper.yy",
+    "name": "Sprites",
+    "path": "folders/Entities/Enemies/Leaper/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,5 +1,5 @@
 //set grid / tile size
-#macro TS 64
+#macro TS 24
 
 //get tiles in room
 var _w = ceil(room_width / TS)

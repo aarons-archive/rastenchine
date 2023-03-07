@@ -23,7 +23,7 @@ function check_for_player() {
 function check_for_player_ranged() {
 	var _dis = distance_to_object(obj_player);
 	//can start chasing? or ready for attack
-	if (_dis <= agro_radius && _dis > close_radius) || agro == true || !(state == peashooter_state.attacking){
+	if (_dis <= agro_radius && _dis > close_radius) || agro == true || !(state == enemy_state.attacking){
 		//should calc path?
 		if (path_timer-- <= 0) {
 			//reset timer

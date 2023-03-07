@@ -14,5 +14,6 @@ leap_timer = 0
 
 idle_sprite = spr_leaper
 death_sprite = spr_basic_enemy_death
-agro_sprite = spr_leaper//_agro
-attacking_sprite = spr_leaper//_attacking
+agro_sprite = spr_leaper_agro
+charging_sprite = spr_leaper_charging
+attacking_sprite = spr_leaper_attacking
