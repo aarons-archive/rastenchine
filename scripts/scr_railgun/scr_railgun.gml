@@ -1,10 +1,10 @@
 #macro RAILGUN_DAMAGE 20
-#macro RAILGUN_RANGE 15
 
 #macro RAILGUN_MAX_AMMO 40
 #macro RAILGUN_CLIP     1
 
 #macro RAILGUN_RELOAD_FRAMES   FPS * 1
+#macro RAILGUN_CHARGE_FRAMES FPS * 0.4
 #macro RAILGUN_COOLDOWN_FRAMES FPS * 0.4
 
 function Railgun() : Weapon() constructor {
@@ -36,15 +36,17 @@ function Railgun() : Weapon() constructor {
 		state = weapon_state.idle 
 	}
 	
+	static alarm_three = function() {
+		state = weapon_state.charging
+	}
+	
 	static use = function() {
 		switch (state) {
 			case weapon_state.idle:
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
-					var _direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
-					with (instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_rail_bullet, speed: 0, direction: _direction, image_angle: _direction, image_xscale: 500 })) lifetime = GUN_RANGE;
-					instance_offset = 0;
-					clip -= 1
-					state = weapon_state.cooldown
+					if (instance.alarm[3] == -1) {
+					instance.alarm[3] = RAILGUN_CHARGE_FRAMES
+				} 
 				}
 				else if (((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((clip <= 0) && (mouse_check_button(global.ATTACK_BUTTON)))) && ammo != 0) {
 					state = weapon_state.reloading
@@ -62,6 +64,12 @@ function Railgun() : Weapon() constructor {
 				} 
 				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
+			case weapon_state.charging:
+				instance_create_layer(instance.x, instance.y, "other", obj_rail_projectile);
+				instance_offset = 0;
+				clip -= 1
+				state = weapon_state.cooldown;
+			break
 		}
 	}
 }

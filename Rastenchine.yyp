@@ -167,6 +167,7 @@
     {"id":{"name":"light_destroy","path":"scripts/light_destroy/light_destroy.yy",},},
     {"id":{"name":"scr_handle_movement_state","path":"scripts/scr_handle_movement_state/scr_handle_movement_state.yy",},},
     {"id":{"name":"obj_motion_planner","path":"objects/obj_motion_planner/obj_motion_planner.yy",},},
+    {"id":{"name":"obj_rail_projectile","path":"objects/obj_rail_projectile/obj_rail_projectile.yy",},},
     {"id":{"name":"spr_pea_shooter","path":"sprites/spr_pea_shooter/spr_pea_shooter.yy",},},
     {"id":{"name":"obj_room_light_collision","path":"objects/obj_room_light_collision/obj_room_light_collision.yy",},},
     {"id":{"name":"scr_do_animation","path":"scripts/scr_do_animation/scr_do_animation.yy",},},
