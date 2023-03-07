@@ -18,6 +18,11 @@ function draw_debug_text() {
 	else if (is_instanceof(item, Gun)) {
 		names += "\nGun Ammo: \nGun Clip: "
 		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
+		
+	}
+	else if (is_instanceof(item, Railgun)) {
+		names += "\nGun Ammo: \nGun Clip: "
+		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 	}
 		
 	draw_text_color( 
@@ -34,4 +39,5 @@ function draw_debug_text() {
 		c_white, c_white, c_white, c_white,
 		1
 	)
+	
 }
