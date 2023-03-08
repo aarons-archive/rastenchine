@@ -2,8 +2,10 @@ event_inherited()
 
 enum enemy_state {
 	idle,
+	wandering,
 	agro,
 	attacking,
+	death,
 	burrowed,
 	charging,
 	sleeping

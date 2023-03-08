@@ -18,6 +18,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Dummy","folderPath":"folders/Entities/Enemies/Dummy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy Managers","folderPath":"folders/Entities/Enemies/Enemy Managers.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Leaper","folderPath":"folders/Entities/Enemies/Leaper.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Leaper/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Pea Shooter","folderPath":"folders/Entities/Enemies/Pea Shooter.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Pea Shooter/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shambler","folderPath":"folders/Entities/Enemies/Shambler.yy",},

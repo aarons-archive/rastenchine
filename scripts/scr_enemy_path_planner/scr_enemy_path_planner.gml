@@ -8,7 +8,7 @@ function check_for_player() {
 			path_timer = path_delay;
 			//can make path to player
 			if (x == _x and y == _y) { var _type = 0 } else { var _type = 1}
-			var _found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, choose(0, 1));
+			var _found_player = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, _type);
 			//start path if can reach the player
 			if (_found_player) {
 				path_start(path, _speed, path_action_stop, false);
@@ -19,6 +19,7 @@ function check_for_player() {
 		}
 	}
 }
+
 
 function check_for_player_ranged() {
 	var _dis = distance_to_object(obj_player);
@@ -40,7 +41,7 @@ function check_for_player_ranged() {
 	}
 }
 
-
+#region tamed shambler stuff
 function follow_player() {
 	var _dis = distance_to_object(obj_player);
 		//should calc path?
@@ -77,3 +78,4 @@ function check_for_enemy() {
 		}
 	}
 }
+#endregion

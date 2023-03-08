@@ -4,18 +4,26 @@ switch (state) {
 	#region idle case
 	case enemy_state.idle:
 		sprite_index = idle_sprite
-		_speed = ENEMY_DEFAULT_SPEED
-		if idle_movement = 0{
-			x += _speed * irandom_range(-3, 3)
-			y += _speed * irandom_range(-3, 3)
-			idle_movement = 1
-			alarm[1] = 60
-		}
+		//first frame of wandering/idle sprite?
+		if alarm[1] = -1 {alarm[1] = 120 }
 		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
 			state = enemy_state.agro 
 			agro = true} 
 		break
 	#endregion
+	#region wandering case
+	case enemy_state.wandering:
+		_speed = 1
+		sprite_index = spr_basic_enemy_chasing
+		Goalx=irandom_range (obj_enemy_spawner.x-100,obj_enemy_spawner.x+100);
+		Goaly=irandom_range (obj_enemy_spawner.y-100,obj_enemy_spawner.y+100);
+		if point_in_circle(Goalx,Goaly,obj_enemy_spawner.x,obj_enemy_spawner.y,200){
+			move_towards_point(Goalx,Goaly,_speed)
+			if distance_to_point(Goalx,Goaly) < 1 {state = enemy_state.idle _speed = 0 }
+		} else {_speed = 0}
+		break
+	#endregion
+	
 	#region agro case
 	case enemy_state.agro:
 		image_speed = 1
@@ -30,6 +38,7 @@ switch (state) {
 		if (agro == false) {state = enemy_state.idle path_end()}
 		break
 	#endregion
+	
 	#region attacking case
 	case enemy_state.attacking:
 		path_end()
@@ -37,3 +46,5 @@ switch (state) {
 		break
 	#endregion
 }
+
+show_debug_message(_speed)

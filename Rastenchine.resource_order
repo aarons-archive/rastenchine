@@ -6,6 +6,7 @@
     {"name":"Dummy","order":2,"path":"folders/Entities/Enemies/Dummy.yy",},
     {"name":"Enemy Managers","order":1,"path":"folders/Entities/Enemies/Enemy Managers.yy",},
     {"name":"Leaper","order":6,"path":"folders/Entities/Enemies/Leaper.yy",},
+    {"name":"Sprites","order":5,"path":"folders/Entities/Enemies/Leaper/Sprites.yy",},
     {"name":"Pea Shooter","order":5,"path":"folders/Entities/Enemies/Pea Shooter.yy",},
     {"name":"Shambler","order":4,"path":"folders/Entities/Enemies/Shambler.yy",},
     {"name":"Player","order":1,"path":"folders/Entities/Player.yy",},

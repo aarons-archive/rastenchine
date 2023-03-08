@@ -1,5 +1,5 @@
 event_inherited()
-
+randomize()
 state = enemy_state.idle
 
 vision_radius = 500
@@ -11,3 +11,8 @@ idle_sprite = spr_basic_enemy
 death_sprite = spr_basic_enemy_death
 agro_sprite = spr_basic_enemy_chasing
 attacking_sprite = spr_basic_enemy_attack
+
+_x = x
+_y = y
+
+wander_speed = 1
