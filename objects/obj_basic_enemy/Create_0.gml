@@ -14,5 +14,3 @@ attacking_sprite = spr_basic_enemy_attack
 
 _x = x
 _y = y
-
-wander_speed = 1

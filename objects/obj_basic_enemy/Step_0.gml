@@ -47,4 +47,8 @@ switch (state) {
 	#endregion
 }
 
-show_debug_message(_speed)
+//idle completely not moving
+//wandering moving around randomly around their spawn zone
+//agro runs toward player
+//attacking swips at player then backs up a bit
+//death plays animation and then destroys instance
