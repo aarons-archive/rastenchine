@@ -32,7 +32,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_rail_bullet",
+    "path": "sprites/spr_rail_bullet/spr_rail_bullet.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

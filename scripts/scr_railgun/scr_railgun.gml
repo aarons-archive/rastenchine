@@ -1,4 +1,4 @@
-#macro RAILGUN_DAMAGE 20
+#macro RAILGUN_DAMAGE 50
 
 #macro RAILGUN_MAX_AMMO 40
 #macro RAILGUN_CLIP     1
@@ -37,7 +37,7 @@ function Railgun() : Weapon() constructor {
 	}
 	
 	static alarm_three = function() {
-		state = weapon_state.charging
+		state = weapon_state.special
 	}
 	
 	static use = function() {
@@ -64,7 +64,7 @@ function Railgun() : Weapon() constructor {
 				} 
 				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
-			case weapon_state.charging:
+			case weapon_state.special:
 				instance_create_layer(instance.x, instance.y, "other", obj_rail_projectile);
 				instance_offset = 0;
 				clip -= 1

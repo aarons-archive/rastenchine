@@ -7,4 +7,4 @@ angle = point_direction(obj_player.x,obj_player.y,r[1],r[2]);
 	if (r[0] != noone) {
     // r[0] holds the nearest (hit) instance.
 }
-lifetime = 30;
+lifetime = 20;
