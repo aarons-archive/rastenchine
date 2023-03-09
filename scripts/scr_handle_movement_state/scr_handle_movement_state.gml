@@ -35,8 +35,11 @@ function handle_movement_state() {
 			if (alarm[0] == -1) { 
 				alarm[0] = PLAYER_DODGE_FRAMES 
 				stamina = max(PLAYER_MIN_STAMINA, stamina - PLAYER_DODGE_STAMINA_COST)
+				_speed = PLAYER_DODGE_SPEED
 			}
-			_speed = lerp(_speed, PLAYER_DODGE_SPEED, 0.2)
+			else {
+				_speed = lerp(_speed, 0, 0.05)
+			}
 			break
 		
 		case player_movement_state.exhausted:

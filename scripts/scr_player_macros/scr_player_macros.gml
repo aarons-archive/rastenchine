@@ -21,7 +21,7 @@
 // dodging
 #macro PLAYER_DODGE_SPEED        (10)
 #macro PLAYER_DODGE_STAMINA_COST (20)
-#macro PLAYER_DODGE_FRAMES       (FPS / 2)  // 30 frames
+#macro PLAYER_DODGE_FRAMES       (FPS / 1.2)  // 30 frames
 
 // exhausted
 #macro PLAYER_EXHAUSTED_SPEED                  (2)

@@ -45,8 +45,8 @@ function Railgun() : Weapon() constructor {
 			case weapon_state.idle:
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
 					if (instance.alarm[3] == -1) {
-					instance.alarm[3] = RAILGUN_CHARGE_FRAMES
-				} 
+						instance.alarm[3] = RAILGUN_CHARGE_FRAMES
+					} 
 				}
 				else if (((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((clip <= 0) && (mouse_check_button(global.ATTACK_BUTTON)))) && ammo != 0) {
 					state = weapon_state.reloading
