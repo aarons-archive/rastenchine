@@ -34,7 +34,8 @@ switch (state) {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 		} 
 		if (collision_rectangle(x-64, y-34,x+64,y+34, obj_player, false, false)) {state = enemy_state.attacking}
-		if !(collision_circle(x, y, agro_radius, obj_player, false, false)) && (alarm[3] == -1) {alarm[3] = agro_timer }
+		if !(collision_circle(x, y, agro_radius, obj_player, false, false))
+			&& (alarm[3] == -1) {alarm[3] = agro_timer }
 		if (agro == false) {state = enemy_state.idle path_end()}
 		break
 	#endregion
@@ -48,4 +49,3 @@ switch (state) {
 }
 
 //attacking swips at player then backs up a bit
-//death plays animation and then destroys instance

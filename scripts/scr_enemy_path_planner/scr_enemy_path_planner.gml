@@ -25,9 +25,9 @@ function check_for_path()
 	if (path_timer-- <= 0) {
 		//reset timer
 		path_timer = wander_delay;
-		Goalx=irandom_range (obj_enemy_spawner.x-100,obj_enemy_spawner.x+100);
-		Goaly=irandom_range (obj_enemy_spawner.y-100,obj_enemy_spawner.y+100);
-		var found_wander = mp_grid_path(global.mp_grid,path,x,y,Goalx,Goaly,true)
+		wander_x=irandom_range (obj_enemy_spawner.x-100,obj_enemy_spawner.x+100);
+		wander_y=irandom_range (obj_enemy_spawner.y-100,obj_enemy_spawner.y+100);
+		var found_wander = mp_grid_path(global.mp_grid,path,x,y,wander_x,wander_y,true)
 		if (found_wander) {path_start(path,_speed,path_action_stop,false)}
 	} 
 }

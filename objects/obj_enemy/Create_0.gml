@@ -15,6 +15,7 @@ state = enemy_state.idle
 
 death_sprite = undefined
 idle_sprite = undefined
+wander_sprite = undefined
 agro_sprite = undefined
 attacking_sprite = undefined
 push = 1
