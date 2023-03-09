@@ -20,6 +20,12 @@ function check_for_player() {
 	}
 }
 
+function check_for_path()
+{
+	var found_wander = mp_grid_path(global.mp_grid,path,x,y,Goalx,Goaly,true)
+	if found_wander
+	{path_start(path,_speed,path_action_stop,false)}
+}
 
 function check_for_player_ranged() {
 	var _dis = distance_to_object(obj_player);
