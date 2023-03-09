@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rail_projectile",
+  "name": "obj_railgun_projectile",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Items",
-    "path": "folders/Inventory/Items.yy",
+    "name": "Railgun",
+    "path": "folders/Inventory/Weapons/Railgun.yy",
   },
   "parentObjectId": {
     "name": "obj_projectile",
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rail_bullet",
-    "path": "sprites/spr_rail_bullet/spr_rail_bullet.yy",
+    "name": "spr_railgun_bullet",
+    "path": "sprites/spr_railgun_bullet/spr_railgun_bullet.yy",
   },
   "spriteMaskId": null,
   "visible": true,

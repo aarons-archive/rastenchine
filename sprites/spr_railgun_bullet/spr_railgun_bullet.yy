@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_rail_bullet",
+  "name": "spr_railgun_bullet",
   "bbox_bottom": 16,
   "bbox_left": 0,
   "bbox_right": 0,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_rail_bullet",
+    "name": "spr_railgun_bullet",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d82b8767-3e2d-4b60-a372-73283c5e6e41","path":"sprites/spr_rail_bullet/spr_rail_bullet.yy",},},},"Disabled":false,"id":"b8451a50-87d3-4515-a0cd-008a7e08d546","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f38ea76f-2093-4af6-a16d-25c2d9d65096","path":"sprites/spr_rail_bullet/spr_rail_bullet.yy",},},},"Disabled":false,"id":"027488a9-e460-4199-8114-9da57a497663","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c882569b-1ff9-4ff3-bee9-867dbc1abd10","path":"sprites/spr_rail_bullet/spr_rail_bullet.yy",},},},"Disabled":false,"id":"8d725ca8-134f-414f-afac-1386a94b0005","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d82b8767-3e2d-4b60-a372-73283c5e6e41","path":"sprites/spr_railgun_bullet/spr_railgun_bullet.yy",},},},"Disabled":false,"id":"b8451a50-87d3-4515-a0cd-008a7e08d546","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f38ea76f-2093-4af6-a16d-25c2d9d65096","path":"sprites/spr_railgun_bullet/spr_railgun_bullet.yy",},},},"Disabled":false,"id":"027488a9-e460-4199-8114-9da57a497663","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c882569b-1ff9-4ff3-bee9-867dbc1abd10","path":"sprites/spr_railgun_bullet/spr_railgun_bullet.yy",},},},"Disabled":false,"id":"8d725ca8-134f-414f-afac-1386a94b0005","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
