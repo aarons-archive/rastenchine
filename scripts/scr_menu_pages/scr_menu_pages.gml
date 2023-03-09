@@ -16,24 +16,24 @@ function menu_draw_page() {
 }
 
 function _draw_page() {
+	// set text font/alignment
 	draw_set_font(fnt_menu)
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_middle)
-	
+	// get current page
 	var page = pages[selected_page]
-	var element_width = array_max(array_map(page, function(element) { return ((MENU_ELEMENT_PADDING * 2) + string_width(element[0])) }))
-	
+	// iterate over page elements
 	for (var i = 0; i < array_length(page); i++) {
 		var element = page[i]
 		array_push(
-			obj_menu.instances,
+			instances,
 			instance_create_layer(
 				MENU_X1, 
-				0,
+				(UI_Y2 / 2) - ((MENU_ELEMENT_HEIGHT * array_length(page)) / 2) + (MENU_ELEMENT_HEIGHT * i),
 				"Instances", 
 				obj_menu_element,
 				{
-					WIDTH: element_width, 
+					WIDTH: ((MENU_ELEMENT_PADDING * 2) + string_width(element[0])), 
 					HEIGHT: MENU_ELEMENT_HEIGHT,
 					TEXT: element[0], 
 					SELECTED: (selected_sub_page == undefined ? false : (selected_sub_page + 1) == i),
@@ -41,7 +41,6 @@ function _draw_page() {
 				}
 			)
 		)
-		page_x += element_width + MENU_ELEMENT_MARGIN
 	}
 }
 
