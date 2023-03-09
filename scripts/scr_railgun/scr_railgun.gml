@@ -65,7 +65,7 @@ function Railgun() : Weapon() constructor {
 				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
 			case weapon_state.shooting:
-				instance_create_layer(instance.x, instance.y, "other", obj_rail_projectile);
+				instance_create_layer(instance.x, instance.y, "other", obj_railgun_projectile);
 				instance_offset = 0;
 				clip -= 1
 				state = weapon_state.cooldown;

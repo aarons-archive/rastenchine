@@ -98,7 +98,7 @@
     {"id":{"name":"scr_do_movement","path":"scripts/scr_do_movement/scr_do_movement.yy",},},
     {"id":{"name":"scr_draw_debug_text","path":"scripts/scr_draw_debug_text/scr_draw_debug_text.yy",},},
     {"id":{"name":"spr_railgun","path":"sprites/spr_railgun/spr_railgun.yy",},},
-    {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
+    {"id":{"name":"obj_lighting_collision","path":"objects/obj_lighting_collision/obj_lighting_collision.yy",},},
     {"id":{"name":"lighting_pre_composite","path":"scripts/lighting_pre_composite/lighting_pre_composite.yy",},},
     {"id":{"name":"scr_draw_health_bar","path":"scripts/scr_draw_health_bar/scr_draw_health_bar.yy",},},
     {"id":{"name":"spr_player_down","path":"sprites/spr_player_down/spr_player_down.yy",},},
@@ -134,7 +134,7 @@
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"spr_flash_light","path":"sprites/spr_flash_light/spr_flash_light.yy",},},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
-    {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
+    {"id":{"name":"spr_lighting_collision","path":"sprites/spr_lighting_collision/spr_lighting_collision.yy",},},
     {"id":{"name":"scr_keybinds","path":"scripts/scr_keybinds/scr_keybinds.yy",},},
     {"id":{"name":"scr_gun","path":"scripts/scr_gun/scr_gun.yy",},},
     {"id":{"name":"spr_tamed_shambler_agro","path":"sprites/spr_tamed_shambler_agro/spr_tamed_shambler_agro.yy",},},
@@ -247,8 +247,8 @@
     {"id":{"name":"spr_leaper_attacking","path":"sprites/spr_leaper_attacking/spr_leaper_attacking.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_nico_aaron_dev","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},},
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_finley_containment_zone","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},},
   ],
   "TextureGroups": [
