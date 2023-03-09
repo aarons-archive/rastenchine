@@ -40,7 +40,7 @@ function Gun() : Weapon() constructor {
 		switch (state) {
 			case weapon_state.idle:
 				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
-					var _direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
+					var _direction = (point_direction(instance.x, instance.y, mouse_x, mouse_y) + random_range(-5,5))
 					with (instance_create_layer(instance.x, instance.y, "other", obj_projectile, { sprite_index: spr_bullet, speed: 10, direction: _direction, image_angle: _direction })) lifetime = GUN_RANGE;
 					instance_offset = 7;
 					clip -= 1
