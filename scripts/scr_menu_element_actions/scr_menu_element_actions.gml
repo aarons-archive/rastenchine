@@ -1,5 +1,5 @@
 #region Control
-function play_game() { room_goto(rm_one) }
+function play_game() { room_goto(rm_nico_aaron_dev) }
 function exit_game() { game_end() }
 #endregion
 

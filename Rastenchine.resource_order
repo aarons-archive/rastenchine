@@ -7,6 +7,7 @@
     {"name":"Leaper","order":6,"path":"folders/Entities/Enemies/Leaper.yy",},
     {"name":"Pea Shooter","order":5,"path":"folders/Entities/Enemies/Pea Shooter.yy",},
     {"name":"Shambler","order":4,"path":"folders/Entities/Enemies/Shambler.yy",},
+    {"name":"Scripts","order":1,"path":"folders/Entities/Player/Scripts.yy",},
     {"name":"Inventory","order":5,"path":"folders/Inventory.yy",},
     {"name":"Crowbar","order":1,"path":"folders/Inventory/Weapons/Crowbar.yy",},
     {"name":"Gun","order":2,"path":"folders/Inventory/Weapons/Gun.yy",},
