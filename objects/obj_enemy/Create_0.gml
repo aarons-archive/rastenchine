@@ -32,4 +32,5 @@ _x = x
 
 path = path_add()
 path_delay = 10
+wander_delay = 360
 path_timer = irandom(60)

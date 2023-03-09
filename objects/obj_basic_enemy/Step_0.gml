@@ -3,11 +3,11 @@ event_inherited()
 switch (state) {
 	#region idle case
 	case enemy_state.idle:
+		path_end()
 		_speed = 0
 		sprite_index = idle_sprite
 		//first frame of wandering/idle sprite?
-		if alarm[1] == -1 && agro == false { speed = 0 
-			alarm[1] = 120 }
+		if alarm[1] == -1 && agro == false { alarm[1] = 120 }
 		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
 			state = enemy_state.agro 
 			agro = true} 
@@ -16,16 +16,11 @@ switch (state) {
 	#region wandering case
 	case enemy_state.wandering:
 		_speed = 1
-		sprite_index = spr_basic_enemy_chasing
-		Goalx=irandom_range (obj_enemy_spawner.x-100,obj_enemy_spawner.x+100);
-		Goaly=irandom_range (obj_enemy_spawner.y-100,obj_enemy_spawner.y+100);
-		//if point_in_circle(Goalx,Goaly,obj_enemy_spawner.x,obj_enemy_spawner.y,200){
-			//move_towards_point(Goalx,Goaly,_speed)
-		
-		//	path_start(path,_speed,path_action_stop,false)
-		//	if distance_to_point(Goalx,Goaly) < 10 {state = enemy_state.idle  }
-		//}
-		
+		sprite_index = spr_basic_enemy//_wandering
+		check_for_path()
+		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
+			state = enemy_state.agro 
+			agro = true}
 		break
 	#endregion
 	
@@ -51,8 +46,6 @@ switch (state) {
 		break
 	#endregion
 }
-//idle completely not moving
-//wandering moving around randomly around their spawn zone
-//agro runs toward player
+
 //attacking swips at player then backs up a bit
 //death plays animation and then destroys instance
