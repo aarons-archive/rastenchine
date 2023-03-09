@@ -37,7 +37,7 @@ function Railgun() : Weapon() constructor {
 	}
 	
 	static alarm_three = function() {
-		state = weapon_state.special
+		state = weapon_state.shooting
 	}
 	
 	static use = function() {
@@ -64,7 +64,7 @@ function Railgun() : Weapon() constructor {
 				} 
 				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
-			case weapon_state.special:
+			case weapon_state.shooting:
 				instance_create_layer(instance.x, instance.y, "other", obj_rail_projectile);
 				instance_offset = 0;
 				clip -= 1

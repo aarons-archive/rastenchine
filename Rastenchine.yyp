@@ -40,6 +40,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Inventory/Weapons/Gun/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Railgun","folderPath":"folders/Inventory/Weapons/Railgun.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Inventory/Weapons/Railgun/Sprites.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rifle","folderPath":"folders/Inventory/Weapons/Rifle.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Inventory/Weapons/Rifle/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shotgun","folderPath":"folders/Inventory/Weapons/Shotgun.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Inventory/Weapons/Shotgun/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Lighting","folderPath":"folders/Lighting.yy",},

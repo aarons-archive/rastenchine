@@ -21,6 +21,7 @@
     {"name":"Crowbar","order":1,"path":"folders/Inventory/Weapons/Crowbar.yy",},
     {"name":"Gun","order":2,"path":"folders/Inventory/Weapons/Gun.yy",},
     {"name":"Railgun","order":4,"path":"folders/Inventory/Weapons/Railgun.yy",},
+    {"name":"Rifle","order":5,"path":"folders/Inventory/Weapons/Rifle.yy",},
     {"name":"Shotgun","order":3,"path":"folders/Inventory/Weapons/Shotgun.yy",},
     {"name":"Sprites","order":1,"path":"folders/Inventory/Weapons/Shotgun/Sprites.yy",},
     {"name":"Lighting","order":7,"path":"folders/Lighting.yy",},
