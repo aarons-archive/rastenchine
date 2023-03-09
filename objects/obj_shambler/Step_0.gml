@@ -16,18 +16,25 @@ switch (state) {
 	#endregion
 	#region idle case
 	case enemy_state.idle:
-			sprite_index = idle_sprite
-			_speed = ENEMY_DEFAULT_SPEED
-			if idle_movement = 0{
-				x += _speed * irandom_range(-3, 3)
-				y += _speed * irandom_range(-3, 3)
-				idle_movement = 1
-				alarm[1] = 60
-			}
-			if (collision_circle(x, y, agro_radius, obj_player, false, false)) {
-				state = enemy_state.agro 
-				agro = true} 
-			break
+		path_end()
+		_speed = 0
+		sprite_index = idle_sprite
+		//first frame of wandering/idle sprite?
+		if alarm[1] == -1 && agro == false { alarm[1] = 120 }
+		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
+			state = enemy_state.agro 
+			agro = true} 
+		break
+	#endregion
+	#region wandering case
+	case enemy_state.wandering:
+		_speed = 1
+		sprite_index = spr_shambler//_wandering
+		check_for_path()
+		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
+			state = enemy_state.agro 
+			agro = true}
+		break
 	#endregion
 	#region agro case
 	case enemy_state.agro:
