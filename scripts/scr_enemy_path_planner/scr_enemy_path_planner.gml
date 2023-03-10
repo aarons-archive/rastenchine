@@ -32,6 +32,12 @@ function check_for_path()
 	} 
 }
 
+function leap_to_player()
+{
+		var leap_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x,obj_player.y,true)
+		if (leap_player) path_start(path,10,path_action_continue,false)
+}
+
 function check_for_player_ranged() {
 	var _dis = distance_to_object(obj_player);
 	//can start chasing? or ready for attack

@@ -43,18 +43,17 @@ switch(state){
 		leap_timer += 0.1
 		if sprite_index == charging_sprite
 		{_speed = 0}
-		if leap_timer >= 8 {state = enemy_state.attacking}
+		if leap_timer >= 4 {state = enemy_state.attacking}
 		break
 	#endregion
 	#region attacking case
 	case enemy_state.attacking:
 		sprite_index = attacking_sprite
 		//jump attack
-		move_towards_point(obj_player.x, obj_player.y, 10)
-		if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision)
-		{_speed = 0}
-		if !(collision_circle(x, y, attack_radius, obj_player, false, false)) && alarm[4] == -1{
-			alarm[4] = 60}
+		leap_to_player()
+		if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision) || alarm[5] == -1
+		{ alarm[5] = 120}
+	
 		break
 	#endregion
 }

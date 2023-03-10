@@ -24,6 +24,10 @@ global._enemy_damage = 10
 _health = ENEMY_MAX_HEALTH
 _speed = ENEMY_DEFAULT_SPEED
 
+vision_radius = 0
+attack_radius = 0
+agro_radius = 0
+agro_timer = 0
 agro = false
 agro_timer = undefined
 
