@@ -36,6 +36,9 @@ function leap_to_player()
 {
 		var leap_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x,obj_player.y,true)
 		if (leap_player) path_start(path,10,path_action_continue,false)
+		if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision) || alarm[5] == -1
+		{ alarm[5] = 120}
+		
 }
 
 function check_for_player_ranged() {

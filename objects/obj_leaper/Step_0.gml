@@ -51,9 +51,6 @@ switch(state){
 		sprite_index = attacking_sprite
 		//jump attack
 		leap_to_player()
-		if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision) || alarm[5] == -1
-		{ alarm[5] = 120}
-	
 		break
 	#endregion
 }
