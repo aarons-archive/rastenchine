@@ -7,10 +7,14 @@ switch(state){
 		_speed = 0
 		sprite_index = idle_sprite
 		//first frame of wandering/idle sprite?
-		if alarm[1] == -1 && agro == false { alarm[1] = 120 }
-		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
+		if has_leaped == true {
+			if alarm[2] == -1 { alarm[2] = 60 }
+		}
+		else if alarm[1] == -1 && agro == false { alarm[1] = 120 }
+		else if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
 			state = enemy_state.agro 
-			agro = true} 
+			agro = true
+		} 
 		break
 	#endregion
 	#region wandering case
@@ -20,7 +24,8 @@ switch(state){
 		check_for_path()
 		if (collision_circle(x, y, agro_radius, obj_player, false, true)) {
 			state = enemy_state.agro 
-			agro = true}
+			agro = true
+		}
 		break
 	#endregion
 	#region agro case

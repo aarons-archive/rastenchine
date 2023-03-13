@@ -34,11 +34,20 @@ function check_for_path()
 
 function leap_to_player()
 {
+	if leap_path_made == false 
+	{
 		var leap_player = mp_grid_path(global.mp_grid,path,x,y,obj_player.x,obj_player.y,true)
-		if (leap_player) path_start(path,10,path_action_continue,false)
-		if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision) || alarm[5] == -1
-		{ alarm[5] = 120}
-		
+		if (leap_player) path_start(path,10,path_action_stop,false)
+		leap_path_made = true
+	}
+	
+	if place_meeting(x,y,obj_player) || place_meeting(x,y,obj_player_collision){
+		path_end() 
+		leap_timer = 0 
+		has_leaped = true
+		leap_path_made = false
+		state = enemy_state.idle
+		}	
 }
 
 function check_for_player_ranged() {
