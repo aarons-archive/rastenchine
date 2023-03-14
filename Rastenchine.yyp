@@ -194,7 +194,6 @@
     {"id":{"name":"obj_area_light","path":"objects/obj_area_light/obj_area_light.yy",},},
     {"id":{"name":"light_cull","path":"scripts/light_cull/light_cull.yy",},},
     {"id":{"name":"polygon_create","path":"scripts/polygon_create/polygon_create.yy",},},
-    {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},},
     {"id":{"name":"light_create_area","path":"scripts/light_create_area/light_create_area.yy",},},
     {"id":{"name":"spr_shell","path":"sprites/spr_shell/spr_shell.yy",},},
     {"id":{"name":"rm_finley_containment_zone","path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},},

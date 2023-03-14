@@ -116,7 +116,6 @@
     {"name":"light_acknowledge_shadow_caster","order":11,"path":"scripts/light_acknowledge_shadow_caster/light_acknowledge_shadow_caster.yy",},
     {"name":"obj_area_light","order":7,"path":"objects/obj_area_light/obj_area_light.yy",},
     {"name":"polygon_create","order":3,"path":"scripts/polygon_create/polygon_create.yy",},
-    {"name":"obj_spawner","order":1,"path":"objects/obj_spawner/obj_spawner.yy",},
     {"name":"light_create_area","order":4,"path":"scripts/light_create_area/light_create_area.yy",},
     {"name":"spr_shell","order":2,"path":"sprites/spr_shell/spr_shell.yy",},
     {"name":"rm_finley_containment_zone","order":1,"path":"rooms/rm_finley_containment_zone/rm_finley_containment_zone.yy",},

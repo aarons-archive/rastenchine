@@ -22,11 +22,11 @@ function check_for_player() {
 
 function check_for_path()
 {
-	if (path_timer-- <= 0) {
+	if (path_timer-- <= 0 and origin_x != 0 and origin_y != 0) {
 		//reset timer
 		path_timer = wander_delay;
-		wander_x=irandom_range (obj_enemy_spawner.x-100,obj_enemy_spawner.x+100);
-		wander_y=irandom_range (obj_enemy_spawner.y-100,obj_enemy_spawner.y+100);
+		wander_x=irandom_range (origin_x - 100, origin_x + 100);
+		wander_y=irandom_range (origin_y - 100, origin_y + 100);
 		var found_wander = mp_grid_path(global.mp_grid,path,x,y,wander_x,wander_y,true)
 		if (found_wander) {path_start(path,_speed,path_action_stop,false)}
 	} 
