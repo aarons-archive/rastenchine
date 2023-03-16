@@ -72,7 +72,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"obj_menu_element","path":"objects/obj_menu_element/obj_menu_element.yy",},},
