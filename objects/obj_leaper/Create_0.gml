@@ -28,16 +28,36 @@ state.add(
 		step: function() {
 			if (within_vision_radius) { return state.change("wandering") }
 			if (within_chase_radius) { return state.change("chasing") }
+			
 		}
 	}
 )
 state.add(
 	"wandering", {
-		enter: function() { sprite_index = sprite_wandering },
+		enter: function() { 
+			sprite_index = sprite_wandering 
+			wander_x = irandom_range(origin_x - 100, origin_x + 100);
+			wander_y = irandom_range(origin_y - 100, origin_y + 100);
+			mp_grid_path(
+				global.mp_grid, path, 
+				x, y,
+				irandom_range(origin_x - 100, origin_x + 100), irandom_range(origin_y - 100, origin_y + 100),
+				true
+			)
+			path_start(path, _speed, path_action_stop, false)
+		},
 		step: function() {
 			if (!within_vision_radius) { return state.change("idle") }
 			if (within_chase_radius) { return state.change("chasing") }
 		}
+	}
+)
+state.add(
+	"cooldown", {
+		enter: function() { 
+			sprite_index = sprite_cooldown
+			alarm[3] = 45
+		},
 	}
 )
 
@@ -107,13 +127,5 @@ state.add(
 				state.change("cooldown")
 			}
 		}
-	}
-)
-state.add(
-	"cooldown", {
-		enter: function() { 
-			sprite_index = sprite_cooldown
-			alarm[3] = 45
-		},
 	}
 )

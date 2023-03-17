@@ -1,2 +1,2 @@
-/// @description Attacking -> Idle
+/// @description Cooldown -> Idle
 state.change("idle")
