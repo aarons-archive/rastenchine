@@ -1,2 +1,2 @@
-state = enemy_state.idle
-has_leaped = false
+/// @description Charging -> Attacking
+state.change("attacking")

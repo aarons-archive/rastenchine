@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Rastenchine",
-    "path": "Rastenchine.yyp",
+    "name": "Lighting",
+    "path": "folders/Lighting.yy",
   },
   "parentObjectId": null,
   "persistent": false,
