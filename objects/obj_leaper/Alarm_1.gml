@@ -1,2 +1,2 @@
-/// @description Lost -> Idle
-state.change("idle")
+/// @description x -> attacking
+state.change("attacking")

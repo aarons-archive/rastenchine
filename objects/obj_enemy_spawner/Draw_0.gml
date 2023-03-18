@@ -1,2 +1,6 @@
 draw_self()
-draw_circle(x, y, 200, true)
+draw_rectangle(
+	bbox_left - 100, bbox_top - 100,
+	bbox_right + 100, bbox_bottom + 100,
+	true
+)

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_leaper_cooldown",
+  "name": "spr_leaper_attacking_cooldown",
   "bbox_bottom": 23,
   "bbox_left": 0,
   "bbox_right": 23,
@@ -14,6 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c100b8bf-aa31-4a15-9d90-f4d2e00ffc14",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -32,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_leaper_cooldown",
+    "name": "spr_leaper_attacking_cooldown",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -43,18 +44,19 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c","path":"sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",},},},"Disabled":false,"id":"216450e5-1b8a-4a69-af66-a8e57616321c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},},"Disabled":false,"id":"d1534eae-2b63-44a5-bc1c-590cf5efbf31","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c100b8bf-aa31-4a15-9d90-f4d2e00ffc14","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},},"Disabled":false,"id":"1f15bfdb-ac94-442f-a1d5-4da56d0f0bfb","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

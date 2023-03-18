@@ -22,13 +22,19 @@ function check_for_player() {
 
 function check_for_path()
 {
-	if (path_timer-- <= 0 and origin_x != 0 and origin_y != 0) {
-		//reset timer
+	if (path_timer-- <= 0) {
 		path_timer = wander_delay;
-		wander_x=irandom_range (origin_x - 100, origin_x + 100);
-		wander_y=irandom_range (origin_y - 100, origin_y + 100);
-		var found_wander = mp_grid_path(global.mp_grid,path,x,y,wander_x,wander_y,true)
-		if (found_wander) {path_start(path,_speed,path_action_stop,false)}
+		
+		if (created_by_spawner) {
+			wander_x = irandom_range(spawner_bbox_left - 100, spawner_bbox_right + 100)
+			wander_y = irandom_range(spawner_bbox_top - 100, spawner_bbox_bottom + 100)
+		}
+		else {
+			wander_x = irandom_range(bbox_left - 100, bbox_right + 100)
+			wander_y = irandom_range(bbox_top - 100, bbox_bottom + 100)
+		}
+		var found_path = mp_grid_path(global.mp_grid, path, x, y, wander_x, wander_y, true)
+		if (found_path) { path_start(path, _speed, path_action_stop, false) }
 	} 
 }
 

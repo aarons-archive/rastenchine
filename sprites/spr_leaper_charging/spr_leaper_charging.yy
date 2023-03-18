@@ -15,8 +15,6 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9267ca1a-99a8-4190-a6a9-857303781965",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"652ec31d-b296-4bb7-bef3-0c735aa889be",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"670e82b8-4f69-4162-a1e0-4973a893cd26",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -46,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 4.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -59,8 +57,6 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c","path":"sprites/spr_leaper_charging/spr_leaper_charging.yy",},},},"Disabled":false,"id":"538aaacf-8f71-4630-99ac-82d6310112e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9267ca1a-99a8-4190-a6a9-857303781965","path":"sprites/spr_leaper_charging/spr_leaper_charging.yy",},},},"Disabled":false,"id":"4f5b4994-33ce-4502-95a8-8f0bffeb14e2","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"652ec31d-b296-4bb7-bef3-0c735aa889be","path":"sprites/spr_leaper_charging/spr_leaper_charging.yy",},},},"Disabled":false,"id":"e9df0c30-78d0-430a-bf67-2cd3815e0fbe","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"670e82b8-4f69-4162-a1e0-4973a893cd26","path":"sprites/spr_leaper_charging/spr_leaper_charging.yy",},},},"Disabled":false,"id":"49a575c3-e6f3-43e2-8c20-ffbf6a085ef5","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -76,6 +76,7 @@
     "IDEVersion": "2023.2.1.75",
   },
   "resources": [
+    {"id":{"name":"spr_leaper_attacking_cooldown","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},
     {"id":{"name":"obj_menu_element","path":"objects/obj_menu_element/obj_menu_element.yy",},},
     {"id":{"name":"spr_shotgun","path":"sprites/spr_shotgun/spr_shotgun.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
@@ -254,7 +255,7 @@
     {"id":{"name":"spr_crosshair","path":"sprites/spr_crosshair/spr_crosshair.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"spr_ui_foreground","path":"sprites/spr_ui_foreground/spr_ui_foreground.yy",},},
-    {"id":{"name":"spr_leaper_cooldown","path":"sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",},},
+    {"id":{"name":"spr_leaper_wandering_cooldown","path":"sprites/spr_leaper_wandering_cooldown/spr_leaper_wandering_cooldown.yy",},},
     {"id":{"name":"light_static_get_array","path":"scripts/light_static_get_array/light_static_get_array.yy",},},
     {"id":{"name":"spr_lut_light_intensity_line","path":"sprites/spr_lut_light_intensity_line/spr_lut_light_intensity_line.yy",},},
     {"id":{"name":"rm_nico_aaron_dev","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},},
