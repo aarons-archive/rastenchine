@@ -106,6 +106,7 @@
     {"id":{"name":"scr_draw_debug_text","path":"scripts/scr_draw_debug_text/scr_draw_debug_text.yy",},},
     {"id":{"name":"spr_railgun","path":"sprites/spr_railgun/spr_railgun.yy",},},
     {"id":{"name":"obj_lighting_collision","path":"objects/obj_lighting_collision/obj_lighting_collision.yy",},},
+    {"id":{"name":"spr_basic_enemy_cooldown","path":"sprites/spr_basic_enemy_cooldown/spr_basic_enemy_cooldown.yy",},},
     {"id":{"name":"lighting_pre_composite","path":"scripts/lighting_pre_composite/lighting_pre_composite.yy",},},
     {"id":{"name":"scr_draw_health_bar","path":"scripts/scr_draw_health_bar/scr_draw_health_bar.yy",},},
     {"id":{"name":"spr_leaper_wandering","path":"sprites/spr_leaper_wandering/spr_leaper_wandering.yy",},},

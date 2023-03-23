@@ -55,6 +55,7 @@
     {"name":"scr_do_movement","order":3,"path":"scripts/scr_do_movement/scr_do_movement.yy",},
     {"name":"scr_draw_debug_text","order":4,"path":"scripts/scr_draw_debug_text/scr_draw_debug_text.yy",},
     {"name":"obj_lighting_collision","order":1,"path":"objects/obj_lighting_collision/obj_lighting_collision.yy",},
+    {"name":"spr_basic_enemy_cooldown","order":4,"path":"sprites/spr_basic_enemy_cooldown/spr_basic_enemy_cooldown.yy",},
     {"name":"lighting_pre_composite","order":4,"path":"scripts/lighting_pre_composite/lighting_pre_composite.yy",},
     {"name":"scr_draw_health_bar","order":2,"path":"scripts/scr_draw_health_bar/scr_draw_health_bar.yy",},
     {"name":"spr_leaper_wandering","order":1,"path":"sprites/spr_leaper_wandering/spr_leaper_wandering.yy",},

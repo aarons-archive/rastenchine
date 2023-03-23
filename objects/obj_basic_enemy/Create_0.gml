@@ -15,6 +15,20 @@ attacking_sprite = spr_basic_enemy_attack
 _x = x
 _y = y
 
+attack_radius = 200
+chase_radius = 400
+vision_radius = 600
+
+within_attack_radius = false
+within_chase_radius = false
+within_vision_radius = false
+
+wander_x = 0
+wander_y = 0
+attack_x = 0
+attack_y = 0
+
+path_cooldown = 10
 
 state = new SnowState("idle")
 
