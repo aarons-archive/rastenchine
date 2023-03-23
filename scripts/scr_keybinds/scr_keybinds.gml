@@ -4,6 +4,7 @@ global.DOWN_KEY = ord("S")
 global.RIGHT_KEY = ord("D")
 global.RUN_KEY = vk_shift
 global.DODGE_KEY = vk_space
+global.SELECT_KEY = ord("E")
 
 global.RELOAD_GUN_KEY = ord("R")
 global.ATTACK_BUTTON = mb_left
