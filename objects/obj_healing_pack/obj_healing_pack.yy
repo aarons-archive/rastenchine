@@ -4,14 +4,16 @@
   "name": "obj_healing_pack",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new HealingPack()",},
+  ],
   "parent": {
     "name": "Healing Pack",
-    "path": "folders/Inventory/Consumables/Healing Pack.yy",
+    "path": "folders/Inventory/Items/Consumables/Healing Pack.yy",
   },
   "parentObjectId": {
-    "name": "obj_item_pickup",
-    "path": "objects/obj_item_pickup/obj_item_pickup.yy",
+    "name": "obj_pickup",
+    "path": "objects/obj_pickup/obj_pickup.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -1,5 +1,6 @@
 /// @desc Gets the active camera
 /// @returns The active camera port [X, Y, Width, Height]
+// Feather disable GM1045
 function lighting_get_active_camera() {
 
 	if(global.worldCustomCamera == undefined) {

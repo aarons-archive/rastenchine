@@ -1,6 +1,7 @@
 /// @desc Composite the shadow map from all the lights
 /// @arg lights The ds_list of lights, in order, to composite
 /// @returns True if it succeeded, otherwise false
+// Feather disable GM1045
 function composite_shadow_map(argument0)
 {
 

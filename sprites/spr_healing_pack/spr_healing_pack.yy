@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Healing Pack",
-    "path": "folders/Inventory/Consumables/Healing Pack.yy",
+    "path": "folders/Inventory/Items/Consumables/Healing Pack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Collision",
-    "path": "folders/Maps/Collision.yy",
+    "name": "Sprites",
+    "path": "folders/Maps/Collision/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

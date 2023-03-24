@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Ammo Box",
-    "path": "folders/Inventory/Consumables/Ammo Box.yy",
+    "path": "folders/Inventory/Items/Consumables/Ammo Box.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

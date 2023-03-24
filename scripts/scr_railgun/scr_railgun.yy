@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Railgun",
-    "path": "folders/Inventory/Weapons/Railgun.yy",
+    "path": "folders/Inventory/Items/Weapons/Railgun.yy",
   },
 }

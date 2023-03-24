@@ -5,6 +5,12 @@
 *	Author: Sohom Sahaun | @sohomsahaun
 */
 
+// Feather disable GM2017
+// Feather disable GM1041
+// Feather disable GM1062
+// Feather disable GM1045
+// Feather disable GM1042
+
 /// @func SnowState(initial_state, [execute_enter])
 /// @param {string} initial_state		Initial state for the state machine
 /// @param {bool}   [execute_enter]		Whether to execute the "enter" event for the initial state (true) or not (false) [Default: true]

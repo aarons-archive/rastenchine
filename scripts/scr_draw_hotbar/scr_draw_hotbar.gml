@@ -32,12 +32,24 @@ function draw_hotbar() {
 			HOTBAR_SLOT_HEIGHT,
 			colour, 1
 		)
-		var hotbar_item = (hotbar[i] != undefined) ? items[hotbar[i]] : undefined
+		try {
+			hotbar_item = (hotbar[i] != undefined) ? items[hotbar[i]] : undefined
+		}
+		catch (exception) {
+			hotbar_item = undefined
+		}
 		if (hotbar_item != undefined) {
 			draw_sprite(
 				hotbar_item.sprite, 0, 
 				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2),
 				slot_y + (HOTBAR_SLOT_HEIGHT / 2)
+			)
+			draw_set_halign(fa_left)
+			draw_set_valign(fa_top)
+			draw_text(
+				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2) + 18,
+				slot_y + (HOTBAR_SLOT_HEIGHT / 2) + 9,
+				string(hotbar_item.count),
 			)
 		}
 	}
