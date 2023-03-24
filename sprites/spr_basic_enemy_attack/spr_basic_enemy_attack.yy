@@ -33,7 +33,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4a9812c0-a4ac-4646-8f6c-bed628b0839e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Sprites",
     "path": "folders/Entities/Enemies/Basic Enemy/Sprites.yy",
@@ -79,7 +79,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 64,
+    "xorigin": 32,
     "yorigin": 32,
   },
   "swatchColours": null,

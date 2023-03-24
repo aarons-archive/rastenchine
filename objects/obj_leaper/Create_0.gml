@@ -81,6 +81,7 @@ state.add(
 			sprite_index = sprite_chasing 
 		},
 		step: function() {
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			if (within_attack_radius) { return state.change("charging") }
 			if (!within_chase_radius) { return state.change("lost") }
 			path_cooldown -= 1
@@ -107,7 +108,8 @@ state.add(
 
 state.add(
 	"charging", {
-		enter: function() { 
+		enter: function() {
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_charging 
 			alarm[1] = 45
 			attack_x = obj_player.x
@@ -118,7 +120,8 @@ state.add(
 )
 state.add(
 	"attacking", {
-		enter: function() { 
+		enter: function() {
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			move_towards_point(attack_x, attack_y, 15)
 		},

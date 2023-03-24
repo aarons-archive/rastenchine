@@ -1,19 +1,8 @@
 event_inherited()
+randomize()
 
-enum enemy_state {
-	idle,
-	wandering,
-	agro,
-	attacking,
-	death,
-	burrowed,
-	charging,
-	sleeping
-}
 
-state = enemy_state.idle
-
-death_sprite = undefined
+sprite_death = undefined
 idle_sprite = undefined
 wander_sprite = undefined
 agro_sprite = undefined
@@ -31,7 +20,6 @@ agro_timer = 0
 agro = false
 agro_timer = undefined
 
-idle_movement = 0
 _y = y
 _x = x
 
