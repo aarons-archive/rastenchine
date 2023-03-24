@@ -4,7 +4,6 @@
 //else {
 //	visible = false
 //}
-
 if (_health < 1) { 
 	state = enemy_state.death
 }
@@ -14,10 +13,16 @@ switch (state) {
 	case enemy_state.death:
 		path_end()
 		_speed = 0
-		sprite_index = death_sprite
+		sprite_index = sprite_death
 		break
 }
 #endregion
+
+within_attack_radius = (collision_circle(x, y, attack_radius, obj_player, true, false) != noone)
+within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, false) != noone)
+within_vision_radius = (collision_circle(x, y, vision_radius, obj_player, true, false) != noone)
+
+state.step()
 
 if instance_exists(obj_railgun_projectile) {
 	if (collision_line(obj_player.x,obj_player.y,obj_railgun_projectile.r[1],obj_railgun_projectile.r[2],self,0,0)) {

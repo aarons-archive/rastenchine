@@ -7,15 +7,19 @@ attack_radius = 100
 agro_radius = 300
 agro_timer = 180
 
-idle_sprite = spr_basic_enemy
-death_sprite = spr_basic_enemy_death
-agro_sprite = spr_basic_enemy_chasing
-attacking_sprite = spr_basic_enemy_attack
+sprite_idle = spr_basic_enemy
+sprite_wandering = spr_basic_enemy
+sprite_wandering_cooldown = spr_basic_enemy_cooldown
+sprite_chasing = spr_basic_enemy_chasing
+sprite_lost = spr_basic_enemy_cooldown
+sprite_attacking = spr_basic_enemy_attack
+sprite_attacking_cooldown = spr_basic_enemy_cooldown
+sprite_death = spr_basic_enemy_death
 
 _x = x
 _y = y
 
-attack_radius = 200
+attack_radius = 20
 chase_radius = 400
 vision_radius = 600
 
@@ -36,6 +40,7 @@ state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle 
+			
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -83,6 +88,7 @@ state.add(
 			sprite_index = sprite_chasing 
 		},
 		step: function() {
+			if (within_attack_radius) { return state.change("attacking") }
 			if (!within_chase_radius) { return state.change("lost") }
 			path_cooldown -= 1
 			if (path_cooldown <= 0) {
@@ -108,10 +114,11 @@ state.add(
 	"attacking", {
 		enter: function() { 
 			sprite_index = sprite_attacking
+			_speed = 0
+			path_end()
 		},
 		step: function() {
 			if (image_index	== image_number - 1) {
-				_speed = 0
 				state.change("attack_cooldown")
 			}
 		}
