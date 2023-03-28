@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tiles",
-  "bbox_bottom": 71,
-  "bbox_left": 24,
-  "bbox_right": 191,
+  "bbox_bottom": 63,
+  "bbox_left": 32,
+  "bbox_right": 127,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47f5f2af-ab4f-4b0f-bdab-b7c901814272",},
   ],
-  "gridX": 24,
-  "gridY": 24,
+  "gridX": 32,
+  "gridY": 32,
   "height": 256,
   "HTile": false,
   "layers": [
