@@ -87,12 +87,11 @@ function Inventory() constructor {
 		// create a pickup instance with the items data
 		instance_create_layer(
 			_item.instance.x, _item.instance.y, 
-			"player", obj_pickup, 
+			"pickups", obj_pickup, 
 			{ 
 				sprite_index: _item.sprite,
 				image_angle: _item.instance.image_angle,
 				image_yscale: _item.instance.image_yscale,
-				depth: obj_player.depth + 1,
 				struct: _item
 			}
 		)
