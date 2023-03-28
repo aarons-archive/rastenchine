@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "path": "folders/Maps/Lighting.yy",
   },
   "parentObjectId": null,
   "persistent": true,

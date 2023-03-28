@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Rastenchine",
-    "path": "Rastenchine.yyp",
+    "name": "NPC",
+    "path": "folders/Maps/NPC.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

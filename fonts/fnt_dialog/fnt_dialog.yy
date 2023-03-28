@@ -123,8 +123,8 @@
   "last": 0,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Menu.yy",
+    "name": "NPC",
+    "path": "folders/Maps/NPC.yy",
   },
   "pointRounding": 0,
   "ranges": [

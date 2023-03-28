@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Rastenchine",
-    "path": "Rastenchine.yyp",
+    "name": "NPC",
+    "path": "folders/Maps/NPC.yy",
   },
   "parentObjectId": null,
   "persistent": false,

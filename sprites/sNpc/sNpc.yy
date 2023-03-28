@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "NPC",
-    "path": "folders/NPC.yy",
+    "path": "folders/Maps/NPC.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

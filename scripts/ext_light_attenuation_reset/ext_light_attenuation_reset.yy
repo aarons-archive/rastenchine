@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Extensions",
-    "path": "folders/Lighting/_INTERNALS/Extensions.yy",
+    "path": "folders/Maps/Lighting/_INTERNALS/Extensions.yy",
   },
 }

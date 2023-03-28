@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Lighting",
-    "path": "folders/Lighting.yy",
+    "path": "folders/Maps/Lighting.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__snowstate_config",
+  "name": "scr_snow_state",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "SnowState",
-    "path": "folders/Scripts/SnowState.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }
