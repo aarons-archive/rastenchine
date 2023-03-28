@@ -136,6 +136,7 @@
     {"id":{"name":"obj_lighting_initialiser","path":"objects/obj_lighting_initialiser/obj_lighting_initialiser.yy",},},
     {"id":{"name":"obj_player_collision","path":"objects/obj_player_collision/obj_player_collision.yy",},},
     {"id":{"name":"scr_ammo_box","path":"scripts/scr_ammo_box/scr_ammo_box.yy",},},
+    {"id":{"name":"spr_shambler_cooldown","path":"sprites/spr_shambler_cooldown/spr_shambler_cooldown.yy",},},
     {"id":{"name":"light_add_to_world","path":"scripts/light_add_to_world/light_add_to_world.yy",},},
     {"id":{"name":"spr_lut_light_intensity_linear","path":"sprites/spr_lut_light_intensity_linear/spr_lut_light_intensity_linear.yy",},},
     {"id":{"name":"ext_light_attenuation_reset","path":"scripts/ext_light_attenuation_reset/ext_light_attenuation_reset.yy",},},

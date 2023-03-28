@@ -5,15 +5,14 @@ chase_radius = 300
 //unique vars
 explode_timer = 0
 
-
-
 sprite_idle =  spr_shambler
 sprite_wandering =  spr_shambler
-sprite_wandering_cooldown = spr_basic_enemy_cooldown
+sprite_wandering_cooldown = spr_shambler_cooldown
 sprite_chasing = spr_shambler_agro
-sprite_lost = spr_basic_enemy_cooldown
+sprite_lost = spr_shambler_cooldown
+sprite_charging = spr_shambler_charging
 sprite_attacking = spr_shambler_explode
-sprite_attacking_cooldown = spr_basic_enemy_cooldown
+sprite_attacking_cooldown = spr_shambler_cooldown
 sprite_death = spr_shambler_death
 
 within_attack_radius = false
@@ -22,13 +21,27 @@ within_vision_radius = false
 
 wander_x = 0
 wander_y = 0
-attack_x = 0
-attack_y = 0
 
 path_cooldown = 10
 
 state = new SnowState("idle")
-
+//sleeping during night hours wandering through day hours 
+state.add(
+	"sleeping", {
+		enter: function() {
+			sprite_index = sprite_sleeping
+		},
+		step: function() {
+			//will also need cheese item + must be crouching?
+			if (collision_circle(x, y, 50, obj_player, false, false)) && keyboard_check_pressed(ord("E")){
+				instance_create_layer(x,y,"other",obj_tamed_shambler)
+				instance_destroy()
+			}
+			if (within_chase_radius) { return state.change("chasing") }
+			if (within_vision_radius) { return state.change("wandering") }	
+		}
+	}
+) 
 state.add(
 	"idle", {
 		enter: function() { 
@@ -81,7 +94,7 @@ state.add(
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			if (within_attack_radius) { return state.change("attacking") }
+			if (within_attack_radius) { return state.change("charging") }
 			if (!within_chase_radius) { return state.change("lost") }
 			path_cooldown -= 1
 			if (path_cooldown <= 0) {
@@ -104,25 +117,38 @@ state.add(
 	}
 )
 state.add(
-	"attacking", {
+	"charging", {
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			sprite_index = sprite_attacking
-			_speed = 0
+			sprite_index = sprite_charging 
 			path_end()
 		},
 		step: function() {
-			if (image_index	== image_number - 1) {
-				state.change("attack_cooldown")
+			explode_timer += 0.1
+			//if sprite_index == sprite_charging{_speed = 0}
+			if !(collision_circle(x, y, attack_radius, obj_player, false, false)){
+				//_speed = ENEMY_DEFAULT_SPEED 
+				explode_timer -= 0.2
+				if explode_timer <= 0 { 
+					explode_timer = 0
+					state.change("chasing")
+				}
 			}
+			if explode_timer >= 8 {state.change("attacking")}
 		}
 	}
 )
 state.add(
-	"attack_cooldown", {
-		enter: function() { 
-			sprite_index = sprite_attacking_cooldown
-			alarm[0] = 120
+	"attacking", {
+		enter: function() {
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+			sprite_index = sprite_attacking
+			path_end()
+		},
+		step: function() {
+			if (image_index	>= image_number - 1) {
+				instance_destroy()
+			}
 		}
 	}
 )

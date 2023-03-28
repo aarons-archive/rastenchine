@@ -63,6 +63,7 @@
     {"name":"spr_bullet","order":2,"path":"sprites/spr_bullet/spr_bullet.yy",},
     {"name":"obj_pea_shooter","order":1,"path":"objects/obj_pea_shooter/obj_pea_shooter.yy",},
     {"name":"scr_snow_state","order":5,"path":"scripts/scr_snow_state/scr_snow_state.yy",},
+    {"name":"spr_shambler_cooldown","order":6,"path":"sprites/spr_shambler_cooldown/spr_shambler_cooldown.yy",},
     {"name":"scr_shotgun","order":1,"path":"scripts/scr_shotgun/scr_shotgun.yy",},
     {"name":"scr_rifle","order":1,"path":"scripts/scr_rifle/scr_rifle.yy",},
     {"name":"fnt_menu","order":1,"path":"fonts/fnt_menu/fnt_menu.yy",},
