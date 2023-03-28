@@ -33,7 +33,7 @@ function draw_hotbar() {
 			colour, 1
 		)
 		try {
-			hotbar_item = (hotbar[i] != undefined) ? items[hotbar[i]] : undefined
+			hotbar_item = (hotbar[i] != undefined) ? inventory[hotbar[i]] : undefined
 		}
 		catch (exception) {
 			hotbar_item = undefined

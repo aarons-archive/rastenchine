@@ -1,6 +1,6 @@
 function Inventory() constructor {
 	
-	items = [new AmmoBox(), new AmmoBox()]
+	inventory = [new AmmoBox(), new HealingPack(), new Railgun(), new Rifle(), new Shotgun()]
 	hotbar = [0, 1, 2, 3, 4]
 	hotbar_index = 0
 	item = undefined
@@ -34,52 +34,65 @@ function Inventory() constructor {
 		//////////////////////
 		var item_index = self.hotbar[self.hotbar_index]
 		if (item_index != undefined) {
-			self.item = self.items[item_index]
+			self.item = self.inventory[item_index]
 			self.item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item, { sprite_index: self.item.sprite })
 		}
 	}
 	
 	static add_item = function(struct) {
-		for (var i = 0; i < array_length(self.items); i++) {
-			if (instanceof(self.items[i]) == instanceof(struct)) { 
-				self.items[i].count += struct.count
+		// search the 'items' list for an item matching the one that
+		// is being added, if one is not found, use -1.
+		var _index = -1
+		for (var i = 0; i < array_length(self.inventory); i++) {
+			if (instanceof(self.inventory[i]) == instanceof(struct)) { 
+				_index = i
 				break
 			}
 		}
-		
-		if (struct.stackable == true) {
-			for (var i = 0; i < array_length(self.items); i++) {
-				if (instanceof(self.items[i]) == instanceof(struct)) { 
-					self.items[i].count += struct.count
-					break
+		// if a matching item was found and the item being added is 
+		// stackable, add the item being added's count to the item
+		// that was found's count.
+		if ((_index != -1) and (struct.stackable == true)) {		
+			self.inventory[_index].count += struct.count
+		}
+
+		else {
+			// search the inventory for an instance of 'undefined'.
+			// if found, replace it with the item being added. 
+			// if not, add the item to the end of the inventory.
+			var inventory_undefined_value_index = array_get_index(self.inventory, undefined)
+			if (inventory_undefined_value_index != 1) {
+				self.inventory[inventory_undefined_value_index] = struct
+			}
+			else {
+				array_push(self.inventory, struct)
+				inventory_undefined_value_index = array_length(self.inventory) - 1
+			}
+			// if the current hotbar slot is empty (undefined), set
+			// it to reference the index of the item that was just 
+			// added. if it is not empty, search the hotbar for an 
+			// instance of 'undefined' and replace it, if found, with
+			// the index of the item that was added.
+			if (self.hotbar[self.hotbar_index] == undefined) {
+				self.hotbar[self.hotbar_index] = inventory_undefined_value_index
+			}
+			else {
+				var hotbar_undefined_value_index = array_get_index(self.hotbar, undefined)
+				if (hotbar_undefined_value_index != 1) {
+					self.hotbar[hotbar_undefined_value_index] = inventory_undefined_value_index
 				}
 			}
+			self.change_item(self.hotbar_index)
 		}
-		else { 
-			for (var i = 0; i < array_length(self.items); i++) {
-				if self.items[i] == undefined {
-					self.items[i] = struct
-					for (var j = 0; j < array_length(self.hotbar); j++) {
-						if self.hotbar[j] == undefined {
-							self.hotbar[j] = i
-							self.change_item(j)
-							break
-						}
-					}
-					break
-				}
-			}
-		}
-		
 	}
 		
 	static drop_item = function(item_index) {
 		// make sure the index of the item being dropped is valid
-		if ((item_index < 0) or (item_index >= array_length(self.items))) {
+		if ((item_index < 0) or (item_index >= array_length(self.inventory))) {
 			return
 		}
 		// get the item that is to be dropped
-		var _item = self.items[item_index]
+		var _item = self.inventory[item_index]
 		if ((is_instanceof(_item, Weapon) == true) and (_item.state != weapon_state.idle)) { 
 			return 
 		}
@@ -98,7 +111,7 @@ function Inventory() constructor {
 		// remove the old item
 		instance_destroy(_item.instance)
 		self.item = undefined
-		self.items[item_index] = undefined
+		self.inventory[item_index] = undefined
 		// remove the hotbar reference
 		for (var i = 0; i < array_length(self.hotbar); i++) {
 			if (self.hotbar[i] == item_index) {
