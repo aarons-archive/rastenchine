@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "dialog",
-    "path": "folders/Maps/NPC/Dialog stuff/dialog.yy",
+    "path": "folders/Maps/NPC/Scripts/dialog.yy",
   },
 }

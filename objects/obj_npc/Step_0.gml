@@ -1,9 +1,9 @@
 if (selected && obj_player.select_input)
 {
-	if (point_in_circle(obj_player.x,obj_player.y,x,y,256)) && (!instance_exists(obj_Dialog))
+	if (point_in_circle(obj_player.x,obj_player.y,x,y,256)) && (!instance_exists(obj_dialog))
 	{
 		//stop player controlling or whatever
-		with (instance_create_layer(x,y,layer,obj_Dialog))
+		with (instance_create_layer(x,y,layer,obj_dialog))
 		{
 			dialog_init();
 			for (var i = 0; i < array_length(other.dialogs); i++) {
@@ -20,9 +20,9 @@ if (selected && obj_player.select_input)
 	}
 }
 
-if (distance_to_object(obj_player) > 100) && (instance_exists(obj_Dialog))
+if (distance_to_object(obj_player) > 100) && (instance_exists(obj_dialog))
 {
-	instance_destroy(obj_Dialog);	
+	instance_destroy(obj_dialog);	
 	with (obj_camera)
 		{
 			follow = obj_player;

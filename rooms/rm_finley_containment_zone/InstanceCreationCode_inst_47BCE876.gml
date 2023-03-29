@@ -1,5 +1,5 @@
 dialogs = [
-    [sNpcHead, "Hi Friend!"],
-	[sPlayerHead, "Hello."],
-	[sNpcHead, "Oppa minecraft style ayyy \nsexy piggy op op op oppa minecraft style!"],
+    [spr_npc_head, "Hi Friend!"],
+	[spr_player_head, "Hello."],
+	[spr_npc_head, "Oppa minecraft style ayyy \nsexy piggy op op op oppa minecraft style!"],
 ]

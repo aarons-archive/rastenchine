@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oNote",
+  "name": "obj_note",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -33,8 +33,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "sNote",
-    "path": "sprites/sNote/sNote.yy",
+    "name": "spr_note",
+    "path": "sprites/spr_note/spr_note.yy",
   },
   "spriteMaskId": null,
   "visible": true,

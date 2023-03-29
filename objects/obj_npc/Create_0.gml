@@ -1,5 +1,5 @@
 selected = false;
 dialogs = [
-    [sPlayerHead, "Test"],
+    [spr_player_head, "Test"],
 ]
 
