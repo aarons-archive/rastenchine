@@ -77,7 +77,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.2.1.75",
   },
   "resources": [
     {"id":{"name":"spr_leaper_attacking_cooldown","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},
