@@ -5,7 +5,7 @@
 //	visible = false
 //}
 if (_health < 1) { 
-	state = enemy_state.death
+	state.change("death")
 }
 if state.get_current_state() == "death"
 {

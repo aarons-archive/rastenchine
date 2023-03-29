@@ -1,10 +1,9 @@
 event_inherited()
 
-state = enemy_state.idle
-
-vision_radius = 700
-attack_radius = 300
-chase_radius = 300
+vision_radius = 800
+attack_radius = 350
+chase_radius = 500
+run_radius = 300
 //unique vars
 close_radius = 200
 shoot_cooldown = false
@@ -15,8 +14,10 @@ sprite_wandering_cooldown = spr_pea_shooter_burrowed
 sprite_chasing = spr_pea_shooter_angry_burrowed
 sprite_lost = spr_basic_enemy_cooldown
 sprite_attacking = spr_pea_shooter
-sprite_attacking_cooldown = spr_basic_enemy_cooldown
+sprite_cooldown = spr_basic_enemy_cooldown
 sprite_death = spr_basic_enemy_death
+
+path_cooldown = 10
 
 state = new SnowState("idle")
 
@@ -31,7 +32,6 @@ state.add(
 		}
 	}
 ) 
-
 state.add(
 	"wandering", {
 		enter: function() { 
@@ -99,24 +99,32 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			path_end()
-			sprite_index = attacking_sprite
+			sprite_index = sprite_attacking
 		},
 		step: function() {
 			if (shoot_cooldown == false) {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
 			var _direction = point_direction(x, y, obj_player.x, obj_player.y)
-			instance_create_layer( x, y, "other", obj_pea_bullets, 
+			instance_create_layer( x, y, "enemies", obj_pea_bullets, 
 			{ speed: 10, direction: _direction, image_angle: _direction })
 			shoot_cooldown = true
-			alarm[0] = 60
+			alarm[1] = 60
 			}
+			if !(within_attack_radius) { return state.change("attack_cooldown") }
+		
+			//distance_to_player = (distance_to_object(obj_player))
+			//direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
+			//if (distance_to_player < run_radius) {
+				// move away from the player
+			//	move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
+//}
 		}
 	}
 )
 state.add(
 	"attack_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_attacking_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		}
 	}
