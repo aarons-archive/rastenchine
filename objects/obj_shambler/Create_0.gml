@@ -5,8 +5,9 @@ chase_radius = 300
 //unique vars
 explode_timer = 0
 
-sprite_idle =  spr_shambler
-sprite_wandering =  spr_shambler
+sprite_sleeping = spr_shambler_sleeping
+sprite_idle = spr_shambler
+sprite_wandering = spr_shambler
 sprite_wandering_cooldown = spr_shambler_cooldown
 sprite_chasing = spr_shambler_agro
 sprite_lost = spr_shambler_cooldown

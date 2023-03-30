@@ -7,14 +7,18 @@ run_radius = 300
 //unique vars
 close_radius = 200
 shoot_cooldown = false
-
-sprite_idle = spr_pea_shooter_burrowed
+run_lock = false
+distance_to_player = (distance_to_object(obj_player))
+direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
+			
+sprite_idle = spr_pea_shooter_burrowed //burrowed
 sprite_wandering = spr_pea_shooter
-sprite_wandering_cooldown = spr_pea_shooter_burrowed
-sprite_chasing = spr_pea_shooter_angry_burrowed
-sprite_lost = spr_basic_enemy_cooldown
-sprite_attacking = spr_pea_shooter
-sprite_cooldown = spr_basic_enemy_cooldown
+sprite_wandering_cooldown = spr_pea_shooter_burrowed 
+sprite_chasing = spr_pea_shooter_angry_burrowed //burrowed
+sprite_lost = spr_basic_enemy_cooldown 
+sprite_attacking = spr_pea_shooter 
+sprite_cooldown = spr_basic_enemy_cooldown 
+sprite_run = spr_pea_shooter_burrowed //burrowed
 sprite_death = spr_basic_enemy_death
 
 path_cooldown = 10
@@ -103,22 +107,17 @@ state.add(
 		},
 		step: function() {
 			if (shoot_cooldown == false) {
-			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
-			var _direction = point_direction(x, y, obj_player.x, obj_player.y)
-			instance_create_layer( x, y, "enemies", obj_pea_bullets, 
-			{ speed: 10, direction: _direction, image_angle: _direction })
-			shoot_cooldown = true
-			alarm[1] = 60
+				if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
+				var _direction = point_direction(x, y, obj_player.x, obj_player.y)
+				instance_create_layer( x, y, "enemies", obj_pea_bullets, 
+				{ speed: 10, direction: _direction, image_angle: _direction })
+				shoot_cooldown = true
+				alarm[1] = 60
 			}
-			if !(within_attack_radius) { return state.change("attack_cooldown") }
-		
-			distance_to_player = (distance_to_object(obj_player))
-			direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
-			if (distance_to_player < run_radius) {
-			    move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
-			}
-			else {
-				speed = 0
+			if !(within_attack_radius) { return state.change("attack_cooldown")}
+
+			if (distance_to_player < run_radius) && run_lock == false && (alarm[2] == -1) {
+				state.change("run") alarm[2] = 120
 			}
 		}
 	}
@@ -131,3 +130,15 @@ state.add(
 		}
 	}
 )
+state.add(
+	"run", {
+		enter: function() {
+			run_lock = true
+			move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
+			sprite_index = sprite_run
+			alarm[3] = 60
+		}
+	}
+)
+
+//burrowed = untargetable do this in player
