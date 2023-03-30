@@ -11,6 +11,6 @@ y = follow.y;
 to_x = xstart
 to_y = ystart
 
-PAN_MAX = 70
+PAN_MAX = 130
 PAN_SCALE = 2
 pan = 0

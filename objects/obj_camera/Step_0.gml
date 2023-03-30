@@ -14,7 +14,7 @@ if (instance_exists(follow)) {
 }
 
 x += (to_x - x) / 15
-y += (to_y - y) / 15
+y += (to_y - y) / 10
 
 x = clamp(x, HALF_VIEW_WIDTH, room_width - HALF_VIEW_WIDTH)
 y = clamp(y, HALF_VIEW_HEIGHT, room_height - HALF_VIEW_HEIGHT)
