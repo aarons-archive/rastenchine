@@ -84,6 +84,7 @@
     {"name":"inst_605A5175","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
     {"name":"inst_434DFE43","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
     {"name":"inst_180F4CF9","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
+    {"name":"inst_16691AD4","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -166,6 +167,7 @@
 -14,-2147483648,1,1,-13,-2147483648,1,1,-83,-2147483648,-16,1,-14,-2147483648,1,1,-13,-2147483648,1,1,-87,-2147483648,1,1,-25,-2147483648,-15,1,-87,-2147483648,1,1,-25,-2147483648,2,1,0,-100,-2147483648,1,1,-25,-2147483648,1,1,-101,-2147483648,1,1,-10,-2147483648,-16,1,-101,-2147483648,1,1,-10,-2147483648,1,1,-116,-2147483648,1,1,-10,-2147483648,1,1,-116,-2147483648,1,1,-6,0,-5,1,-3885,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_tiles","path":"tilesets/ts_tiles/ts_tiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_112EEEC1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2912.0,"y":2624.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_16691AD4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_pea_shooter","path":"objects/obj_pea_shooter/obj_pea_shooter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2400.0,"y":3488.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"pickups","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_42C3590","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_healing_pack","path":"objects/obj_healing_pack/obj_healing_pack.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2848.0,"y":2560.0,},

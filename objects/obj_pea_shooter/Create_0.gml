@@ -112,12 +112,14 @@ state.add(
 			}
 			if !(within_attack_radius) { return state.change("attack_cooldown") }
 		
-			//distance_to_player = (distance_to_object(obj_player))
-			//direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
-			//if (distance_to_player < run_radius) {
-				// move away from the player
-			//	move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
-//}
+			distance_to_player = (distance_to_object(obj_player))
+			direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
+			if (distance_to_player < run_radius) {
+			    move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
+			}
+			else {
+				speed = 0
+			}
 		}
 	}
 )
