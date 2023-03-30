@@ -262,6 +262,7 @@
     {"id":{"name":"spr_leaper","path":"sprites/spr_leaper/spr_leaper.yy",},},
     {"id":{"name":"spr_basic_enemy","path":"sprites/spr_basic_enemy/spr_basic_enemy.yy",},},
     {"id":{"name":"ts_grass","path":"tilesets/ts_grass/ts_grass.yy",},},
+    {"id":{"name":"obj_game_time","path":"objects/obj_game_time/obj_game_time.yy",},},
     {"id":{"name":"light_create_directional","path":"scripts/light_create_directional/light_create_directional.yy",},},
     {"id":{"name":"spr_pea_shooter_burrowed","path":"sprites/spr_pea_shooter_burrowed/spr_pea_shooter_burrowed.yy",},},
     {"id":{"name":"sBoss","path":"sprites/sBoss/sBoss.yy",},},
