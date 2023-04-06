@@ -36,6 +36,7 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":2,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":3,"path":"folders/UI/Sprites.yy",},
+    {"name":"Roaming Boss","order":7,"path":"folders/Entities/Enemies/Roaming Boss.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_leaper_attacking_cooldown","order":7,"path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},
@@ -109,6 +110,7 @@
     {"name":"spr_door_bottom","order":1,"path":"sprites/spr_door_bottom/spr_door_bottom.yy",},
     {"name":"obj_shambler","order":1,"path":"objects/obj_shambler/obj_shambler.yy",},
     {"name":"obj_flash_light","order":3,"path":"objects/obj_flash_light/obj_flash_light.yy",},
+    {"name":"oBoss","order":1,"path":"objects/oBoss/oBoss.yy",},
     {"name":"spr_enemy_spawner","order":1,"path":"sprites/spr_enemy_spawner/spr_enemy_spawner.yy",},
     {"name":"obj_area_light","order":1,"path":"objects/obj_area_light/obj_area_light.yy",},
     {"name":"spr_player_side","order":2,"path":"sprites/spr_player_side/spr_player_side.yy",},

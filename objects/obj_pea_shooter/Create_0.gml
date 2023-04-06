@@ -134,7 +134,7 @@ state.add(
 	"run", {
 		enter: function() {
 			run_lock = true
-			move_towards_point(x - lengthdir_x(1, direction_to_player), y - lengthdir_y(1, direction_to_player), _speed)
+			move_towards_point(x - lengthdir_x(5, direction_to_player), y - lengthdir_y(5, direction_to_player), _speed)
 			sprite_index = sprite_run
 			alarm[3] = 60
 		}

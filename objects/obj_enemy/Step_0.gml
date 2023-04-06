@@ -14,6 +14,16 @@ if state.get_current_state() == "death"
 	sprite_index = sprite_death
 }
 
+// check for collisions with walls
+if (place_meeting(x + _speed, y, obj_player_collision)) {
+    move_contact_solid(direction, max(abs(_speed), abs(_speed)));
+    _speed = 0;
+}
+if (place_meeting(x, y + _speed, obj_player_collision)) {
+    move_contact_solid(direction, max(abs(_speed), abs(_speed)));
+    _speed = 0;
+}
+
 within_attack_radius = (collision_circle(x, y, attack_radius, obj_player, true, false) != noone)
 within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, false) != noone)
 within_vision_radius = (collision_circle(x, y, vision_radius, obj_player, true, false) != noone)
