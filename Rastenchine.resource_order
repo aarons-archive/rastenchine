@@ -7,6 +7,7 @@
     {"name":"Enemy Managers","order":2,"path":"folders/Entities/Enemies/Enemy Managers.yy",},
     {"name":"Leaper","order":4,"path":"folders/Entities/Enemies/Leaper.yy",},
     {"name":"Pea Shooter","order":5,"path":"folders/Entities/Enemies/Pea Shooter.yy",},
+    {"name":"Roaming Boss","order":7,"path":"folders/Entities/Enemies/Roaming Boss.yy",},
     {"name":"Shambler","order":6,"path":"folders/Entities/Enemies/Shambler.yy",},
     {"name":"Player","order":1,"path":"folders/Entities/Player.yy",},
     {"name":"Sprites","order":1,"path":"folders/Entities/Player/Sprites.yy",},
@@ -36,7 +37,6 @@
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":2,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":3,"path":"folders/UI/Sprites.yy",},
-    {"name":"Roaming Boss","order":7,"path":"folders/Entities/Enemies/Roaming Boss.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_leaper_attacking_cooldown","order":7,"path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},
