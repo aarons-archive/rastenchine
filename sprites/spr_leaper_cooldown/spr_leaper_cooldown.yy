@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_leaper_attacking_cooldown",
+  "name": "spr_leaper_cooldown",
   "bbox_bottom": 23,
   "bbox_left": 0,
   "bbox_right": 23,
@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c100b8bf-aa31-4a15-9d90-f4d2e00ffc14",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c36d32a2-5f3a-4cf7-886a-79494305b810",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -33,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_leaper_attacking_cooldown",
+    "name": "spr_leaper_cooldown",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},},"Disabled":false,"id":"d1534eae-2b63-44a5-bc1c-590cf5efbf31","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c100b8bf-aa31-4a15-9d90-f4d2e00ffc14","path":"sprites/spr_leaper_attacking_cooldown/spr_leaper_attacking_cooldown.yy",},},},"Disabled":false,"id":"1f15bfdb-ac94-442f-a1d5-4da56d0f0bfb","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abda7006-aa43-40a8-9e2b-c86f4f0cfa0c","path":"sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",},},},"Disabled":false,"id":"216450e5-1b8a-4a69-af66-a8e57616321c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c36d32a2-5f3a-4cf7-886a-79494305b810","path":"sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",},},},"Disabled":false,"id":"311b7409-6342-43ef-94aa-76be2469b945","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

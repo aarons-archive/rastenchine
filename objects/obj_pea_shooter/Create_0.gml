@@ -1,27 +1,26 @@
-event_inherited()
-
+event_inherited()		
+//sprites
+sprite_idle      = spr_pea_shooter_burrowed //burrowed
+sprite_wandering = spr_pea_shooter
+sprite_chasing   = spr_pea_shooter_angry_burrowed //burrowed
+sprite_lost      = spr_basic_enemy_cooldown
+sprite_attacking = spr_pea_shooter
+sprite_cooldown  = spr_pea_shooter_burrowed //burrowed
+sprite_death     = spr_basic_enemy_death
+//unique sprites
+sprite_run = spr_pea_shooter_burrowed //burrowed
+//radi
 vision_radius = 800
 attack_radius = 350
-chase_radius = 500
+chase_radius  = 500
+//unique radi
 run_radius = 300
-//unique vars
 close_radius = 200
+//unique vars
 shoot_cooldown = false
 run_lock = false
 distance_to_player = (distance_to_object(obj_player))
 direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
-			
-sprite_idle = spr_pea_shooter_burrowed //burrowed
-sprite_wandering = spr_pea_shooter
-sprite_wandering_cooldown = spr_pea_shooter_burrowed 
-sprite_chasing = spr_pea_shooter_angry_burrowed //burrowed
-sprite_lost = spr_basic_enemy_cooldown 
-sprite_attacking = spr_pea_shooter 
-sprite_cooldown = spr_basic_enemy_cooldown 
-sprite_run = spr_pea_shooter_burrowed //burrowed
-sprite_death = spr_basic_enemy_death
-
-path_cooldown = 10
 
 state = new SnowState("idle")
 
@@ -60,7 +59,7 @@ state.add(
 state.add(
 	"wandering_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_wandering_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		},
 		step: function() {

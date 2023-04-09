@@ -1,31 +1,28 @@
 event_inherited()
-
+//sprites
+sprite_idle      = spr_basic_enemy
+sprite_wandering = spr_basic_enemy
+sprite_chasing   = spr_basic_enemy_chasing
+sprite_lost      = spr_basic_enemy_cooldown
+sprite_attacking = spr_basic_enemy_attack
+sprite_cooldown  = spr_basic_enemy_cooldown
+sprite_death     = spr_basic_enemy_death
+//radi
 vision_radius = 500
 attack_radius = 20
-chase_radius = 300
-
-sprite_idle = spr_basic_enemy
-sprite_wandering = spr_basic_enemy
-sprite_wandering_cooldown = spr_basic_enemy_cooldown
-sprite_chasing = spr_basic_enemy_chasing
-sprite_lost = spr_basic_enemy_cooldown
-sprite_attacking = spr_basic_enemy_attack
-sprite_attacking_cooldown = spr_basic_enemy_cooldown
-sprite_death = spr_basic_enemy_death
-
-within_attack_radius = false
-within_chase_radius = false
-within_vision_radius = false
-
-wander_x = 0
-wander_y = 0
-attack_x = 0
-attack_y = 0
-
-path_cooldown = 10
+chase_radius  = 300
 
 state = new SnowState("idle")
-
+#region Same for all enemies
+if state.add(
+	"death", {
+		enter: function() {
+			path_end()
+			_speed = 0
+			sprite_index = sprite_death
+		}
+	}	
+)
 state.add(
 	"idle", {
 		enter: function() { 
@@ -62,7 +59,18 @@ state.add(
 state.add(
 	"wandering_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_wandering_cooldown
+			sprite_index = sprite_cooldown
+			alarm[0] = 120
+		},
+		step: function() {
+			if (within_chase_radius) { return state.change("chasing") }
+		}
+	}
+)
+state.add(
+	"lost", {
+		enter: function() { 
+			sprite_index = sprite_lost 
 			alarm[0] = 120
 		},
 		step: function() {
@@ -71,6 +79,7 @@ state.add(
 	}
 )
 
+#endregion
 state.add(
 	"chasing", {
 		enter: function() { 
@@ -89,17 +98,7 @@ state.add(
 		}
 	}
 )
-state.add(
-	"lost", {
-		enter: function() { 
-			sprite_index = sprite_lost 
-			alarm[0] = 120
-		},
-		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-		}
-	}
-)
+
 state.add(
 	"attacking", {
 		enter: function() {
@@ -118,7 +117,7 @@ state.add(
 state.add(
 	"attack_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_attacking_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		}
 	}

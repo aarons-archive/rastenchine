@@ -1,41 +1,34 @@
 event_inherited()
-
-sprite_idle = spr_leaper
+//sprites
+sprite_idle      = spr_leaper
 sprite_wandering = spr_leaper_wandering
-sprite_wandering_cooldown = spr_leaper_wandering_cooldown
-sprite_chasing = spr_leaper_chasing
-sprite_lost = spr_leaper_lost
-sprite_charging = spr_leaper_charging
+sprite_chasing   = spr_leaper_chasing
+sprite_lost      = spr_leaper_lost
 sprite_attacking = spr_leaper_attacking
-sprite_attacking_cooldown = spr_leaper_attacking_cooldown
-sprite_death = spr_basic_enemy_death
-
-attack_radius = 200
-chase_radius = 400
+sprite_cooldown  = spr_leaper_cooldown
+sprite_death     = spr_basic_enemy_death
+//unique sprites
+sprite_charging = spr_leaper_charging
+//radi
 vision_radius = 600
-
-within_attack_radius = false
-within_chase_radius = false
-within_vision_radius = false
-
-wander_x = 0
-wander_y = 0
+attack_radius = 200
+chase_radius  = 400
+//
 attack_x = 0
 attack_y = 0
 
-path_cooldown = 10
-
 state = new SnowState("idle")
-
+#region Same for all enemies
 state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle 
 		},
 		step: function() {
-			if (within_attack_radius) { return state.change("charging") }
 			if (within_chase_radius) { return state.change("chasing") }
 			if (within_vision_radius) { return state.change("wandering") }	
+			//unique to leaper
+			if (within_attack_radius) { return state.change("charging") }
 		}
 	}
 ) 
@@ -56,16 +49,18 @@ state.add(
 			if (path_found) { path_start(path, 2, path_action_stop, false) }
 		},
 		step: function() {
-			if (within_attack_radius) { return state.change("charging") }
+		
 			if (within_chase_radius) { return state.change("chasing") }
 			if (path_position == 1) { state.change("wandering_cooldown") }
+			//unique to leaper
+			if (within_attack_radius) { return state.change("charging") }
 		}
 	}
 )
 state.add(
 	"wandering_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_wandering_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		},
 		step: function() {
@@ -74,6 +69,19 @@ state.add(
 		}
 	}
 )
+state.add(
+	"lost", {
+		enter: function() { 
+			sprite_index = sprite_lost 
+			alarm[0] = 120
+		},
+		step: function() {
+			if (within_attack_radius) { return state.change("charging") }
+			if (within_chase_radius) { return state.change("chasing") }
+		}
+	}
+)
+#endregion
 
 state.add(
 	"chasing", {
@@ -93,18 +101,7 @@ state.add(
 		}
 	}
 )
-state.add(
-	"lost", {
-		enter: function() { 
-			sprite_index = sprite_lost 
-			alarm[0] = 120
-		},
-		step: function() {
-			if (within_attack_radius) { return state.change("charging") }
-			if (within_chase_radius) { return state.change("chasing") }
-		}
-	}
-)
+
 
 state.add(
 	"charging", {
@@ -136,7 +133,7 @@ state.add(
 state.add(
 	"attack_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_attacking_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		}
 	}

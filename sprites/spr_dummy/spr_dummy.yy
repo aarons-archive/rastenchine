@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Dummy",
-    "path": "folders/Entities/Enemies/Dummy.yy",
+    "path": "folders/Misc/Dummy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

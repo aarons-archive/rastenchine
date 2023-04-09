@@ -1,26 +1,35 @@
 event_inherited()
 randomize()
-
-
-sprite_death = undefined
-idle_sprite = undefined
-wander_sprite = undefined
-agro_sprite = undefined
-attacking_sprite = undefined
+//all sprites
+sprite_idle      = undefined
+sprite_wandering = undefined
+sprite_chasing   = undefined
+sprite_lost      = undefined
+sprite_attacking = undefined
+sprite_cooldown  = undefined
+sprite_death     = undefined
+//enemy clutter var
 push = 1
-
+//enemies stats var
 global._enemy_damage = 10
 _health = ENEMY_MAX_HEALTH
 _speed = ENEMY_DEFAULT_SPEED
-
+//radi
 vision_radius = 0
 attack_radius = 0
-chase_radius = 0
-
-_y = y
-_x = x
-
+chase_radius  = 0
+within_attack_radius = false
+within_chase_radius  = false
+within_vision_radius = false
+//path vars
 path = path_add()
 path_delay = 10
 wander_delay = 360
 path_timer = irandom(60)
+path_cooldown = 10
+//wander var
+wander_x = 0
+wander_y = 0
+//
+_y = y
+_x = x

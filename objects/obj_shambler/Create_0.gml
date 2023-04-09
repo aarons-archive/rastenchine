@@ -1,29 +1,21 @@
 event_inherited()
+//sprites
+sprite_idle      = spr_shambler
+sprite_wandering = spr_shambler
+sprite_chasing   = spr_shambler_agro
+sprite_lost      = spr_shambler_cooldown
+sprite_attacking = spr_shambler_explode
+sprite_cooldown  = spr_shambler_cooldown
+sprite_death     = spr_basic_enemy_death
+//unique sprites
+sprite_sleeping = spr_shambler_sleeping
+sprite_charging = spr_shambler_charging
+//radi
 vision_radius = 500
 attack_radius = 100
-chase_radius = 300
+chase_radius  = 300
 //unique vars
 explode_timer = 0
-
-sprite_sleeping = spr_shambler_sleeping
-sprite_idle = spr_shambler
-sprite_wandering = spr_shambler
-sprite_wandering_cooldown = spr_shambler_cooldown
-sprite_chasing = spr_shambler_agro
-sprite_lost = spr_shambler_cooldown
-sprite_charging = spr_shambler_charging
-sprite_attacking = spr_shambler_explode
-sprite_attacking_cooldown = spr_shambler_cooldown
-sprite_death = spr_shambler_death
-
-within_attack_radius = false
-within_chase_radius = false
-within_vision_radius = false
-
-wander_x = 0
-wander_y = 0
-
-path_cooldown = 10
 
 state = new SnowState("idle")
 //sleeping during night hours wandering through day hours 
@@ -79,7 +71,7 @@ state.add(
 state.add(
 	"wandering_cooldown", {
 		enter: function() { 
-			sprite_index = sprite_wandering_cooldown
+			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		},
 		step: function() {
