@@ -32,11 +32,11 @@
     {"name":"Sprites","order":4,"path":"folders/Maps/Sprites.yy",},
     {"name":"Tiles","order":5,"path":"folders/Maps/Tiles.yy",},
     {"name":"Menu","order":1,"path":"folders/Menu.yy",},
+    {"name":"Misc","order":6,"path":"folders/Misc.yy",},
     {"name":"Scripts","order":2,"path":"folders/Scripts.yy",},
     {"name":"Crosshair","order":1,"path":"folders/UI/Crosshair.yy",},
     {"name":"Scripts","order":2,"path":"folders/UI/Scripts.yy",},
     {"name":"Sprites","order":3,"path":"folders/UI/Sprites.yy",},
-    {"name":"Misc","order":6,"path":"folders/Misc.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":3,"path":"objects/obj_menu_element/obj_menu_element.yy",},

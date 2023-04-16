@@ -6,14 +6,9 @@
 //}
 
 // check for collisions with walls
-if (place_meeting(x + _speed, y, obj_player_collision)) {
-    move_contact_solid(direction, max(abs(_speed), abs(_speed)));
-    _speed = 0;
-}
-if (place_meeting(x, y + _speed, obj_player_collision)) {
-    move_contact_solid(direction, max(abs(_speed), abs(_speed)));
-    _speed = 0;
-}
+if (place_meeting(x + _x, y, obj_player_collision)) {_x = 0 }
+if (place_meeting(x, y + _y, obj_player_collision)) {_y = 0 }
+
 
 if (_health < 1) { 
 	state.change("death")
