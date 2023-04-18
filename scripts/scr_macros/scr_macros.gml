@@ -1,5 +1,5 @@
 #macro DEBUG          (true)
-#macro LIGHTING_DEBUG (true)
+#macro LIGHTING_DEBUG (false)
 #macro FPS            (game_get_speed(gamespeed_fps))
 
 #macro PLAYER_ORIGIN_OFFSET (16)
