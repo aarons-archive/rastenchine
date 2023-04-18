@@ -19,8 +19,7 @@ close_radius = 200
 //unique vars
 shoot_cooldown = false
 run_lock = false
-distance_to_player = (distance_to_object(obj_player))
-direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
+
 
 state = new SnowState("idle")
 
@@ -38,6 +37,7 @@ state.add(
 state.add(
 	"wandering", {
 		enter: function() { 
+			_speed = ENEMY_DEFAULT_SPEED
 			sprite_index = sprite_wandering 
 			if (created_by_spawner) {
 				wander_x = irandom_range(spawner_bbox_left - 100, spawner_bbox_right + 100)
@@ -71,6 +71,7 @@ state.add(
 state.add(
 	"chasing", {
 		enter: function() { 
+			_speed = ENEMY_DEFAULT_SPEED
 			sprite_index = sprite_chasing 
 		},
 		step: function() {
@@ -116,14 +117,17 @@ state.add(
 			if !(within_attack_radius) { return state.change("attack_cooldown")}
 
 			if (distance_to_player < run_radius) && run_lock == false && (alarm[2] == -1) {
-				state.change("run") alarm[2] = 120
+				state.change("run")
 			}
 		}
 	}
 )
 state.add(
 	"attack_cooldown", {
-		enter: function() { 
+		enter: function() {
+			show_debug_message("Apple")
+			_speed = 0
+			path_end()
 			sprite_index = sprite_cooldown
 			alarm[0] = 120
 		}
@@ -132,12 +136,19 @@ state.add(
 state.add(
 	"run", {
 		enter: function() {
+			
+			alarm[2] = 180
 			run_lock = true
-			move_towards_point(x - lengthdir_x(5, direction_to_player), y - lengthdir_y(5, direction_to_player), _speed)
-			sprite_index = sprite_run
-			alarm[3] = 60
+			sprite_index = sprite_run	
+			//alarm[3] = 30
+		} , 
+			step: function () {
+				var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
+				move_towards_point(x - lengthdir_x(2, direction_to_player), y - lengthdir_y(2, direction_to_player), _speed)
+				if (distance_to_player > chase_radius) {return state.change("attack_cooldown")}
 		}
 	}
 )
+
 
 //burrowed = untargetable do this in player

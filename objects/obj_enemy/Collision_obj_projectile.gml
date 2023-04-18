@@ -4,13 +4,12 @@ var proj = other;
 
 if (other.image_index == 1) {
 	if (invincible == false) {
-		_speed = 0
 		path_end()
 		invincible = true
 		alarm[6] = 30
 		
 		//knockback
-		var knockback = 8;
+		var knockback = 20;
 		var knock_dir = point_direction(x, y, other.x, other.y); 
 		var knockback_x = lengthdir_x(knockback,  knock_dir);
 		var knockback_y = lengthdir_y(knockback,  knock_dir); 

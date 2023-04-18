@@ -1,4 +1,14 @@
 {
-  "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Basic Enemy","order":1,"path":"folders/Entities/Enemies/Basic Enemy.yy",},
+    {"name":"Leaper","order":2,"path":"folders/Entities/Enemies/Leaper.yy",},
+    {"name":"Pea Shooter","order":3,"path":"folders/Entities/Enemies/Pea Shooter.yy",},
+    {"name":"Roaming Boss","order":4,"path":"folders/Entities/Enemies/Roaming Boss.yy",},
+    {"name":"Shambler","order":5,"path":"folders/Entities/Enemies/Shambler.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"obj_enemy_spawner","order":3,"path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},
+    {"name":"obj_motion_planner","order":1,"path":"objects/obj_motion_planner/obj_motion_planner.yy",},
+    {"name":"spr_enemy_spawner","order":2,"path":"sprites/spr_enemy_spawner/spr_enemy_spawner.yy",},
+  ],
 }
