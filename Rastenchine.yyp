@@ -99,7 +99,6 @@
     {"id":{"name":"dialog_get_picture","path":"scripts/dialog_get_picture/dialog_get_picture.yy",},},
     {"id":{"name":"scr_line_collision","path":"scripts/scr_line_collision/scr_line_collision.yy",},},
     {"id":{"name":"spr_shambler_explode","path":"sprites/spr_shambler_explode/spr_shambler_explode.yy",},},
-    {"id":{"name":"Sprite81","path":"sprites/Sprite81/Sprite81.yy",},},
     {"id":{"name":"draw_reset","path":"scripts/draw_reset/draw_reset.yy",},},
     {"id":{"name":"scr_enemy_path_planner","path":"scripts/scr_enemy_path_planner/scr_enemy_path_planner.yy",},},
     {"id":{"name":"sh_blend_light","path":"shaders/sh_blend_light/sh_blend_light.yy",},},

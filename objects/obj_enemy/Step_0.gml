@@ -5,10 +5,6 @@
 //	visible = false
 //}
 
-// check for collisions with walls
-if (place_meeting(x + _x, y, obj_player_collision)) {_x = 0 }
-if (place_meeting(x, y + _y, obj_player_collision)) {_y = 0 }
-
 
 if (_health < 1) { 
 	state.change("death")
@@ -20,7 +16,8 @@ within_vision_radius = (collision_circle(x, y, vision_radius, obj_player, true, 
 
 state.step()
 
-//raingun shit
+
+#region railgun shit
 if instance_exists(obj_railgun_projectile) {
 	if (collision_line(obj_player.x,obj_player.y,obj_railgun_projectile.r[1],obj_railgun_projectile.r[2],self,0,0)) {
 		var item = obj_player.inventory.item
@@ -35,4 +32,5 @@ if instance_exists(obj_railgun_projectile) {
 		}
 	}
 }
+#endregion
 

@@ -67,6 +67,7 @@ state.add(
 		}
 	}
 )
+
 state.add(
 	"lost", {
 		enter: function() { 

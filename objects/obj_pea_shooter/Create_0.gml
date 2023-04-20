@@ -140,12 +140,11 @@ state.add(
 			alarm[2] = 180
 			run_lock = true
 			sprite_index = sprite_run	
-			//alarm[3] = 30
+			alarm[3] = 30
 		} , 
 			step: function () {
 				var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
 				move_towards_point(x - lengthdir_x(2, direction_to_player), y - lengthdir_y(2, direction_to_player), _speed)
-				if (distance_to_player > chase_radius) {return state.change("attack_cooldown")}
 		}
 	}
 )
