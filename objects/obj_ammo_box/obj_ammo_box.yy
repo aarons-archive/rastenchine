@@ -9,7 +9,7 @@
   ],
   "parent": {
     "name": "Ammo Box",
-    "path": "folders/Inventory/Items/Consumables/Ammo Box.yy",
+    "path": "folders/Inventory/Consumables/Ammo Box.yy",
   },
   "parentObjectId": {
     "name": "obj_pickup",
