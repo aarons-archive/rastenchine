@@ -77,6 +77,7 @@
     {"name":"obj_time","order":3,"path":"objects/obj_time/obj_time.yy",},
     {"name":"spr_health_bar_heart","order":4,"path":"sprites/spr_health_bar_heart/spr_health_bar_heart.yy",},
     {"name":"spr_crowbar_attacking","order":2,"path":"sprites/spr_crowbar_attacking/spr_crowbar_attacking.yy",},
+    {"name":"obj_boss_spawner","order":8,"path":"objects/obj_boss_spawner/obj_boss_spawner.yy",},
     {"name":"spr_area_light","order":5,"path":"sprites/spr_area_light/spr_area_light.yy",},
     {"name":"obj_item","order":2,"path":"objects/obj_item/obj_item.yy",},
     {"name":"spr_crosshair","order":1,"path":"sprites/spr_crosshair/spr_crosshair.yy",},

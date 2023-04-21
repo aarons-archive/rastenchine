@@ -276,6 +276,7 @@
     {"id":{"name":"spr_health_bar_heart","path":"sprites/spr_health_bar_heart/spr_health_bar_heart.yy",},},
     {"id":{"name":"spr_door_top","path":"sprites/spr_door_top/spr_door_top.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_boss_spawner","path":"objects/obj_boss_spawner/obj_boss_spawner.yy",},},
     {"id":{"name":"obj_basic_enemy","path":"objects/obj_basic_enemy/obj_basic_enemy.yy",},},
     {"id":{"name":"obj_entity","path":"objects/obj_entity/obj_entity.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},

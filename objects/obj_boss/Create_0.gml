@@ -9,7 +9,7 @@ sprite_cooldown  = spr_boss
 attack_radius = 20
 chase_radius  = 300
 
-state = new SnowState("spawn")
+state = new SnowState("idle")
 if state.add(
 	"death", {
 		enter: function() {
@@ -20,23 +20,12 @@ if state.add(
 	}	
 )
 state.add(
-	"spawn", {
-		enter: function(){
-		},
-		step: function() {
-			if !instance_exists(obj_boss) && (global.time > 0 || global.time < 240) {
-				spawn_boss = irandom_range(1, 100)
-				if spawn_boss <= 20 {instance_create_layer(obj_player.x,obj_player.y,"enemies", obj_boss)}
-			}
-		}
-	}
-)
-state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle 
 		},
 		step: function() {
+			//time instead of range
 			if (within_chase_radius) { return state.change("chasing") }
 		}
 	}
@@ -48,8 +37,7 @@ state.add(
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			if (within_attack_radius) { return state.change("attacking") }
-			if (!within_chase_radius) { return state.change("lost") }
+			//if (within_attack_radius) { return state.change("attacking") }
 			path_cooldown -= 1
 			if (path_cooldown <= 0) {
 				path_cooldown = 20
