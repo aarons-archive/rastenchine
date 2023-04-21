@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings": [
     {"name":"Entities","order":5,"path":"folders/Entities.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Entities/Enemies/Basic Enemy/Sprites.yy",},
     {"name":"Inventory","order":4,"path":"folders/Inventory.yy",},
     {"name":"Items","order":2,"path":"folders/Inventory/Items.yy",},
     {"name":"Consumables","order":4,"path":"folders/Inventory/Items/Consumables.yy",},
