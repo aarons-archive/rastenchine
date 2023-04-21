@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Misc.yy",
+    "name": "Maps",
+    "path": "folders/Maps.yy",
   },
   "parentObjectId": null,
   "persistent": false,

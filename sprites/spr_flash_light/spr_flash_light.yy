@@ -15,8 +15,8 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7b201826-ea44-4425-915d-8e06f46d8b0b",},
   ],
-  "gridX": 640,
-  "gridY": 360,
+  "gridX": 320,
+  "gridY": 250,
   "height": 500,
   "HTile": false,
   "layers": [
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 3,
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Maps/Lighting.yy",
+    "name": "Sprites",
+    "path": "folders/Important/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -47,7 +47,7 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,

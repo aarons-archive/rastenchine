@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Maps/Lighting.yy",
+    "name": "Important",
+    "path": "folders/Important.yy",
   },
   "parentObjectId": null,
   "persistent": true,

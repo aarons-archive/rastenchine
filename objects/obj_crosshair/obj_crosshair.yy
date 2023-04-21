@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Crosshair",
-    "path": "folders/UI/Crosshair.yy",
+    "name": "Important",
+    "path": "folders/Important.yy",
   },
   "parentObjectId": null,
   "persistent": false,

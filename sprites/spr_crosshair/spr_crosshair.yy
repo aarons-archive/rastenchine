@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Crosshair",
-    "path": "folders/UI/Crosshair.yy",
+    "name": "Sprites",
+    "path": "folders/Important/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
