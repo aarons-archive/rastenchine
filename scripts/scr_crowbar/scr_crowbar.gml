@@ -18,7 +18,6 @@ function Crowbar() : Weapon() constructor {
 	
 	// Crowbar
 	charge = CROWBAR_MIN_CHARGE
-
 	static alarm_one = function() { state = weapon_state.cooldown }
 	static alarm_two = function() { state = weapon_state.idle }
 	
