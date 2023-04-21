@@ -1,7 +1,8 @@
-ticks = ((ticks + (0.4 / FPS)) + 240) % 240
-if (ticks > 120) {
-	global.ambientShadowIntensity = ((ticks / 120) + 1) % 1
+global.time = ((global.time + (0.4 / FPS)) + 240) % 240
+
+if (global.time > 120) {
+	global.ambientShadowIntensity = ((global.time / 120) + 1) % 1
 }
 else {
-	global.ambientShadowIntensity = 1 - ((ticks / 120) + 1) % 1
+	global.ambientShadowIntensity = 1 - ((global.time / 120) + 1) % 1
 }

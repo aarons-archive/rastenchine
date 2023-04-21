@@ -3,8 +3,8 @@ function draw_debug_text() {
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_bottom)
 	
-	var names = "Movement State \nSpeed: "
-	var values = string(movement_state) + "\n" + string(_speed)
+	var names = "Shadow Intensity: \nTime: \nMovement State: \nSpeed: "
+	var values = string(global.ambientShadowIntensity) + "\n" + string(global.time) + "\n" + string(movement_state) + "\n" + string(_speed)
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {
@@ -15,16 +15,12 @@ function draw_debug_text() {
 		names += "\nCrowbar Charge: "
 		values += "\n" + string(item.charge)
 	}
-	else if (is_instanceof(item, Gun)) {
+	else if (is_instanceof(item, Gun) or is_instanceof(item, Railgun) or is_instanceof(item, Rifle) or is_instanceof(item, Shotgun)) {
 		names += "\nGun Ammo: \nGun Clip: "
 		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 		
 	}
-	else if (is_instanceof(item, Railgun)) {
-		names += "\nGun Ammo: \nGun Clip: "
-		values += "\n" + string(item.ammo) + "\n" + string(item.clip)
-	}
-		
+
 	draw_text_color( 
 		UI_X1 + UI_MARGIN, 
 		UI_Y2 - UI_MARGIN, 
