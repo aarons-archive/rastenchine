@@ -1,3 +1,8 @@
+global.ambientShadowIntensity = 0.8
+
+light = light_create_point(mouse_x, mouse_y, 64000, $ffffffff, 256, 2)
+light_add_to_world(light)
+
 enum menu_page {
 	home,
 	settings,

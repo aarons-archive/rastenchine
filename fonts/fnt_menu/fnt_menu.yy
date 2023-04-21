@@ -2128,8 +2128,8 @@
   "last": 0,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Menu",
-    "path": "folders/Menu.yy",
+    "name": "Main Menu",
+    "path": "folders/Main Menu.yy",
   },
   "pointRounding": 0,
   "ranges": [

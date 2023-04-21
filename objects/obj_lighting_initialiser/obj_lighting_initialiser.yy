@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Important.yy",
+    "name": "Persistent",
+    "path": "folders/Persistent.yy",
   },
   "parentObjectId": null,
   "persistent": true,
@@ -33,5 +33,5 @@
     "path": "sprites/spr_lighting_initialiser/spr_lighting_initialiser.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

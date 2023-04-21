@@ -17,8 +17,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Managers",
-    "path": "folders/Entities/Enemies/Enemy Managers.yy",
+    "name": "Enemies",
+    "path": "folders/Entities/Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_entity",

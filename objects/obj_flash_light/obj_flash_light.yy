@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Important.yy",
+    "name": "Maps",
+    "path": "folders/Maps.yy",
   },
   "parentObjectId": null,
   "persistent": true,

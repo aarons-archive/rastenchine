@@ -30,7 +30,7 @@ function _draw_page() {
 			instance_create_layer(
 				MENU_X1, 
 				(UI_Y2 / 2) - ((MENU_ELEMENT_HEIGHT * array_length(page)) / 2) + (MENU_ELEMENT_HEIGHT * i),
-				"Instances", 
+				"important", 
 				obj_menu_element,
 				{
 					WIDTH: ((MENU_ELEMENT_PADDING * 2) + string_width(element[0])), 
@@ -59,7 +59,7 @@ function _draw_sub_page() {
 			instance_create_layer(
 				MENU_X, 
 				MENU_SUB_PAGE_Y + ((MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * i),
-				"Instances", 
+				"important", 
 				obj_menu_element,
 				{
 					WIDTH: element_width, 
