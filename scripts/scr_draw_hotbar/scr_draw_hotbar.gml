@@ -49,7 +49,7 @@ function draw_hotbar() {
 			draw_text(
 				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2) + 18,
 				slot_y + (HOTBAR_SLOT_HEIGHT / 2) + 9,
-				string(hotbar_item.count),
+				string(hotbar_item.count)
 			)
 		}
 	}
