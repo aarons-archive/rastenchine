@@ -6,11 +6,14 @@ sprite_attacking = spr_boss
 sprite_cooldown  = spr_boss
 //sprite_death     = spr_boss
 //radi
-attack_radius = 20
-chase_radius  = 300
+attack_radius = 200
+chase_radius  = 1000
+//
+attack_x = 0
+attack_y = 0
 
 state = new SnowState("idle")
-if state.add(
+if state.add( 
 	"death", {
 		enter: function() {
 			path_end()
@@ -48,7 +51,7 @@ state.add(
 	}
 )
 state.add(
-	"attacking1", {
+	"swipe_attack", {
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
@@ -63,15 +66,27 @@ state.add(
 	}
 )
 state.add(
-	"attacking2", {
+	"charging", {
+		enter: function() {
+			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+			sprite_index = sprite_charging 
+			alarm[1] = 45
+			attack_x = obj_player.x
+			attack_y = obj_player.y
+			path_end()
+		}
+	}
+)
+state.add(
+	"charge_attack", {
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
-			_speed = 0
-			path_end()
+			move_towards_point(attack_x, attack_y, 15)
 		},
 		step: function() {
-			if (image_index	== image_number - 1) {
+			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 1) {
+				speed = 0
 				state.change("attack_cooldown")
 			}
 		}
