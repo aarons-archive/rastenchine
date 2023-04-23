@@ -8,7 +8,7 @@ if ((activated_by != undefined) and (activated_by.active == false)) {
 
 if (active == true) {
 	if (light == undefined) {
-		light = light_create_point(x, y, 64000, $FFFFFFFF, 500, 0)
+		light = light_create_point(middle_x, middle_y, 64000, $FFFFFFFF, 500, 0)
 		light_add_to_world(light)
 	}
 	else if (light[| eLight.Intensity] < 5.0) {

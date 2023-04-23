@@ -10,3 +10,6 @@ connected_room_count = collision_rectangle_list(
 	obj_room_collision, true, true,
 	connected_rooms, false
 )
+
+middle_x = bbox_right - (sprite_width / 2)
+middle_y = bbox_bottom - (sprite_height / 2)

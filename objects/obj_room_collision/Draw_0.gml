@@ -1,8 +1,10 @@
-//draw_self()
-
-//if (light != undefined) { 
-//	draw_set_halign(fa_center)
-//	draw_set_valign(fa_middle)
-//	draw_text(x, y, string(self.id))	
-//	draw_text(x, y + 15, string(self))	
-//}
+if (DEBUG_LIGHTING == true) {
+	draw_self()
+	if (light != undefined) { 
+		draw_set_font(fnt_game)
+		draw_set_halign(fa_center)
+		draw_set_valign(fa_middle)
+		draw_text(middle_x, middle_y, string(self.id))	
+		draw_text(middle_x, middle_y + 15, string(self))	
+	}
+}
