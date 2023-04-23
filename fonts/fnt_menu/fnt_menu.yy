@@ -119,7 +119,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Main Menu",
-    "path": "folders/Main Menu.yy",
+    "path": "folders/UI/Main Menu.yy",
   },
   "pointRounding": 0,
   "ranges": [

@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Main Menu",
-    "path": "folders/Main Menu.yy",
+    "path": "folders/UI/Main Menu.yy",
   },
   "parentObjectId": null,
   "persistent": false,
