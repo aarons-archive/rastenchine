@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Maps/Lighting.yy",
+    "name": "_LIGHTING_INTERNALS",
+    "path": "folders/_LIGHTING_INTERNALS.yy",
   },
   "parentObjectId": null,
   "persistent": false,

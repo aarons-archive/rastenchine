@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Roaming Boss",
-    "path": "folders/Entities/Enemies/Roaming Boss.yy",
+    "name": "Boss",
+    "path": "folders/Entities/Enemies/Boss.yy",
   },
   "parentObjectId": {
     "name": "obj_enemy",

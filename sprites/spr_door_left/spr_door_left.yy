@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Maps/Doors/Sprites.yy",
+    "path": "folders/Levels/Placeables/Doors/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

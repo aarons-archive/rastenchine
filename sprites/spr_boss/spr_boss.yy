@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Roaming Boss",
-    "path": "folders/Entities/Enemies/Roaming Boss.yy",
+    "name": "Boss",
+    "path": "folders/Entities/Enemies/Boss.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

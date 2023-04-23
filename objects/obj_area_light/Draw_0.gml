@@ -1,1 +1,1 @@
-if (LIGHTING_DEBUG == true) { draw_self() }
+if (DEBUG_LIGHTING == true) { draw_self() }

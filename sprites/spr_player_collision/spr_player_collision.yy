@@ -49,7 +49,7 @@
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Maps/Collision/Sprites.yy",
+    "path": "folders/Levels/Placeables/Collisions/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

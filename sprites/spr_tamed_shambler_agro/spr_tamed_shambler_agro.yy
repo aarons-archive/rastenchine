@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Entities/Tamed Shambler/Sprites.yy",
+    "path": "folders/Entities/Friends/Tamed Shambler/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

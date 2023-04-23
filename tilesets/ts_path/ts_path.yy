@@ -49,8 +49,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Maps/Tiles.yy",
+    "name": "Tilesets",
+    "path": "folders/Levels/Tilesets.yy",
   },
   "spriteId": {
     "name": "spr_path",

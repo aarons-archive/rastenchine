@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBench",
+  "name": "obj_bench",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Maps",
-    "path": "folders/Maps.yy",
+    "name": "Bench",
+    "path": "folders/Levels/Placeables/Bench.yy",
   },
   "parentObjectId": null,
   "persistent": false,

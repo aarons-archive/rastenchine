@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "NPC",
-    "path": "folders/Maps/NPC.yy",
+    "name": "NPC's",
+    "path": "folders/Levels/Placeables/NPC's.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

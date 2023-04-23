@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Maps",
-    "path": "folders/Maps.yy",
+    "name": "Player",
+    "path": "folders/Entities/Player.yy",
   },
   "parentObjectId": null,
   "persistent": true,

@@ -8,19 +8,19 @@ function do_animation() {
 	{
 		image_speed = 1;
 		if (x_movement > 0) {
-		sprite_index = spr_player_side_roll;
+		sprite_index = spr_player_roll_side;
 		image_xscale = 1;
 		}
 		else if (x_movement < 0) {
-		sprite_index = spr_player_side_roll;
+		sprite_index = spr_player_roll_side;
 		image_xscale = -1;
 		}
 		else if (y_movement > 0) {
-		sprite_index = spr_player_down_roll;
+		sprite_index = spr_player_roll_down;
 		image_xscale = 1;
 		}
 		else if (y_movement < 0) {
-		sprite_index = spr_player_up_roll;
+		sprite_index = spr_player_roll_up;
 		image_xscale = 1;
 		}
 		if (image_index == 6) image_speed = 0;

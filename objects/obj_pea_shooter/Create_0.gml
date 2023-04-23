@@ -2,7 +2,7 @@ event_inherited()
 //sprites
 sprite_idle      = spr_pea_shooter_burrowed //burrowed
 sprite_wandering = spr_pea_shooter
-sprite_chasing   = spr_pea_shooter_angry_burrowed //burrowed
+sprite_chasing   = spr_pea_shooter_burrowed_angry //burrowed
 sprite_lost      = spr_basic_enemy_cooldown
 sprite_attacking = spr_pea_shooter
 sprite_cooldown  = spr_pea_shooter_burrowed //burrowed

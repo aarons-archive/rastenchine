@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Doors",
-    "path": "folders/Maps/Doors.yy",
+    "path": "folders/Levels/Placeables/Doors.yy",
   },
   "parentObjectId": {
     "name": "obj_door",

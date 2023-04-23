@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Dummy",
-    "path": "folders/Maps/Dummy.yy",
+    "path": "folders/_UNUSED/Dummy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

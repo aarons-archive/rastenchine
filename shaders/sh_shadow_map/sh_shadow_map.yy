@@ -4,7 +4,7 @@
   "name": "sh_shadow_map",
   "parent": {
     "name": "Shaders",
-    "path": "folders/Maps/Lighting/_INTERNALS/Shaders.yy",
+    "path": "folders/_LIGHTING_INTERNALS/Shaders.yy",
   },
   "type": 1,
 }

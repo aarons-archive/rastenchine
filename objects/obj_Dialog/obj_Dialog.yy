@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Maps/NPC.yy",
+    "name": "NPC's",
+    "path": "folders/Levels/Placeables/NPC's.yy",
   },
   "parentObjectId": null,
   "persistent": false,
