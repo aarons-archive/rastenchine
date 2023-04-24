@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Inventory/Weapons/Gun/Sprites.yy",
+    "path": "folders/Inventory/Weapons/Ranged/Gun/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Railgun",
-    "path": "folders/Inventory/Weapons/Railgun.yy",
+    "path": "folders/Inventory/Weapons/Ranged/Railgun.yy",
   },
   "parentObjectId": {
     "name": "obj_projectile",

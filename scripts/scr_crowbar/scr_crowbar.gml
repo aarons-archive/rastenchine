@@ -8,7 +8,7 @@
 #macro CROWBAR_ATTACK_FRAMES   20
 #macro CROWBAR_COOLDOWN_FRAMES 40
 
-function Crowbar() : Weapon() constructor {
+function Crowbar() : Melee() constructor {
 	
 	// from Item
 	sprite = spr_crowbar

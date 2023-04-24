@@ -7,7 +7,7 @@
 #macro GUN_RELOAD_FRAMES   FPS * 1
 #macro GUN_COOLDOWN_FRAMES FPS * 0.4
 
-function Gun() : Weapon() constructor {
+function Gun() : Ranged() constructor {
 
 	// from Item
 	sprite = spr_gun

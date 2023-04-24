@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Crowbar",
-    "path": "folders/Inventory/Weapons/Crowbar.yy",
+    "path": "folders/Inventory/Weapons/Melee/Crowbar.yy",
   },
 }

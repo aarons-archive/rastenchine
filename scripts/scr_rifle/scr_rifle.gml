@@ -9,7 +9,7 @@
 #macro RIFLE_BURST_FRAMES FPS * 0.1
 #macro RIFLE_BURST_AMOUNT 3
 
-function Rifle() : Weapon() constructor {
+function Rifle() : Ranged() constructor {
 
 	// from Item
 	sprite = spr_rifle

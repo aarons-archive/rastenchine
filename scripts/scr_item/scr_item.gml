@@ -7,8 +7,8 @@ function Item() constructor {
 	sprite = undefined
 	
 	// can be overriden in children
-	instance_offset = 25    // moves instance out by <x> pixels to rotate around properly.
-	instance_y_offset = -15 // moves instance up by <x> pixels to match arm placement.
+	instance_offset = 20    // moves instance out by <x> pixels to rotate around properly.
+	instance_y_offset = -16 // moves instance up by <x> pixels to match arm placement.
 	
 	stackable = false
 	count = -1

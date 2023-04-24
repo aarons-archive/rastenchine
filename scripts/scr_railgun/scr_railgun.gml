@@ -7,7 +7,7 @@
 #macro RAILGUN_CHARGE_FRAMES FPS * 0.4
 #macro RAILGUN_COOLDOWN_FRAMES FPS * 0.4
 
-function Railgun() : Weapon() constructor {
+function Railgun() : Ranged() constructor {
 
 	// from Item
 	sprite = spr_railgun

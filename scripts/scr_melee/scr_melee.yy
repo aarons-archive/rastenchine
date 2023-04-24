@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_rifle",
+  "name": "scr_melee",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Rifle",
-    "path": "folders/Inventory/Weapons/Ranged/Rifle.yy",
+    "name": "Melee",
+    "path": "folders/Inventory/Weapons/Melee.yy",
   },
 }
