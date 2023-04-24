@@ -26,6 +26,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Basic Enemy","folderPath":"folders/Entities/Enemies/Basic Enemy.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Basic Enemy/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Boss","folderPath":"folders/Entities/Enemies/Boss.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Boss/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemy Managers","folderPath":"folders/Entities/Enemies/Enemy Managers.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Leaper","folderPath":"folders/Entities/Enemies/Leaper.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Leaper/Sprites.yy",},
@@ -80,9 +81,12 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Main Menu","folderPath":"folders/UI/Main Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/UI/Main Menu/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/UI/Sprites.yy",},
+<<<<<<< HEAD
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Entities/Enemies/Boss/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Melee","folderPath":"folders/Inventory/Weapons/Melee.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ranged","folderPath":"folders/Inventory/Weapons/Ranged.yy",},
+=======
+>>>>>>> a221ebc (boss ai work)
   ],
   "IncludedFiles": [],
   "isEcma": false,

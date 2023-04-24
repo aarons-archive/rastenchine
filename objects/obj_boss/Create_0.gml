@@ -10,9 +10,9 @@ sprite_death         = spr_boss
 sprite_charging  = spr_boss_charging
 
 //radi
-swipe_attack_radius = 200
+swipe_attack_radius = 300
 charge_attack_radius = 400
-chase_radius  = 1000
+chase_radius  = 700
 //
 attack_x = 0
 attack_y = 0
