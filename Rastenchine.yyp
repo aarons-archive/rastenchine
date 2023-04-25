@@ -299,6 +299,7 @@
     {"id":{"name":"light_update","path":"scripts/light_update/light_update.yy",},},
     {"id":{"name":"dialog_add","path":"scripts/dialog_add/dialog_add.yy",},},
     {"id":{"name":"spr_health_bar_heart","path":"sprites/spr_health_bar_heart/spr_health_bar_heart.yy",},},
+    {"id":{"name":"spr_game","path":"sprites/spr_game/spr_game.yy",},},
     {"id":{"name":"spr_door_top","path":"sprites/spr_door_top/spr_door_top.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"scr_menu_macros","path":"scripts/scr_menu_macros/scr_menu_macros.yy",},},

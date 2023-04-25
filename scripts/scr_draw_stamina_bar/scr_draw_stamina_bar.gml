@@ -36,7 +36,7 @@ function draw_stamina_bar() {
 			1
 		)
 	}
-	if (DEBUG == true) {
+	if (global.debug_text == true) {
 		draw_set_halign(fa_right)
 		draw_set_valign(fa_middle)
 		draw_text_colour(

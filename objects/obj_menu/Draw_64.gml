@@ -1,4 +1,4 @@
-if (DEBUG_MENU == true) {
+if (global.debug_menu == true) {
 	draw_line_colour(
 		UI_X1, UI_Y_MIDDLE, 
 		UI_X2, UI_Y_MIDDLE, 

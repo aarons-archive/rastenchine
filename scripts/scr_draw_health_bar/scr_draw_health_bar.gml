@@ -28,7 +28,7 @@ function draw_health_bar() {
 		HEALTH_BAR_SPRITE_WIDTH * (_health / PLAYER_MAX_HEALTH), 
 		HEALTH_BAR_SPRITE_HEIGHT
 	)
-	if (DEBUG == true) {
+	if (global.debug_text == true) {
 		draw_set_halign(fa_right)
 		draw_set_valign(fa_middle)
 		draw_text_colour(
