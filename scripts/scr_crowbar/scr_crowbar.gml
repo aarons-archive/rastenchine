@@ -78,6 +78,18 @@ function Crowbar() : Melee() constructor {
 					_insty = obj_player.y + lengthdir_y(instance_offset, _direction) + instance_y_offset + 30
 					show_debug_message("Swing Up Left")
 				}
+				else if (obj_player.sprite_index == spr_player_down && instance.image_yscale == 1)
+				{
+					_instx = obj_player.x + lengthdir_x(instance_offset, _direction) - 20
+					_insty = obj_player.y + lengthdir_y(instance_offset, _direction) + instance_y_offset - 10
+					show_debug_message("Swing Down Right")
+				}
+				else if (obj_player.sprite_index == spr_player_down && instance.image_yscale == -1)
+				{
+					_instx = obj_player.x + lengthdir_x(instance_offset, _direction) + 20
+					_insty = obj_player.y + lengthdir_y(instance_offset, _direction) + instance_y_offset - 10
+					show_debug_message("Swing Down Left")
+				}
 				instance.x = _instx
 				instance.y = _insty
 				break
