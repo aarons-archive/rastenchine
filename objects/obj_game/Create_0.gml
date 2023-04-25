@@ -5,4 +5,4 @@ global.debug_menu = false
 global.pause = false
 global.time = 120
 
-pause_surface = undefined
+pause_sprite = -1
