@@ -1,7 +1,3 @@
-#macro DEBUG          (true)
-#macro DEBUG_LIGHTING (false)
-#macro DEBUG_MENU     (false)
-
 #macro FPS                   (game_get_speed(gamespeed_fps))
 #macro TIME_SPEED_MULTIPLIER 20
 

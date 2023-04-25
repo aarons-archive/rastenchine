@@ -1,10 +1,16 @@
 function draw_debug_text() {
-
+	draw_set_font(fnt_game)
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_bottom)
 	
-	var names = "Shadow Intensity: \nTime: \nMovement State: \nSpeed: "
-	var values = string(global.ambientShadowIntensity) + "\n" + string(global.time) + "\n" + string(movement_state) + "\n" + string(_speed)
+	var names = @"Shadow Intensity: \n
+				  Time: \n
+				  Movement State: \n
+				  Speed: "
+	var values = string(global.ambientShadowIntensity) + "\n" + 
+				 string(global.time) + "\n" + 
+				 string(movement_state) + "\n" + 
+				 string(_speed)
 	
 	var item = inventory.item
 	if (is_instanceof(item, Weapon)) {
