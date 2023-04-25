@@ -15,7 +15,7 @@ chase_radius  = 700
 //
 attack_x = 0
 attack_y = 0
-
+charge_attack = 3
 state = new SnowState("idle")
 if state.add( 
 	"death", {
@@ -44,10 +44,13 @@ state.add(
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			
+			//swipe attack
 			if (within_swipe_attack_radius) { return state.change("swipe_attack") }
-			charge_attack = irandom_range(1,50)
-			if  (charge_attack <= 2) && (within_charge_attack_radius) { return state.change("charging") }
+			//charge attack
+			show_debug_message(charge_attack)
+			if  (charge_attack <= 2) && (within_charge_attack_radius) { return state.change("charging") } 
+			else if (charge_attack > 2) {alarm[2] = 60}
+			//banaan 
 			path_cooldown -= 1
 			if (path_cooldown <= 0) {
 				path_cooldown = 20
@@ -76,6 +79,7 @@ state.add(
 	"charging", {
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+			charge_attack = 3
 			sprite_index = sprite_charging 
 			alarm[1] = 45
 			attack_x = obj_player.x
