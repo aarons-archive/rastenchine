@@ -8,9 +8,8 @@ sprite_cooldown      = spr_boss_charging//cooldown spr
 sprite_death         = spr_boss
 //unique sprites
 sprite_charging  = spr_boss_charging
-
 //radi
-swipe_attack_radius = 300
+swipe_attack_radius  = 250
 charge_attack_radius = 400
 chase_radius  = 700
 //
@@ -45,9 +44,10 @@ state.add(
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			if (swipe_attack_radius) { return state.change("swipe_attack") }
-			charge_attack = irandom_range(1,10)
-			if  (charge_attack <= 2) && (charge_attack_radius) { return state.change("charging") }
+			
+			if (within_swipe_attack_radius) { return state.change("swipe_attack") }
+			charge_attack = irandom_range(1,50)
+			if  (charge_attack <= 2) && (within_charge_attack_radius) { return state.change("charging") }
 			path_cooldown -= 1
 			if (path_cooldown <= 0) {
 				path_cooldown = 20
@@ -66,7 +66,7 @@ state.add(
 			path_end()
 		},
 		step: function() {
-			if (image_index	== image_number - 1) {
+			if (image_index	>= image_number - 1) {
 				state.change("attack_cooldown")
 			}
 		}

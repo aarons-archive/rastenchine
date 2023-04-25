@@ -109,7 +109,7 @@ state.add(
 			path_end()
 		},
 		step: function() {
-			if (image_index	== image_number - 1) {
+			if (image_index	>= image_number - 1) {
 				state.change("attack_cooldown")
 			}
 		}

@@ -80,6 +80,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Main Menu","folderPath":"folders/UI/Main Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/UI/Main Menu/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/UI/Sprites.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trees","folderPath":"folders/Levels/Placeables/Trees.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,

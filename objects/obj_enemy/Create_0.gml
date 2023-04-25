@@ -21,6 +21,8 @@ chase_radius  = 0
 within_attack_radius = false
 within_chase_radius  = false
 within_vision_radius = false
+within_charge_attack_radius = false
+within_swipe_attack_radius  = false
 //path vars
 path = path_add()
 path_delay = 10
