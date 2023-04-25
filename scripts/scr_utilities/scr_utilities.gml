@@ -13,3 +13,7 @@ function array_max(array) {
 	}
 	return _max
 }
+
+function wrap_value(value, _max) {
+	return (value + _max) % _max
+}
