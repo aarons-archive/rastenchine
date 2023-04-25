@@ -21,7 +21,6 @@ function Melee() : Weapon() constructor {
 		if ((_direction > 0) and (_direction < 180)) { instance.depth = obj_player.depth - 1 } 
 		// in front of the player when the mouse is in the lower screen area
 		else { instance.depth = obj_player.depth + 1 }
-		
 		// facing right when the mouse is in the right screen area
 		if ((_direction <= 90) or (_direction >= 270)) { instance.image_yscale = lerp(instance.image_yscale, 1, 0.25) }
 		// facing left when the mouse is in the left screen area

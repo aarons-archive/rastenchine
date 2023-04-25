@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Inventory",
-    "path": "folders/Inventory.yy",
+    "name": "Ranged",
+    "path": "folders/Inventory/Weapons/Ranged.yy",
   },
   "parentObjectId": null,
   "persistent": false,
