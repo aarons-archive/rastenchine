@@ -18,13 +18,17 @@ attack_y = 0
 charge_attack = 3
 state = new SnowState("idle")
 if state.add( 
-	"death", {
+	"Run", {
 		enter: function() {
 			path_end()
 			_speed = 0
 			sprite_index = sprite_death
-		}
-	}	
+		} , 
+			step: function() {
+				//runs away from player when low enough on health
+				//runs when timer runs out
+			}
+		}	
 )
 state.add(
 	"idle", {
