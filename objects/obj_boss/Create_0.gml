@@ -21,14 +21,16 @@ if state.add(
 	"Run", {
 		enter: function() {
 			path_end()
-			_speed = 0
-			sprite_index = sprite_death
 		} , 
-			step: function() {
-				//runs away from player when low enough on health
-				//runs when timer runs out
-			}
-		}	
+		step: function() {
+			//pick furthest boss spawn point and move towards it
+			boss_escape_zone = instance_furthest(x,y,obj_boss_spawn_zone)
+			var path_found = mp_grid_path(global.mp_grid, path, x, y,
+			boss_escape_zone.x, boss_escape_zone.y, true)
+			if (path_found) { path_start(path, _speed, path_action_stop, false) }
+			//runs away from player when low enough on health
+		}
+	}	
 )
 state.add(
 	"idle", {
@@ -44,7 +46,8 @@ state.add(
 state.add(
 	"chasing", {
 		enter: function() { 
-			sprite_index = sprite_chasing 
+			sprite_index = sprite_chasing
+			alarm[3] = 600
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
