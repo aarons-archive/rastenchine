@@ -75,13 +75,17 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Levels/Tilesets/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Persistent","folderPath":"folders/Persistent.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Persistent/Sprites.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Sprites","folderPath":"folders/Player Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Main Menu","folderPath":"folders/UI/Main Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/UI/Main Menu/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/UI/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Trees","folderPath":"folders/Levels/Placeables/Trees.yy",},
+<<<<<<< HEAD
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Sprites","folderPath":"folders/Player Sprites.yy",},
+=======
+>>>>>>> 2859748 (tree stuff)
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -170,6 +174,7 @@
     {"id":{"name":"shadow_casters_exist","path":"scripts/shadow_casters_exist/shadow_casters_exist.yy",},},
     {"id":{"name":"obj_dialog","path":"objects/obj_dialog/obj_dialog.yy",},},
     {"id":{"name":"lighting_post_composite","path":"scripts/lighting_post_composite/lighting_post_composite.yy",},},
+    {"id":{"name":"obj_tree","path":"objects/obj_tree/obj_tree.yy",},},
     {"id":{"name":"scr_ranged","path":"scripts/scr_ranged/scr_ranged.yy",},},
     {"id":{"name":"spr_time","path":"sprites/spr_time/spr_time.yy",},},
     {"id":{"name":"mcrunright","path":"sprites/mcrunright/mcrunright.yy",},},
