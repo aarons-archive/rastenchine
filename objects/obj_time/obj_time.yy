@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Important.yy",
+    "name": "Managers",
+    "path": "folders/Managers.yy",
   },
   "parentObjectId": null,
   "persistent": true,
@@ -33,5 +33,5 @@
     "path": "sprites/spr_time/spr_time.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

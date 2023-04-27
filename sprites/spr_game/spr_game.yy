@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Persistent/Sprites.yy",
+    "path": "folders/Managers/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
