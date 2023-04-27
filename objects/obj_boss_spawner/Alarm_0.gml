@@ -28,15 +28,9 @@ randomise()
 
 if (instance_exists(obj_boss) == false) /*check time as well*/ {
 	var chance = irandom_range(1, 100)
-	if (true) {
-		while (true) {
-			spawn_x = irandom_range(0, room_width)
-			spawn_y = irandom_range(0, room_height)
-			with (obj_boss) { if (place_meeting(spawn_x, spawn_y, obj_anti_boss)) { continue }}
-			else if (point_distance(spawn_x, spawn_y, obj_player.x, obj_player.y) <= 750) { continue }
-			instance_create_layer(spawn_x, spawn_y, "enemies", obj_boss)
-			show_debug_message("spawned")
-			break
-		}
+	if (chance <= 100) {
+		var spawner = random_instance_of(obj_boss_spawn_zone)
+		show_debug_message(spawner)
+		alarm[0] = 60
 	}
 }

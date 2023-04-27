@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_anti_boss",
+  "name": "obj_boss_spawn_zone",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_anti_boss",
-    "path": "sprites/spr_anti_boss/spr_anti_boss.yy",
+    "name": "spr_boss_spawn_zone",
+    "path": "sprites/spr_boss_spawn_zone/spr_boss_spawn_zone.yy",
   },
   "spriteMaskId": null,
   "visible": true,
