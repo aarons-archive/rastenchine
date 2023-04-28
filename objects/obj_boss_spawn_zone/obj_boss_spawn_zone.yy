@@ -30,5 +30,5 @@
     "path": "sprites/spr_boss_spawn_zone/spr_boss_spawn_zone.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

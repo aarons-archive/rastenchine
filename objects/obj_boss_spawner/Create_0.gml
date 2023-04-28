@@ -1,1 +1,3 @@
-alarm[0] = 60
+randomise()
+
+on_cooldown = false
