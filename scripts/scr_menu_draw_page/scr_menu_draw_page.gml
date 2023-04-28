@@ -9,9 +9,9 @@ function menu_draw_page() {
 }
 
 function calculate_element_y1(element_count, current) {
-	var menu_height = ((MENU_ELEMENT_HEIGHT * element_count) + (MENU_ELEMENT_MARGIN * (element_count - 1))) / 2
+	var menu_height = ((MENU_ELEMENT_HEIGHT * element_count) + (MENU_ELEMENT_MARGIN * (element_count - 2))) / 2
 	var offset = (MENU_ELEMENT_HEIGHT + MENU_ELEMENT_MARGIN) * current
-	return round(UI_Y_MIDDLE - menu_height + offset) 
+	return round(MENU_Y_MIDDLE - menu_height + offset) 
 }
 
 function calculate_element_width(text) {
@@ -55,7 +55,7 @@ function draw_sub_page() {
 		array_push(
 			instances, 
 			instance_create_layer(
-				(UI_X_MIDDLE / 2), calculate_element_y1(array_length(sub_page), i),
+				MENU_X_MIDDLE * 0.65, calculate_element_y1(array_length(sub_page), i),
 				"menu", obj_menu_element,
 				{
 					WIDTH: element_width, 
