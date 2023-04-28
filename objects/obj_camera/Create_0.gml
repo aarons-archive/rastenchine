@@ -1,16 +1,15 @@
-CAMERA = view_camera[0]
-HALF_VIEW_WIDTH = camera_get_view_width(CAMERA) * 0.5
-HALF_VIEW_HEIGHT = camera_get_view_height(CAMERA) * 0.5
-ENABLE_PANNING = true
-
 follow = obj_player
 
-x = follow.x;
-y = follow.y;
+pan_scale = 2
+pan_max = 150
 
-to_x = xstart
-to_y = ystart
+camera = view_camera[0]
 
-PAN_MAX = 130
-PAN_SCALE = 2
-pan = 0
+view_width = camera_get_view_width(camera)
+half_view_width = view_width / 2
+
+view_height = camera_get_view_height(camera)
+half_view_height = view_height / 2
+
+x = obj_player.x
+y = obj_player.y - PLAYER_ORIGIN_OFFSET

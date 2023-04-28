@@ -6,7 +6,7 @@ function Melee() : Weapon() constructor {
 	instance_y_offset = -20
 
 	static common = function() {
-		var _direction = point_direction(obj_player.x, obj_player.y, obj_crosshair.x, obj_crosshair.y)
+		var _direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		if (_direction > 0) and (_direction < 180) {
 			instance_y_offset = lerp(instance_y_offset, -28, 0.1)
 		}

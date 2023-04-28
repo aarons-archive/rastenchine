@@ -9,7 +9,6 @@ enum weapon_state {
 }
 
 function Weapon() : Item() constructor {
-	
 	// common
 	state = weapon_state.idle
 	

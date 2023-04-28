@@ -1,7 +1,7 @@
 image_xscale = scale
 image_yscale = scale * sign(image_yscale)
 
-var mouse_is_near_item = collision_point(obj_crosshair.x, obj_crosshair.y, self, true, false)
+var mouse_is_near_item = collision_point(mouse_x, mouse_y, self, true, false)
 var player_is_near_item = point_in_circle(obj_player.x, obj_player.y, x, y, 100)
 var player_is_holding_grab_key = keyboard_check_pressed(global.SELECT_KEY)
 

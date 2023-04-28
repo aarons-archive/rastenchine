@@ -1,2 +1,2 @@
-/// @description Toggle Debug Menu
-global.debug_menu = !global.debug_menu
+/// @description Toggle Debug Screen
+global.debug_screen = !global.debug_screen

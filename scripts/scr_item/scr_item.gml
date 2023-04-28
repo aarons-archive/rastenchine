@@ -14,7 +14,7 @@ function Item() constructor {
 	count = -1
 	
 	static common = function() {
-		var _direction = point_direction(obj_player.x, obj_player.y, obj_crosshair.x, obj_crosshair.y)
+		var _direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		instance.x = obj_player.x + lengthdir_x(instance_offset, _direction)
 		instance.y = obj_player.y + lengthdir_y(instance_offset, _direction) + instance_y_offset
 		instance.image_angle = _direction

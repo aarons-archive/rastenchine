@@ -28,7 +28,7 @@ function draw_page() {
 			instances,
 			instance_create_layer(
 				MENU_X1, calculate_element_y1(array_length(page), i),
-				"menu", obj_menu_element,
+				"managers", obj_menu_element,
 				{
 					WIDTH: calculate_element_width(element[0]), 
 					HEIGHT: MENU_ELEMENT_HEIGHT,
@@ -56,7 +56,7 @@ function draw_sub_page() {
 			instances, 
 			instance_create_layer(
 				MENU_X_MIDDLE * 0.65, calculate_element_y1(array_length(sub_page), i),
-				"menu", obj_menu_element,
+				"managers", obj_menu_element,
 				{
 					WIDTH: element_width, 
 					HEIGHT: MENU_ELEMENT_HEIGHT,
