@@ -145,7 +145,7 @@
     {"name":"scr_do_animation","order":3,"path":"scripts/scr_do_animation/scr_do_animation.yy",},
     {"name":"mcwalkright1arm","order":24,"path":"sprites/mcwalkright1arm/mcwalkright1arm.yy",},
     {"name":"mcwalkdown1arm","order":20,"path":"sprites/mcwalkdown1arm/mcwalkdown1arm.yy",},
-    {"name":"mcdrdown","order":6,"path":"sprites/mcdrdown/mcdrdown.yy",},
+    {"name":"spr_player_roll_down","order":6,"path":"sprites/spr_player_roll_down/spr_player_roll_down.yy",},
     {"name":"spr_door_bottom","order":1,"path":"sprites/spr_door_bottom/spr_door_bottom.yy",},
     {"name":"obj_shambler","order":1,"path":"objects/obj_shambler/obj_shambler.yy",},
     {"name":"obj_flash_light","order":4,"path":"objects/obj_flash_light/obj_flash_light.yy",},

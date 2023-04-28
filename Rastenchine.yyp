@@ -252,7 +252,7 @@
     {"id":{"name":"scr_do_animation","path":"scripts/scr_do_animation/scr_do_animation.yy",},},
     {"id":{"name":"mcwalkright1arm","path":"sprites/mcwalkright1arm/mcwalkright1arm.yy",},},
     {"id":{"name":"mcwalkdown1arm","path":"sprites/mcwalkdown1arm/mcwalkdown1arm.yy",},},
-    {"id":{"name":"mcdrdown","path":"sprites/mcdrdown/mcdrdown.yy",},},
+    {"id":{"name":"spr_player_roll_down","path":"sprites/spr_player_roll_down/spr_player_roll_down.yy",},},
     {"id":{"name":"spr_door_bottom","path":"sprites/spr_door_bottom/spr_door_bottom.yy",},},
     {"id":{"name":"dialog_count","path":"scripts/dialog_count/dialog_count.yy",},},
     {"id":{"name":"spr_lut_light_intensity_spot","path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},},
