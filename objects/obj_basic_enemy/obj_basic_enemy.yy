@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_basic_enemy",
-    "path": "sprites/spr_basic_enemy/spr_basic_enemy.yy",
+    "name": "spr_molten_idle",
+    "path": "sprites/spr_molten_idle/spr_molten_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

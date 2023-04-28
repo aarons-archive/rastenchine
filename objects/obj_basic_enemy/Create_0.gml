@@ -1,12 +1,12 @@
 event_inherited()
 //sprites
-sprite_idle      = spr_basic_enemy
-sprite_wandering = spr_basic_enemy
-sprite_chasing   = spr_basic_enemy_chasing
-sprite_lost      = spr_basic_enemy_cooldown
-sprite_attacking = spr_basic_enemy_attack
-sprite_cooldown  = spr_basic_enemy_cooldown
-sprite_death     = spr_basic_enemy_death
+sprite_idle      = spr_molten_idle
+sprite_wandering = spr_molten_chase
+sprite_chasing   = spr_molten_chase
+sprite_lost      = spr_molten_idle
+sprite_attacking = spr_molten_attack
+sprite_cooldown  = spr_molten_cooldown
+sprite_death     = spr_molten_death
 //radi
 vision_radius = 500
 attack_radius = 20
