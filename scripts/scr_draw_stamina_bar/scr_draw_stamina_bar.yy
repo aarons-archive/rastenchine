@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/UI.yy",
+    "name": "GUI",
+    "path": "folders/GUI.yy",
   },
 }

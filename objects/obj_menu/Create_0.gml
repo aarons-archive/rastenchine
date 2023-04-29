@@ -3,16 +3,16 @@ global.ambientShadowIntensity = 0.5
 light = light_create_point(mouse_x, mouse_y, 64000, $ffffffff, 256, 2)
 light_add_to_world(light)
 
-enum menu_page {
+enum MenuPage {
 	home,
 	settings,
 }
-enum menu_settings_sub_page {
+enum MenuSettingsSubPage {
 	video,
 	audio,
 	gameplay,
 }
-enum menu_element_action {
+enum MenuElementAction {
 	run_script,
 	slide_value,
 	shift_value,
@@ -21,34 +21,34 @@ enum menu_element_action {
 }
 
 home = [
-	["PLAY",          menu_element_action.run_script,  play_game,                   undefined,                   undefined                      ],
-	["SETTINGS",      menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.video   ],
-	["EXIT",          menu_element_action.run_script,  exit_game,                   undefined,                   undefined                      ],
+	["PLAY",          MenuElementAction.run_script,  play_game,                   undefined,                   undefined                   ],
+	["SETTINGS",      MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.video   ],
+	["EXIT",          MenuElementAction.run_script,  exit_game,                   undefined,                   undefined                   ],
 ]
 settings = [
-	["<- BACK",       menu_element_action.run_script,  menu_change_page,            menu_page.home,              undefined                      ],
-	["VIDEO",         menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.video   ],
-	["AUDIO",         menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.audio   ],
-	["GAMEPLAY",      menu_element_action.run_script,  menu_change_page,            menu_page.settings,          menu_settings_sub_page.gameplay],
+	["<- BACK",       MenuElementAction.run_script,  menu_change_page,            MenuPage.home,               undefined                   ],
+	["VIDEO",         MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.video   ],
+	["AUDIO",         MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.audio   ],
+	["GAMEPLAY",      MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.gameplay],
 ]
 video_settings = [
-	["RESOLUTION",    menu_element_action.shift_value, change_resolution,           global.resolution,           ["1920x1080", "1280x720"]      ],
-	["DISPLAY MODE",  menu_element_action.shift_value, change_display_mode,         global.display_mode,         ["FULLSCREEN", "WINDOWED"]     ],
+	["RESOLUTION",    MenuElementAction.shift_value, change_resolution,           global.resolution,           ["1920x1080", "1280x720"]   ],
+	["DISPLAY MODE",  MenuElementAction.shift_value, change_display_mode,         global.display_mode,         ["FULLSCREEN", "WINDOWED"]  ],
 ]
 audio_settings = [
-	["MASTER",        menu_element_action.slide_value, change_main_volume,          global.main_volume,          undefined                      ],
-	["SOUND EFFECTS", menu_element_action.slide_value, change_sound_effects_volume, global.sound_effects_volume, undefined                      ],
-	["MUSIC",         menu_element_action.slide_value, change_music_volume,         global.music_volume,         undefined                      ],
+	["MASTER",        MenuElementAction.slide_value, change_main_volume,          global.main_volume,          undefined                   ],
+	["SOUND EFFECTS", MenuElementAction.slide_value, change_sound_effects_volume, global.sound_effects_volume, undefined                   ],
+	["MUSIC",         MenuElementAction.slide_value, change_music_volume,         global.music_volume,         undefined                   ],
 ]
 gameplay_settings = [
-	["DIFFICULTY",    menu_element_action.shift_value, change_difficulty,           global.difficulty,           ["EASY", "MEDIUM", "HARD"]     ],
+	["DIFFICULTY",    MenuElementAction.shift_value, change_difficulty,           global.difficulty,           ["EASY", "MEDIUM", "HARD"]  ],
 ]
 
 pages = [home, settings]
-selected_page = menu_page.home
+selected_page = MenuPage.home
 
 sub_pages = [video_settings, audio_settings, gameplay_settings]
 selected_sub_page = undefined
 
 instances = []
-menu_draw_page()
+menu_render_page()

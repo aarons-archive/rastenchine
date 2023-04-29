@@ -1,15 +1,15 @@
 #macro HOTBAR_PADDING (8)
 
-#macro HOTBAR_SLOT_WIDTH  (60)
-#macro HOTBAR_SLOT_HEIGHT (60) 
+#macro HOTBAR_SLOT_WIDTH  (32)
+#macro HOTBAR_SLOT_HEIGHT (32) 
 
 #macro HOTBAR_BACKGROUND_WIDTH	((HOTBAR_PADDING * 2) + HOTBAR_SLOT_WIDTH)
-#macro HOTBAR_BACKGROUND_HEIGHT (undefined) // calculated on demand
-#macro HOTBAR_BACKGROUND_X      (UI_X1 + UI_MARGIN)
-#macro HOTBAR_BACKGROUND_Y      (UI_Y1 + UI_MARGIN)
+#macro HOTBAR_BACKGROUND_HEIGHT (undefined)
+#macro HOTBAR_BACKGROUND_X      (GUI_X1 + GUI_MARGIN)
+#macro HOTBAR_BACKGROUND_Y      (GUI_Y1 + GUI_MARGIN)
 
 #macro HOTBAR_SLOT_X (HOTBAR_BACKGROUND_X + HOTBAR_PADDING)
-#macro HOTBAR_SLOT_Y (undefined) // calculated on demand
+#macro HOTBAR_SLOT_Y (undefined)
 
 function draw_hotbar() {
 	var hotbar_length = array_length(hotbar)
@@ -18,11 +18,11 @@ function draw_hotbar() {
 		HOTBAR_BACKGROUND_X, 
 		HOTBAR_BACKGROUND_Y,
 		HOTBAR_BACKGROUND_WIDTH, 
-		HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + UI_MARGIN) * hotbar_length) + (HOTBAR_PADDING - UI_MARGIN)
+		HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + GUI_MARGIN) * hotbar_length) + (HOTBAR_PADDING - GUI_MARGIN)
 	)
 	
 	for (var i = 0; i < hotbar_length; i++) {
-		var slot_y = HOTBAR_BACKGROUND_Y + HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + UI_MARGIN) * i)
+		var slot_y = HOTBAR_BACKGROUND_Y + HOTBAR_PADDING + ((HOTBAR_SLOT_WIDTH + GUI_MARGIN) * i)
 		var colour = (i == index) ? c_green : c_white
 		draw_sprite_stretched_ext(
 			spr_ui_background, 0,

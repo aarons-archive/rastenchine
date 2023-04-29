@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "LUT's",
-    "path": "folders/_LIGHTING_INTERNALS/LUT's.yy",
+    "path": "folders/INTERNALS/Lighting/LUT's.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

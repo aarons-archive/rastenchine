@@ -42,8 +42,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "molten animations",
-    "path": "folders/_UNUSED/molten animations.yy",
+    "name": "Molten Animations",
+    "path": "folders/Unused/Molten Animations.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

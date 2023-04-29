@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Dev Molten Sprites",
-    "path": "folders/_UNUSED/Dev Molten Sprites.yy",
+    "name": "Molten Dev Sprites",
+    "path": "folders/Unused/Molten Dev Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

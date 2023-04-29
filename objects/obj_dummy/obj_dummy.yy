@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "_UNUSED",
-    "path": "folders/_UNUSED.yy",
+    "name": "Dummy",
+    "path": "folders/Unused/Dummy.yy",
   },
   "parentObjectId": {
     "name": "obj_enemy",

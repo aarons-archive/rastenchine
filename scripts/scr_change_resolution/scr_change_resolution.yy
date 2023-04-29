@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_menu_change_resolution",
+  "name": "scr_change_resolution",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/UI/Main Menu/Scripts.yy",
+    "name": "Element Actions",
+    "path": "folders/Menu/Element Actions.yy",
   },
 }
