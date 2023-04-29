@@ -1,6 +1,6 @@
 function element_y1(element_count, index, height) {
 	var page_height = (height * element_count) + (MENU_MARGIN * (element_count - 1))
-	var element_offset = ((height) * index)
+	var element_offset = ((height + MENU_MARGIN) * index)
 	return round((MENU_MIDDLE_Y - (page_height / 2)) + element_offset) 
 }
 
