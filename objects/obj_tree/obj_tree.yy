@@ -12,7 +12,10 @@
     "name": "Trees",
     "path": "folders/Levels/Placeables/Trees.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_player_collision",
+    "path": "objects/obj_player_collision/obj_player_collision.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
