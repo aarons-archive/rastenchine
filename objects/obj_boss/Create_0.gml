@@ -12,6 +12,7 @@ sprite_charging  = spr_boss_charging
 swipe_attack_radius  = 250
 charge_attack_radius = 400
 chase_radius  = 700
+_health = 120
 //
 attack_x = 0
 attack_y = 0

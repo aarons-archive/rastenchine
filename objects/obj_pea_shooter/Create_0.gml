@@ -3,10 +3,10 @@ event_inherited()
 sprite_idle      = spr_pea_shooter_burrowed //burrowed
 sprite_wandering = spr_pea_shooter
 sprite_chasing   = spr_pea_shooter_burrowed_angry //burrowed
-sprite_lost      = spr_basic_enemy_cooldown
+sprite_lost      = dev_basic_enemy_cooldown
 sprite_attacking = spr_pea_shooter
 sprite_cooldown  = spr_pea_shooter_burrowed //burrowed
-sprite_death     = spr_basic_enemy_death
+sprite_death     = dev_basic_enemy_cooldown
 //unique sprites
 sprite_run = spr_pea_shooter_burrowed //burrowed
 //radi

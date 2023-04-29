@@ -9,7 +9,7 @@ sprite_cooldown  = spr_molten_cooldown
 sprite_death     = spr_molten_death
 //radi
 vision_radius = 500
-attack_radius = 20
+attack_radius = 15
 chase_radius  = 300
 
 state = new SnowState("idle")
