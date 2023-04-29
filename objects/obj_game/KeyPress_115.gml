@@ -1,2 +1,2 @@
-/// @description Toggle Debug Enemies
-global.debug_enemies = !global.debug_enemies
+/// @description Debug Alignment
+global.debug_alignment = !global.debug_alignment

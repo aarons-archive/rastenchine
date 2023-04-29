@@ -1,4 +1,4 @@
-if (global.debug_lighting == true) {
+if (global.debug_lights == true) {
 	draw_self()
 	if (light != undefined) { 
 		draw_set_font(fnt_game)

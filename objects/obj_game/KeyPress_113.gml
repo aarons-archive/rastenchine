@@ -1,2 +1,2 @@
-/// @description Toggle Debug Lighting
-global.debug_lighting = !global.debug_lighting
+/// @description Debug Enemies
+global.debug_enemies = !global.debug_enemies

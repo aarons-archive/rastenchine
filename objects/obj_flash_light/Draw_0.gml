@@ -1,1 +1,1 @@
-if (global.debug_lighting == true) { draw_self() }
+if (global.debug_lights == true) { draw_self() }
