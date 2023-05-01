@@ -1,5 +1,5 @@
-#macro MENU_MARGIN  (5)
-#macro MENU_PADDING (5)
+#macro MENU_MARGIN  (6)
+#macro MENU_PADDING (6)
 
 #macro MENU_X1       (0 + MENU_MARGIN)
 #macro MENU_X2       (CAMERA_WIDTH - MENU_MARGIN)

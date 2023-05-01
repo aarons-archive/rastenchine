@@ -11,5 +11,5 @@ function get_inputs() {
 	// dodging
 	dodge_input = keyboard_check_pressed(global.DODGE_KEY)
 	//selecting
-	select_input = keyboard_check(global.SELECT_KEY)
+	select_input = keyboard_check(global.PICKUP_ITEM_KEY)
 }

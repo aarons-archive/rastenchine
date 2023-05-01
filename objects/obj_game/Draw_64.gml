@@ -3,14 +3,24 @@ if (global.debug_text == true) {
 	draw_debug_text() 
 }
 
-if (global.debug_alignment == true) { 
+if (global.debug_alignment == true) {
 	// vertial alignment line
+	draw_line_colour(
+		GUI_X1, GUI_MIDDLE_Y - 1, 
+		GUI_X2, GUI_MIDDLE_Y - 1, 
+		c_white, c_white
+	)
 	draw_line_colour(
 		GUI_X1, GUI_MIDDLE_Y, 
 		GUI_X2, GUI_MIDDLE_Y, 
 		c_white, c_white
 	)
 	// horizontal alignment line
+	draw_line_colour(
+		GUI_MIDDLE_X - 1, GUI_Y1, 
+		GUI_MIDDLE_X - 1, GUI_Y2, 
+		c_white, c_white
+	)	
 	draw_line_colour(
 		GUI_MIDDLE_X, GUI_Y1, 
 		GUI_MIDDLE_X, GUI_Y2, 

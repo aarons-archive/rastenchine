@@ -34,15 +34,15 @@ function draw_debug_text() {
 	}
 
 	draw_text_color( 
-		GUI_X1 + GUI_MARGIN, 
-		GUI_Y2 - GUI_MARGIN, 
+		GUI_X1, 
+		GUI_Y2, 
 		names, 
 		c_white, c_white, c_white, c_white,
 		1
 	)
 	draw_text_color(
-		GUI_X1 + GUI_MARGIN + string_width(names), 
-		GUI_Y2 - GUI_MARGIN,
+		GUI_X1 + string_width(names), 
+		GUI_Y2 ,
 		values,
 		c_white, c_white, c_white, c_white,
 		1
@@ -62,15 +62,15 @@ function draw_debug_text() {
 			 string(global.camera_zooming)
 	
 	draw_text_color(
-		GUI_X2 - GUI_MARGIN, 
-		GUI_Y2 - GUI_MARGIN,
+		GUI_X2, 
+		GUI_Y2,
 		values,
 		c_white, c_white, c_white, c_white,
 		1
 	)
 	draw_text_color( 
-		GUI_X2 - GUI_MARGIN - string_width(values), 
-		GUI_Y2 - GUI_MARGIN, 
+		GUI_X2 - string_width(values), 
+		GUI_Y2, 
 		names,
 		c_white, c_white, c_white, c_white,
 		1

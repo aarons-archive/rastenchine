@@ -1,5 +1,4 @@
 function do_movement() {
-
 	if (walk_input == false) { 
 		return 
 	}

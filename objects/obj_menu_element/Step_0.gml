@@ -1,5 +1,5 @@
 if point_in_rectangle(mouse_x, mouse_y, X1, Y1, X2, Y2) {
-	colour = c_gray
+	colour = c_green
 	if mouse_check_button_pressed(mb_left) {
 		switch (ACTION) {
 			case MenuElementAction.run_script:

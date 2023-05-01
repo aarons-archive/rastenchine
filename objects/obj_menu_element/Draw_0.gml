@@ -5,7 +5,7 @@ draw_set_halign(fa_left)
 
 // draw button/text
 draw_sprite_stretched_ext(
-	spr_ui_background, 0,
+	spr_gui_background, 0,
 	X1, Y1, WIDTH, HEIGHT,
 	colour, 1
 )
@@ -21,7 +21,7 @@ draw_text_colour(
 switch (ACTION) {
 	case MenuElementAction.slide_value:
 		draw_sprite_stretched_ext(
-			spr_ui_background, 0,
+			spr_gui_background, 0,
 			X2 + MENU_MARGIN, Y1, 
 			150, HEIGHT,
 			colour, 1
@@ -39,7 +39,7 @@ switch (ACTION) {
 		break
 	case MenuElementAction.shift_value:
 		draw_sprite_stretched_ext(
-			spr_ui_background, 0,
+			spr_gui_background, 0,
 			X2 + MENU_MARGIN, Y1, 
 			150, HEIGHT,
 			colour, 1

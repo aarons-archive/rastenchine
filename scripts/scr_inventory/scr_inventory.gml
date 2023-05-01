@@ -5,6 +5,9 @@ function Inventory() constructor {
 	index = 0
 	item = undefined
 	
+	_slot_instances = []
+	opened = false
+	
 	self.change_item(self.index)
 	
 	////////////////
@@ -113,6 +116,14 @@ function Inventory() constructor {
 	////////////
 
 	static step = function() {
+		if (keyboard_check_pressed(global.OPEN_INVENTORY_KEY) == true) {
+			self.opened = !self.opened
+			toggle_inventory()
+		}
+		if (self.opened == true) {
+			if (self.item != undefined) { self.item.common() }
+			exit
+		}
 		////////////////////////////////
 		// mouse wheel item selection //
 		////////////////////////////////
@@ -145,9 +156,11 @@ function Inventory() constructor {
 			self.item.use()
 		}
 	}
-	
-	static draw = function() { 
-		draw_hotbar() 
+
+	static draw = function() {
+		if (self.opened == true) {
+			draw_inventory()
+		}
+		draw_hotbar()
 	}
  }
- 

@@ -3,7 +3,7 @@ image_yscale = scale * sign(image_yscale)
 
 var mouse_is_near_item = collision_point(mouse_x, mouse_y, self, true, false)
 var player_is_near_item = point_in_circle(obj_player.x, obj_player.y, x, y, 100)
-var player_is_holding_grab_key = keyboard_check_pressed(global.SELECT_KEY)
+var player_is_holding_grab_key = keyboard_check_pressed(global.PICKUP_ITEM_KEY)
 
 if ((mouse_is_near_item != noone) and (player_is_near_item == true)) {
 	scale = lerp(scale, 1.25, 0.25)
