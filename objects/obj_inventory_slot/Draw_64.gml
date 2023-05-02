@@ -7,9 +7,8 @@ var y2 = y + height
 if (point_in_rectangle(_mouse_x, _mouse_y, x, y, x2, y2) == true) {
 	colour = c_green
 	if (mouse_check_button(mb_left) == true) {
-		x = _mouse_x
-		y = _mouse_y
-		
+		x = _mouse_x - (width / 2)
+		y = _mouse_y - (height / 2)
 	}
 }
 else {

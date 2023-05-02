@@ -122,10 +122,12 @@ function Inventory() constructor {
 		if (keyboard_check_pressed(global.OPEN_INVENTORY_KEY) == true) {
 			if (self.open == true) {
 				self.open = false
+				obj_camera.pan_enabled = false
 				hide_inventory()
 			}
 			else if (self.open == false) {
 				self.open = true
+				obj_camera.pan_enabled = true
 				show_inventory()
 			}
 		}
