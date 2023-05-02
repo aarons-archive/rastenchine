@@ -4,7 +4,7 @@ var proj = other;
 
 if (other.image_index == 1) {
 	if (invincible == false) {
-		
+		_health -= 10
 		path_end()
 		invincible = true
 		alarm[6] = 30

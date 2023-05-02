@@ -21,7 +21,7 @@ state = new SnowState("idle")
 if state.add( 
 	"Run", {
 		enter: function() {
-			path_end()
+			
 		} , 
 		step: function() {
 			//pick furthest boss spawn point and move towards it
@@ -30,6 +30,7 @@ if state.add(
 			boss_escape_zone.x, boss_escape_zone.y, true)
 			if (path_found) { path_start(path, _speed, path_action_stop, false) }
 			//runs away from player when low enough on health
+			//if distance_to_object(boss_escape_zone) < 200 {show_debug_message("Amog")}
 		}
 	}	
 )

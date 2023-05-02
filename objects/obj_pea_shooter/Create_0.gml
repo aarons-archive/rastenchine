@@ -125,7 +125,7 @@ state.add(
 state.add(
 	"attack_cooldown", {
 		enter: function() {
-			show_debug_message("Apple")
+			//show_debug_message("Apple")
 			_speed = 0
 			path_end()
 			sprite_index = sprite_cooldown
