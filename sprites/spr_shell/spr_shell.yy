@@ -15,7 +15,7 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b31de69-51f2-48ca-bf61-4b5034d8da16",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f355fb92-b42e-4453-81d4-b82bcfd2c70a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"699d7888-4f66-47b7-8c6d-6d5f08642251",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"59c38a22-db3f-4762-b792-5d5505dc6293",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8cd0bb27-0c62-43fd-8490-7a9871385c1b",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bb93489d-addf-4e25-9630-49f893fcca4e",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d35d492b-cc66-4d33-8c25-bc33c40cba3e",},
@@ -24,7 +24,7 @@
   ],
   "gridX": 10,
   "gridY": 10,
-  "height": 20,
+  "height": 15,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e32fa296-019d-44c1-a13a-2c9513be9337","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -63,7 +63,7 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5b31de69-51f2-48ca-bf61-4b5034d8da16","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"45cea676-3f07-4a5c-ad41-018b167f4e2e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f355fb92-b42e-4453-81d4-b82bcfd2c70a","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"e8995a5f-9a9b-4a51-a095-5c7741018b2d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"699d7888-4f66-47b7-8c6d-6d5f08642251","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"6e9ec789-8863-4f95-b47f-dc3e234c99b4","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"59c38a22-db3f-4762-b792-5d5505dc6293","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"f1fc01ac-734b-4157-986d-286cada9cc6b","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8cd0bb27-0c62-43fd-8490-7a9871385c1b","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"f921a7c2-4bdd-4c42-a2ca-a15ae3cc42e1","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bb93489d-addf-4e25-9630-49f893fcca4e","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"ba226c36-f146-4bb7-9b7b-96dac37d2430","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d35d492b-cc66-4d33-8c25-bc33c40cba3e","path":"sprites/spr_shell/spr_shell.yy",},},},"Disabled":false,"id":"a1a6f2c3-9c88-4438-997b-2c6080009104","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
@@ -73,8 +73,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 15,
-    "yorigin": 10,
+    "xorigin": 12,
+    "yorigin": 7,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
@@ -84,5 +84,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 30,
+  "width": 25,
 }

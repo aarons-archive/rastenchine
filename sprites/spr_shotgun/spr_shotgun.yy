@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_shotgun",
-  "bbox_bottom": 20,
+  "bbox_bottom": 17,
   "bbox_left": 0,
   "bbox_right": 29,
   "bbox_top": 10,

@@ -1,10 +1,16 @@
-// calculate the panning pixels/direction
-var _pan = min(PAN_MAX, distance_to_point(mouse_x, mouse_y) / PAN_SCALE)
-var _direction = point_direction(follow.x, follow.y - PLAYER_ORIGIN_OFFSET, mouse_x, mouse_y)
-
-// move the camera object to the same place as the follow object, accounting for panning and smoothing
-x += ((follow.x + lengthdir_x(_pan, _direction)) - x) / SMOOTHING
-y += ((follow.y + lengthdir_y(_pan, _direction) - PLAYER_ORIGIN_OFFSET) - y) / SMOOTHING
+if (pan_enabled) {
+	// calculate the panning pixels/direction
+	var _pan = min(PAN_MAX, distance_to_point(mouse_x, mouse_y) / PAN_SCALE)
+	var _direction = point_direction(follow.x, follow.y - PLAYER_ORIGIN_OFFSET, mouse_x, mouse_y)
+	// move the camera object to the same place as the follow object, accounting for panning and smoothing
+	x += ((follow.x + lengthdir_x(_pan, _direction)) - x) / SMOOTHING
+	y += ((follow.y + lengthdir_y(_pan, _direction) - PLAYER_ORIGIN_OFFSET) - y) / SMOOTHING
+}
+else {
+	// move the camera object to the same place as the follow object, accounting for panning and smoothing
+	x += ((follow.x) - x) / SMOOTHING
+	y += ((follow.y - PLAYER_ORIGIN_OFFSET) - y) / SMOOTHING
+}
 
 var half_view_width
 var half_view_height

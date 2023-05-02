@@ -15,7 +15,7 @@ if (selected && obj_player.select_input)
 		with (obj_camera)
 		{
 			follow = other.id;	
-			ENABLE_PANNING = false;
+			pan_enabled = false;
 		}
 	}
 }
@@ -26,6 +26,6 @@ if (distance_to_object(obj_player) > 100) && (instance_exists(obj_dialog))
 	with (obj_camera)
 		{
 			follow = obj_player;
-			ENABLE_PANNING = true;
+			pan_enabled = true;
 		}
 }
