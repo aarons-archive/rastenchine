@@ -13,6 +13,6 @@ draw_healthbar(
 	true, false
 )
 
-if (keyboard_check(global.SHOW_ENEMY_PATH_KEY)) {
+if (keyboard_check_direct(global.SHOW_ENEMY_PATH_KEY)) {
 	draw_path(path, x, y, true)	
 }

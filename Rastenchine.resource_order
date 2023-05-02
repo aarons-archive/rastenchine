@@ -21,6 +21,8 @@
     {"name":"Consumables","order":8,"path":"folders/Inventory/Consumables.yy",},
     {"name":"Weapons","order":7,"path":"folders/Inventory/Weapons.yy",},
     {"name":"Crowbar","order":2,"path":"folders/Inventory/Weapons/Melee/Crowbar.yy",},
+    {"name":"Plank","order":3,"path":"folders/Inventory/Weapons/Melee/Plank.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Inventory/Weapons/Melee/Plank/Sprites.yy",},
     {"name":"Gun","order":2,"path":"folders/Inventory/Weapons/Ranged/Gun.yy",},
     {"name":"Railgun","order":3,"path":"folders/Inventory/Weapons/Ranged/Railgun.yy",},
     {"name":"Rifle","order":4,"path":"folders/Inventory/Weapons/Ranged/Rifle.yy",},
@@ -40,8 +42,6 @@
     {"name":"Dummy","order":8,"path":"folders/Unused/Dummy.yy",},
     {"name":"Molten Animations","order":2,"path":"folders/Unused/Molten Animations.yy",},
     {"name":"Molten Dev Sprites","order":7,"path":"folders/Unused/Molten Dev Sprites.yy",},
-    {"name":"Plank","order":3,"path":"folders/Inventory/Weapons/Melee/Plank.yy",},
-    {"name":"Sprites","order":1,"path":"folders/Inventory/Weapons/Melee/Plank/Sprites.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_boss_charging","order":1,"path":"sprites/spr_boss_charging/spr_boss_charging.yy",},

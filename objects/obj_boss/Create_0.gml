@@ -22,15 +22,13 @@ if state.add(
 	"Run", {
 		enter: function() {
 			
-		} , 
-		step: function() {
-			//pick furthest boss spawn point and move towards it
 			boss_escape_zone = instance_furthest(x,y,obj_boss_spawn_zone)
 			var path_found = mp_grid_path(global.mp_grid, path, x, y,
 			boss_escape_zone.x, boss_escape_zone.y, true)
 			if (path_found) { path_start(path, _speed, path_action_stop, false) }
-			//runs away from player when low enough on health
-			//if distance_to_object(boss_escape_zone) < 200 {show_debug_message("Amog")}
+		} , 
+		step: function() {
+			if distance_to_object(boss_escape_zone) < 150 {instance_destroy()}
 		}
 	}	
 )
@@ -56,7 +54,7 @@ state.add(
 			//swipe attack
 			if (within_swipe_attack_radius) { return state.change("swipe_attack") }
 			//charge attack
-			show_debug_message(charge_attack)
+			//show_debug_message(charge_attack)
 			if  (charge_attack <= 2) && (within_charge_attack_radius) { return state.change("charging") } 
 			else if (charge_attack > 2) {alarm[2] = 60}
 			//banaan 
@@ -117,6 +115,14 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_cooldown
 			alarm[0] = 120
+		}
+	}
+)
+
+state.add(
+	"death", {
+		enter: function() {
+			state.change("Run")
 		}
 	}
 )
