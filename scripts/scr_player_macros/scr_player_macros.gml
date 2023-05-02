@@ -1,3 +1,5 @@
+#macro PLAYER_ORIGIN_OFFSET (16)
+
 // health
 #macro PLAYER_MIN_HEALTH (0)
 #macro PLAYER_MAX_HEALTH (100)

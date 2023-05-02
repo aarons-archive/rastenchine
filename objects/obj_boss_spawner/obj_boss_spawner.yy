@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Managers.yy",
+    "name": "Enemy Managers",
+    "path": "folders/Entities/Enemies/Enemy Managers.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -1,3 +1,6 @@
+#macro ENEMY_MAX_HEALTH     (100)
+#macro ENEMY_DEFAULT_SPEED  (4)
+
 event_inherited()
 randomize()
 //all sprites

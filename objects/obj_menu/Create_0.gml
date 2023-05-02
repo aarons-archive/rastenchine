@@ -22,14 +22,14 @@ enum MenuElementAction {
 
 home = [
 	["PLAY",          MenuElementAction.run_script,  play_game,                   undefined,                   undefined                   ],
-	["SETTINGS",      MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.video   ],
+	["SETTINGS",      MenuElementAction.run_script,  change_page,                 MenuPage.settings,           MenuSettingsSubPage.video   ],
 	["EXIT",          MenuElementAction.run_script,  exit_game,                   undefined,                   undefined                   ],
 ]
 settings = [
-	["<- BACK",       MenuElementAction.run_script,  menu_change_page,            MenuPage.home,               undefined                   ],
-	["VIDEO",         MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.video   ],
-	["AUDIO",         MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.audio   ],
-	["GAMEPLAY",      MenuElementAction.run_script,  menu_change_page,            MenuPage.settings,           MenuSettingsSubPage.gameplay],
+	["<- BACK",       MenuElementAction.run_script,  change_page,                 MenuPage.home,               undefined                   ],
+	["VIDEO",         MenuElementAction.run_script,  change_page,                 MenuPage.settings,           MenuSettingsSubPage.video   ],
+	["AUDIO",         MenuElementAction.run_script,  change_page,                 MenuPage.settings,           MenuSettingsSubPage.audio   ],
+	["GAMEPLAY",      MenuElementAction.run_script,  change_page,                 MenuPage.settings,           MenuSettingsSubPage.gameplay],
 ]
 video_settings = [
 	["RESOLUTION",    MenuElementAction.shift_value, change_resolution,           global.resolution,           ["1920x1080", "1280x720"]   ],
@@ -51,4 +51,4 @@ sub_pages = [video_settings, audio_settings, gameplay_settings]
 selected_sub_page = undefined
 
 instances = []
-menu_render_page()
+render_page()

@@ -5,7 +5,7 @@ if (global.paused == true) {
 	pause_sprite = sprite_create_from_surface(
 		application_surface, 
 		0, 0, 
-		camera_get_view_width(view_camera[0]) * 2, camera_get_view_height(view_camera[0]) * 2, 
+		VIEW_WIDTH, VIEW_HEIGHT, 
 		false, false, 0, 0
 	)
 	instance_deactivate_all(true)

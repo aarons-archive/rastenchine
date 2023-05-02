@@ -6,8 +6,8 @@ pause_sprite = undefined
 
 global.camera_zooming = false
 
-global.debug_text = true
+global.debug_text    = true
 global.debug_enemies = true
-global.debug_lights = false
-global.debug_alignment = false
-global.debug_camera = false
+global.debug_lights  = false
+global.debug_gui     = false
+global.debug_camera  = false

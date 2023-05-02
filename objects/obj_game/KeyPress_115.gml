@@ -1,2 +1,2 @@
-/// @description Debug Alignment
-global.debug_alignment = !global.debug_alignment
+/// @description Debug GUI
+global.debug_gui = !global.debug_gui

@@ -6,7 +6,7 @@ function Inventory() constructor {
 	item = undefined
 	
 	_slot_instances = []
-	opened = false
+	open = false
 	
 	self.change_item(self.index)
 	
@@ -116,11 +116,23 @@ function Inventory() constructor {
 	////////////
 
 	static step = function() {
+		/////////////////////////////
+		// toggle inventory screen //
+		/////////////////////////////
 		if (keyboard_check_pressed(global.OPEN_INVENTORY_KEY) == true) {
-			self.opened = !self.opened
-			toggle_inventory()
+			if (self.open == true) {
+				self.open = false
+				hide_inventory()
+			}
+			else if (self.open == false) {
+				self.open = true
+				show_inventory()
+			}
 		}
-		if (self.opened == true) {
+		////////////////////////////////////////////////////////////////////
+		// only perform "common" item actions if inventory screen is open //
+		////////////////////////////////////////////////////////////////////
+		if (self.open == true) {
 			if (self.item != undefined) { self.item.common() }
 			exit
 		}
@@ -158,7 +170,7 @@ function Inventory() constructor {
 	}
 
 	static draw = function() {
-		if (self.opened == true) {
+		if (self.open == true) {
 			draw_inventory()
 		}
 		draw_hotbar()
