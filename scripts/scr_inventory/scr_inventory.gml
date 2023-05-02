@@ -53,7 +53,7 @@ function Inventory() constructor {
 		// if found: replace it with the item being added.
 		// if not found: add the item to the end of the inventory.
 		var inventory_index = array_get_index(self.inventory, undefined)
-		if (inventory_index != 1) {
+		if (inventory_index != -1) {
 			self.inventory[inventory_index] = struct
 		}
 		else {

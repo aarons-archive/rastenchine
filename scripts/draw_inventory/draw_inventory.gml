@@ -32,8 +32,9 @@ function draw_inventory() {
 function show_inventory() {
 	for (var _x = 0; _x < INVENTORY_SLOT_COUNT_X; _x++) {
 		for (var _y = 0; _y < INVENTORY_SLOT_COUNT_Y; _y++) {
+			var _inventory_index = _y * INVENTORY_SLOT_COUNT_X + _x 
 			var _sprite = undefined
-			try { _sprite = inventory[_y * INVENTORY_SLOT_COUNT_X + _x].sprite } catch(error) {}
+			try { _sprite = inventory[_inventory_index].sprite } catch(error) {}
 			array_push(_slot_instances, instance_create_layer( 
 				INVENTORY_BACKGROUND_X + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_WIDTH) * _x),
 				INVENTORY_BACKGROUND_Y + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_HEIGHT) * _y),
@@ -43,6 +44,8 @@ function show_inventory() {
 					width: INVENTORY_SLOT_WIDTH, 
 					height: INVENTORY_SLOT_HEIGHT,
 					sprite: _sprite,
+					//inventory_index: _inventory_index,
+					//hotbar_index: array_find_index(hotbar, _inventory_index)
 				}
 			))
 		}
