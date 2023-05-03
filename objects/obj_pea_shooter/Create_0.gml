@@ -129,25 +129,29 @@ state.add(
 			_speed = 0
 			path_end()
 			sprite_index = sprite_cooldown
-			alarm[0] = 120
+			alarm[0] = 60
 		}
 	}
 )
 state.add(
 	"run", {
 		enter: function() {
-			
+			show_debug_message("AOGKASKOG")
 			alarm[2] = 180
 			run_lock = true
 			sprite_index = sprite_run	
 			alarm[3] = 30
 		} , 
-			step: function () {
-				var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)
-				move_towards_point(x - lengthdir_x(2, direction_to_player), y - lengthdir_y(2, direction_to_player), _speed)
+		step: function () {
+			/*
+			var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)	
+			//(x - lengthdir_x(2, direction_to_player), y - lengthdir_y(2, direction_to_player), _speed)
+			var x_dir = x - lengthdir_x(15, direction_to_player)
+			var y_dir = y - lengthdir_y(15, direction_to_player)
+			var path_found = mp_grid_path(global.mp_grid, path, x, y, x_dir, y_dir, true)
+			if (path_found) { path_start(path, _speed, path_action_stop, false) }
+			*/
 		}
 	}
 )
-
-
 //burrowed = untargetable do this in player

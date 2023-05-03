@@ -7,6 +7,7 @@ sprite_lost      = spr_molten_idle
 sprite_attacking = spr_molten_attack
 sprite_cooldown  = spr_molten_cooldown
 sprite_death     = spr_molten_death
+sprite_hurt      = spr_molten_cooldown //hurt sprite
 //radi
 vision_radius = 500
 attack_radius = 15
@@ -120,6 +121,29 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_cooldown
 			alarm[0] = 120
+		}
+	}
+)
+state.add(
+	"hurt", {
+		enter: function() {
+			sprite_index = sprite_hurt
+			_health -= 10
+			path_end()
+			invincible = true
+			alarm[6] = 30
+			alarm[0] = 30
+		},
+		step: function() {
+			//knockback stil buggy but idk hgow to make wrok like cool an studf
+			/*
+			var knockback = 5
+			var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
+			var knockback_x = lengthdir_x(knockback,  knock_dir)
+			var knockback_y = lengthdir_y(knockback,  knock_dir) 
+			x -= knockback_x
+			y -= knockback_y 
+			*/
 		}
 	}
 )
