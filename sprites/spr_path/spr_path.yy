@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_path",
   "bbox_bottom": 127,
-  "bbox_left": 64,
+  "bbox_left": 32,
   "bbox_right": 223,
   "bbox_top": 0,
   "bboxMode": 0,

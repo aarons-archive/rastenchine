@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_tree",
+  "name": "obj_rocks",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Trees",
-    "path": "folders/Levels/Placeables/Trees.yy",
+    "name": "Rocks",
+    "path": "folders/Levels/Placeables/Rocks.yy",
   },
-  "parentObjectId": {
-    "name": "obj_player_collision",
-    "path": "objects/obj_player_collision/obj_player_collision.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -31,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_trees",
-    "path": "sprites/spr_trees/spr_trees.yy",
+    "name": "spr_rocks",
+    "path": "sprites/spr_rocks/spr_rocks.yy",
   },
   "spriteMaskId": null,
   "visible": true,
