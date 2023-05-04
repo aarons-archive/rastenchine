@@ -5,7 +5,10 @@
 //	visible = false
 //}
 
-
+if place_meeting(x,y,obj_player_collision)
+{
+	
+}
 if (_health < 1) { 
 	state.change("death")
 }

@@ -126,7 +126,6 @@ state.add(
 state.add(
 	"attack_cooldown", {
 		enter: function() {
-			//show_debug_message("Apple")
 			_speed = 0
 			path_end()
 			sprite_index = sprite_cooldown
@@ -144,14 +143,11 @@ state.add(
 			alarm[3] = 30
 		} , 
 		step: function () {
-			/*
-			var direction_to_player = point_direction(x, y, obj_player.x, obj_player.y)	
-			//(x - lengthdir_x(2, direction_to_player), y - lengthdir_y(2, direction_to_player), _speed)
-			var x_dir = x - lengthdir_x(15, direction_to_player)
-			var y_dir = y - lengthdir_y(15, direction_to_player)
-			var path_found = mp_grid_path(global.mp_grid, path, x, y, x_dir, y_dir, true)
-			if (path_found) { path_start(path, _speed, path_action_stop, false) }
-			*/
+			var run_dir = point_direction(x,y, obj_player.x, obj_player.y)
+			var x_dir = x - lengthdir_x(15, run_dir)
+			var y_dir = y - lengthdir_y(15, run_dir)
+			x -= x_dir
+			y -= y_dir
 		}
 	}
 )
