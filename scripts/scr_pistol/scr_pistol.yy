@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_ranged",
+  "name": "scr_pistol",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Ranged",
-    "path": "folders/Inventory/Weapons/Ranged.yy",
+    "name": "Pistol",
+    "path": "folders/Inventory/Items/Weapons/Guns/Pistol.yy",
   },
 }

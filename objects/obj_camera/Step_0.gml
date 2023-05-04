@@ -20,7 +20,7 @@ if (global.camera_zooming == true) {
 	var current_view_width = camera_get_view_width(camera)
 	var current_view_height = camera_get_view_height(camera)
 	// calculate the zoom level
-	zoom = clamp(zoom + (((mouse_wheel_down() - mouse_wheel_up())) * 0.1), ZOOM_MIN, ZOOM_MAX)
+	zoom = clamp(zoom + ((keyboard_check(global.ZOOM_OUT_KEY) - keyboard_check(global.ZOOM_IN_KEY)) * 0.05), ZOOM_MIN, ZOOM_MAX)
 	// calculate the zoom width/height
 	var zoom_width = lerp(current_view_width, zoom * default_view_width, 0.05)
 	var zoom_height = lerp(current_view_height, zoom * default_view_height, 0.05)

@@ -31,7 +31,7 @@
   "origin": 4,
   "parent": {
     "name": "Med Kit",
-    "path": "folders/Inventory/Consumables/Med Kit.yy",
+    "path": "folders/Inventory/Items/Consumables/Med Kit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

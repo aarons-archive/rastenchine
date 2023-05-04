@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Plank",
-    "path": "folders/Inventory/Weapons/Melee/Plank.yy",
+    "path": "folders/Inventory/Items/Weapons/Melee/Plank.yy",
   },
 }

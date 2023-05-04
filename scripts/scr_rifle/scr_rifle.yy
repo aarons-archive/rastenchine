@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Rifle",
-    "path": "folders/Inventory/Weapons/Ranged/Rifle.yy",
+    "path": "folders/Inventory/Items/Weapons/Guns/Rifle.yy",
   },
 }

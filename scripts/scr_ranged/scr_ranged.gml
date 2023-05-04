@@ -1,1 +1,0 @@
-function Ranged() : Weapon() constructor {}

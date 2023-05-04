@@ -1,67 +1,85 @@
-#macro GUN_DAMAGE 5
-#macro GUN_RANGE 30
-
-#macro GUN_MAX_AMMO 60
-#macro GUN_CLIP     6
-
-#macro GUN_RELOAD_FRAMES   FPS * 1
-#macro GUN_COOLDOWN_FRAMES FPS * 0.4
-
-function Gun() : Ranged() constructor {
-
-	// from Item
-	sprite = spr_gun
+function Gun() : Weapon() constructor {
+	////////////
+	// sprite //
+	////////////
+	DEFAULT_SPRITE = undefined
+	COOLDOWN_SPRITE = undefined
+	RELOADING_SPRITE = undefined
 	
-	// from Weapon
-	damage = GUN_DAMAGE
+	////////////
+	// timing //
+	////////////
+	COOLDOWN_FRAMES = undefined
+	RELOADING_FRAMES = undefined
 	
-	// Gun
-	ammo = GUN_MAX_AMMO
-	clip = GUN_CLIP
-
-	static alarm_one = function() {
-		state = weapon_state.idle
-		instance.sprite_index = spr_gun
-		if ((clip + ammo) < GUN_CLIP) {
-			clip = ammo
-			ammo = 0
+	//////////
+	// ammo //
+	//////////
+	DEFAULT_AMMO = undefined
+	DEFAULT_CLIP = undefined
+	ammo = DEFAULT_AMMO
+	clip = DEFAULT_CLIP
+	
+	////////////
+	// inputs //
+	////////////
+	attack_input = false
+	reload_input = false
+	
+	////////////
+	// states //
+	////////////
+	state = new SnowState("idle")
+	state.add(
+		"idle", {
+			step: function() {
+				if ((attack_input == true) and (clip >= 1)) { 
+					return state.change("shooting") 
+				}
+				if ((reload_input == true) or ((attack_input == true) and (clip <= 0) and (ammo >= 1))) { 
+					return state.change("reloading")
+				}
+			}
 		}
-		else {
-			ammo -= (GUN_CLIP - clip)
-			clip = GUN_CLIP
+	)
+	state.add(
+		"cooldown", {
+			enter: function() {
+				instance.sprite_index = COOLDOWN_SPRITE
+			},
+			step: function() {
+				offset = lerp(offset, ITEM_OFFSET, 0.25)
+				if (state.get_time(false) >= COOLDOWN_FRAMES) { 
+					return state.change("idle") 
+				}
+			},
+			leave: function() {
+				instance.sprite_index = DEFAULT_SPRITE
+			}
 		}
-	}
-	
-	static alarm_two = function() { 
-		state = weapon_state.idle 
-	}
+	)
+	state.add(
+		"reloading", {
+			enter: function() {
+				instance.sprite_index = RELOADING_SPRITE
+			},
+			step: function() {
+				if (state.get_time(false) >= RELOADING_FRAMES) {
+					var missing = DEFAULT_CLIP - clip
+					clip += (missing > ammo) ? (ammo) : (missing)
+					ammo -= (missing > ammo) ? (ammo) : (missing)
+					return state.change("idle")
+				}
+			},
+			leave: function() {
+				instance.sprite_index = DEFAULT_SPRITE
+			}
+		}
+	)
 	
 	static use = function() {
-		switch (state) {
-			case weapon_state.idle:
-				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
-					var _direction = (point_direction(instance.x, instance.y, mouse_x, mouse_y) + random_range(-5,5))
-					with (instance_create_layer(instance.x, instance.y, "player", obj_projectile, { sprite_index: spr_bullet, speed: 7, direction: _direction, image_angle: _direction })) lifetime = GUN_RANGE;
-					instance_offset = 7;
-					clip -= 1
-					state = weapon_state.cooldown
-				}
-				else if (((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((clip <= 0) && (mouse_check_button(global.ATTACK_BUTTON)))) && ammo != 0) {
-					state = weapon_state.reloading
-					instance.sprite_index = spr_gun_reloading
-				}
-				break
-			case weapon_state.reloading:
-				if (instance.alarm[1] == -1) {
-					instance.alarm[1] = GUN_RELOAD_FRAMES
-				} 
-				break
-			case weapon_state.cooldown:
-				if (instance.alarm[2] == -1) {
-					instance.alarm[2] = GUN_COOLDOWN_FRAMES
-				} 
-				instance_offset = lerp(instance_offset, 25, 0.1);
-				break
-		}
+		attack_input = (mouse_check_button(global.ATTACK_BUTTON) == true)
+		reload_input = (keyboard_check_pressed(global.RELOAD_KEY) == true)
+		state.step()
 	}
 }

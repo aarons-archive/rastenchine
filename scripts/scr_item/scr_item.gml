@@ -1,33 +1,38 @@
+#macro ITEM_OFFSET (16)
+#macro ITEM_Y_OFFSET (2)
+
 function Item() constructor {
-	
-	// private
+
 	instance = undefined
+	DEFAULT_SPRITE = undefined
 	
-	// must be overridden in children
-	sprite = undefined
-	
-	// can be overriden in children
-	instance_offset = 20    // moves instance out by <x> pixels to rotate around properly.
-	instance_y_offset = -16 // moves instance up by <x> pixels to match arm placement.
+	offset = ITEM_OFFSET
 	
 	stackable = false
 	count = -1
 	
 	static common = function() {
-		var _direction = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
-		instance.x = obj_player.x + lengthdir_x(instance_offset, _direction)
-		instance.y = obj_player.y + lengthdir_y(instance_offset, _direction) + instance_y_offset
-		instance.image_angle = _direction
+		instance.x = obj_player._x + lengthdir_x(offset, obj_player._direction)
+		instance.y = obj_player._y + lengthdir_y(offset, obj_player._direction)
+		instance.image_angle = obj_player._direction
 		
-		// behind the player when the mouse is in the upper screen area
-		if ((_direction > 0) and (_direction < 180)) { instance.depth = obj_player.depth + 1 } 
-		// in front of the player when the mouse is in the lower screen area
-		else { instance.depth = obj_player.depth - 1 }
+		// behind the player when the mouse is in the upper area of the screen
+		if ((obj_player._direction > 0) and (obj_player._direction < 180)) { 
+			instance.depth = obj_player.depth + 1
+		} 
+		// in front of the player when the mouse is in the lower area of the screen
+		else { 
+			instance.depth = obj_player.depth - 1 
+		}
 		
-		// facing right when the mouse is in the right screen area
-		if ((_direction <= 90) or (_direction >= 270)) { instance.image_yscale = lerp(instance.image_yscale, 1, 0.25) }
-		// facing left when the mouse is in the left screen area
-		else { instance.image_yscale = lerp(instance.image_yscale, -1, 0.25) }
+		// facing right when the mouse is on the right side of the screen
+		if ((obj_player._direction <= 90) or (obj_player._direction >= 270)) { 
+			instance.image_yscale = lerp(instance.image_yscale, 1, 0.25) 
+		}
+		// facing left when the mouse is on the left side of the screen
+		else { 
+			instance.image_yscale = lerp(instance.image_yscale, -1, 0.25) 
+		}
 	}
 	
 	static use = function() {}

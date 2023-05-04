@@ -6,6 +6,10 @@ walk_input = false
 run_input = false
 dodge_input = false
 
+_x = -1
+_y = -1
+_direction = -1
+
 enum player_movement_state {
 	idle,
 	walking,

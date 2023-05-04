@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Inventory/Weapons/Melee/Crowbar/Sprites.yy",
+    "path": "folders/Inventory/Items/Weapons/Melee/Crowbar/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

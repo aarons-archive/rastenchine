@@ -7,7 +7,7 @@
 #macro RAILGUN_CHARGE_FRAMES FPS * 0.4
 #macro RAILGUN_COOLDOWN_FRAMES FPS * 0.4
 
-function Railgun() : Ranged() constructor {
+function Railgun() : Gun() constructor {
 
 	// from Item
 	sprite = spr_railgun
@@ -65,7 +65,7 @@ function Railgun() : Ranged() constructor {
 				instance_offset = lerp(instance_offset, 25, 0.1);
 				break
 			case weapon_state.shooting:
-				instance_create_layer(instance.x, instance.y, "player", obj_railgun_projectile);
+				instance_create_layer(instance.x, instance.y, "player", obj_railgun_beam);
 				instance_offset = 0;
 				clip -= 1
 				state = weapon_state.cooldown;

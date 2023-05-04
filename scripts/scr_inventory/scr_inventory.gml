@@ -1,7 +1,7 @@
 function Inventory() constructor {
 	
-	inventory = [new AmmoBox(), new Plank(), new Crowbar(), new Gun(), new Railgun(), new Rifle(), new Shotgun()]
-	hotbar = [0, 1, 2, 3, 4, 5, 6]
+	inventory = [new Pistol(), new Rifle()]
+	hotbar = [0, 1]
 	index = 0
 	item = undefined
 	
@@ -18,7 +18,7 @@ function Inventory() constructor {
 		// clean up the current item
 		if (self.item != undefined) {
 			// disallow changing items if the current item is a non-idle weapon
-			if ((is_instanceof(self.item, Weapon) == true) and (self.item.state != weapon_state.idle)) { 
+			if ((is_instanceof(self.item, Weapon) == true) and (self.item.state.get_current_state() != "idle")) { 
 				return 
 			}
 			// destroy the current items object instance
@@ -32,7 +32,7 @@ function Inventory() constructor {
 		var item_index = self.hotbar[self.index]
 		if (item_index != undefined) {
 			self.item = self.inventory[item_index]
-			self.item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item, { sprite_index: self.item.sprite })
+			self.item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item, { sprite_index: self.item.DEFAULT_SPRITE })
 		}
 	}
 	
@@ -92,7 +92,7 @@ function Inventory() constructor {
 			_item.instance.x, _item.instance.y, 
 			"pickups", obj_pickup, 
 			{ 
-				sprite_index: _item.sprite,
+				sprite_index: _item.DEFAULT_SPRITE,
 				image_angle: _item.instance.image_angle,
 				image_yscale: _item.instance.image_yscale,
 				struct: _item

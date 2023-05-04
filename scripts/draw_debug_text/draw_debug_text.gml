@@ -24,14 +24,14 @@ function _draw_bottom_left_debug_text() {
 		values += "\n" + string(obj_player.movement_state) + "\n" + string(obj_player._speed)
 		var item = obj_player.inventory.item
 		if (is_instanceof(item, Weapon)) {
-			names += "\nItem State: \nItem Damage: "
-			values += "\n" + string(item.state) + "\n" + string(item.damage)
+			names += "\nItem State: "
+			values += "\n" + string(item.state.get_current_state())
 	 	}
 		if (is_instanceof(item, Melee)) {
 			names += "\nCrowbar Charge: "
 			values += "\n" + string(item.charge)
 		}
-		if (is_instanceof(item, Ranged)) {
+		if (is_instanceof(item, Gun)) {
 			names += "\nGun Ammo: \nGun Clip: "
 			values += "\n" + string(item.ammo) + "\n" + string(item.clip)
 		}

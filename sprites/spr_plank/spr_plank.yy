@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Inventory/Weapons/Melee/Plank/Sprites.yy",
+    "path": "folders/Inventory/Items/Weapons/Melee/Plank/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

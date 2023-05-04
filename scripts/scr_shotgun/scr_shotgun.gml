@@ -7,7 +7,7 @@
 #macro SHOTGUN_RELOAD_FRAMES   FPS * 1
 #macro SHOTGUN_COOLDOWN_FRAMES FPS * 0.4
 
-function Shotgun() : Ranged() constructor {
+function Shotgun() : Gun() constructor {
 
 	// from Item
 	sprite = spr_shotgun
@@ -44,7 +44,7 @@ function Shotgun() : Ranged() constructor {
 					var _spread_direction = _direction - 10;
 					repeat 4
 					{
-						with (instance_create_layer(instance.x, instance.y, "player", obj_projectile, { sprite_index: spr_shell, speed: 10, direction: _spread_direction, image_angle: _spread_direction })) lifetime = (SHOTGUN_RANGE + random_range(0, 3));
+						with (instance_create_layer(instance.x, instance.y, "player", obj_projectile, { sprite_index: spr_shotgun_shell, speed: 10, direction: _spread_direction, image_angle: _spread_direction })) lifetime = (SHOTGUN_RANGE + random_range(0, 3));
 						_spread_direction += irandom_range(5, 10)
 					}
 					instance_offset = 0;

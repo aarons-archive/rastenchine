@@ -18,8 +18,8 @@ state.step()
 
 
 #region railgun shit
-if instance_exists(obj_railgun_projectile) {
-	if (collision_line(obj_player.x,obj_player.y,obj_railgun_projectile.r[1],obj_railgun_projectile.r[2],self,0,0)) {
+if instance_exists(obj_railgun_beam) {
+	if (collision_line(obj_player.x,obj_player.y,obj_railgun_beam.r[1],obj_railgun_beam.r[2],self,0,0)) {
 		var item = obj_player.inventory.item
 		var tame = obj_tamed_shambler
 		if (invincible == false) {

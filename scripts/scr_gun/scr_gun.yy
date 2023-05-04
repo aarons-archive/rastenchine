@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Gun",
-    "path": "folders/Inventory/Weapons/Ranged/Gun.yy",
+    "name": "Guns",
+    "path": "folders/Inventory/Items/Weapons/Guns.yy",
   },
 }

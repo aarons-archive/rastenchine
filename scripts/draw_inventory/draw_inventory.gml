@@ -34,7 +34,7 @@ function show_inventory() {
 		for (var _y = 0; _y < INVENTORY_SLOT_COUNT_Y; _y++) {
 			var _inventory_index = _y * INVENTORY_SLOT_COUNT_X + _x 
 			var _sprite = undefined
-			try { _sprite = inventory[_inventory_index].sprite } catch(error) {}
+			try { _sprite = inventory[_inventory_index].DEFAULT_SPRITE } catch(error) {}
 			array_push(_slot_instances, instance_create_layer( 
 				INVENTORY_BACKGROUND_X + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_WIDTH) * _x),
 				INVENTORY_BACKGROUND_Y + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_HEIGHT) * _y),
@@ -79,7 +79,7 @@ function draw_hotbar() {
 		)
 		if (_item != undefined) {
 			draw_sprite(
-				_item.sprite, 0, 
+				_item.DEFAULT_SPRITE, 0, 
 				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2),
 				slot_y + (HOTBAR_SLOT_HEIGHT / 2)
 			)

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_railgun_projectile",
+  "name": "obj_railgun_beam",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Railgun",
-    "path": "folders/Inventory/Weapons/Ranged/Railgun.yy",
+    "path": "folders/Inventory/Items/Weapons/Guns/Railgun.yy",
   },
   "parentObjectId": {
     "name": "obj_projectile",
