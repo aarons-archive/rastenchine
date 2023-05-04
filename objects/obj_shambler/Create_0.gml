@@ -2,11 +2,12 @@ event_inherited()
 //sprites
 sprite_idle      = spr_shambler
 sprite_wandering = spr_shambler
-sprite_chasing   = spr_shambler_agro
+sprite_chasing   = spr_shambler_chasing
 sprite_lost      = spr_shambler_cooldown
 sprite_attacking = spr_shambler_explode
 sprite_cooldown  = spr_shambler_cooldown
-sprite_death     = spr_basic_enemy_death
+sprite_death     = dev_basic_enemy_death
+sprite_hurt      = spr_shambler
 //unique sprites
 sprite_sleeping = spr_shambler_sleeping
 sprite_charging = spr_shambler_charging
@@ -145,3 +146,34 @@ state.add(
 		}
 	}
 )
+#region universal states
+if state.add(
+	"death", {
+		enter: function() {
+			path_end()
+			_speed = 0
+			sprite_index = sprite_death
+		}
+	}	
+)
+state.add(
+	"hurt", {
+		enter: function() {
+			sprite_index = sprite_hurt
+			path_end()
+			alarm[0] = 10
+		},
+		step: function() {
+			//kncokcback
+			if instance_exists(obj_projectile) {
+				var knockback = 2
+				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
+				var knockback_x = lengthdir_x(knockback,  knock_dir)
+				var knockback_y = lengthdir_y(knockback,  knock_dir) 
+				x -= knockback_x
+				y -= knockback_y 
+			}			
+		}
+	}
+)
+#endregion

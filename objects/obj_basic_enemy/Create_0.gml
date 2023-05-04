@@ -14,16 +14,6 @@ attack_radius = 15
 chase_radius  = 300
 
 state = new SnowState("idle")
-#region Same for all enemies
-if state.add(
-	"death", {
-		enter: function() {
-			path_end()
-			_speed = 0
-			sprite_index = sprite_death
-		}
-	}	
-)
 state.add(
 	"idle", {
 		enter: function() { 
@@ -34,8 +24,7 @@ state.add(
 			if (within_vision_radius) { return state.change("wandering") }	
 		}
 	}
-) 
-
+)
 state.add(
 	"wandering", {
 		enter: function() { 
@@ -80,8 +69,6 @@ state.add(
 		}
 	}
 )
-
-#endregion
 state.add(
 	"chasing", {
 		enter: function() { 
@@ -100,7 +87,6 @@ state.add(
 		}
 	}
 )
-
 state.add(
 	"attacking", {
 		enter: function() {
@@ -120,30 +106,38 @@ state.add(
 	"attack_cooldown", {
 		enter: function() { 
 			sprite_index = sprite_cooldown
-			alarm[0] = 120
+			alarm[0] = 60
 		}
 	}
+)
+#region universal states
+if state.add(
+	"death", {
+		enter: function() {
+			path_end()
+			_speed = 0
+			sprite_index = sprite_death
+		}
+	}	
 )
 state.add(
 	"hurt", {
 		enter: function() {
 			sprite_index = sprite_hurt
-			_health -= 10
 			path_end()
-			invincible = true
-			alarm[6] = 30
-			alarm[0] = 30
+			alarm[0] = 10
 		},
 		step: function() {
-			//knockback stil buggy but idk hgow to make wrok like cool an studf
-			/*
-			var knockback = 5
-			var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
-			var knockback_x = lengthdir_x(knockback,  knock_dir)
-			var knockback_y = lengthdir_y(knockback,  knock_dir) 
-			x -= knockback_x
-			y -= knockback_y 
-			*/
+			//kncokcback
+			if instance_exists(obj_projectile) {
+				var knockback = 2
+				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
+				var knockback_x = lengthdir_x(knockback,  knock_dir)
+				var knockback_y = lengthdir_y(knockback,  knock_dir) 
+				x -= knockback_x
+				y -= knockback_y 
+			}			
 		}
 	}
 )
+#endregion

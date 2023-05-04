@@ -7,6 +7,7 @@ sprite_lost      = dev_basic_enemy_cooldown
 sprite_attacking = spr_pea_shooter
 sprite_cooldown  = spr_pea_shooter_burrowed //burrowed
 sprite_death     = dev_basic_enemy_cooldown
+sprite_hurt      = spr_pea_shooter
 //unique sprites
 sprite_run = spr_pea_shooter_burrowed //burrowed
 //radi
@@ -154,4 +155,35 @@ state.add(
 		}
 	}
 )
+#region universal states
+if state.add(
+	"death", {
+		enter: function() {
+			path_end()
+			_speed = 0
+			sprite_index = sprite_death
+		}
+	}	
+)
+state.add(
+	"hurt", {
+		enter: function() {
+			sprite_index = sprite_hurt
+			path_end()
+			alarm[0] = 10
+		},
+		step: function() {
+			//kncokcback
+			if instance_exists(obj_projectile) {
+				var knockback = 2
+				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
+				var knockback_x = lengthdir_x(knockback,  knock_dir)
+				var knockback_y = lengthdir_y(knockback,  knock_dir) 
+				x -= knockback_x
+				y -= knockback_y 
+			}			
+		}
+	}
+)
+#endregion
 //burrowed = untargetable do this in player
