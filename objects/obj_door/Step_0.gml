@@ -1,5 +1,5 @@
 player_is_near = distance_to_object(obj_player) <= 50
-select_input = keyboard_check_pressed(global.SELECT_KEY)
+select_input = keyboard_check_pressed(global.OPEN_DOOR_KEY)
 
 if (player_is_near == true and select_input == true) {
 	if (toggle == true) {

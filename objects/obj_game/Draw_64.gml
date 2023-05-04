@@ -7,6 +7,7 @@ if (global.paused == true) and (pause_sprite != undefined) {
 	// draw darkened background
 	draw_set_alpha(0.75)
 	draw_rectangle_colour(0, 0, VIEW_WIDTH, VIEW_HEIGHT, c_black, c_black, c_black, c_black, false)
+	draw_set_alpha(1)
 	// draw paused text
 	draw_set_font(fnt_menu)
 	draw_set_halign(fa_center)
