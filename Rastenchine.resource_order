@@ -33,6 +33,7 @@
     {"name":"Doors","order":2,"path":"folders/Levels/Placeables/Doors.yy",},
     {"name":"Lights","order":3,"path":"folders/Levels/Placeables/Lights.yy",},
     {"name":"NPC's","order":4,"path":"folders/Levels/Placeables/NPC's.yy",},
+    {"name":"Rocks","order":6,"path":"folders/Levels/Placeables/Rocks.yy",},
     {"name":"Trees","order":5,"path":"folders/Levels/Placeables/Trees.yy",},
     {"name":"Rooms","order":2,"path":"folders/Levels/Rooms.yy",},
     {"name":"Tilesets","order":3,"path":"folders/Levels/Tilesets.yy",},
@@ -42,7 +43,6 @@
     {"name":"Dummy","order":8,"path":"folders/Unused/Dummy.yy",},
     {"name":"Molten Animations","order":2,"path":"folders/Unused/Molten Animations.yy",},
     {"name":"Molten Dev Sprites","order":7,"path":"folders/Unused/Molten Dev Sprites.yy",},
-    {"name":"Rocks","order":6,"path":"folders/Levels/Placeables/Rocks.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_boss_charging","order":1,"path":"sprites/spr_boss_charging/spr_boss_charging.yy",},
