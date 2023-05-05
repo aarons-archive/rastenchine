@@ -11,7 +11,7 @@ if (selected && obj_player.select_input)
 			}
 			dialog_reset();
 		}
-
+		jumpscare = true;
 		with (obj_camera)
 		{
 			follow = other.id;	
