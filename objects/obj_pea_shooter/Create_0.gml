@@ -11,12 +11,12 @@ sprite_hurt      = spr_pea_shooter
 //unique sprites
 sprite_run = spr_pea_shooter_burrowed //burrowed
 //radi
-vision_radius = 800
+vision_radius = 600
 attack_radius = 350
-chase_radius  = 500
+chase_radius  = 400
 //unique radi
-run_radius = 300
-close_radius = 200
+run_radius = 200
+close_radius = 150
 //unique vars
 shoot_cooldown = false
 run_lock = false
@@ -129,7 +129,7 @@ state.add(
 			_speed = 0
 			path_end()
 			sprite_index = sprite_cooldown
-			alarm[0] = 60
+			alarm[0] = 30
 		}
 	}
 )
@@ -144,8 +144,22 @@ state.add(
 		} , 
 		step: function () {
 			var run_dir = point_direction(x,y, obj_player.x, obj_player.y)
-			var x_dir = x - lengthdir_x(15, run_dir)
-			var y_dir = y - lengthdir_y(15, run_dir)
+			var x_dir = lengthdir_x(5, run_dir)
+			var y_dir = lengthdir_y(5, run_dir)
+			
+			if (place_meeting(x + x_dir, y, obj_player_collision)) {
+				while (not place_meeting(x + sign(x_dir), y, obj_player_collision)) {
+					x += sign(x_dir)
+				}
+				x_dir = 0
+			}
+			if (place_meeting(x, y + y_dir, obj_player_collision)) {
+				while (not place_meeting(x, y + sign(y_dir), obj_player_collision)) {
+					y += sign(y_dir)
+				}
+				y_dir = 0
+			}
+				
 			x -= x_dir
 			y -= y_dir
 		}
@@ -171,10 +185,22 @@ state.add(
 		step: function() {
 			//kncokcback
 			if instance_exists(obj_projectile) {
-				var knockback = 2
+				var knockback = 5
 				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
 				var knockback_x = lengthdir_x(knockback,  knock_dir)
 				var knockback_y = lengthdir_y(knockback,  knock_dir) 
+				if (place_meeting(x + knockback_x, y, obj_player_collision)) {
+					while (not place_meeting(x + sign(knockback_x), y, obj_player_collision)) {
+						x += sign(knockback_x)
+					}
+					knockback_x = 0
+				}
+				if (place_meeting(x, y + knockback_y, obj_player_collision)) {
+					while (not place_meeting(x, y + sign(knockback_y), obj_player_collision)) {
+						y += sign(knockback_y)
+					}
+					knockback_y = 0
+				}
 				x -= knockback_x
 				y -= knockback_y 
 			}			

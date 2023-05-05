@@ -7,7 +7,7 @@ if (other.image_index == 1) && !(obj_pea_shooter.sprite_index == spr_pea_shooter
 		state.change("hurt")
 		_health -= 10
 		invincible = true
-		alarm[6] = 30
+		alarm[6] = 20
 		if (item != Rifle) item.state = weapon_state.cooldown
 		if instance_exists(obj_tamed_shambler){tame.state = shambler_tamed_state.agro}
 		if instance_exists(obj_tamed_shambler){tame.target = self}

@@ -166,10 +166,22 @@ state.add(
 		step: function() {
 			//kncokcback
 			if instance_exists(obj_projectile) {
-				var knockback = 2
+				var knockback = 5
 				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 
 				var knockback_x = lengthdir_x(knockback,  knock_dir)
 				var knockback_y = lengthdir_y(knockback,  knock_dir) 
+				if (place_meeting(x + knockback_x, y, obj_player_collision)) {
+					while (not place_meeting(x + sign(knockback_x), y, obj_player_collision)) {
+						x += sign(knockback_x)
+					}
+					knockback_x = 0
+				}
+				if (place_meeting(x, y + knockback_y, obj_player_collision)) {
+					while (not place_meeting(x, y + sign(knockback_y), obj_player_collision)) {
+						y += sign(knockback_y)
+					}
+					knockback_y = 0
+				}
 				x -= knockback_x
 				y -= knockback_y 
 			}			

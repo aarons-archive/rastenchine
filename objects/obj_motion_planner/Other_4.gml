@@ -1,5 +1,5 @@
 //set grid / tile size
-#macro TS 32
+#macro TS 8
 
 //get tiles in room
 var _w = ceil(room_width / TS)
@@ -9,4 +9,5 @@ var _h = ceil(room_height / TS)
 global.mp_grid = mp_grid_create(0, 0, _w, _h, TS, TS)
 
 //add solid instance to grid
-wall_coll = mp_grid_add_instances(global.mp_grid, obj_player_collision, true)
+mp_grid_add_instances(global.mp_grid, obj_player_collision, true)
+//mp_grid_add_instances(global.mp_grid, obj_enemy, true)

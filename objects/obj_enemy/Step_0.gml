@@ -5,13 +5,7 @@
 //	visible = false
 //}
 
-if place_meeting(x,y,obj_player_collision)
-{
-	
-}
-if (_health < 1) { 
-	state.change("death")
-}
+if (_health < 1) { state.change("death")}
 
 within_attack_radius = (collision_circle(x, y, attack_radius, obj_player, true, false) != noone)
 within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, false) != noone)
