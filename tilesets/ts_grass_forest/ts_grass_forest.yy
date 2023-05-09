@@ -62,8 +62,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Tilesets",
-    "path": "folders/Levels/Tilesets.yy",
+    "name": "Forest",
+    "path": "folders/Levels/Tilesets/Forest.yy",
   },
   "spriteId": {
     "name": "spr_grass_forest",

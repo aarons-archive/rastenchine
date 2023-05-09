@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Levels/Tilesets/Sprites.yy",
+    "path": "folders/Levels/Tilesets/Forest/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,3 +1,3 @@
 room_goto(rm_finley_containment_zone)
-x = 9672
-y = 2635
+x = 1530
+y = 4030
