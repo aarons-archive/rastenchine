@@ -1,14 +1,15 @@
 event_inherited()
 //sprites
-sprite_idle      = spr_leaper
-sprite_wandering = spr_leaper_wandering
-sprite_chasing   = spr_leaper_chasing
-sprite_lost      = spr_leaper_lost
-sprite_attacking = spr_leaper_attacking
+sprite_idle      = spr_leaper_idle
+sprite_wandering = spr_leaper_chase //wander sprite
+sprite_chasing   = spr_leaper_chase
+sprite_lost      = spr_leaper_cooldown
+sprite_attacking = spr_leaper_attack
 sprite_cooldown  = spr_leaper_cooldown
-sprite_death     = dev_basic_enemy_death
+sprite_death     = spr_leaper_death
+sprite_hurt      = spr_leaper_cooldown
 //unique sprites
-sprite_charging = spr_leaper_charging
+sprite_charging = spr_leaper_charge
 //radi
 vision_radius = 600
 attack_radius = 200

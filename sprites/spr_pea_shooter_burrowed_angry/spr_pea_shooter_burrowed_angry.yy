@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "path": "folders/Entities/Enemies/Pea Shooter/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

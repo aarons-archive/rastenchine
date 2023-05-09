@@ -6,7 +6,7 @@ sprite_chasing   = spr_shambler_chasing
 sprite_lost      = spr_shambler_cooldown
 sprite_attacking = spr_shambler_explode
 sprite_cooldown  = spr_shambler_cooldown
-sprite_death     = dev_basic_enemy_death
+sprite_death     = spr_shambler_death
 sprite_hurt      = spr_shambler
 //unique sprites
 sprite_sleeping = spr_shambler_sleeping

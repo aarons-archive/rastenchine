@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_leaper",
-    "path": "sprites/spr_leaper/spr_leaper.yy",
+    "name": "spr_leaper_cooldown",
+    "path": "sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",
   },
   "spriteMaskId": null,
   "visible": true,
