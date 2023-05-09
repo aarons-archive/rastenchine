@@ -47,6 +47,7 @@
     {"name":"Molten Animations","order":2,"path":"folders/Unused/Molten Animations.yy",},
     {"name":"shambler","order":4,"path":"folders/Unused/shambler.yy",},
     {"name":"Molten Dev Sprites","order":7,"path":"folders/Unused/Molten Dev Sprites.yy",},
+    {"name":"Cactus","order":7,"path":"folders/Levels/Placeables/Cactus.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_boss_charging","order":1,"path":"sprites/spr_boss_charging/spr_boss_charging.yy",},
@@ -154,6 +155,7 @@
     {"name":"spr_molten_attack","order":1,"path":"sprites/spr_molten_attack/spr_molten_attack.yy",},
     {"name":"spr_rifle_cooldown","order":2,"path":"sprites/spr_rifle_cooldown/spr_rifle_cooldown.yy",},
     {"name":"obj_inventory_slot","order":9,"path":"objects/obj_inventory_slot/obj_inventory_slot.yy",},
+    {"name":"obj_cactus","order":1,"path":"objects/obj_cactus/obj_cactus.yy",},
     {"name":"utilities","order":2,"path":"scripts/utilities/utilities.yy",},
     {"name":"spr_objects","order":11,"path":"sprites/spr_objects/spr_objects.yy",},
     {"name":"spr_crowbar_charging","order":2,"path":"sprites/spr_crowbar_charging/spr_crowbar_charging.yy",},
