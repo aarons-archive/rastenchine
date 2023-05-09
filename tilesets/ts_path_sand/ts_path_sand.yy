@@ -1,7 +1,7 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_path",
+  "name": "ts_path_sand",
   "autoTileSets": [
     {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
         10,
@@ -19,7 +19,7 @@
         17,
         16,
         18,
-        1,
+        24,
       ],},
   ],
   "macroPageTiles": {
@@ -35,8 +35,8 @@
     "path": "folders/Levels/Tilesets.yy",
   },
   "spriteId": {
-    "name": "spr_path",
-    "path": "sprites/spr_path/spr_path.yy",
+    "name": "spr_path_sand",
+    "path": "sprites/spr_path_sand/spr_path_sand.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {
