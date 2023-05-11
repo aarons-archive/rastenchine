@@ -83,6 +83,7 @@
     {"name":"obj_med_kit","order":2,"path":"objects/obj_med_kit/obj_med_kit.yy",},
     {"name":"draw_debug_gui","order":2,"path":"scripts/draw_debug_gui/draw_debug_gui.yy",},
     {"name":"obj_pickup","order":2,"path":"objects/obj_pickup/obj_pickup.yy",},
+    {"name":"Scr_enemies","order":7,"path":"scripts/Scr_enemies/Scr_enemies.yy",},
     {"name":"spr_growth","order":1,"path":"sprites/spr_growth/spr_growth.yy",},
     {"name":"obj_projectile","order":1,"path":"objects/obj_projectile/obj_projectile.yy",},
     {"name":"spr_pistol_bullet","order":3,"path":"sprites/spr_pistol_bullet/spr_pistol_bullet.yy",},

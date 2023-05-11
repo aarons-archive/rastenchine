@@ -13,9 +13,9 @@ sprite_hurt      = spr_molten_cooldown //hurt sprite
 vision_radius = 500
 attack_radius = 15
 chase_radius  = 300
-//
+//sound
 idle_sounds = choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4)
-
+//State machine
 state = new SnowState("idle")
 state.add(
 	"idle", {
@@ -25,6 +25,8 @@ state.add(
 			
 		},
 		step: function() {
+			//These if statements find if the player is within either of these ranges
+			//and then moves the enemy into the necessary state
 			if (within_chase_radius) { return state.change("chasing") }
 			if (within_vision_radius) { return state.change("wandering") }	
 		}
@@ -33,6 +35,7 @@ state.add(
 state.add(
 	"wandering", {
 		enter: function() { 
+			//enemies find a spot within a vicinity and if it is able to be moved to the enemy will move that way
 			sprite_index = sprite_wandering
 			if (created_by_spawner) {
 				wander_x = irandom_range(spawner_bbox_left - 100, spawner_bbox_right + 100)
@@ -81,7 +84,7 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing 
-			audio_play_sound(snd_molten_moving,1,true)
+			audio_play_sound(snd_molten_moving,1,true,0.01)
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
@@ -129,7 +132,7 @@ if state.add(
 			_speed = 0
 			sprite_index = sprite_death
 			audio_stop_all()
-			audio_play_sound(snd_leaper_death,1,false)
+			audio_play_sound(snd_molten_death,1,false,0.5)
 		}
 	}	
 )
