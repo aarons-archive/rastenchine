@@ -6,6 +6,7 @@ sprite_swipe_attack  = spr_boss_swipe_attack
 sprite_charge_attack = spr_boss_charge_attack
 sprite_cooldown      = spr_boss_charging//cooldown spr
 sprite_death         = spr_boss
+sprite_hurt          = spr_boss
 //unique sprites
 sprite_charging  = spr_boss_charging
 //radi
@@ -118,7 +119,7 @@ state.add(
 		}
 	}
 )
-
+#region universal states
 state.add(
 	"death", {
 		enter: function() {
@@ -126,3 +127,13 @@ state.add(
 		}
 	}
 )
+state.add(
+	"hurt", {
+		enter: function() {
+			sprite_index = sprite_hurt
+			path_end()
+			alarm[0] = 30
+		},
+	}
+)
+#endregion

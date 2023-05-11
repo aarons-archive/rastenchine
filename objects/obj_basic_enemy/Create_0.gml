@@ -17,7 +17,8 @@ state = new SnowState("idle")
 state.add(
 	"idle", {
 		enter: function() { 
-			sprite_index = sprite_idle 
+			sprite_index = sprite_idle
+			audio_stop_all()
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -39,6 +40,7 @@ state.add(
 			}
 			var path_found = mp_grid_path(global.mp_grid, path, x, y, wander_x, wander_y, irandom_range(0, 1))
 			if (path_found) { path_start(path, 2, path_action_stop, false)}
+			audio_play_sound(Zombie_Walking_noise,1,true)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -73,6 +75,7 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing 
+			audio_play_sound(Zombie_Walking_noise,1,true)
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
@@ -92,6 +95,8 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
+			audio_stop_all()
+			audio_play_sound(ZombieAttack,1,false)
 			_speed = 0
 			path_end()
 		},
