@@ -91,6 +91,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Forest","folderPath":"folders/Levels/Tilesets/Forest.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Levels/Tilesets/Forest/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Growth","folderPath":"folders/Levels/Tilesets/Growth.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Nest","folderPath":"folders/Levels/Tilesets/Nest.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Levels/Tilesets/Nest/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Ruins","folderPath":"folders/Levels/Tilesets/Ruins.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Levels/Tilesets/Ruins/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Managers","folderPath":"folders/Managers.yy",},

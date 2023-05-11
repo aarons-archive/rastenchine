@@ -48,6 +48,7 @@
     {"name":"Desert","order":2,"path":"folders/Levels/Tilesets/Desert.yy",},
     {"name":"Forest","order":1,"path":"folders/Levels/Tilesets/Forest.yy",},
     {"name":"Growth","order":4,"path":"folders/Levels/Tilesets/Growth.yy",},
+    {"name":"Nest","order":3,"path":"folders/Levels/Tilesets/Nest.yy",},
     {"name":"Menu","order":3,"path":"folders/Menu.yy",},
     {"name":"Scripts","order":1,"path":"folders/Scripts.yy",},
     {"name":"Unused","order":7,"path":"folders/Unused.yy",},
