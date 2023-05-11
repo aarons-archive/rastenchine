@@ -9,7 +9,7 @@
   ],
   "parent": {
     "name": "Desert Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
+    "path": "folders/Inventory/Items/Ground/Keys/Desert Key.yy",
   },
   "parentObjectId": {
     "name": "obj_key",

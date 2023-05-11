@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_stackable",
+  "name": "scr_ground",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Stackables",
-    "path": "folders/Inventory/Items/Ground/Stackables.yy",
+    "name": "Ground",
+    "path": "folders/Inventory/Items/Ground.yy",
   },
 }

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Forest Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Forest Key.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Items/Ground/Keys/Forest Key/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

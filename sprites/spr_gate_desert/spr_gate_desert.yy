@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Desert Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Items/Ground/Keys/Desert Key/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -23,10 +23,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6416e84e-e408-4a67-9e8a-451ed112dd7e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 0,
+  "origin": 4,
   "parent": {
     "name": "Cheese",
-    "path": "folders/Inventory/Items/Consumables/Cheese.yy",
+    "path": "folders/Inventory/Items/Ground/Stackables/Cheese.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,8 +59,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 16,
+    "yorigin": 16,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

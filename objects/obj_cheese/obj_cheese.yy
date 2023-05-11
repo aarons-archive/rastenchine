@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_key_ruins",
+  "name": "obj_cheese",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new Key(sprite_index)",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new Cheese(sprite_index)",},
   ],
   "parent": {
-    "name": "Ruins Key",
-    "path": "folders/Inventory/Items/Ground/Keys/Ruins Key.yy",
+    "name": "Cheese",
+    "path": "folders/Inventory/Items/Ground/Stackables/Cheese.yy",
   },
   "parentObjectId": {
-    "name": "obj_key",
-    "path": "objects/obj_key/obj_key.yy",
+    "name": "obj_pickup",
+    "path": "objects/obj_pickup/obj_pickup.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_key_ruins",
-    "path": "sprites/spr_key_ruins/spr_key_ruins.yy",
+    "name": "spr_cheese",
+    "path": "sprites/spr_cheese/spr_cheese.yy",
   },
   "spriteMaskId": null,
   "visible": true,

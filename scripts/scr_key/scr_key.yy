@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Keys",
-    "path": "folders/Inventory/Items/Consumables/Keys.yy",
+    "path": "folders/Inventory/Items/Ground/Keys.yy",
   },
 }

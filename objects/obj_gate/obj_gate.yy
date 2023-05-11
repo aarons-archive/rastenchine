@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Keys",
-    "path": "folders/Inventory/Items/Consumables/Keys.yy",
+    "path": "folders/Inventory/Items/Ground/Keys.yy",
   },
   "parentObjectId": null,
   "persistent": false,

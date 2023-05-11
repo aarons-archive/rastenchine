@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ruins Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Ruins Key.yy",
+    "path": "folders/Inventory/Items/Ground/Keys/Ruins Key.yy",
   },
   "parentObjectId": {
     "name": "obj_gate",

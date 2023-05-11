@@ -1,4 +1,4 @@
-function Stackable(sprite) : Consumable(sprite) constructor {
+function Stackable(sprite) : Ground(sprite) constructor {
 	// Stackable
 	stackable = true
 	count = 1

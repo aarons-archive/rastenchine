@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Ruins Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Ruins Key.yy",
+    "name": "Sprites",
+    "path": "folders/Inventory/Items/Ground/Keys/Ruins Key/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

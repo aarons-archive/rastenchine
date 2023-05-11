@@ -9,7 +9,7 @@
   ],
   "parent": {
     "name": "Med Kit",
-    "path": "folders/Inventory/Items/Consumables/Stackables/Med Kit.yy",
+    "path": "folders/Inventory/Items/Ground/Stackables/Med Kit.yy",
   },
   "parentObjectId": {
     "name": "obj_pickup",

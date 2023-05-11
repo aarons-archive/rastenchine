@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Forest Key",
-    "path": "folders/Inventory/Items/Consumables/Keys/Forest Key.yy",
+    "path": "folders/Inventory/Items/Ground/Keys/Forest Key.yy",
   },
   "parentObjectId": {
     "name": "obj_gate",

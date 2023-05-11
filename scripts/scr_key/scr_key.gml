@@ -1,1 +1,1 @@
-function Key(sprite) : Consumable(sprite) constructor {}
+function Key(sprite) : Ground(sprite) constructor {}

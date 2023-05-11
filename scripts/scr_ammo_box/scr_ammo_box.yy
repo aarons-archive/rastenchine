@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Ammo Box",
-    "path": "folders/Inventory/Items/Consumables/Stackables/Ammo Box.yy",
+    "path": "folders/Inventory/Items/Ground/Stackables/Ammo Box.yy",
   },
 }
