@@ -51,20 +51,7 @@ state.add(
 			alarm[3] = 600
 		},
 		step: function() {
-			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			//swipe attack
-			if (within_swipe_attack_radius) { return state.change("swipe_attack") }
-			//charge attack
-			//show_debug_message(charge_attack)
-			if  (charge_attack <= 2) && (within_charge_attack_radius) { return state.change("charging") } 
-			else if (charge_attack > 2) {alarm[2] = 60}
-			//banaan 
-			path_cooldown -= 1
-			if (path_cooldown <= 0) {
-				path_cooldown = 20
-				var path_found = mp_grid_path(global.mp_grid, path, x, y, obj_player.x, obj_player.y, true)
-				if (path_found) { path_start(path, _speed, path_action_stop, false) }
-			}
+			enemy_chasing()
 		}
 	}
 )
@@ -130,9 +117,7 @@ state.add(
 state.add(
 	"hurt", {
 		enter: function() {
-			sprite_index = sprite_hurt
-			path_end()
-			alarm[0] = 30
+			enemy_hurt()
 		},
 	}
 )

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Scr_enemies",
+  "name": "scr_enemy_functions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Entities/Enemies.yy",
+    "name": "Enemy Managers",
+    "path": "folders/Entities/Enemies/Enemy Managers.yy",
   },
 }

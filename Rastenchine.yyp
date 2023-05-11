@@ -197,7 +197,7 @@
     {"id":{"name":"draw_debug_gui","path":"scripts/draw_debug_gui/draw_debug_gui.yy",},},
     {"id":{"name":"spr_leaper_idle","path":"sprites/spr_leaper_idle/spr_leaper_idle.yy",},},
     {"id":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},},
-    {"id":{"name":"Scr_enemies","path":"scripts/Scr_enemies/Scr_enemies.yy",},},
+    {"id":{"name":"scr_enemy_functions","path":"scripts/scr_enemy_functions/scr_enemy_functions.yy",},},
     {"id":{"name":"spr_leaper_charge","path":"sprites/spr_leaper_charge/spr_leaper_charge.yy",},},
     {"id":{"name":"obj_note","path":"objects/obj_note/obj_note.yy",},},
     {"id":{"name":"ext_light_attenuation_apply","path":"scripts/ext_light_attenuation_apply/ext_light_attenuation_apply.yy",},},
