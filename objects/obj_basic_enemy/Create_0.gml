@@ -1,4 +1,5 @@
 event_inherited()
+randomize()
 //sprites
 sprite_idle      = spr_molten_idle
 sprite_wandering = spr_molten_chase
@@ -12,6 +13,8 @@ sprite_hurt      = spr_molten_cooldown //hurt sprite
 vision_radius = 500
 attack_radius = 15
 chase_radius  = 300
+//
+idle_sounds = choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4)
 
 state = new SnowState("idle")
 state.add(
@@ -19,6 +22,7 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_idle
 			audio_stop_all()
+			
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -29,7 +33,7 @@ state.add(
 state.add(
 	"wandering", {
 		enter: function() { 
-			sprite_index = sprite_wandering 
+			sprite_index = sprite_wandering
 			if (created_by_spawner) {
 				wander_x = irandom_range(spawner_bbox_left - 100, spawner_bbox_right + 100)
 				wander_y = irandom_range(spawner_bbox_top - 100, spawner_bbox_bottom + 100)
@@ -40,7 +44,7 @@ state.add(
 			}
 			var path_found = mp_grid_path(global.mp_grid, path, x, y, wander_x, wander_y, irandom_range(0, 1))
 			if (path_found) { path_start(path, 2, path_action_stop, false)}
-			audio_play_sound(Zombie_Walking_noise,1,true)
+			audio_play_sound(snd_molten_moving,1,true)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -53,6 +57,8 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_cooldown
 			alarm[0] = 120
+			audio_stop_all()
+			audio_play_sound(idle_sounds,1, false)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -75,7 +81,7 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing 
-			audio_play_sound(Zombie_Walking_noise,1,true)
+			audio_play_sound(snd_molten_moving,1,true)
 		},
 		step: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
@@ -96,7 +102,7 @@ state.add(
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			audio_stop_all()
-			audio_play_sound(ZombieAttack,1,false)
+			audio_play_sound(snd_molten_attack,1,false)
 			_speed = 0
 			path_end()
 		},
@@ -122,6 +128,8 @@ if state.add(
 			path_end()
 			_speed = 0
 			sprite_index = sprite_death
+			audio_stop_all()
+			audio_play_sound(snd_leaper_death,1,false)
 		}
 	}	
 )
@@ -133,7 +141,7 @@ state.add(
 			alarm[0] = 30
 		},
 		step: function() {
-			//kncokcback
+			//knockback
 			if instance_exists(obj_projectile) {
 				var knockback = 5
 				var knock_dir = point_direction(x, y, obj_projectile.x, obj_projectile.y) 

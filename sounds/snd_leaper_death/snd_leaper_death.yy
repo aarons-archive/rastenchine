@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "ZombieAttack",
+  "name": "snd_leaper_death",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.021678,
+  "duration": 1.802449,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Entities/Enemies/Basic Enemy/Sounds.yy",
+    "path": "folders/Entities/Enemies/Leaper/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "ZombieAttack.wav",
+  "soundFile": "snd_leaper_death.mp3",
   "type": 0,
   "volume": 1.0,
 }

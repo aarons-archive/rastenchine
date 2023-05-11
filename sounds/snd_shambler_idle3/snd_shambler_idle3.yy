@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "Zombie_Walking_noise",
+  "name": "snd_shambler_idle3",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 3.250816,
+  "duration": 0.975238,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Entities/Enemies/Basic Enemy/Sounds.yy",
+    "path": "folders/Entities/Enemies/Shambler/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "Zombie_Walking_noise.wav",
+  "soundFile": "snd_shambler_idle3.wav",
   "type": 0,
   "volume": 1.0,
 }

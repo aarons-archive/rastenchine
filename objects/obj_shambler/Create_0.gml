@@ -17,6 +17,8 @@ attack_radius = 100
 chase_radius  = 300
 //unique vars
 explode_timer = 0
+//
+idle_sounds = choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,snd_shambler_idle4,snd_shambler_idle5)
 
 state = new SnowState("idle")
 //sleeping during night hours wandering through day hours 
@@ -24,6 +26,7 @@ state.add(
 	"sleeping", {
 		enter: function() {
 			sprite_index = sprite_sleeping
+			audio_stop_all()
 		},
 		step: function() {
 			//will also need cheese item + must be crouching?
@@ -39,7 +42,8 @@ state.add(
 state.add(
 	"idle", {
 		enter: function() { 
-			sprite_index = sprite_idle 
+			sprite_index = sprite_idle
+			audio_stop_all()
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -74,6 +78,8 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_cooldown
 			alarm[0] = 120
+			audio_stop_all()
+			audio_play_sound(idle_sounds,1, false)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }

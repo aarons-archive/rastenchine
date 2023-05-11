@@ -146,6 +146,8 @@ if state.add(
 			path_end()
 			_speed = 0
 			sprite_index = sprite_death
+			audio_stop_all()
+			audio_play_sound(snd_molten_death,1,false)
 		}
 	}	
 )
