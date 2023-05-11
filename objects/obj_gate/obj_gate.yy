@@ -1,18 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_key",
-  "eventList": [],
+  "name": "obj_gate",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Keys",
-    "path": "folders/Inventory/Items/Consumables/Keys.yy",
+    "name": "Gates",
+    "path": "folders/Levels/Placeables/Gates.yy",
   },
-  "parentObjectId": {
-    "name": "obj_pickup",
-    "path": "objects/obj_pickup/obj_pickup.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_med_kit",
+  "name": "obj_key_ruins",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new MedKit(sprite_index)",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new Key(sprite_index)",},
   ],
   "parent": {
-    "name": "Med Kit",
-    "path": "folders/Inventory/Items/Consumables/Stackables/Med Kit.yy",
+    "name": "Ruins Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Ruins Key.yy",
   },
   "parentObjectId": {
-    "name": "obj_pickup",
-    "path": "objects/obj_pickup/obj_pickup.yy",
+    "name": "obj_key",
+    "path": "objects/obj_key/obj_key.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_med_kit",
-    "path": "sprites/spr_med_kit/spr_med_kit.yy",
+    "name": "spr_key_ruins",
+    "path": "sprites/spr_key_ruins/spr_key_ruins.yy",
   },
   "spriteMaskId": null,
   "visible": true,

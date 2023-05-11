@@ -1,4 +1,1 @@
-function MedKit() : Consumables() constructor {
-	// from Item
-	sprite = spr_med_kit
-}
+function MedKit(sprite) : Stackable(sprite) constructor {}

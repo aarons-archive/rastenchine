@@ -1,19 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_med_kit",
+  "name": "obj_gate_forest",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new MedKit(sprite_index)",},
-  ],
+  "overriddenProperties": [],
   "parent": {
-    "name": "Med Kit",
-    "path": "folders/Inventory/Items/Consumables/Stackables/Med Kit.yy",
+    "name": "Forest Gate",
+    "path": "folders/Levels/Placeables/Gates/Forest Gate.yy",
   },
   "parentObjectId": {
-    "name": "obj_pickup",
-    "path": "objects/obj_pickup/obj_pickup.yy",
+    "name": "obj_gate",
+    "path": "objects/obj_gate/obj_gate.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_med_kit",
-    "path": "sprites/spr_med_kit/spr_med_kit.yy",
+    "name": "spr_gate_forest",
+    "path": "sprites/spr_gate_forest/spr_gate_forest.yy",
   },
   "spriteMaskId": null,
   "visible": true,

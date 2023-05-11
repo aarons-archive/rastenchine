@@ -5,11 +5,11 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new AmmoBox()",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new AmmoBox(sprite_index)",},
   ],
   "parent": {
     "name": "Ammo Box",
-    "path": "folders/Inventory/Items/Consumables/Ammo Box.yy",
+    "path": "folders/Inventory/Items/Consumables/Stackables/Ammo Box.yy",
   },
   "parentObjectId": {
     "name": "obj_pickup",

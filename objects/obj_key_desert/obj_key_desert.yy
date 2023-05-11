@@ -4,10 +4,12 @@
   "name": "obj_key_desert",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new Key(sprite_index)",},
+  ],
   "parent": {
-    "name": "Keys",
-    "path": "folders/Inventory/Items/Keys.yy",
+    "name": "Desert Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
   },
   "parentObjectId": {
     "name": "obj_key",
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_obj_key_desert",
-    "path": "sprites/spr_obj_key_desert/spr_obj_key_desert.yy",
+    "name": "spr_key_desert",
+    "path": "sprites/spr_key_desert/spr_key_desert.yy",
   },
   "spriteMaskId": null,
   "visible": true,

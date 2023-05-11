@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_med_kit",
+  "name": "scr_key",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Med Kit",
-    "path": "folders/Inventory/Items/Consumables/Stackables/Med Kit.yy",
+    "name": "Keys",
+    "path": "folders/Inventory/Items/Consumables/Keys.yy",
   },
 }

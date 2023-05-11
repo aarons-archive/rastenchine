@@ -1,4 +1,4 @@
-function Consumables() : Item() constructor {
-	stackable = true
-	count = 1
+function Consumable(sprite) : Item() constructor {
+	// from Item
+	DEFAULT_SPRITE = sprite
 }

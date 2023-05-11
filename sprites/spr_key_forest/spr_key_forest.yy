@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_obj_key_ruin",
+  "name": "spr_key_forest",
   "bbox_bottom": 27,
   "bbox_left": 9,
   "bbox_right": 21,
@@ -13,26 +13,26 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80a02f63-68a4-4ebd-b506-e6af12003045",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93b9d93e-7d28-4b4f-8991-d4c51d7ef6c7",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9c29e698-2a48-40ea-9232-072ab352e2e0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"75790918-ff78-4874-98a7-76d574bde0aa","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Inventory/Items/Keys/Sprites.yy",
+    "name": "Forest Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Forest Key.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_obj_key_ruin",
+    "name": "spr_key_forest",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"80a02f63-68a4-4ebd-b506-e6af12003045","path":"sprites/spr_obj_key_ruin/spr_obj_key_ruin.yy",},},},"Disabled":false,"id":"8fbde8f7-1797-43bc-84c4-0bfe36bddef5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"93b9d93e-7d28-4b4f-8991-d4c51d7ef6c7","path":"sprites/spr_key_forest/spr_key_forest.yy",},},},"Disabled":false,"id":"500b79c1-f078-405f-819a-3a02985d1da7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

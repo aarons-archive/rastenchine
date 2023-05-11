@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_key_ruin",
+  "name": "obj_gate_ruins",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Keys",
-    "path": "folders/Inventory/Items/Keys.yy",
+    "name": "Ruins Gate",
+    "path": "folders/Levels/Placeables/Gates/Ruins Gate.yy",
   },
   "parentObjectId": {
-    "name": "obj_key",
-    "path": "objects/obj_key/obj_key.yy",
+    "name": "obj_gate",
+    "path": "objects/obj_gate/obj_gate.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_obj_key_ruin",
-    "path": "sprites/spr_obj_key_ruin/spr_obj_key_ruin.yy",
+    "name": "spr_gate_ruins",
+    "path": "sprites/spr_gate_ruins/spr_gate_ruins.yy",
   },
   "spriteMaskId": null,
   "visible": true,

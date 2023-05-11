@@ -18,4 +18,4 @@ global.ZOOM_OUT_KEY = vk_pageup
 global.ZOOM_IN_KEY = vk_pagedown
 
 global.OPEN_DOOR_KEY = ord("E")
-
+global.OPEN_GATE_KEY = ord("E")

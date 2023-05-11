@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_obj_key_desert",
+  "name": "spr_key_desert",
   "bbox_bottom": 27,
   "bbox_left": 9,
   "bbox_right": 21,
@@ -25,14 +25,14 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Inventory/Items/Keys/Sprites.yy",
+    "name": "Desert Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_obj_key_desert",
+    "name": "spr_key_desert",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f74120cc-2a8d-4fd4-882f-70c237393ad3","path":"sprites/spr_obj_key_desert/spr_obj_key_desert.yy",},},},"Disabled":false,"id":"858db279-1640-416e-ba46-d1f8ba42e162","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f74120cc-2a8d-4fd4-882f-70c237393ad3","path":"sprites/spr_key_desert/spr_key_desert.yy",},},},"Disabled":false,"id":"858db279-1640-416e-ba46-d1f8ba42e162","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

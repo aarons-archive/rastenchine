@@ -4,10 +4,12 @@
   "name": "obj_key_forest",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"struct","path":"objects/obj_pickup/obj_pickup.yy",},"value":"new Key(sprite_index)",},
+  ],
   "parent": {
-    "name": "Keys",
-    "path": "folders/Inventory/Items/Keys.yy",
+    "name": "Forest Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Forest Key.yy",
   },
   "parentObjectId": {
     "name": "obj_key",
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_obj_key_forest",
-    "path": "sprites/spr_obj_key_forest/spr_obj_key_forest.yy",
+    "name": "spr_key_forest",
+    "path": "sprites/spr_key_forest/spr_key_forest.yy",
   },
   "spriteMaskId": null,
   "visible": true,
