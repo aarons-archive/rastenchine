@@ -1,7 +1,7 @@
 function Inventory() constructor {
 	
-	inventory = [new Pistol(), new Rifle()]
-	hotbar = [0, 1, undefined, undefined, undefined]
+	inventory = [new Pistol(), new Rifle(), new Shotgun(), new Railgun()]
+	hotbar = [0, 1, 2, 3, undefined]
 	index = 0
 	item = undefined
 	

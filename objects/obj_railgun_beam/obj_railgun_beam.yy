@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_railgun_bullet",
-    "path": "sprites/spr_railgun_bullet/spr_railgun_bullet.yy",
+    "name": "spr_railgun_beam",
+    "path": "sprites/spr_railgun_beam/spr_railgun_beam.yy",
   },
   "spriteMaskId": null,
   "visible": true,

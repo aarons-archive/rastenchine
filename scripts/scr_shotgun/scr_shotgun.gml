@@ -1,72 +1,57 @@
-#macro SHOTGUN_DAMAGE 20
-#macro SHOTGUN_RANGE 15
+#macro SHOTGUN_BULLET_SPRITE (spr_shotgun_shell)
+#macro SHOTGUN_BULLET_SPEED  (10)
+#macro SHOTGUN_BULLET_RANGE  (50)
+#macro SHOTGUN_BULLET_DAMAGE (5)
 
-#macro SHOTGUN_MAX_AMMO 40
-#macro SHOTGUN_CLIP     2
-
-#macro SHOTGUN_RELOAD_FRAMES   FPS * 1
-#macro SHOTGUN_COOLDOWN_FRAMES FPS * 0.4
+#macro SHOTGUN_KICKBACK_DISTANCE (7.5)
 
 function Shotgun() : Gun() constructor {
+	////////////
+	// sprite //
+	////////////
+	DEFAULT_SPRITE   = spr_shotgun
+	COOLDOWN_SPRITE  = spr_shotgun_cooldown
+	RELOADING_SPRITE = spr_shotgun_reloading
+	
+	////////////
+	// timing //
+	////////////
+	COOLDOWN_FRAMES  = FPS * 0.4
+	RELOADING_FRAMES = FPS * 1
+	
+	//////////
+	// ammo //
+	//////////
+	DEFAULT_AMMO = 40
+	DEFAULT_CLIP = 2
+	ammo         = DEFAULT_AMMO
+	clip         = DEFAULT_CLIP
 
-	// from Item
-	sprite = spr_shotgun
-	
-	// from Weapon
-	damage = SHOTGUN_DAMAGE
-	
-	// SHOTGUN
-	ammo = SHOTGUN_MAX_AMMO
-	clip = SHOTGUN_CLIP
-
-	static alarm_one = function() {
-		state = weapon_state.idle
-		instance.sprite_index = spr_shotgun
-		if ((clip + ammo) < SHOTGUN_CLIP) {
-			clip = ammo
-			ammo = 0
-		}
-		else {
-			ammo -= (SHOTGUN_CLIP - clip)
-			clip = SHOTGUN_CLIP
-		}
-	}
-	
-	static alarm_two = function() { 
-		state = weapon_state.idle 
-	}
-	
-	static use = function() {
-		switch (state) {
-			case weapon_state.idle:
-				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
-					var _direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
-					var _spread_direction = _direction - 10;
-					repeat 4
-					{
-						with (instance_create_layer(instance.x, instance.y, "player", obj_projectile, { sprite_index: spr_shotgun_shell, speed: 10, direction: _spread_direction, image_angle: _spread_direction })) lifetime = (SHOTGUN_RANGE + random_range(0, 3));
-						_spread_direction += irandom_range(5, 10)
-					}
-					instance_offset = 0;
-					clip -= 1
-					state = weapon_state.cooldown
+	////////////
+	// states //
+	////////////
+	state.add(
+		"shooting", {
+			step: function() {
+				var spread = point_direction(instance.x, instance.y, mouse_x, mouse_y) - 10
+				repeat (4) {
+					instance_create_layer(
+						instance.x, instance.y, "player", obj_projectile, 
+						{ 
+							sprite_index: SHOTGUN_BULLET_SPRITE, 
+							direction: spread, 
+							image_angle: spread,
+							speed: SHOTGUN_BULLET_SPEED, 
+							range: SHOTGUN_BULLET_RANGE,
+							damage: SHOTGUN_BULLET_DAMAGE,
+						}
+					)
+					spread += irandom_range(5, 10)
 				}
-				else if (((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((clip <= 0) && (mouse_check_button(global.ATTACK_BUTTON)))) && ammo != 0) {
-					state = weapon_state.reloading
-					instance.sprite_index = spr_shotgun_reloading
-				}
-				break
-			case weapon_state.reloading:
-				if (instance.alarm[1] == -1) {
-					instance.alarm[1] = SHOTGUN_RELOAD_FRAMES
-				} 
-				break
-			case weapon_state.cooldown:
-				if (instance.alarm[2] == -1) {
-					instance.alarm[2] = SHOTGUN_COOLDOWN_FRAMES
-				} 
-				instance_offset = lerp(instance_offset, 25, 0.1);
-				break
+				clip -= 1
+				offset -= SHOTGUN_KICKBACK_DISTANCE
+				state.change("cooldown")
+			}
 		}
-	}
+	)
 }

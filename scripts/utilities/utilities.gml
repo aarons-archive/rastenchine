@@ -1,29 +1,18 @@
-function array_min(array) {
-	var _min = array[0]
-	for (var i = 0; i < array_length(array); i++) {
-		_min = min(_min, array[i])
-	}
-	return _min
-}
-
-function array_max(array) {
-	var _max = array[0]
-	for (var i = 0; i < array_length(array); i++) {
-		_max = max(_max, array[i])
-	}
-	return _max
-}
-
 function wrap(value, _max) {
 	return (value + _max) % _max
 }
 
-function random_instance_of(object) {
-	var instances = []
+function instances_of(object) {
+    var instances = []
 	for (var i = 0; i < instance_number(object); ++i){
 		instances[i] = instance_find(object, i)
 	}
- 	return instances[irandom_range(0, array_length(instances) - 1)]
+	return instances
+}
+
+function random_instance_of(object) {
+	var instances = instances_of(object)
+ 	return (array_length(instances) <= 0) ? (undefined) : (instances[irandom_range(0, array_length(instances) - 1)])
 }
 
 function collision_line_point(x1, y1, x2, y2, qi, qp, qn) {

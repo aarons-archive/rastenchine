@@ -1,75 +1,55 @@
-#macro RAILGUN_DAMAGE 50
+#macro RAILGUN_BULLET_SPRITE (spr_railgun_beam)
+#macro RAILGUN_BULLET_RANGE  (50)
+#macro RAILGUN_BULLET_DAMAGE (5)
 
-#macro RAILGUN_MAX_AMMO 40
-#macro RAILGUN_CLIP     1
-
-#macro RAILGUN_RELOAD_FRAMES   FPS * 1
-#macro RAILGUN_CHARGE_FRAMES FPS * 0.4
-#macro RAILGUN_COOLDOWN_FRAMES FPS * 0.4
+#macro RAILGUN_KICKBACK_DISTANCE (7.5)
 
 function Railgun() : Gun() constructor {
-
-	// from Item
-	sprite = spr_railgun
+	////////////
+	// sprite //
+	////////////
+	DEFAULT_SPRITE   = spr_railgun
+	COOLDOWN_SPRITE  = spr_railgun_cooldown
+	RELOADING_SPRITE = spr_railgun_reloading
 	
-	// from Weapon
-	damage = RAILGUN_DAMAGE
+	////////////
+	// timing //
+	////////////
+	COOLDOWN_FRAMES  = FPS * 0.4
+	RELOADING_FRAMES = FPS * 1
+	CHARGE_FRAMES    = FPS * 0.4
 	
-	// RAILGUN
-	ammo = RAILGUN_MAX_AMMO
-	clip = RAILGUN_CLIP
-
-	static alarm_one = function() {
-		state = weapon_state.idle
-		instance.sprite_index = spr_railgun
-		if ((clip + ammo) < RAILGUN_CLIP) {
-			clip = ammo
-			ammo = 0
-		}
-		else {
-			ammo -= (RAILGUN_CLIP - clip)
-			clip = RAILGUN_CLIP
-		}
-	}
+	//////////
+	// ammo //
+	//////////
+	DEFAULT_AMMO = 40
+	DEFAULT_CLIP = 1
+	ammo         = DEFAULT_AMMO
+	clip         = DEFAULT_CLIP
 	
-	static alarm_two = function() { 
-		state = weapon_state.idle 
-	}
-	
-	static alarm_three = function() {
-		state = weapon_state.shooting
-	}
-	
-	static use = function() {
-		switch (state) {
-			case weapon_state.idle:
-				if ((mouse_check_button(global.ATTACK_BUTTON)) && (clip >= 1)) {
-					if (instance.alarm[3] == -1) {
-						instance.alarm[3] = RAILGUN_CHARGE_FRAMES
-					} 
+	////////////
+	// states //
+	////////////
+	state.add(
+		"shooting", {
+			step: function() {
+				if (state.get_time(false) >= CHARGE_FRAMES) {
+					instance_create_layer(
+						instance.x + lengthdir_x(13, obj_player._direction), instance.y + lengthdir_y(13, obj_player._direction), 
+						"player", obj_railgun_beam, 
+						{ 
+							sprite_index: RAILGUN_BULLET_SPRITE, 
+							direction: obj_player._direction, 
+							image_angle: obj_player._direction,
+							range: RAILGUN_BULLET_RANGE,
+							damage: RAILGUN_BULLET_DAMAGE,
+						}
+					)
+					clip -= 1
+					offset -= RAILGUN_KICKBACK_DISTANCE
+					state.change("cooldown")
 				}
-				else if (((keyboard_check_pressed(global.RELOAD_GUN_KEY)) || ((clip <= 0) && (mouse_check_button(global.ATTACK_BUTTON)))) && ammo != 0) {
-					state = weapon_state.reloading
-					instance.sprite_index = spr_railgun_reloading
-				}
-				break
-			case weapon_state.reloading:
-				if (instance.alarm[1] == -1) {
-					instance.alarm[1] = RAILGUN_RELOAD_FRAMES
-				} 
-				break
-			case weapon_state.cooldown:
-				if (instance.alarm[2] == -1) {
-					instance.alarm[2] = RAILGUN_COOLDOWN_FRAMES
-				} 
-				instance_offset = lerp(instance_offset, 25, 0.1);
-				break
-			case weapon_state.shooting:
-				instance_create_layer(instance.x, instance.y, "player", obj_railgun_beam);
-				instance_offset = 0;
-				clip -= 1
-				state = weapon_state.cooldown;
-			break
+			}
 		}
-	}
+	)
 }
