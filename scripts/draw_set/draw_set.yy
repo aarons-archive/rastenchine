@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "draw",
-    "path": "folders/Levels/Placeables/NPC's/Scripts/draw.yy",
+    "path": "folders/Levels/NPC's/Scripts/draw.yy",
   },
 }

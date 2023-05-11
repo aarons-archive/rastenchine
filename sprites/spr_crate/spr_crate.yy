@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Placeables",
-    "path": "folders/Levels/Placeables.yy",
+    "name": "Sprites",
+    "path": "folders/Levels/Placeables/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

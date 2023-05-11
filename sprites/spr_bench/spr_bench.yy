@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Bench",
-    "path": "folders/Levels/Placeables/Bench.yy",
+    "name": "Sprites",
+    "path": "folders/Levels/Placeables/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

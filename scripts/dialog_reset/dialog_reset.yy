@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "dialog",
-    "path": "folders/Levels/Placeables/NPC's/Scripts/dialog.yy",
+    "path": "folders/Levels/NPC's/Scripts/dialog.yy",
   },
 }

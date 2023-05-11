@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.021678,
   "parent": {
-    "name": "Basic Enemy",
-    "path": "folders/Entities/Enemies/Basic Enemy.yy",
+    "name": "Sounds",
+    "path": "folders/Entities/Enemies/Basic Enemy/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

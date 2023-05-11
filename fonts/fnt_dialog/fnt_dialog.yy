@@ -124,7 +124,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "NPC's",
-    "path": "folders/Levels/Placeables/NPC's.yy",
+    "path": "folders/Levels/NPC's.yy",
   },
   "pointRounding": 0,
   "ranges": [

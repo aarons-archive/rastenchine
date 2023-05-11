@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "leaper",
-    "path": "folders/Unused/leaper.yy",
+    "name": "Leaper",
+    "path": "folders/Unused/Leaper.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lights",
-    "path": "folders/Levels/Placeables/Lights.yy",
+    "name": "Placeables",
+    "path": "folders/Levels/Placeables.yy",
   },
   "parentObjectId": null,
   "persistent": false,

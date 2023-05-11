@@ -31,8 +31,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Actual Player Sprites",
-    "path": "folders/Entities/Player/Sprites/Actual Player Sprites.yy",
+    "name": "Player",
+    "path": "folders/Unused/Player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

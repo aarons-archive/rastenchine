@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Rocks",
-    "path": "folders/Levels/Placeables/Rocks.yy",
+    "name": "Sprites",
+    "path": "folders/Levels/Placeables/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

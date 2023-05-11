@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bench",
-    "path": "folders/Levels/Placeables/Bench.yy",
+    "name": "Placeables",
+    "path": "folders/Levels/Placeables.yy",
   },
   "parentObjectId": null,
   "persistent": false,

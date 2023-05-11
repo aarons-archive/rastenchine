@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "shambler",
-    "path": "folders/Unused/shambler.yy",
+    "name": "Shambler",
+    "path": "folders/Unused/Shambler.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

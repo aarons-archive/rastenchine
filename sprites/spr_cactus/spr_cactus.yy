@@ -31,8 +31,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Cactus",
-    "path": "folders/Levels/Placeables/Cactus.yy",
+    "name": "Sprites",
+    "path": "folders/Levels/Placeables/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

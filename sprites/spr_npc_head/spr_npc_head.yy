@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "NPC's",
-    "path": "folders/Levels/Placeables/NPC's.yy",
+    "path": "folders/Levels/NPC's.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Trees",
-    "path": "folders/Levels/Placeables/Trees.yy",
+    "name": "Placeables",
+    "path": "folders/Levels/Placeables.yy",
   },
   "parentObjectId": {
     "name": "obj_player_collision",

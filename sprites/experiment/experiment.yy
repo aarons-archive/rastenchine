@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Molten Animations",
-    "path": "folders/Unused/Molten Animations.yy",
+    "name": "Animations",
+    "path": "folders/Unused/Molten/Animations.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
