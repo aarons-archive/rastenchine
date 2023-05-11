@@ -9,8 +9,8 @@ function Railgun() : Gun() constructor {
 	// sprite //
 	////////////
 	DEFAULT_SPRITE   = spr_railgun
-	COOLDOWN_SPRITE  = spr_railgun_cooldown
-	RELOADING_SPRITE = spr_railgun_reloading
+	COOLDOWN_SPRITE  = spr_railgun
+	RELOADING_SPRITE = spr_railgun
 	
 	////////////
 	// timing //
