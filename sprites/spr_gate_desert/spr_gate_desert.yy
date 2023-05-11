@@ -49,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Desert Gate",
-    "path": "folders/Levels/Placeables/Gates/Desert Gate.yy",
+    "name": "Desert Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

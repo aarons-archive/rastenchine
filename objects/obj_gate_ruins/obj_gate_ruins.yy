@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Ruins Gate",
-    "path": "folders/Levels/Placeables/Gates/Ruins Gate.yy",
+    "name": "Ruins Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Ruins Key.yy",
   },
   "parentObjectId": {
     "name": "obj_gate",

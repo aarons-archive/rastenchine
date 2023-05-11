@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Gates",
-    "path": "folders/Levels/Placeables/Gates.yy",
+    "name": "Keys",
+    "path": "folders/Inventory/Items/Consumables/Keys.yy",
   },
   "parentObjectId": null,
   "persistent": false,

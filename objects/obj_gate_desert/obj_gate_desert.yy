@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Desert Gate",
-    "path": "folders/Levels/Placeables/Gates/Desert Gate.yy",
+    "name": "Desert Key",
+    "path": "folders/Inventory/Items/Consumables/Keys/Desert Key.yy",
   },
   "parentObjectId": {
     "name": "obj_gate",
