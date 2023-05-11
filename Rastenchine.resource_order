@@ -55,6 +55,8 @@
     {"name":"Animations","order":1,"path":"folders/Unused/Molten/Animations.yy",},
     {"name":"Player","order":4,"path":"folders/Unused/Player.yy",},
     {"name":"Shambler","order":2,"path":"folders/Unused/Shambler.yy",},
+    {"name":"items","order":9,"path":"folders/items.yy",},
+    {"name":"Cheese","order":3,"path":"folders/Inventory/Items/Consumables/Cheese.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":5,"path":"objects/obj_menu_element/obj_menu_element.yy",},

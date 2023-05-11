@@ -3,8 +3,8 @@ PAN_MAX = 150
 pan_enabled = true
 
 zoom = 1
-ZOOM_MIN = 0.2
-ZOOM_MAX = 5
+ZOOM_MIN = 0.1
+ZOOM_MAX = 7.5
 
 SMOOTHING = 15
 

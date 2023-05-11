@@ -90,6 +90,7 @@
     {"name":"inst_67613D26","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
     {"name":"inst_2D0B6D8","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
     {"name":"inst_3681ED8D","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
+    {"name":"inst_2DB04B2A","path":"rooms/rm_nico_aaron_dev/rm_nico_aaron_dev.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -164,6 +165,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_54EF843A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room_collision","path":"objects/obj_room_collision/obj_room_collision.yy",},"properties":[],"rotation":0.0,"scaleX":10.0,"scaleY":4.0,"x":448.0,"y":1152.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_27D36581","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room_collision","path":"objects/obj_room_collision/obj_room_collision.yy",},"properties":[],"rotation":0.0,"scaleX":13.0,"scaleY":4.0,"x":1280.0,"y":960.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2FAEAD5B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_boss_spawn_zone","path":"objects/obj_boss_spawn_zone/obj_boss_spawn_zone.yy",},"properties":[],"rotation":0.0,"scaleX":4.75,"scaleY":4.5,"x":120.0,"y":1832.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2DB04B2A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_boss_spawn_zone","path":"objects/obj_boss_spawn_zone/obj_boss_spawn_zone.yy",},"properties":[],"rotation":0.0,"scaleX":9.5,"scaleY":9.5,"x":976.0,"y":1424.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"tiles_top","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":64,"SerialiseWidth":64,"TileCompressedData":[
 -408,-2147483648,1,13,-16,25,1,14,-46,-2147483648,1,12,-4,-2147483648,-5,0,-7,-2147483648,1,12,-46,-2147483648,1,12,-16,-2147483648,1,12,-31,-2147483648,1,13,-14,25,1,33,-16,-2147483648,1,31,-8,25,1,14,-22,-2147483648,1,12,-14,-2147483648,1,12,-16,-2147483648,1,12,-8,-2147483648,1,12,-22,-2147483648,1,12,

@@ -12,7 +12,6 @@ if (player_is_near_gate and player_is_pressing_open_gate_key) {
 		) != -1
 	) {
 		open = !open
-		show_debug_message(open)
 		image_index = (open ? sprite_get_number(sprite_index) - 1 : 0)
 	}
 }
