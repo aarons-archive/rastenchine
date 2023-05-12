@@ -13,7 +13,7 @@
   "duration": 1.021678,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Entities/Enemies/Basic Enemy/Sounds.yy",
+    "path": "folders/Entities/Enemies/Molten/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

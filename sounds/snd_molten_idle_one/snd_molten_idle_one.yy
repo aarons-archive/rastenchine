@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_molten_idle2",
+  "name": "snd_molten_idle_one",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.718277,
+  "duration": 4.249252,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Entities/Enemies/Basic Enemy/Sounds.yy",
+    "path": "folders/Entities/Enemies/Molten/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_molten_idle2.wav",
+  "soundFile": "snd_molten_idle_one.wav",
   "type": 0,
   "volume": 1.0,
 }
