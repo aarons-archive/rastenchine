@@ -133,7 +133,6 @@
     {"name":"obj_door_left","order":3,"path":"objects/obj_door_left/obj_door_left.yy",},
     {"name":"obj_leaper","order":2,"path":"objects/obj_leaper/obj_leaper.yy",},
     {"name":"scr_crowbar","order":1,"path":"scripts/scr_crowbar/scr_crowbar.yy",},
-    {"name":"ts_nest_walls","order":3,"path":"tilesets/ts_nest_walls/ts_nest_walls.yy",},
     {"name":"obj_motion_planner","order":1,"path":"objects/obj_motion_planner/obj_motion_planner.yy",},
     {"name":"obj_railgun_beam","order":2,"path":"objects/obj_railgun_beam/obj_railgun_beam.yy",},
     {"name":"spr_boss_spawn_zone","order":3,"path":"sprites/spr_boss_spawn_zone/spr_boss_spawn_zone.yy",},

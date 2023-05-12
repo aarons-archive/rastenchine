@@ -309,7 +309,6 @@
     {"id":{"name":"obj_door_left","path":"objects/obj_door_left/obj_door_left.yy",},},
     {"id":{"name":"obj_leaper","path":"objects/obj_leaper/obj_leaper.yy",},},
     {"id":{"name":"scr_crowbar","path":"scripts/scr_crowbar/scr_crowbar.yy",},},
-    {"id":{"name":"ts_nest_walls","path":"tilesets/ts_nest_walls/ts_nest_walls.yy",},},
     {"id":{"name":"light_destroy","path":"scripts/light_destroy/light_destroy.yy",},},
     {"id":{"name":"scr_handle_movement_state","path":"scripts/scr_handle_movement_state/scr_handle_movement_state.yy",},},
     {"id":{"name":"obj_motion_planner","path":"objects/obj_motion_planner/obj_motion_planner.yy",},},
