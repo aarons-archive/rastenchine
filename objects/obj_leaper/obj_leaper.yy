@@ -32,7 +32,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_leaper_cooldown",
     "path": "sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",

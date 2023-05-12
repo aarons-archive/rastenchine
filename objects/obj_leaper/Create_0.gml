@@ -81,16 +81,16 @@ state.add(
 	}
 )
 
-
+#region ATTACKS
 state.add(
 	"charging", {
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-			sprite_index = sprite_charging 
-			alarm[1] = 45
+			sprite_index = sprite_charging
 			attack_x = obj_player.x
 			attack_y = obj_player.y
 			path_end()
+			alarm[1] = 45
 		}
 	}
 )
@@ -99,7 +99,7 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
-			move_towards_point(attack_x, attack_y, 15)
+			move_towards_point(attack_x, attack_y, 10)
 		},
 		step: function() {
 			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 1) {
@@ -117,12 +117,13 @@ state.add(
 		}
 	}
 )
+#endregion
 #region universal states
 if state.add(
 	"death", {
 		enter: function() {
 			enemy_death()
-			audio_play_sound(snd_molten_death,1,false)
+			audio_play_sound(snd_leaper_death,1,false,global.enemy_audio)
 		}
 	}	
 )
@@ -132,7 +133,7 @@ state.add(
 			enemy_hurt()
 		},
 		step: function() {
-			//kncokcback
+			//knockback
 			enemy_knockback()
 		}			
 	}

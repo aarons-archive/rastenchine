@@ -72,7 +72,9 @@ function enemy_death()
 	_speed = 0
 	sprite_index = sprite_death
 	audio_stop_all()
+	if image_index >= image_number - 1 {instance_destroy() }
 }
+
 function enemy_peashooter_run()
 {
 	var run_dir = point_direction(x,y, obj_player.x, obj_player.y)
@@ -94,3 +96,5 @@ function enemy_peashooter_run()
 	x -= x_dir
 	y -= y_dir
 }
+
+global.enemy_audio = 0.01
