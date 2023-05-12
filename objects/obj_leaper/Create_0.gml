@@ -76,7 +76,7 @@ state.add(
 			sprite_index = sprite_chasing 
 		},
 		step: function() {
-			enemy_chasing()
+			enemy_chasing(true)
 		}
 	}
 )
@@ -85,7 +85,7 @@ state.add(
 state.add(
 	"charging", {
 		enter: function() {
-			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+			if (obj_player._x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_charging
 			attack_x = obj_player.x
 			attack_y = obj_player.y
@@ -97,12 +97,12 @@ state.add(
 state.add(
 	"attacking", {
 		enter: function() {
-			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
+			if (obj_player._x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			move_towards_point(attack_x, attack_y, 10)
 		},
 		step: function() {
-			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 1) {
+			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 10) {
 				speed = 0
 				state.change("attack_cooldown")
 			}

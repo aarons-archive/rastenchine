@@ -49,10 +49,10 @@ function enemy_wandering_cooldown()
 	alarm[0] = 120
 	audio_stop_all()
 }
-function enemy_chasing()
+function enemy_chasing(leaper=false)
 {
 	if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-		if (within_attack_radius) { return state.change("attacking") }
+		if (within_attack_radius) { return state.change(leaper ? "charging" : "attacking") }
 		if (!within_chase_radius) { return state.change("lost") }
 		path_cooldown -= 1
 		if (path_cooldown <= 0) {

@@ -6,7 +6,7 @@
 
 // stamina 
 #macro PLAYER_MIN_STAMINA (0)
-#macro PLAYER_MAX_STAMINA (500)
+#macro PLAYER_MAX_STAMINA (999999999999999)
 
 // idle
 #macro PLAYER_IDLE_SPEED                  (0)
