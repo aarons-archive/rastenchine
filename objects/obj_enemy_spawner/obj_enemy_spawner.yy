@@ -3,16 +3,14 @@
   "resourceVersion": "1.0",
   "name": "obj_enemy_spawner",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Managers",
-    "path": "folders/Entities/Enemies/Enemy Managers.yy",
+    "name": "Collisions",
+    "path": "folders/Levels/Placeables/Collisions.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +27,9 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SPAWN_COUNT","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":15.0,"rangeMin":1.0,"value":"5","varType":1,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SPAWN_OBJECTS","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[obj_basic_enemy]","varType":4,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"spawn_count","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":15.0,"rangeMin":1.0,"value":"5","varType":1,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"spawn_objects","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[obj_basic_enemy]","varType":4,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"cooldown_frames","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"FPS * 10","varType":4,},
   ],
   "solid": false,
   "spriteId": {
