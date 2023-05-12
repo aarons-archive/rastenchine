@@ -12,7 +12,7 @@ if array_length(enemies_spawned) == 0 and (!collision_rectangle(obj_player.x - 3
 			enemies_spawned, 
 			instance_create_layer(
 				random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), 
-				"other", enemies,
+				"enemies", enemies,
 				{ 
 					created_by_spawner: true,
 					spawner_bbox_bottom: bbox_bottom, 
