@@ -14,7 +14,6 @@ vision_radius = 500
 attack_radius = 15
 chase_radius  = 300
 //sound
-enemySounds = audio_emitter_create()
 //idle_sounds = 
 //State machine
 state = new SnowState("idle")

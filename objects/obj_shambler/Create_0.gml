@@ -45,6 +45,7 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_idle
 			audio_stop_all()
+			audio_play_sound(choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,snd_shambler_idle4,snd_shambler_idle5),1, false, global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -57,6 +58,7 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
+			//audio_play_sound(snd_shambler_moving)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -123,6 +125,7 @@ state.add(
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			path_end()
+			audio_play_sound(snd_shambler_explode,1,false,global.enemy_audio)
 		},
 		step: function() {
 			if (image_index	>= image_number - 1) {
