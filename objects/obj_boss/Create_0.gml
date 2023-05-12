@@ -37,7 +37,7 @@ state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle
-			audio_play_sound(choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4),1, false, global.enemy_audio)
+			audio_play_sound(choose(snd_growler_idle1,snd_growler_idle2,snd_growler_idle3,snd_growler_idle4),1, false, global.enemy_audio)
 		},
 		step: function() {
 			//time instead of range

@@ -28,7 +28,10 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SPAWN_COUNT","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":15.0,"rangeMin":1.0,"value":"5","varType":1,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SPAWN_OBJECTS","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[obj_basic_enemy]","varType":4,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "spr_enemy_spawner",

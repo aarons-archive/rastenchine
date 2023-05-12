@@ -1,1 +1,1 @@
-spawn_cooldown = false
+cooldown = false

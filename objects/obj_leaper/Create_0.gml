@@ -100,6 +100,7 @@ state.add(
 			if (obj_player._x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			move_towards_point(attack_x, attack_y, 10)
+			audio_play_sound(snd_leaper_attack,1,false,global.enemy_audio)
 		},
 		step: function() {
 			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 10) {
