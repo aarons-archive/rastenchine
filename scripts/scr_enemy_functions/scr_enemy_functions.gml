@@ -32,7 +32,7 @@ function enemy_wandering()
 {
 	randomize()
 	sprite_index = sprite_wandering
-	if (created_by_spawner) {
+	if (created_by_spawner == true) {
 		wander_x = irandom_range(spawner_bbox_left - 100, spawner_bbox_right + 100)
 		wander_y = irandom_range(spawner_bbox_top - 100, spawner_bbox_bottom + 100)
 	}
