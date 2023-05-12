@@ -74,7 +74,7 @@ function Rifle() : Gun() constructor {
 			step: function() {
 				offset = lerp(offset, ITEM_OFFSET, 0.25)
 				if (state.get_time(false) >= BURST_COOLDOWN_FRAMES) {
-					return state.change("idle") 
+					return state.change("shooting") 
 				}
 			},
 			leave: function() {
