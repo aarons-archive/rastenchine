@@ -28,7 +28,7 @@
   "physicsStartAwake": true,
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"spawn_count","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":15.0,"rangeMin":1.0,"value":"5","varType":1,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"spawn_objects","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[obj_basic_enemy]","varType":4,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"spawn_objects","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"[obj_molten]","varType":4,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"cooldown_frames","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"FPS * 10","varType":4,},
   ],
   "solid": false,
