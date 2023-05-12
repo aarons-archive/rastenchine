@@ -33,7 +33,7 @@ function Shotgun() : Gun() constructor {
 	state.add(
 		"shooting", {
 			step: function() {
-				var spread = point_direction(instance.x, instance.y, mouse_x, mouse_y) - 10
+				var spread = _direction - 10
 				repeat (4) {
 					instance_create_layer(
 						instance.x, instance.y, "player", obj_projectile, 

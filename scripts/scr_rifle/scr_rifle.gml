@@ -42,7 +42,7 @@ function Rifle() : Gun() constructor {
 		"shooting", {
 			step: function() {
 				if (burst_clip >= 1) {
-					var spread = point_direction(instance.x, instance.y, mouse_x, mouse_y) + random_range(-RIFLE_BULLET_SPREAD, RIFLE_BULLET_SPREAD)
+					var spread = _direction + random_range(-RIFLE_BULLET_SPREAD, RIFLE_BULLET_SPREAD)
 					instance_create_layer(
 						instance.x, instance.y, "player", obj_projectile, 
 						{ 

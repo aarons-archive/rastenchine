@@ -16,18 +16,17 @@ state.step()
 
 #region railgun shit
 if instance_exists(obj_railgun_beam) {
-	if (collision_line(obj_player.x,obj_player.y,obj_railgun_beam.r[1],obj_railgun_beam.r[2],self,0,0)) {
-		var item = obj_player.inventory.item
-		var tame = obj_tamed_shambler
-		if (invincible == false) {
-			invincible = true
-			alarm[6] = 30
-			_health -= item.damage
-			item.state = weapon_state.cooldown
-			if instance_exists(obj_tamed_shambler){tame.state = shambler_tamed_state.agro}
-			if instance_exists(obj_tamed_shambler){tame.target = self}
+	if (collision_line(obj_player.x, obj_player.y, obj_railgun_beam.r[1], obj_railgun_beam.r[2], self, 0, 0)) {
+		if (invincible == true) { exit }
+		_health -= obj_railgun_beam.damage
+		invincible = true
+		alarm[6] = 20
+		state.change("hurt")
+		var tamed_shamblers = instances_of(obj_tamed_shambler)
+		for (var i = 0; i < array_length(tamed_shamblers); i++) {
+			tamed_shamblers[i].state = shambler_tamed_state.agro
+			tamed_shamblers[i].target = self
 		}
 	}
 }
 #endregion
-

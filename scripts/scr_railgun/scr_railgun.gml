@@ -1,6 +1,6 @@
 #macro RAILGUN_BULLET_SPRITE (spr_railgun_beam)
 #macro RAILGUN_BULLET_RANGE  (50)
-#macro RAILGUN_BULLET_DAMAGE (5)
+#macro RAILGUN_BULLET_DAMAGE (20)
 
 #macro RAILGUN_KICKBACK_DISTANCE (7.5)
 
@@ -35,12 +35,12 @@ function Railgun() : Gun() constructor {
 			step: function() {
 				if (state.get_time(false) >= CHARGE_FRAMES) {
 					instance_create_layer(
-						instance.x + lengthdir_x(13, obj_player._direction), instance.y + lengthdir_y(13, obj_player._direction), 
+						instance.x + lengthdir_x(12, _direction), instance.y + lengthdir_y(12, _direction), 
 						"player", obj_railgun_beam, 
 						{ 
 							sprite_index: RAILGUN_BULLET_SPRITE, 
-							direction: obj_player._direction, 
-							image_angle: obj_player._direction,
+							direction: _direction, 
+							image_angle: _direction,
 							range: RAILGUN_BULLET_RANGE,
 							damage: RAILGUN_BULLET_DAMAGE,
 						}

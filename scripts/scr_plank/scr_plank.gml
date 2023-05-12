@@ -11,7 +11,7 @@
 function Plank() : Melee() constructor {
 	
 	// from Item
-	sprite = spr_plank
+	DEFAULT_SPRITE = spr_plank
 	
 	// from Weapon
 	damage = PLANK_DAMAGE

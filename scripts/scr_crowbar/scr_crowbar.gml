@@ -11,7 +11,7 @@
 function Crowbar() : Melee() constructor {
 	
 	// from Item
-	sprite = spr_crowbar
+	DEFAULT_SPRITE = spr_crowbar
 	
 	// from Weapon
 	damage = CROWBAR_DAMAGE

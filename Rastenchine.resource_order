@@ -43,11 +43,11 @@
     {"name":"Menu","order":3,"path":"folders/Menu.yy",},
     {"name":"Scripts","order":1,"path":"folders/Scripts.yy",},
     {"name":"Unused","order":7,"path":"folders/Unused.yy",},
+    {"name":"Items","order":5,"path":"folders/Unused/Items.yy",},
     {"name":"Leaper","order":3,"path":"folders/Unused/Leaper.yy",},
     {"name":"Molten","order":1,"path":"folders/Unused/Molten.yy",},
     {"name":"Player","order":4,"path":"folders/Unused/Player.yy",},
     {"name":"Shambler","order":2,"path":"folders/Unused/Shambler.yy",},
-    {"name":"Items","order":5,"path":"folders/Unused/Items.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_menu_element","order":6,"path":"objects/obj_menu_element/obj_menu_element.yy",},

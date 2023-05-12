@@ -34,7 +34,7 @@ function Pistol() : Gun() constructor {
 	state.add(
 		"shooting", {
 			step: function() {
-				var spread = point_direction(instance.x, instance.y, mouse_x, mouse_y) + random_range(-PISTOL_BULLET_SPREAD, PISTOL_BULLET_SPREAD)
+				var spread = _direction + random_range(-PISTOL_BULLET_SPREAD, PISTOL_BULLET_SPREAD)
 				instance_create_layer(
 					instance.x, instance.y, "player", obj_projectile, 
 					{ 
