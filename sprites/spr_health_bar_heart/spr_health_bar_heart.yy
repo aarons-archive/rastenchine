@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_health_bar_heart",
-  "bbox_bottom": 21,
-  "bbox_left": 2,
-  "bbox_right": 23,
-  "bbox_top": 2,
+  "bbox_bottom": 23,
+  "bbox_left": 1,
+  "bbox_right": 26,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -21,6 +21,7 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b12bc812-a436-41f9-80e6-4f5d74de1073","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6b7764c6-454d-4fe3-9c2c-1c58d0491775","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
@@ -93,5 +94,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 26,
+  "width": 28,
 }

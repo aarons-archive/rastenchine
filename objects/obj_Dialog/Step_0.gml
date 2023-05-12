@@ -27,7 +27,7 @@ if (can_display_text)
 			
 			if(dialog_end()) {
 				obj_camera.follow = obj_player;
-				obj_camera.ENABLE_PANNING = true;
+				obj_camera.pan_enabled = true;
 				//make player move again
 				instance_destroy();
 			}
