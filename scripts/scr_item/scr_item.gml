@@ -15,7 +15,7 @@ function Item() constructor {
 		instance.x = obj_player._x + lengthdir_x(offset, obj_player._direction)
 		instance.y = obj_player._y + lengthdir_y(offset, obj_player._direction)
 		
-		_direction = point_direction(instance.x, instance.y, mouse_x, mouse_y)
+		_direction = point_direction(obj_player._x, obj_player._y, mouse_x, mouse_y)
 		instance.image_angle = _direction
 		
 		var _depth = (_direction > 0) and (_direction < 180) ? 1 : -1
