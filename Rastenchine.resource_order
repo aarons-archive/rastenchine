@@ -115,6 +115,7 @@
     {"name":"spr_plank_charging","order":1,"path":"sprites/spr_plank_charging/spr_plank_charging.yy",},
     {"name":"ts_nest_grass","order":1,"path":"tilesets/ts_nest_grass/ts_nest_grass.yy",},
     {"name":"spr_boss_chasing","order":3,"path":"sprites/spr_boss_chasing/spr_boss_chasing.yy",},
+    {"name":"obj_emitter","order":4,"path":"objects/obj_emitter/obj_emitter.yy",},
     {"name":"snd_molten_attack","order":1,"path":"sounds/snd_molten_attack/snd_molten_attack.yy",},
     {"name":"ts_forest_walls","order":3,"path":"tilesets/ts_forest_walls/ts_forest_walls.yy",},
     {"name":"spr_leaper_cooldown","order":2,"path":"sprites/spr_leaper_cooldown/spr_leaper_cooldown.yy",},
