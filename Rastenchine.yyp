@@ -236,6 +236,7 @@
     {"id":{"name":"ts_nest_grass","path":"tilesets/ts_nest_grass/ts_nest_grass.yy",},},
     {"id":{"name":"mcrunright","path":"sprites/mcrunright/mcrunright.yy",},},
     {"id":{"name":"spr_boss_chasing","path":"sprites/spr_boss_chasing/spr_boss_chasing.yy",},},
+    {"id":{"name":"obj_emitter","path":"objects/obj_emitter/obj_emitter.yy",},},
     {"id":{"name":"snd_molten_attack","path":"sounds/snd_molten_attack/snd_molten_attack.yy",},},
     {"id":{"name":"scr_weapon","path":"scripts/scr_weapon/scr_weapon.yy",},},
     {"id":{"name":"spr_key_forest","path":"sprites/spr_key_forest/spr_key_forest.yy",},},

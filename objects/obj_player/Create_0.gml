@@ -1,5 +1,6 @@
 event_inherited()
 
+audio_listener_orientation(0,1,0,0,0,1)
 x_input = 0
 y_input = 0
 walk_input = false

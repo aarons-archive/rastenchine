@@ -22,8 +22,8 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_idle
 			audio_stop_all()
-			audio_play_sound(choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4),1, false, global.enemy_audio)
-
+			//audio_play_sound(choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4),1, false, global.enemy_audio)
+			audio_play_sound_on(s_emit,choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3,snd_molten_idle4),true,1,global.enemy_audio)
 		},
 		step: function() {
 			//These if statements find if the player is within either of these ranges
@@ -37,7 +37,7 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
-			audio_play_sound(snd_molten_moving,1,true,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_molten_moving,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -69,7 +69,8 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing 
-			audio_play_sound(snd_molten_moving,1,true,global.enemy_audio)
+			//audio_play_sound(snd_molten_moving,1,true,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_molten_moving,true,1,global.enemy_audio)
 		},
 		step: function() {
 			enemy_chasing()
@@ -82,7 +83,8 @@ state.add(
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
 			audio_stop_all()
-			audio_play_sound(snd_molten_attack,1,false,global.enemy_audio)
+			//audio_play_sound(snd_molten_attack,1,false,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_molten_attack,true,1,global.enemy_audio)
 			_speed = 0
 			path_end()
 		},
@@ -106,7 +108,8 @@ if state.add(
 	"death", {
 		enter: function() {
 			enemy_death()
-			audio_play_sound(snd_molten_death,1,false,global.enemy_audio)
+			//audio_play_sound(snd_molten_death,1,false,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_molten_death,true,1,global.enemy_audio)
 		}
 	}	
 )
