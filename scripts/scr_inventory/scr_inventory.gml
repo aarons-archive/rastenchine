@@ -1,7 +1,7 @@
 function Inventory() constructor {
 	
-	inventory = [new Pistol(), new Rifle(), new Shotgun(), new Railgun(), new Crowbar(), new Plank()]
-	hotbar = [0, 1, 2, 3, 4, 5]
+	inventory = [new Pistol(), new Rifle(), new Shotgun(), new Railgun(), new Crowbar(), new Plank(), new BaseballBat()]
+	hotbar = [0, 1, 2, 3, 4, 5, 6]
 	index = 0
 	item = undefined
 	
@@ -32,7 +32,7 @@ function Inventory() constructor {
 		var item_index = self.hotbar[self.index]
 		if (item_index != undefined) {
 			self.item = self.inventory[item_index]
-			self.item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item, { sprite_index: self.item.DEFAULT_SPRITE })
+			self.item.instance = instance_create_layer(obj_player.x, obj_player.y, "player", obj_item, { sprite_index: self.item.HAND_SPRITE })
 		}
 	}
 	
@@ -84,7 +84,7 @@ function Inventory() constructor {
 		}
 		// get the item that is to be dropped
 		var _item = self.inventory[item_index]
-		if ((is_instanceof(_item, Weapon) == true) and (_item.state != weapon_state.idle)) { 
+		if ((is_instanceof(_item, Weapon) == true) and (_item.state.get_current_state() != "idle")) { 
 			return 
 		}
 		// create a pickup instance with the items data
@@ -92,7 +92,7 @@ function Inventory() constructor {
 			_item.instance.x, _item.instance.y, 
 			"pickups", obj_pickup, 
 			{ 
-				sprite_index: _item.DEFAULT_SPRITE,
+				sprite_index: _item.SPRITE,
 				image_angle: _item.instance.image_angle,
 				image_yscale: _item.instance.image_yscale,
 				struct: _item
@@ -122,12 +122,12 @@ function Inventory() constructor {
 		if (keyboard_check_pressed(global.OPEN_INVENTORY_KEY) == true) {
 			if (self.open == true) {
 				self.open = false
-				obj_camera.pan_enabled = false
+				obj_camera.pan_enabled = true
 				hide_inventory()
 			}
 			else if (self.open == false) {
 				self.open = true
-				obj_camera.pan_enabled = true
+				obj_camera.pan_enabled = false
 				show_inventory()
 			}
 		}
@@ -172,9 +172,6 @@ function Inventory() constructor {
 	}
 
 	static draw = function() {
-		if (self.open == true) {
-			draw_inventory()
-		}
 		draw_hotbar()
 	}
  }

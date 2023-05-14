@@ -6,10 +6,11 @@
 #macro SHOTGUN_KICKBACK_DISTANCE (7.5)
 
 function Shotgun() : Gun() constructor {
-	////////////
-	// sprite //
-	////////////
-	DEFAULT_SPRITE   = spr_shotgun
+	/////////////
+	// sprites //
+	/////////////
+	SPRITE           = spr_shotgun
+	HAND_SPRITE      = spr_shotgun_hand
 	COOLDOWN_SPRITE  = spr_shotgun_cooldown
 	RELOADING_SPRITE = spr_shotgun_reloading
 	
@@ -22,10 +23,10 @@ function Shotgun() : Gun() constructor {
 	//////////
 	// ammo //
 	//////////
-	DEFAULT_AMMO = 40
-	DEFAULT_CLIP = 2
-	ammo         = DEFAULT_AMMO
-	clip         = DEFAULT_CLIP
+	MAX_AMMO = 60
+	MAX_CLIP = 2
+	ammo = MAX_AMMO
+	clip = MAX_CLIP
 
 	////////////
 	// states //
@@ -33,7 +34,7 @@ function Shotgun() : Gun() constructor {
 	state.add(
 		"shooting", {
 			step: function() {
-				var spread = _direction - 10
+				var spread = angle - 10
 				repeat (4) {
 					instance_create_layer(
 						instance.x, instance.y, "player", obj_projectile, 
@@ -49,8 +50,8 @@ function Shotgun() : Gun() constructor {
 					spread += irandom_range(5, 10)
 				}
 				clip -= 1
-				offset -= SHOTGUN_KICKBACK_DISTANCE
-				state.change("cooldown")
+				distance -= SHOTGUN_KICKBACK_DISTANCE
+				return state.change("cooldown")
 			}
 		}
 	)

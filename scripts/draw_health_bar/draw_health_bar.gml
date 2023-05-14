@@ -16,9 +16,9 @@
 function draw_health_bar() {
 	draw_sprite_stretched(
 		spr_gui_background, 0,
-		HEALTH_BAR_BACKGROUND_X,
+		HEALTH_BAR_BACKGROUND_X, 
 		HEALTH_BAR_BACKGROUND_Y,
-		HEALTH_BAR_BACKGROUND_WIDTH,
+		HEALTH_BAR_BACKGROUND_WIDTH, 
 		HEALTH_BAR_BACKGROUND_HEIGHT
 	)
 	draw_sprite_stretched(
@@ -35,8 +35,7 @@ function draw_health_bar() {
 			HEALTH_BAR_BACKGROUND_X - GUI_MARGIN, 
 			HEALTH_BAR_BACKGROUND_Y + (HEALTH_BAR_BACKGROUND_HEIGHT / 2),
 			string(_health) + "/" + string(PLAYER_MAX_HEALTH), 
-			c_white, c_white, c_white, c_white,
-			1
+			c_white, c_white, c_white, c_white, 1
 		)
 	}
 }

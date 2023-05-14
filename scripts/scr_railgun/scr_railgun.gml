@@ -5,10 +5,11 @@
 #macro RAILGUN_KICKBACK_DISTANCE (7.5)
 
 function Railgun() : Gun() constructor {
-	////////////
-	// sprite //
-	////////////
-	DEFAULT_SPRITE   = spr_railgun
+	/////////////
+	// sprites //
+	/////////////
+	SPRITE           = spr_railgun
+	HAND_SPRITE      = spr_railgun_hand
 	COOLDOWN_SPRITE  = spr_railgun
 	RELOADING_SPRITE = spr_railgun
 	
@@ -22,10 +23,10 @@ function Railgun() : Gun() constructor {
 	//////////
 	// ammo //
 	//////////
-	DEFAULT_AMMO = 40
-	DEFAULT_CLIP = 1
-	ammo         = DEFAULT_AMMO
-	clip         = DEFAULT_CLIP
+	MAX_AMMO = 60
+	MAX_CLIP = 1
+	ammo = MAX_AMMO
+	clip = MAX_CLIP
 	
 	////////////
 	// states //
@@ -35,19 +36,19 @@ function Railgun() : Gun() constructor {
 			step: function() {
 				if (state.get_time(false) >= CHARGE_FRAMES) {
 					instance_create_layer(
-						instance.x + lengthdir_x(12, _direction), instance.y + lengthdir_y(12, _direction), 
+						instance.x + lengthdir_x(12, angle), instance.y + lengthdir_y(12, angle), 
 						"player", obj_railgun_beam, 
 						{ 
 							sprite_index: RAILGUN_BULLET_SPRITE, 
-							direction: _direction, 
-							image_angle: _direction,
+							direction: angle, 
+							image_angle: angle,
 							range: RAILGUN_BULLET_RANGE,
 							damage: RAILGUN_BULLET_DAMAGE,
 						}
 					)
 					clip -= 1
-					offset -= RAILGUN_KICKBACK_DISTANCE
-					state.change("cooldown")
+					distance -= RAILGUN_KICKBACK_DISTANCE
+					return state.change("cooldown")
 				}
 			}
 		}

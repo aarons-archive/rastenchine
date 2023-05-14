@@ -2,24 +2,25 @@ function Gun() : Weapon() constructor {
 	////////////
 	// sprite //
 	////////////
-	DEFAULT_SPRITE = undefined
-	COOLDOWN_SPRITE = undefined
+	SPRITE           = undefined
+	HAND_SPRITE      = undefined
+	COOLDOWN_SPRITE  = undefined
 	RELOADING_SPRITE = undefined
 	
 	////////////
 	// timing //
 	////////////
-	COOLDOWN_FRAMES = undefined
+	COOLDOWN_FRAMES  = undefined
 	RELOADING_FRAMES = undefined
 	
 	//////////
 	// ammo //
 	//////////
-	DEFAULT_AMMO = undefined
-	DEFAULT_CLIP = undefined
-	ammo = DEFAULT_AMMO
-	clip = DEFAULT_CLIP
-	
+	MAX_AMMO = undefined
+	MAX_CLIP = undefined
+	ammo = MAX_AMMO
+	clip = MAX_CLIP
+
 	////////////
 	// inputs //
 	////////////
@@ -48,13 +49,13 @@ function Gun() : Weapon() constructor {
 				instance.sprite_index = COOLDOWN_SPRITE
 			},
 			step: function() {
-				offset = lerp(offset, ITEM_OFFSET, 0.25)
+				distance = lerp(distance, DEFAULT_DISTANCE, 0.25)
 				if (state.get_time(false) >= COOLDOWN_FRAMES) { 
 					return state.change("idle") 
 				}
 			},
 			leave: function() {
-				instance.sprite_index = DEFAULT_SPRITE
+				instance.sprite_index = HAND_SPRITE
 			}
 		}
 	)
@@ -65,14 +66,14 @@ function Gun() : Weapon() constructor {
 			},
 			step: function() {
 				if (state.get_time(false) >= RELOADING_FRAMES) {
-					var missing = DEFAULT_CLIP - clip
+					var missing = MAX_CLIP - clip
 					clip += (missing > ammo) ? (ammo) : (missing)
 					ammo -= (missing > ammo) ? (ammo) : (missing)
 					return state.change("idle")
 				}
 			},
 			leave: function() {
-				instance.sprite_index = DEFAULT_SPRITE
+				instance.sprite_index = HAND_SPRITE
 			}
 		}
 	)

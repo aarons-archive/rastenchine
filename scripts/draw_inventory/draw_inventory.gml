@@ -21,33 +21,38 @@
 #macro HOTBAR_SLOT_X      (HOTBAR_BACKGROUND_X + GUI_BG_BORDER + INVENTORY_MARGIN)
 #macro HOTBAR_SLOT_Y      (undefined)
 
-function draw_inventory() {
-	draw_sprite_stretched(
-		GUI_BG_SPRITE, 0,
-		INVENTORY_BACKGROUND_X, INVENTORY_BACKGROUND_Y,
-		INVENTORY_BACKGROUND_WIDTH, INVENTORY_BACKGROUND_HEIGHT
-	)
-}
-
 function show_inventory() {
+	//array_push(
+	//	_slot_instances, 
+	//	instance_create_layer(
+	//		INVENTORY_BACKGROUND_X, INVENTORY_BACKGROUND_Y,
+	//		"managers", obj_inventory_slot,
+	//		{
+	//			width: INVENTORY_BACKGROUND_WIDTH,
+	//			height: INVENTORY_BACKGROUND_HEIGHT
+	//		}
+	//	)
+	//)
 	for (var _x = 0; _x < INVENTORY_SLOT_COUNT_X; _x++) {
 		for (var _y = 0; _y < INVENTORY_SLOT_COUNT_Y; _y++) {
 			var _inventory_index = _y * INVENTORY_SLOT_COUNT_X + _x 
 			var _sprite = undefined
-			try { _sprite = inventory[_inventory_index].DEFAULT_SPRITE } catch(error) {}
-			array_push(_slot_instances, instance_create_layer( 
-				INVENTORY_BACKGROUND_X + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_WIDTH) * _x),
-				INVENTORY_BACKGROUND_Y + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_HEIGHT) * _y),
-				"managers", 
-				obj_inventory_slot,
-				{
-					width: INVENTORY_SLOT_WIDTH, 
-					height: INVENTORY_SLOT_HEIGHT,
-					sprite: _sprite,
-					//inventory_index: _inventory_index,
-					//hotbar_index: array_find_index(hotbar, _inventory_index)
-				}
-			))
+			try { _sprite = inventory[_inventory_index].SPRITE } catch(error) {}
+			array_push(
+				_slot_instances, 
+				instance_create_layer( 
+					INVENTORY_BACKGROUND_X + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_WIDTH) * _x),
+					INVENTORY_BACKGROUND_Y + GUI_BG_BORDER + INVENTORY_MARGIN + ((INVENTORY_MARGIN + INVENTORY_SLOT_HEIGHT) * _y),
+					"managers", obj_inventory_slot,
+					{
+						width: INVENTORY_SLOT_WIDTH, 
+						height: INVENTORY_SLOT_HEIGHT,
+						sprite: _sprite,
+						//inventory_index: _inventory_index,
+						//hotbar_index: array_find_index(hotbar, _inventory_index)
+					}
+				)
+			)
 		}
 	}
 }
@@ -69,17 +74,17 @@ function draw_hotbar() {
 	for (var i = 0; i < length; i++) {
 		var slot_y = HOTBAR_BACKGROUND_Y + GUI_BG_BORDER + INVENTORY_MARGIN + ((HOTBAR_SLOT_HEIGHT + INVENTORY_MARGIN) * i)
 		var colour = (i == index) ? (c_green) : (c_white)
-		var _item = undefined
-		try { _item = (hotbar[i] != undefined) ? (inventory[hotbar[i]]) : (undefined) } catch (error) {}
 		draw_sprite_stretched_ext(
 			GUI_BG_SPRITE, 0,
 			HOTBAR_SLOT_X, slot_y,
 			HOTBAR_SLOT_WIDTH, HOTBAR_SLOT_HEIGHT,
 			colour, 1
 		)
+		var _item = undefined
+		try { _item = (hotbar[i] != undefined) ? (inventory[hotbar[i]]) : (undefined) } catch (error) {}
 		if (_item != undefined) {
 			draw_sprite(
-				_item.DEFAULT_SPRITE, 0, 
+				_item.SPRITE, 0, 
 				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2),
 				slot_y + (HOTBAR_SLOT_HEIGHT / 2)
 			)

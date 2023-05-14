@@ -11,3 +11,18 @@ do_movement()
 do_animation()
 
 inventory.step()
+
+if (global.fell) && (scale > 0) {
+	movement_state = player_movement_state.dodging
+	x++;
+	scale-=0.01;
+	image_xscale = scale;
+	image_yscale = scale;
+	if (inventory.item != undefined) {
+		inventory.item.instance.image_xscale = scale
+		inventory.item.instance.image_yscale = scale
+	}
+}
+else if (global.fell) && (scale <= 0.01) && (room != rm_fell_and_died) {
+	room_goto(rm_fell_and_died)	
+}

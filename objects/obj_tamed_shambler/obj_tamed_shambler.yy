@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Tamed Shambler",
-    "path": "folders/Entities/Friends/Tamed Shambler.yy",
+    "name": "Shambler",
+    "path": "folders/Entities/Enemies/Shambler.yy",
   },
   "parentObjectId": {
     "name": "obj_entity",
