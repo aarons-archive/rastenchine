@@ -6,6 +6,7 @@ y_input = 0
 walk_input = false
 run_input = false
 dodge_input = false
+scale = 1;
 
 _x = -1
 _y = -1

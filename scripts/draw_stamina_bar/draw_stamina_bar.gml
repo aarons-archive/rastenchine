@@ -32,8 +32,7 @@ function draw_stamina_bar() {
 			STAMINA_BAR_BACKGROUND_X, 
 			STAMINA_BAR_BACKGROUND_Y + STAMINA_BAR_BACKGROUND_HEIGHT,
 			"EXAHUSTED!",	
-			c_green, c_green, c_green, c_green, 
-			1
+			c_red, c_red, c_red, c_red, 1
 		)
 	}
 	if (global.debug_text == true) {
@@ -43,8 +42,7 @@ function draw_stamina_bar() {
 			STAMINA_BAR_BACKGROUND_X - GUI_MARGIN, 
 			STAMINA_BAR_BACKGROUND_Y + (STAMINA_BAR_BACKGROUND_HEIGHT / 2),
 			string(stamina) + "/" + string(PLAYER_MAX_STAMINA), 
-			c_white, c_white, c_white, c_white,
-			1
+			c_white, c_white, c_white, c_white, 1
 		)
 	}
 }

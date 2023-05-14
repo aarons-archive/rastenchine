@@ -37,5 +37,5 @@
     "path": "sprites/spr_enemy_spawner/spr_enemy_spawner.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

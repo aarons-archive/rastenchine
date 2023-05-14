@@ -7,10 +7,11 @@
 #macro RIFLE_KICKBACK_DISTANCE (3)
 
 function Rifle() : Gun() constructor {
-	////////////
-	// sprite //
-	////////////
-	DEFAULT_SPRITE   = spr_rifle
+	/////////////
+	// sprites //
+	/////////////
+    SPRITE           = spr_rifle
+	HAND_SPRITE      = spr_rifle_hand
 	COOLDOWN_SPRITE  = spr_rifle_cooldown
 	RELOADING_SPRITE = spr_rifle_reloading
 	
@@ -24,10 +25,10 @@ function Rifle() : Gun() constructor {
 	//////////
 	// ammo //
 	//////////
-	DEFAULT_AMMO = 60
-	DEFAULT_CLIP = 12
-	ammo         = DEFAULT_AMMO
-	clip         = DEFAULT_CLIP
+	MAX_AMMO = 60
+	MAX_CLIP = 12
+	ammo = MAX_AMMO
+	clip = MAX_CLIP
 	
 	/////////////
 	// special //
@@ -42,7 +43,7 @@ function Rifle() : Gun() constructor {
 		"shooting", {
 			step: function() {
 				if (burst_clip >= 1) {
-					var spread = _direction + random_range(-RIFLE_BULLET_SPREAD, RIFLE_BULLET_SPREAD)
+					var spread = angle + random_range(-RIFLE_BULLET_SPREAD, RIFLE_BULLET_SPREAD)
 					instance_create_layer(
 						instance.x, instance.y, "player", obj_projectile, 
 						{ 
@@ -56,12 +57,12 @@ function Rifle() : Gun() constructor {
 					)
 					clip -= 1
 					burst_clip -= 1
-					offset -= RIFLE_KICKBACK_DISTANCE
-					state.change("burst_cooldown")
+					distance -= RIFLE_KICKBACK_DISTANCE
+					return state.change("burst_cooldown")
 				}
 				else {
 					burst_clip = DEFAULT_BURST_CLIP
-					state.change("cooldown")
+					return state.change("cooldown")
 				}
 			}
 		}
@@ -72,13 +73,13 @@ function Rifle() : Gun() constructor {
 				instance.sprite_index = COOLDOWN_SPRITE
 			},
 			step: function() {
-				offset = lerp(offset, ITEM_OFFSET, 0.25)
+				distance = lerp(distance, DEFAULT_DISTANCE, 0.25)
 				if (state.get_time(false) >= BURST_COOLDOWN_FRAMES) {
 					return state.change("shooting") 
 				}
 			},
 			leave: function() {
-				instance.sprite_index = DEFAULT_SPRITE
+				instance.sprite_index = SPRITE
 			}
 		}
 	)

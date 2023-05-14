@@ -12,7 +12,7 @@ within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, fa
 within_vision_radius = (collision_circle(x, y, vision_radius, obj_player, true, false) != noone)
 
 state.step()
-
+depth = -(y / 10)
 
 #region railgun shit
 if instance_exists(obj_railgun_beam) {

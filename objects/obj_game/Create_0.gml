@@ -11,3 +11,5 @@ global.debug_enemies = true
 global.debug_lights  = false
 global.debug_gui     = false
 global.debug_camera  = false
+
+global.fell          = false
