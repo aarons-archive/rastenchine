@@ -124,7 +124,7 @@ if state.add(
 	"death", {
 		enter: function() {
 			enemy_death()
-			audio_play_sound(snd_leaper_death,1,false,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_leaper_death,true,1,global.enemy_audio)
 		}
 	}	
 )
@@ -132,6 +132,7 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
+			//audio_play_sound_on(s_emit,snd_leaper_hurt,true,1,global.enemy_audio)
 		},
 		step: function() {
 			//knockback

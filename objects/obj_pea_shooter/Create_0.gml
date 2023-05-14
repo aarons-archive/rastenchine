@@ -11,9 +11,9 @@ sprite_hurt      = spr_pea_shooter
 //unique sprites
 sprite_run = spr_pea_shooter_burrowed //burrowed
 //radi
-vision_radius = 600
-attack_radius = 350
-chase_radius  = 400
+vision_radius = 800
+attack_radius = 250
+chase_radius  = 600
 //unique radi
 run_radius = 200
 close_radius = 150
@@ -26,6 +26,8 @@ state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle 
+			audio_stop_all()
+			//audio_play_sound_on(s_emit,choose(),true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -37,6 +39,7 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
+			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -68,6 +71,7 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing 
+			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
 		},
 		step: function() {
 			enemy_chasing()
@@ -88,6 +92,7 @@ state.add(
 				var _direction = point_direction(x, y, obj_player.x, obj_player.y)
 				instance_create_layer( x, y, "enemies", obj_pea_bullets, 
 				{ speed: 10, direction: _direction, image_angle: _direction })
+				//audio_play_sound_on(s_emit,snd_peashooter_attack,true,1,global.enemy_audio)
 				shoot_cooldown = true
 				alarm[1] = 60
 			}
@@ -116,6 +121,7 @@ state.add(
 			run_lock = true
 			sprite_index = sprite_run	
 			alarm[3] = 30
+			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
 		} , 
 		step: function () {
 			enemy_peashooter_run()
@@ -127,6 +133,7 @@ if state.add(
 	"death", {
 		enter: function() {
 			enemy_death()
+			//audio_play_sound_on(s_emit,snd_peashooter_death,true,1,global.enemy_audio)
 		}
 	}	
 )
@@ -134,6 +141,7 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
+			//audio_play_sound_on(s_emit,snd_peashooter_hurt,true,1,global.enemy_audio)
 		},
 		step: function() {
 			//knockback

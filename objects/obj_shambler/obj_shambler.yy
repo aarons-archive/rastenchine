@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_shambler",
-    "path": "sprites/spr_shambler/spr_shambler.yy",
+    "name": "spr_shambler_idle",
+    "path": "sprites/spr_shambler_idle/spr_shambler_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

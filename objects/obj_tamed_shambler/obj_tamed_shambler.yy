@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_tamed_shambler",
-    "path": "sprites/spr_tamed_shambler/spr_tamed_shambler.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

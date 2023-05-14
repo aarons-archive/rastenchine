@@ -1,13 +1,13 @@
 event_inherited()
 //sprites
-sprite_idle      = spr_shambler
-sprite_wandering = spr_shambler
-sprite_chasing   = spr_shambler_chasing
-sprite_lost      = spr_shambler_cooldown
+sprite_idle      = spr_shambler_idle
+sprite_wandering = spr_shambler_moving
+sprite_chasing   = spr_shambler_moving
+sprite_lost      = dev_shambler_cooldown
 sprite_attacking = spr_shambler_explode
-sprite_cooldown  = spr_shambler_cooldown
+sprite_cooldown  = dev_shambler_cooldown
 sprite_death     = spr_shambler_death
-sprite_hurt      = spr_shambler
+sprite_hurt      = dev_shambler
 //unique sprites
 sprite_sleeping = spr_shambler_sleeping
 sprite_charging = spr_shambler_charging
@@ -18,16 +18,13 @@ chase_radius  = 300
 //unique vars
 explode_timer = 0
 //
-idle_sounds = choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,
-					snd_shambler_idle4,snd_shambler_idle5)
-
-state = new SnowState("idle")
+state = new SnowState("sleeping")
 //sleeping during night hours wandering through day hours 
 state.add(
 	"sleeping", {
 		enter: function() {
 			sprite_index = sprite_sleeping
-			audio_stop_all()
+			audio_stop_sound(s_emit)
 		},
 		step: function() {
 			//will also need cheese item + must be crouching?
@@ -44,8 +41,8 @@ state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle
-			audio_stop_all()
-			audio_play_sound(choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,snd_shambler_idle4,snd_shambler_idle5),1, false, global.enemy_audio)
+			audio_stop_sound(s_emit)
+			audio_play_sound_on(s_emit,choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,snd_shambler_idle4,snd_shambler_idle5),true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -58,7 +55,7 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
-			//audio_play_sound(snd_shambler_moving)
+			audio_play_sound_on(s_emit,snd_shambler_moving1,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -70,7 +67,6 @@ state.add(
 	"wandering_cooldown", {
 		enter: function() { 
 			enemy_wandering_cooldown()
-			audio_play_sound(idle_sounds,1, false)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -90,10 +86,11 @@ state.add(
 state.add(
 	"chasing", {
 		enter: function() { 
-			sprite_index = sprite_chasing 
+			sprite_index = sprite_chasing
+			audio_play_sound_on(s_emit,snd_shambler_moving1,true,1,global.enemy_audio)
 		},
 		step: function() {
-			enemy_chasing()
+			enemy_chasing(true)
 		}
 	}
 )
@@ -106,9 +103,7 @@ state.add(
 		},
 		step: function() {
 			explode_timer += 0.1
-			//if sprite_index == sprite_charging{_speed = 0}
-			if !(collision_circle(x, y, attack_radius, obj_player, false, false)){
-				//_speed = ENEMY_DEFAULT_SPEED 
+			if !(within_attack_radius){
 				explode_timer -= 0.2
 				if explode_timer <= 0 { 
 					explode_timer = 0
@@ -124,8 +119,10 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
+			instance_create_layer(x,y,"enemies",obj_shambler_explosion)
 			path_end()
-			audio_play_sound(snd_shambler_explode,1,false,global.enemy_audio)
+			audio_stop_sound(s_emit)
+			audio_play_sound_on(s_emit,snd_shambler_explode,false,1,global.enemy_audio)
 		},
 		step: function() {
 			if (image_index	>= image_number - 1) {
@@ -138,7 +135,8 @@ state.add(
 if state.add(
 	"death", {
 		enter: function() {
-			enemy_death()
+			enemy_death()	
+			//audio_play_sound_on(s_emit,snd_shambler_death,true,1,global.enemy_audio)
 		}
 	}	
 )
@@ -146,6 +144,7 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
+			//audio_play_sound_on(s_emit,snd_shambler_hurt,true,1,global.enemy_audio)
 		},
 		step: function() {
 			//knockback

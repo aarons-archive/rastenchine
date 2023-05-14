@@ -41,7 +41,10 @@ function enemy_wandering()
 		wander_y = irandom_range(bbox_top - 200, bbox_bottom + 200)
 	}
 	var path_found = mp_grid_path(global.mp_grid, path, x, y, wander_x, wander_y, irandom_range(0, 1))
-	if (path_found) { path_start(path, 2, path_action_stop, false)}
+	if (path_found) { 
+		if (wander_x < x) {image_xscale = -1} else {image_xscale = 1}
+		path_start(path, 2, path_action_stop, false)
+	}
 }
 function enemy_wandering_cooldown()
 {
@@ -49,10 +52,10 @@ function enemy_wandering_cooldown()
 	alarm[0] = 120
 	audio_stop_all()
 }
-function enemy_chasing(leaper=false)
+function enemy_chasing(charger=false)
 {
 	if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
-		if (within_attack_radius) { return state.change(leaper ? "charging" : "attacking") }
+		if (within_attack_radius) { return state.change(charger ? "charging" : "attacking") }
 		if (!within_chase_radius) { return state.change("lost") }
 		path_cooldown -= 1
 		if (path_cooldown <= 0) {
@@ -97,4 +100,4 @@ function enemy_peashooter_run()
 	y -= y_dir
 }
 
-global.enemy_audio = 0.01
+global.enemy_audio = 0.03

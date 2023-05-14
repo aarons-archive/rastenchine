@@ -8,6 +8,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":3,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":8,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -35,8 +36,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_pea_shooter",
-    "path": "sprites/spr_pea_shooter/spr_pea_shooter.yy",
+    "name": "dev_pea_shooter",
+    "path": "sprites/dev_pea_shooter/dev_pea_shooter.yy",
   },
   "spriteMaskId": null,
   "visible": true,
