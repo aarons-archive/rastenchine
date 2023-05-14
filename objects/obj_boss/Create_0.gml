@@ -26,7 +26,10 @@ if state.add(
 			boss_escape_zone = instance_furthest(x,y,obj_boss_spawn_zone)
 			var path_found = mp_grid_path(global.mp_grid, path, x, y,
 			boss_escape_zone.x, boss_escape_zone.y, true)
-			if (path_found) { path_start(path, _speed, path_action_stop, false) }
+			if (path_found) { 
+				path_start(path, _speed, path_action_stop, false)
+				//audio_play_sound_on(s_emit,snd_growler_moving,true,1,global.enemy_audio)
+			}
 		} , 
 		step: function() {
 			if distance_to_object(boss_escape_zone) < 150 {instance_destroy()}
@@ -50,6 +53,7 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_chasing
 			alarm[3] = 600
+			//audio_play_sound_on(s_emit,snd_growler_moving,true,1,global.enemy_audio)
 		},
 		step: function() {
 			enemy_chasing()
@@ -63,6 +67,8 @@ state.add(
 			sprite_index = sprite_swipe_attack
 			_speed = 0
 			path_end()
+			audio_stop_all()
+			//audio_play_sound_on(s_emit,snd_growler_swipe_attack,false,1,global.enemy_audio)
 		},
 		step: function() {
 			if (image_index	>= image_number - 1) {
@@ -90,6 +96,8 @@ state.add(
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_charge_attack
 			move_towards_point(attack_x, attack_y, 15)
+			audio_stop_all()
+			//audio_play_sound_on(s_emit,snd_growler_charge_attack,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 1) {
@@ -119,6 +127,7 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
+			//audio_play_sound_on(s_emit,snd_boss_hurt,true,1,global.enemy_audio)
 		},
 	}
 )

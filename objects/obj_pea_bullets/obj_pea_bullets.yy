@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pea_bullets",
-    "path": "sprites/spr_pea_bullets/spr_pea_bullets.yy",
+    "name": "dev_pea_bullets",
+    "path": "sprites/dev_pea_bullets/dev_pea_bullets.yy",
   },
   "spriteMaskId": null,
   "visible": true,

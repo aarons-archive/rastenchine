@@ -1,0 +1,1 @@
+attack_radius = 250

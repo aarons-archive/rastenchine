@@ -13,20 +13,19 @@ sprite_hurt      = spr_molten_cooldown //hurt sprite
 vision_radius = 500
 attack_radius = 15
 chase_radius  = 300
-//sound
-//idle_sounds = 
+//idle sounds
+idle_sounds  = choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3)
+moving_sound = snd_molten_moving
+alarm[9] = 120
 //State machine
 state = new SnowState("idle")
 state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle
-			audio_stop_all()
-			audio_play_sound_on(s_emit,choose(snd_molten_idle_one,snd_molten_idle_two,snd_molten_idle_three,snd_molten_idle_four),true,1,global.enemy_audio)
 		},
 		step: function() {
-			//These if statements find if the player is within either of these ranges
-			//and then moves the enemy into the necessary state
+			//If the player is within either of these ranges the enemy will move into the required state
 			if (within_chase_radius) { return state.change("chasing") }
 			if (within_vision_radius) { return state.change("wandering") }	
 		}
@@ -36,7 +35,8 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
-			audio_play_sound_on(s_emit,snd_molten_moving,true,1,global.enemy_audio)
+			//audio_stop_sound(s_emit)
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -48,6 +48,7 @@ state.add(
 	"wandering_cooldown", {
 		enter: function() { 
 			enemy_wandering_cooldown()
+			audio_stop_sound(moving_sound)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -58,6 +59,7 @@ state.add(
 	"lost", {
 		enter: function() { 
 			enemy_lost()
+			audio_stop_sound(moving_sound)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -67,9 +69,10 @@ state.add(
 state.add(
 	"chasing", {
 		enter: function() { 
-			sprite_index = sprite_chasing 
-			//audio_play_sound(snd_molten_moving,1,true,global.enemy_audio)
-			audio_play_sound_on(s_emit,snd_molten_moving,true,1,global.enemy_audio)
+			sprite_index = sprite_chasing
+			if !audio_is_playing(moving_sound){
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
+			}
 		},
 		step: function() {
 			enemy_chasing()
@@ -81,9 +84,8 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
-			audio_stop_all()
-			//audio_play_sound(snd_molten_attack,1,false,global.enemy_audio)
-			audio_play_sound_on(s_emit,snd_molten_attack,true,1,global.enemy_audio)
+			//audio_stop_sound(s_emit)
+			audio_play_sound_on(s_emit,snd_molten_attack,false,1,global.enemy_audio)
 			_speed = 0
 			path_end()
 		},
@@ -106,9 +108,8 @@ state.add(
 if state.add(
 	"death", {
 		enter: function() {
+			audio_play_sound_on(s_emit,snd_molten_death,false,1,global.enemy_audio)
 			enemy_death()
-			//audio_play_sound(snd_molten_death,1,false,global.enemy_audio)
-			audio_play_sound_on(s_emit,snd_molten_death,true,1,global.enemy_audio)
 		}
 	}	
 )
@@ -116,6 +117,8 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
+			//audio_stop_all()
+			audio_play_sound_on(s_emit,snd_molten_death,false,1,global.enemy_audio)
 		},
 		step: function() {
 			//knockback
