@@ -14,7 +14,7 @@ vision_radius = 500
 attack_radius = 15
 chase_radius  = 300
 //idle sounds
-idle_sounds  = choose(snd_molten_idle1,snd_molten_idle2,snd_molten_idle3)
+idle_sounds  = choose(snd_molten_idle_one,snd_molten_idle_two,snd_molten_idle_three)
 moving_sound = snd_molten_moving
 alarm[9] = 120
 //State machine

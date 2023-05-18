@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 3,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Inventory/Items/Weapons/Guns/Railgun/Sprites.yy",
+    "name": "Beam",
+    "path": "folders/Inventory/Items/Weapons/Guns/Railgun/Beam.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

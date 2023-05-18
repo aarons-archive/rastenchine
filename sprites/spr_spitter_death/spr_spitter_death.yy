@@ -51,8 +51,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Spitter",
-    "path": "folders/Entities/Enemies/Spitter/Spitter.yy",
+    "name": "Sprites",
+    "path": "folders/Entities/Enemies/Spitter/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
