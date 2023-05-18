@@ -52,7 +52,7 @@
   "origin": 0,
   "parent": {
     "name": "Spitter",
-    "path": "folders/Entities/Enemies/Pea Shooter/Spitter.yy",
+    "path": "folders/Entities/Enemies/Spitter/Spitter.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
