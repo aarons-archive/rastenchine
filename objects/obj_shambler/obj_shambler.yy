@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_shambler_idle",
+    "path": "sprites/spr_shambler_idle/spr_shambler_idle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

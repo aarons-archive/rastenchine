@@ -7,3 +7,5 @@ within_attack_radius = (
 		obj_player, true, false
 	) != noone
 )
+
+show_debug_message(image_index)

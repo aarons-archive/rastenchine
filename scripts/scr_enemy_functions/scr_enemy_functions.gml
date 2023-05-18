@@ -74,8 +74,7 @@ function enemy_death()
 	path_end()
 	_speed = 0
 	sprite_index = sprite_death
-	audio_stop_all()
-	if image_index >= image_number - 1 {instance_destroy() }
+	if image_index >= sprite_get_number(sprite_death) - 1 {instance_destroy() }
 }
 
 function enemy_peashooter_run()
@@ -100,4 +99,87 @@ function enemy_peashooter_run()
 	y -= y_dir
 }
 
+function ALL_THE_STATES()
+{
+	state.add(
+	"idle", {
+		enter: function() { 
+			sprite_index = sprite_idle
+		},
+		step: function() {
+			if (within_chase_radius) { return state.change("chasing") }
+			if (within_vision_radius) { return state.change("wandering") }	
+		}
+	}
+)
+state.add(
+	"wandering", {
+		enter: function() { 
+			enemy_wandering()
+			if audio_is_playing(moving_sound) {audio_stop_sound(moving_sound)}
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
+		},
+		step: function() {
+			if (within_chase_radius) { return state.change("chasing") }
+			if (path_position == 1) { state.change("wandering_cooldown") }
+		}
+	}
+)
+state.add(
+	"wandering_cooldown", {
+		enter: function() { 
+			enemy_wandering_cooldown()
+			audio_stop_sound(moving_sound)
+		},
+		step: function() {
+			if (within_chase_radius) { return state.change("chasing") }
+		}
+	}
+)
+state.add(
+	"lost", {
+		enter: function() { 
+			enemy_lost()
+			audio_stop_sound(moving_sound)
+		},
+		step: function() {
+			if (within_chase_radius) { return state.change("chasing") }
+		}
+	}
+)
+state.add(
+	"chasing", {
+		enter: function() { 
+			sprite_index = sprite_chasing
+			if audio_is_playing(moving_sound) {audio_stop_sound(moving_sound)}
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
+		},
+		step: function() {
+			enemy_chasing()
+		}
+	}
+)
+if state.add(
+	"death", {
+		enter: function() {
+			audio_stop_sound(moving_sound)
+			audio_play_sound_on(s_emit,death_sound,false,1,global.enemy_audio)
+			enemy_death()
+		}
+	}	
+)
+state.add(
+	"hurt", {
+		enter: function() {
+			enemy_hurt()
+			audio_stop_sound(moving_sound)
+			audio_play_sound_on(s_emit,hurt_sound,false,1,global.enemy_audio)
+		},
+		step: function() {
+			enemy_knockback()
+			}	
+			
+		}
+)
+}
 global.enemy_audio = 0.03

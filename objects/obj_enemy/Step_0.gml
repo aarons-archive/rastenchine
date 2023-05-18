@@ -7,6 +7,7 @@
 audio_emitter_position(s_emit,x,y,0)
 if (_health < 1) { state.change("death")}
 
+
 within_attack_radius = (collision_circle(x, y, attack_radius, obj_player, true, false) != noone)
 within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, false) != noone)
 within_vision_radius = (collision_circle(x, y, vision_radius, obj_player, true, false) != noone)
