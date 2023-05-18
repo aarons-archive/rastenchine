@@ -13,7 +13,7 @@
   "duration": 2.21737,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Entities/Enemies/Pea Shooter/Sounds.yy",
+    "path": "folders/Entities/Enemies/Spitter/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
