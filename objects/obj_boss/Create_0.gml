@@ -1,14 +1,14 @@
 event_inherited()
 //sprites
 sprite_idle          = spr_boss
-sprite_chasing       = spr_boss_chasing
+sprite_chasing       = spr_Growler_moving
 sprite_swipe_attack  = spr_boss_swipe_attack
 sprite_charge_attack = spr_boss_charge_attack
 sprite_cooldown      = spr_boss_charging//cooldown spr
 sprite_death         = spr_boss
 sprite_hurt          = spr_boss
 //unique sprites
-sprite_charging  = spr_boss_charging
+sprite_charging      = spr_boss_charging
 //radi
 swipe_attack_radius  = 250
 charge_attack_radius = 400
@@ -18,6 +18,13 @@ _health = 120
 attack_x = 0
 attack_y = 0
 charge_attack = 3
+//idle sounds
+idle_sounds  = choose(snd_growler_idle_one,snd_growler_idle_two,snd_growler_idle_three,snd_growler_idle_four)
+moving_sound = snd_growler_moving
+hurt_sound   = snd_molten_hurt //snd_growler_hurt
+death_sound  = snd_molten_death //snd_growler_death 
+attack_sound = snd_molten_attack //snd_growler_attack
+//State Machine
 state = new SnowState("idle")
 if state.add( 
 	"Run", {
@@ -28,7 +35,8 @@ if state.add(
 			boss_escape_zone.x, boss_escape_zone.y, true)
 			if (path_found) { 
 				path_start(path, _speed, path_action_stop, false)
-				//audio_play_sound_on(s_emit,snd_growler_moving,true,1,global.enemy_audio)
+				if audio_is_playing(moving_sound) {audio_stop_sound(moving_sound)}
+				audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
 			}
 		} , 
 		step: function() {
@@ -40,7 +48,6 @@ state.add(
 	"idle", {
 		enter: function() { 
 			sprite_index = sprite_idle
-			audio_play_sound(choose(snd_growler_idle_one,snd_growler_idle_two,snd_growler_idle_three,snd_growler_idle_four),1, false, global.enemy_audio)
 		},
 		step: function() {
 			//time instead of range
@@ -48,12 +55,15 @@ state.add(
 		}
 	}
 ) 
+
 state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing
 			alarm[3] = 600
-			//audio_play_sound_on(s_emit,snd_growler_moving,true,1,global.enemy_audio)
+			if audio_is_playing(moving_sound) {audio_stop_sound(moving_sound)}
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
+			//music?
 		},
 		step: function() {
 			enemy_chasing()
@@ -67,8 +77,8 @@ state.add(
 			sprite_index = sprite_swipe_attack
 			_speed = 0
 			path_end()
-			audio_stop_all()
-			//audio_play_sound_on(s_emit,snd_growler_swipe_attack,false,1,global.enemy_audio)
+			audio_stop_sound(moving_sound)
+			//audio_play_sound_on(s_emit,sound_swipe_attack,false,1,global.enemy_audio)
 		},
 		step: function() {
 			if (image_index	>= image_number - 1) {
@@ -97,7 +107,7 @@ state.add(
 			sprite_index = sprite_charge_attack
 			move_towards_point(attack_x, attack_y, 15)
 			audio_stop_all()
-			//audio_play_sound_on(s_emit,snd_growler_charge_attack,true,1,global.enemy_audio)
+			//audio_play_sound_on(s_emit,sound_charge_attack,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (place_meeting(x, y, obj_player) || place_meeting(x, y, obj_player_collision) || distance_to_point(attack_x, attack_y) <= 1) {
@@ -120,6 +130,7 @@ state.add(
 	"death", {
 		enter: function() {
 			state.change("Run")
+			//sound here maybe?
 		}
 	}
 )
@@ -127,7 +138,7 @@ state.add(
 	"hurt", {
 		enter: function() {
 			enemy_hurt()
-			//audio_play_sound_on(s_emit,snd_boss_hurt,true,1,global.enemy_audio)
+			//audio_play_sound_on(s_emit,hurt_sound,true,1,global.enemy_audio)
 		},
 	}
 )
