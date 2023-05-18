@@ -12,8 +12,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},"propertyId":{"name":"damage","path":"objects/obj_projectile/obj_projectile.yy",},"value":"-1",},
   ],
   "parent": {
-    "name": "Railgun",
-    "path": "folders/Inventory/Items/Weapons/Guns/Railgun.yy",
+    "name": "Beam",
+    "path": "folders/Inventory/Items/Weapons/Guns/Railgun/Beam.yy",
   },
   "parentObjectId": {
     "name": "obj_projectile",

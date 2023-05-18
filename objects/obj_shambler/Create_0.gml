@@ -42,7 +42,7 @@ state.add(
 		enter: function() { 
 			sprite_index = sprite_idle
 			audio_stop_sound(s_emit)
-			audio_play_sound_on(s_emit,choose(snd_shambler_idle1,snd_shambler_idle2,snd_shambler_idle3,snd_shambler_idle4,snd_shambler_idle5),true,1,global.enemy_audio)
+			audio_play_sound_on(s_emit,choose(snd_shambler_idle_one,snd_shambler_idle_two,snd_shambler_idle_three,snd_shambler_idle_four,snd_shambler_idle_five),true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -55,7 +55,7 @@ state.add(
 	"wandering", {
 		enter: function() { 
 			enemy_wandering()
-			audio_play_sound_on(s_emit,snd_shambler_moving1,true,1,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_shambler_moving_one,true,1,global.enemy_audio)
 		},
 		step: function() {
 			if (within_chase_radius) { return state.change("chasing") }
@@ -87,7 +87,7 @@ state.add(
 	"chasing", {
 		enter: function() { 
 			sprite_index = sprite_chasing
-			audio_play_sound_on(s_emit,snd_shambler_moving1,true,1,global.enemy_audio)
+			audio_play_sound_on(s_emit,snd_shambler_moving_one,true,1,global.enemy_audio)
 		},
 		step: function() {
 			enemy_chasing(true)

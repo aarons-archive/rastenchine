@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Inventory/Items/Weapons/Melee/Crowbar/Sprites.yy",
+    "name": "Melee",
+    "path": "folders/Inventory/Items/Weapons/Melee.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
