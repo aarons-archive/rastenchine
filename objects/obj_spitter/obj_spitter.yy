@@ -35,7 +35,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": true,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_spitter_death",
+    "path": "sprites/spr_spitter_death/spr_spitter_death.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

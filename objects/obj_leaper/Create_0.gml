@@ -17,71 +17,51 @@ chase_radius  = 400
 //
 attack_x = 0
 attack_y = 0
+//idle sounds
+idle_sounds  = choose(snd_leaper_idle_one,snd_leaper_idle_two,snd_leaper_idle_three)
+moving_sound = snd_molten_moving //snd_leaper_moving
+hurt_sound   = snd_molten_hurt //snd_leaper_hurt
+death_sound  = snd_leaper_death
+attack_sound = snd_leaper_attack
+//State Machine
 
 state = new SnowState("idle")
-#region Same for all enemies
 state.add(
 	"idle", {
-		enter: function() { 
-			sprite_index = sprite_idle 
-		},
 		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-			if (within_vision_radius) { return state.change("wandering") }	
-			//unique to leaper
 			if (within_attack_radius) { return state.change("charging") }
 		}
 	}
 )
+ALL_THE_STATES()
 state.add(
 	"wandering", {
-		enter: function() { 
-			enemy_wandering()
-		},
 		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-			if (path_position == 1) { state.change("wandering_cooldown") }
-			//unique to leaper
 			if (within_attack_radius) { return state.change("charging") }
 		}
 	}
 )
 state.add(
 	"wandering_cooldown", {
-		enter: function() { 
-			enemy_wandering_cooldown()
-		},
 		step: function() {
 			if (within_attack_radius) { return state.change("charging") }
-			if (within_chase_radius) { return state.change("chasing") }
 		}
 	}
 )
 state.add(
 	"lost", {
-		enter: function() { 
-			enemy_lost()
-		},
 		step: function() {
 			if (within_attack_radius) { return state.change("charging") }
-			if (within_chase_radius) { return state.change("chasing") }
 		}
 	}
 )
-#endregion
-
 state.add(
 	"chasing", {
-		enter: function() { 
-			sprite_index = sprite_chasing 
-		},
 		step: function() {
 			enemy_chasing(true)
 		}
 	}
 )
-
-#region ATTACKS
 state.add(
 	"charging", {
 		enter: function() {
@@ -118,26 +98,3 @@ state.add(
 		}
 	}
 )
-#endregion
-#region universal states
-if state.add(
-	"death", {
-		enter: function() {
-			enemy_death()
-			audio_play_sound_on(s_emit,snd_leaper_death,true,1,global.enemy_audio)
-		}
-	}	
-)
-state.add(
-	"hurt", {
-		enter: function() {
-			enemy_hurt()
-			//audio_play_sound_on(s_emit,snd_leaper_hurt,true,1,global.enemy_audio)
-		},
-		step: function() {
-			//knockback
-			enemy_knockback()
-		}			
-	}
-)
-#endregion

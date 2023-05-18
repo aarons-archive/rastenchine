@@ -1,83 +1,35 @@
 event_inherited()		
 //sprites
-sprite_idle      = spr_pea_shooter_burrowed //burrowed
-sprite_wandering = spr_pea_shooter
-sprite_chasing   = spr_pea_shooter_burrowed_angry //burrowed
-sprite_lost      = dev_basic_enemy_cooldown
-sprite_attacking = spr_pea_shooter
-sprite_cooldown  = spr_pea_shooter_burrowed //burrowed
-sprite_death     = dev_basic_enemy_cooldown
-sprite_hurt      = spr_pea_shooter
+sprite_idle      = spr_spitter_death //burrowed
+sprite_wandering = spr_spitter_moving
+sprite_chasing   = spr_spitter_moving //burrowed
+sprite_lost      = spr_spitter_death
+sprite_attacking = spr_spitter_attack
+sprite_cooldown  = spr_spitter_death //burrowed
+sprite_death     = spr_spitter_death
+sprite_hurt      = spr_spitter_death
 //unique sprites
-sprite_run = spr_pea_shooter_burrowed //burrowed
+sprite_run = spr_spitter_moving //burrowed
 //radi
 vision_radius = 800
 attack_radius = 250
 chase_radius  = 600
 //unique radi
-run_radius = 200
-close_radius = 150
+run_radius    = 200
+close_radius  = 150
 //unique vars
 shoot_cooldown = false
-run_lock = false
-
+run_lock       = false
+//idle sounds
+idle_sounds  = choose(snd_spitter_idle_one,snd_spitter_idle_two,snd_spitter_idle_three)
+moving_sound = snd_molten_moving //snd_spitter_moving
+hurt_sound   = snd_molten_hurt //snd_spitter_hurt
+death_sound  = snd_molten_death //snd_spitter_death
+attack_sound = snd_spitter_attack
+//State Machine
 state = new SnowState("idle")
-state.add(
-	"idle", {
-		enter: function() { 
-			sprite_index = sprite_idle 
-			audio_stop_all()
-			//audio_play_sound_on(s_emit,choose(),true,1,global.enemy_audio)
-		},
-		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-			if (within_vision_radius) { return state.change("wandering") }	
-		}
-	}
-) 
-state.add(
-	"wandering", {
-		enter: function() { 
-			enemy_wandering()
-			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
-		},
-		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-			if (path_position == 1) { state.change("wandering_cooldown") }
-		}
-	}
-)
-state.add(
-	"wandering_cooldown", {
-		enter: function() { 
-			enemy_wandering_cooldown()
-		},
-		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-		}
-	}
-)
-state.add(
-	"lost", {
-		enter: function() { 
-			enemy_lost()
-		},
-		step: function() {
-			if (within_chase_radius) { return state.change("chasing") }
-		}
-	}
-)
-state.add(
-	"chasing", {
-		enter: function() { 
-			sprite_index = sprite_chasing 
-			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
-		},
-		step: function() {
-			enemy_chasing()
-		}
-	}
-)
+
+ALL_THE_STATES()
 
 state.add(
 	"attacking", {
@@ -85,6 +37,8 @@ state.add(
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			path_end()
 			sprite_index = sprite_attacking
+			audio_stop_sound(moving_sound)
+			audio_play_sound_on(s_emit,attack_sound,false,1,global.enemy_audio)
 		},
 		step: function() {
 			if (shoot_cooldown == false) {
@@ -92,7 +46,6 @@ state.add(
 				var _direction = point_direction(x, y, obj_player.x, obj_player.y)
 				instance_create_layer( x, y, "enemies", obj_pea_bullets, 
 				{ speed: 10, direction: _direction, image_angle: _direction })
-				//audio_play_sound_on(s_emit,snd_peashooter_attack,true,1,global.enemy_audio)
 				shoot_cooldown = true
 				alarm[1] = 60
 			}
@@ -107,8 +60,6 @@ state.add(
 state.add(
 	"attack_cooldown", {
 		enter: function() {
-			_speed = 0
-			path_end()
 			sprite_index = sprite_cooldown
 			alarm[0] = 30
 		}
@@ -121,33 +72,11 @@ state.add(
 			run_lock = true
 			sprite_index = sprite_run	
 			alarm[3] = 30
-			//audio_play_sound_on(s_emit,snd_peashooter_moving,true,1,global.enemy_audio)
+			if audio_is_playing(moving_sound) {audio_stop_sound(moving_sound)}
+			audio_play_sound_on(s_emit,moving_sound,true,1,global.enemy_audio)
 		} , 
 		step: function () {
 			enemy_peashooter_run()
 		}
 	}
 )
-#region universal states
-if state.add(
-	"death", {
-		enter: function() {
-			enemy_death()
-			//audio_play_sound_on(s_emit,snd_peashooter_death,true,1,global.enemy_audio)
-		}
-	}	
-)
-state.add(
-	"hurt", {
-		enter: function() {
-			enemy_hurt()
-			//audio_play_sound_on(s_emit,snd_peashooter_hurt,true,1,global.enemy_audio)
-		},
-		step: function() {
-			//knockback
-			enemy_knockback()
-		}			
-	}
-)
-#endregion
-//burrowed = untargetable do this in player
