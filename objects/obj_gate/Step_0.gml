@@ -7,7 +7,7 @@ if (player_is_near_gate and player_is_pressing_open_gate_key) {
 			obj_player.inventory.inventory,	
 			function(_element) {
 				if (_element == undefined) { return false}
-				else { return string_replace(sprite_get_name(_element.DEFAULT_SPRITE), "spr_key", "spr_gate") == sprite_get_name(sprite_index) }
+				else { return string_replace(sprite_get_name(_element.SPRITE), "spr_key", "spr_gate") == sprite_get_name(sprite_index) }
 			}
 		) != -1
 	) {

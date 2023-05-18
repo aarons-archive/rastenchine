@@ -35,6 +35,7 @@
     {"name":"Weapons","order":3,"path":"folders/Inventory/Items/Weapons.yy",},
     {"name":"Pistol","order":2,"path":"folders/Inventory/Items/Weapons/Guns/Pistol.yy",},
     {"name":"Railgun","order":5,"path":"folders/Inventory/Items/Weapons/Guns/Railgun.yy",},
+    {"name":"Beam","order":1,"path":"folders/Inventory/Items/Weapons/Guns/Railgun/Beam.yy",},
     {"name":"Rifle","order":3,"path":"folders/Inventory/Items/Weapons/Guns/Rifle.yy",},
     {"name":"Shotgun","order":4,"path":"folders/Inventory/Items/Weapons/Guns/Shotgun.yy",},
     {"name":"Baseball Bat","order":5,"path":"folders/Inventory/Items/Weapons/Melee/Baseball Bat.yy",},
@@ -43,7 +44,6 @@
     {"name":"Levels","order":6,"path":"folders/Levels.yy",},
     {"name":"Menu","order":3,"path":"folders/Menu.yy",},
     {"name":"Scripts","order":1,"path":"folders/Scripts.yy",},
-    {"name":"Beam","order":1,"path":"folders/Inventory/Items/Weapons/Guns/Railgun/Beam.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_boss_charging","order":2,"path":"sprites/spr_boss_charging/spr_boss_charging.yy",},
