@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_boss_charge_attack",
+  "name": "dev_boss_charge_attack",
   "bbox_bottom": 255,
   "bbox_left": 0,
   "bbox_right": 255,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_boss_charge_attack",
+    "name": "dev_boss_charge_attack",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eed4244b-4d2d-4f9b-b841-45bbcbe53f62","path":"sprites/spr_boss_charge_attack/spr_boss_charge_attack.yy",},},},"Disabled":false,"id":"99f33b68-c4fe-4927-a418-a3b4ba02773c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eed4244b-4d2d-4f9b-b841-45bbcbe53f62","path":"sprites/dev_boss_charge_attack/dev_boss_charge_attack.yy",},},},"Disabled":false,"id":"99f33b68-c4fe-4927-a418-a3b4ba02773c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

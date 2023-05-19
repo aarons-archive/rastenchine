@@ -1,13 +1,13 @@
 event_inherited()		
 //sprites
-sprite_idle      = spr_spitter_death //burrowed
+sprite_idle      = spr_spitter_moving //burrowed
 sprite_wandering = spr_spitter_moving
 sprite_chasing   = spr_spitter_moving //burrowed
-sprite_lost      = spr_spitter_death
+sprite_lost      = spr_spitter_cooldown
 sprite_attacking = spr_spitter_attack
-sprite_cooldown  = spr_spitter_death //burrowed
-sprite_death     = spr_spitter_death
-sprite_hurt      = spr_spitter_death
+sprite_cooldown  = spr_spitter_cooldown //burrowed
+sprite_death     = spr_spitter_deatd
+sprite_hurt      = spr_spitter_cooldown //hurt
 //unique sprites
 sprite_run = spr_spitter_moving //burrowed
 //radi

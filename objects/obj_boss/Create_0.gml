@@ -1,14 +1,14 @@
 event_inherited()
 //sprites
-sprite_idle          = spr_boss
+sprite_idle          = dev_boss
 sprite_chasing       = spr_Growler_moving
-sprite_swipe_attack  = spr_boss_swipe_attack
-sprite_charge_attack = spr_boss_charge_attack
-sprite_cooldown      = spr_boss_charging//cooldown spr
-sprite_death         = spr_boss
-sprite_hurt          = spr_boss
+sprite_swipe_attack  = dev_boss_swipe_attack
+sprite_charge_attack = dev_boss_charge_attack
+sprite_cooldown      = dev_boss_charging//cooldown spr
+sprite_death         = dev_boss
+sprite_hurt          = dev_boss
 //unique sprites
-sprite_charging      = spr_boss_charging
+sprite_charging      = dev_boss_charging
 //radi
 swipe_attack_radius  = 250
 charge_attack_radius = 400
