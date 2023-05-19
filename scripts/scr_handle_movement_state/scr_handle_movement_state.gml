@@ -1,6 +1,6 @@
 function handle_movement_state() {
 	
-	if ((stamina <= 0) and (movement_state != player_movement_state.dodging)) {
+	if ((stamina <= 1) and (movement_state != player_movement_state.dodging)) {
 		movement_state = player_movement_state.exhausted
 	}
 	

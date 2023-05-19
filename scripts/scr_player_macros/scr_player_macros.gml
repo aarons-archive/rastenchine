@@ -18,12 +18,12 @@
 
 // running
 #macro PLAYER_RUN_SPEED                  (5)
-#macro PLAYER_RUN_STAMINA_COST_PER_FRAME (1)
+#macro PLAYER_RUN_STAMINA_COST_PER_FRAME (0.5)
 
 // dodging
-#macro PLAYER_DODGE_SPEED        (7)
+#macro PLAYER_DODGE_SPEED        (10)
 #macro PLAYER_DODGE_STAMINA_COST (20)
-#macro PLAYER_DODGE_FRAMES       (FPS / 1)  
+#macro PLAYER_DODGE_FRAMES       (FPS * 1.5)  
 
 // exhausted
 #macro PLAYER_EXHAUSTED_SPEED                  (1)
