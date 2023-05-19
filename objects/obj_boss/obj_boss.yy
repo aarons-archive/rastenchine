@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Growler_moving",
-    "path": "sprites/spr_Growler_moving/spr_Growler_moving.yy",
+    "name": "spr_growler_moving",
+    "path": "sprites/spr_growler_moving/spr_growler_moving.yy",
   },
   "spriteMaskId": null,
   "visible": true,

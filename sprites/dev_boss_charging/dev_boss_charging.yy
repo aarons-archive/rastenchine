@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Entities/Enemies/Boss/Sprites.yy",
+    "name": "Old spr",
+    "path": "folders/Entities/Enemies/Boss/Sprites/Old spr.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
