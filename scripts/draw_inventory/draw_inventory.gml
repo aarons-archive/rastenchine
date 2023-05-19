@@ -63,6 +63,7 @@ function hide_inventory() {
 }
 
 function draw_hotbar() {
+	draw_set_font(fnt_game)
 	length = array_length(hotbar)
 	draw_sprite_stretched(
 		GUI_BG_SPRITE, 0,
@@ -88,7 +89,6 @@ function draw_hotbar() {
 				HOTBAR_SLOT_X + (HOTBAR_SLOT_WIDTH / 2),
 				slot_y + (HOTBAR_SLOT_HEIGHT / 2)
 			)
-			draw_set_font(fnt_game)
 			draw_set_halign(fa_right)
 			draw_set_valign(fa_bottom)
 			draw_text(
@@ -97,5 +97,23 @@ function draw_hotbar() {
 				string(_item.count)
 			)
 		}
+	}
+	if (is_instanceof(self.item, Gun)) {
+		draw_set_halign(fa_left)
+		draw_set_valign(fa_top)
+		var names = "Ammo: \nClip: "
+		var values = $"{self.item.ammo}\n{self.item.clip}"
+		draw_text_color( 
+			HOTBAR_BACKGROUND_X + HOTBAR_BACKGROUND_WIDTH + INVENTORY_MARGIN, 
+			HOTBAR_BACKGROUND_Y + INVENTORY_MARGIN,
+			names, 
+			c_white, c_white, c_white, c_white, 1
+		)
+		draw_text_color( 
+			HOTBAR_BACKGROUND_X + HOTBAR_BACKGROUND_WIDTH + INVENTORY_MARGIN + string_width(names), 
+			HOTBAR_BACKGROUND_Y + INVENTORY_MARGIN,
+			values, 
+			c_white, c_white, c_white, c_white, 1
+		)
 	}
 }
