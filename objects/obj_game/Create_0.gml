@@ -13,3 +13,4 @@ global.debug_gui     = false
 global.debug_camera  = false
 
 global.fell          = false
+global.win           = false

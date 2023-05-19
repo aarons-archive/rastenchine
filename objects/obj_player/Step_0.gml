@@ -26,3 +26,8 @@ if (global.fell) && (scale > 0) {
 else if (global.fell) && (scale <= 0.01) && (room != rm_fell_and_died) {
 	room_goto(rm_fell_and_died)	
 }
+
+if (_health <= 0) && (room != rm_death)
+{
+	room_goto(rm_death)	
+}
