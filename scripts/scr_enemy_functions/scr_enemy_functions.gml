@@ -1,4 +1,4 @@
-function enemy_hurt()
+ function enemy_hurt()
 {
 	sprite_index = sprite_hurt
 	path_end()
