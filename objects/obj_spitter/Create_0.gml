@@ -11,7 +11,7 @@ sprite_cooldown  = spr_spitter_cooldown //burrowed
 sprite_death     = spr_spitter_death
 sprite_hurt      = spr_spitter_cooldown //hurt
 //unique sprites
-sprite_run = spr_spitter_moving //burrowed
+sprite_run       = spr_spitter_moving //burrowed
 //radi
 vision_radius = 800
 attack_radius = 250
@@ -46,7 +46,7 @@ state.add(
 			if (shoot_cooldown == false) {
 				if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1} 
 				var _direction = point_direction(x, y, obj_player.x, obj_player.y)
-				instance_create_layer( x, y, "enemies", obj_pea_bullets, 
+				instance_create_layer( x, y, "enemies", obj_spitter_bullets, 
 				{ speed: 10, direction: _direction, image_angle: _direction })
 				shoot_cooldown = true
 				alarm[1] = 60

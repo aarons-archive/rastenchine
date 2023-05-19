@@ -34,7 +34,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_spitter_death",
     "path": "sprites/spr_spitter_death/spr_spitter_death.yy",
