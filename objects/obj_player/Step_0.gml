@@ -1,3 +1,9 @@
+if (room != rm_finley_containment_zone) {
+	room_goto(rm_finley_containment_zone)
+	x = 135
+	y = 3983
+} 
+
 depth = -(y / 10)
 
 _x = x

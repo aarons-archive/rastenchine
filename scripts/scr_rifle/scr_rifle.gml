@@ -12,8 +12,8 @@ function Rifle() : Gun() constructor {
 	/////////////
     SPRITE           = spr_rifle
 	HAND_SPRITE      = spr_rifle_hand
-	COOLDOWN_SPRITE  = spr_rifle_cooldown
-	RELOADING_SPRITE = spr_rifle_reloading
+	COOLDOWN_SPRITE  = spr_rifle_hand
+	RELOADING_SPRITE = spr_rifle_hand
 	
 	////////////
 	// timing //
@@ -45,7 +45,8 @@ function Rifle() : Gun() constructor {
 				if (burst_clip >= 1) {
 					var spread = angle + random_range(-RIFLE_BULLET_SPREAD, RIFLE_BULLET_SPREAD)
 					instance_create_layer(
-						instance.x, instance.y, "player", obj_projectile, 
+						instance.x + lengthdir_x(16, angle), instance.y + lengthdir_y(16, angle),
+						"player", obj_projectile, 
 						{ 
 							sprite_index: RIFLE_BULLET_SPRITE, 
 							direction: spread, 

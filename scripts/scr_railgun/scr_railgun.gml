@@ -10,8 +10,8 @@ function Railgun() : Gun() constructor {
 	/////////////
 	SPRITE           = spr_railgun
 	HAND_SPRITE      = spr_railgun_hand
-	COOLDOWN_SPRITE  = spr_railgun
-	RELOADING_SPRITE = spr_railgun
+	COOLDOWN_SPRITE  = spr_railgun_hand
+	RELOADING_SPRITE = spr_railgun_hand
 	
 	////////////
 	// timing //
@@ -36,7 +36,7 @@ function Railgun() : Gun() constructor {
 			step: function() {
 				if (state.get_time(false) >= CHARGE_FRAMES) {
 					instance_create_layer(
-						instance.x + lengthdir_x(12, angle), instance.y + lengthdir_y(12, angle), 
+						instance.x, instance.y, 
 						"player", obj_railgun_beam, 
 						{ 
 							sprite_index: RAILGUN_BULLET_SPRITE, 

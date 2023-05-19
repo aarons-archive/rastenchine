@@ -11,8 +11,8 @@ function Shotgun() : Gun() constructor {
 	/////////////
 	SPRITE           = spr_shotgun
 	HAND_SPRITE      = spr_shotgun_hand
-	COOLDOWN_SPRITE  = spr_shotgun_cooldown
-	RELOADING_SPRITE = spr_shotgun_reloading
+	COOLDOWN_SPRITE  = spr_shotgun_hand
+	RELOADING_SPRITE = spr_shotgun_hand
 	
 	////////////
 	// timing //
@@ -37,7 +37,8 @@ function Shotgun() : Gun() constructor {
 				var spread = angle - 10
 				repeat (4) {
 					instance_create_layer(
-						instance.x, instance.y, "player", obj_projectile, 
+						instance.x + lengthdir_x(10, angle), instance.y + lengthdir_y(10, angle), 
+						"player", obj_projectile, 
 						{ 
 							sprite_index: SHOTGUN_BULLET_SPRITE, 
 							direction: spread, 
