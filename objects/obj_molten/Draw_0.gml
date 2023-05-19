@@ -8,5 +8,3 @@ if (global.debug_enemies == true) {
 		true
 	)
 }
-
-draw_text(x+10,y+10,state.get_current_state())

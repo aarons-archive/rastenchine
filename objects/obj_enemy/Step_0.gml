@@ -1,12 +1,16 @@
-//if ((place_meeting(x, y, obj_flash_light) == true) or (place_meeting(x, y, obj_area_light) == true)) {
-//	visible = true
-//} 
-//else {
-//	visible = false
-//}
 audio_emitter_position(s_emit,x,y,0)
 if (_health < 1) { state.change("death")}
-
+if (global.time >= 200 or global.time <= 40) {
+	if ((place_meeting(x, y, obj_flash_light) == true) or (place_meeting(x, y, obj_area_light) == true)) {
+		visible = true
+	} 
+	else {
+		visible = false
+	}
+}
+else {
+    visible = true
+}
 
 within_attack_radius = (collision_circle(x, y, attack_radius, obj_player, true, false) != noone)
 within_chase_radius = (collision_circle(x, y, chase_radius, obj_player, true, false) != noone)

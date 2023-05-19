@@ -1,4 +1,6 @@
-event_inherited()		
+event_inherited()	
+//health
+_health = 30
 //sprites
 sprite_idle      = spr_spitter_moving //burrowed
 sprite_wandering = spr_spitter_moving
@@ -22,11 +24,10 @@ shoot_cooldown = false
 run_lock       = false
 //idle sounds
 idle_sounds  = choose(snd_spitter_idle_one,snd_spitter_idle_two,snd_spitter_idle_three)
-moving_sound = snd_spitter_moving
+moving_sound = snd_molten_moving //snd_spitter_moving
 hurt_sound   = snd_molten_hurt //snd_spitter_hurt
 death_sound  = snd_molten_death //snd_spitter_death
 attack_sound = snd_spitter_attack
-burrow_sound = snd_spitter_burrow1
 //State Machine
 state = new SnowState("idle")
 

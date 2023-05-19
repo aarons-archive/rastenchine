@@ -1,4 +1,6 @@
 event_inherited()
+//health
+_health = 40
 //sprites
 sprite_idle      = spr_shambler_idle
 sprite_wandering = spr_shambler_moving
@@ -71,7 +73,7 @@ state.add(
 		enter: function() {
 			if (obj_player.x < x) {image_xscale = -1} else {image_xscale = 1}
 			sprite_index = sprite_attacking
-			instance_create_layer(x,y,"enemies",obj_explosion)
+			instance_create_layer(x,y,"enemies",obj_shambler_explosion)
 			path_end()
 			audio_stop_sound(moving_sound)
 			audio_play_sound_on(s_emit,attack_sound,false,1,global.enemy_audio)
