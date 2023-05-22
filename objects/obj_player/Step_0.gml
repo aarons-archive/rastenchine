@@ -1,4 +1,4 @@
-if (room != rm_finley_containment_zone) {
+if (room != rm_finley_containment_zone) && (room != rm_death) && (room != rm_win) {
 	room_goto(rm_finley_containment_zone)
 	x = 135
 	y = 3983

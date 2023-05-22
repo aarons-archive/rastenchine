@@ -45,7 +45,43 @@ state.add(
 		}
 	}
 ) 
-
+state = new SnowState("idle")
+state.add(
+	"idle", {
+		step: function() {
+			if (within_attack_radius) { return state.change("charging") }
+		}
+	}
+)
+ALL_THE_STATES()
+state.add(
+	"wandering", {
+		step: function() {
+			if (within_attack_radius) { return state.change("charging") }
+		}
+	}
+)
+state.add(
+	"wandering_cooldown", {
+		step: function() {
+			if (within_attack_radius) { return state.change("charging") }
+		}
+	}
+)
+state.add(
+	"lost", {
+		step: function() {
+			if (within_attack_radius) { return state.change("charging") }
+		}
+	}
+)
+state.add(
+	"chasing", {
+		step: function() {
+			enemy_chasing(true)
+		}
+	}
+)
 ALL_THE_STATES()
 
 state.add(
